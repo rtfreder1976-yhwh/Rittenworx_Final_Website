@@ -11,7 +11,6 @@ export default defineConfig({
   },
   redirects: {
     '/home': '/',
-    '/index.html': '/',
     '/about.html': '/about',
     '/contact.html': '/contact',
     '/quote.html': '/quote',
