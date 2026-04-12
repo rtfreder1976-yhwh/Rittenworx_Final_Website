@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://madisonhandymanpro.com',
+  site: 'https://www.rittenworxhandyman.net',
   vite: {
     plugins: [tailwindcss()]
   },
@@ -59,23 +59,36 @@ export default defineConfig({
     '/finding-reliable-general-contractors-in-huntsville': '/blog',
     '/how-much-does-interior-painting-cost-in-huntsville': '/blog/how-much-does-interior-painting-cost-in-huntsville',
     '/faq.html': '/',
-    '/handyman-resources': '/blog'
+    '/handyman-resources': '/blog',
+
+    // Legacy URLs still indexed in GSC (missing redirects)
+    '/flooring-installation-repair.html': '/services/flooring',
+    '/home-exterior-and-siding': '/services',
+    '/handyman-and-home-repair-services': '/services',
+    '/areas-we-serve': '/locations',
+    '/plumbing-service': '/services',
+    '/seasonal-outdoor-home-maintenance': '/blog',
+
+    // Hero image appearing as a search result — redirect to homepage
+    '/hero-handyman.png': '/',
+    '/hero-maintenance-roy.png': '/',
   },
   integrations: [
     sitemap({
+      filter: (page) => !page.includes('/admin/'),
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
       customPages: [
-        'https://madisonhandymanpro.com/',
-        'https://madisonhandymanpro.com/services/',
-        'https://madisonhandymanpro.com/locations/',
-        'https://madisonhandymanpro.com/about/',
-        'https://madisonhandymanpro.com/contact/'
+        'https://www.rittenworxhandyman.net/',
+        'https://www.rittenworxhandyman.net/services/',
+        'https://www.rittenworxhandyman.net/locations/',
+        'https://www.rittenworxhandyman.net/about/',
+        'https://www.rittenworxhandyman.net/contact/'
       ],
       serialize(item) {
         // Set custom priorities based on page importance
-        if (item.url === 'https://madisonhandymanpro.com/') {
+        if (item.url === 'https://www.rittenworxhandyman.net/') {
           item.priority = 1.0;
           item.changefreq = 'daily';
         } else if (item.url.includes('/services')) {

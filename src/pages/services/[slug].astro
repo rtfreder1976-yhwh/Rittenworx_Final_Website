@@ -85,8 +85,8 @@ export function getStaticPaths() {
 const { service, city, cityPath } = Astro.props;
 const { slug } = Astro.params;
 
-const title = `${service.name} in ${city}, AL | Local Expert Handyman`;
-const description = `Need ${service.name.toLowerCase()} in ${city}, Alabama? Rittenworx offers fast, affordable, and professional services. Get your free estimate today!`;
+const title = `${service.name} in ${city}, AL | Rittenworx`;
+const description = `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
 
 // Custom local schema for this specific combination
 const localSchema = {
@@ -94,10 +94,10 @@ const localSchema = {
     "@graph": [
         {
             "@type": "LocalBusiness",
-            "@id": `https://madisonhandymanpro.com/services/${slug}/#business`,
+            "@id": `https://www.rittenworxhandyman.net/services/${slug}/#business`,
             name: `Rittenworx - ${city}`,
             description: description,
-            url: `https://madisonhandymanpro.com/services/${slug}`,
+            url: `https://www.rittenworxhandyman.net/services/${slug}`,
             telephone: "(256) 221-0373",
             address: {
                 "@type": "PostalAddress",

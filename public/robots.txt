@@ -1,25 +1,23 @@
-# Madison Handyman Pro - robots.txt
-# https://madisonhandymanpro.com
+# Rittenworx - robots.txt
+# https://www.rittenworxhandyman.net
 
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 # Sitemap location
-Sitemap: https://madisonhandymanpro.com/sitemap-index.xml
-
-# Crawl-delay for polite crawling
-Crawl-delay: 1
-
-# Block non-content paths
-Disallow: /api/
-Disallow: /_astro/
+Sitemap: https://www.rittenworxhandyman.net/sitemap-index.xml
 
 # Allow all major search engines full access
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /admin/

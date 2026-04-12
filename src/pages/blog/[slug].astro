@@ -15,8 +15,13 @@ const { Content } = await entry.render();
 ---
 
 <Layout
-    title={`${entry.data.title} | Rittenworx`}
+    title={entry.data.title}
     description={entry.data.description}
+    ogType="article"
+    articleMeta={{
+        publishedTime: entry.data.pubDate.toISOString(),
+        author: entry.data.author,
+    }}
 >
     <article class="bg-gray-50 min-h-screen py-20 lg:py-32">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
