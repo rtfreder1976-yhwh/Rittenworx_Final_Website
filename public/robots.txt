@@ -11,13 +11,13 @@ Sitemap: https://www.rittenworxhandyman.net/sitemap-index.xml
 
 # Allow all major search engines full access
 User-agent: Googlebot
-Allow: /
-Disallow: /admin/
+Allow: /admin/
+Disallow: /
 
 User-agent: Bingbot
-Allow: /
-Disallow: /admin/
+Allow: /admin/
+Disallow: /
 
 User-agent: DuckDuckBot
-Allow: /
-Disallow: /admin/
+Allow: /admin/
+Disallow:/

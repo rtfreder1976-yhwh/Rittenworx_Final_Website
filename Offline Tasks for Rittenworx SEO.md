@@ -20,7 +20,6 @@ Images
 
 Content / Business Listings
 
-- Google Business Profile — Confirm the website URL there is https://www.rittenworxhandyman.net (not the old domain)
 - Yelp / BBB / any directories — Update website URL on any listings that still show the old domain
 
 Optional Wins

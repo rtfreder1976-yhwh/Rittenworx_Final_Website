@@ -15,7 +15,10 @@
       "mcp__plugin_playwright_playwright__browser_navigate",
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
       "mcp__plugin_playwright_playwright__browser_snapshot",
-      "Read(//c/Users/rtfre/Downloads/**)"
+      "Read(//c/Users/rtfre/Downloads/**)",
+      "Bash(where cwebp:*)",
+      "Bash(where magick:*)",
+      "Bash(node -e \"require\\('sharp'\\)\")"
     ],
     "deny": [],
     "ask": []
