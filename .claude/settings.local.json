@@ -11,7 +11,11 @@
       "Bash(unzip -o \"rittenworxhandyman.net-Coverage-2026-04-11.zip\" -d coverage_report)",
       "Bash(unzip -o \"rittenworxhandyman.net-FAQ-2026-04-11.zip\" -d faq_report)",
       "Bash(git diff:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "Read(//c/Users/rtfre/Downloads/**)"
     ],
     "deny": [],
     "ask": []
