@@ -18,7 +18,9 @@
       "Read(//c/Users/rtfre/Downloads/**)",
       "Bash(where cwebp:*)",
       "Bash(where magick:*)",
-      "Bash(node -e \"require\\('sharp'\\)\")"
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(sed -i 's|/hero-maintenance-roy\\\\.png|/hero-maintenance-roy.webp|g' src/pages/index.astro)",
+      "Bash(sed -i 's|/hero-handyman\\\\.png|/hero-handyman.webp|g' src/pages/index.astro src/pages/services.astro \"src/pages/services/[slug].astro\" src/components/ServiceAreaMap.astro)"
     ],
     "deny": [],
     "ask": []
