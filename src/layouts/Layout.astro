@@ -255,8 +255,8 @@ const finalSchema = schema || schemaData;
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-    <!-- Performance: Preload Critical Resources -->
-    <link rel="preload" href="/favicon.png" as="image" type="image/png" />
+    <!-- Page-specific resource hints (LCP image preload, etc.) -->
+    <slot name="head" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -406,10 +406,11 @@ const finalSchema = schema || schemaData;
 
     <meta name="generator" content={Astro.generator} />
 
-    <!-- GHL Tracking -->
+    <!-- GHL Tracking (deferred — non-blocking) -->
     <script
       src="https://api.singingriverai.com/js/external-tracking.js"
-      data-tracking-id="tk_96448d723e684c62bb251af6fcaa9eeb"></script>
+      data-tracking-id="tk_96448d723e684c62bb251af6fcaa9eeb"
+      defer></script>
 
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
@@ -527,6 +528,8 @@ const finalSchema = schema || schemaData;
               src="/images/logo.webp"
               alt="Rittenworx Logo"
               class="object-contain"
+              width="570"
+              height="438"
               style="height: 64px; width: auto;"
             />
           </a>
@@ -767,6 +770,8 @@ const finalSchema = schema || schemaData;
               src="/images/logo-bw.avif"
               alt="Rittenworx Logo"
               class="h-12 w-auto mb-4 bg-white/10 p-2 border border-white/20 rounded-md"
+              width="200"
+              height="172"
             />
             <p class="text-sm text-gray-400 mb-4">
               Family-owned, certified carpentry. 7 years serving North Alabama
