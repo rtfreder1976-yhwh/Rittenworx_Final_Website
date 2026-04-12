@@ -72,6 +72,29 @@ export default defineConfig({
     // Hero image appearing as a search result — redirect to homepage
     '/hero-handyman.png': '/',
     '/hero-maintenance-roy.png': '/',
+
+    // 404s from GSC Coverage report — blog posts on deleted/renamed URLs
+    '/how-to-choose-a-handyman-in-somerville': '/blog',
+    '/how-to-find-quality-home-repairs-in-decatur': '/blog',
+    '/somerville-resident-s-guide-to-home-exterior-repairs': '/blog',
+    '/understanding-general-home-repairs-for-renters-and-owners-in-decatur-al': '/blog',
+    '/how-electrical-work-services-keep-your-somerville-al-home-safe-and-efficient': '/blog',
+    '/which-painting-services-boost-curb-appeal-in-madison-al': '/blog',
+    '/what-to-expect-from-electrical-services-in-madison': '/blog',
+
+    // 404s — service/resource pages without redirects
+    '/electrical-services': '/services',
+    '/electrical-work.html': '/services',
+    '/plumbing-repairs.html': '/services',
+    '/general-home-repairs': '/services',
+    '/faq': '/',
+
+    // 404s — service area pages
+    '/service-area/arab-al': '/locations',
+    '/service-area/': '/locations',
+
+    // 404s — misc
+    '/new-page': '/',
   },
   integrations: [
     sitemap({
