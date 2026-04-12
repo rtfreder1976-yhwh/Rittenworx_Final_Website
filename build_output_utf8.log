@@ -1,0 +1,247 @@
+﻿
+> handyman-madison@0.0.1 build
+> astro build
+
+[2m16:34:21[22m [34m[content][39m Syncing content
+[2m16:34:21[22m [34m[content][39m Synced content
+[2m16:34:21[22m [34m[types][39m Generated [2m479ms[22m
+[2m16:34:21[22m [34m[build][39m output: [34m"static"[39m
+[2m16:34:21[22m [34m[build][39m mode: [34m"static"[39m
+[2m16:34:21[22m [34m[build][39m directory: [34mC:\Users\rtfre\.gemini\antigravity\scratch\Rittenworx_Final_Website\dist\[39m
+[2m16:34:21[22m [34m[build][39m Collecting build info...
+[2m16:34:21[22m [34m[build][39m [32mΓ£ô Completed in 502ms.[39m
+[2m16:34:21[22m [34m[build][39m Building static entrypoints...
+[2m16:34:23[22m [34m[vite][39m [32mΓ£ô built in 1.63s[39m
+[2m16:34:23[22m [34m[build][39m [32mΓ£ô Completed in 1.65s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m16:34:23[22m [34m[vite][39m transforming...
+[2m16:34:23[22m [34m[vite][39m [32mΓ£ô[39m 6 modules transformed.
+[2m16:34:23[22m [34m[vite][39m rendering chunks...
+[2m16:34:23[22m [34m[vite][39m computing gzip size...
+[2m16:34:23[22m [34m[vite][39m [2mdist/[22m[36m_astro/dashboard.astro_astro_type_script_index_0_lang.Ds9P6cqp.js  [39m[1m[2m0.05 kB[22m[1m[22m[2m Γöé gzip: 0.07 kB[22m
+[2m16:34:23[22m [34m[vite][39m [32mΓ£ô built in 25ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m16:34:23[22m [32mΓû╢[39m src/pages/about.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/about/index.html[22m [2m(+18ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/admin/dashboard.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/admin/dashboard/index.html[22m [2m(+16ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/admin/index.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/admin/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/blog/[slug].astro
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/complete-guide-to-drywall-repair-in-madison/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/complete-guide-to-seamless-gutter-installation-meridianville/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/complete-guide-to-custom-baseboards-and-crown-molding-hampton-cove/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/complete-guide-to-hardwood-flooring-installation-decatur-al/index.html[22m [2m(+17ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/fall-gutter-cleaning-preparation-guide-hampton-cove/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/emergency-exterior-door-repair-harvest-alabama/index.html[22m [2m(+9ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/complete-guide-to-drywall-installation-huntsville-al/index.html[22m [2m(+10ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/emergency-water-leak-repair-somerville-alabama/index.html[22m [2m(+8ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/emergency-roof-fascia-repair-somerville-alabama/index.html[22m [2m(+7ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/emergency-handyman-services-what-madison-homeowners-need-to-know/index.html[22m [2m(+14ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/how-much-does-interior-painting-cost-in-huntsville/index.html[22m [2m(+13ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/how-much-does-custom-finish-carpentry-cost-athens-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/how-much-does-lvp-flooring-cost-madison-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/what-to-do-when-exterior-paint-starts-peeling/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/how-much-does-it-cost-to-paint-kitchen-cabinets-athens-al/index.html[22m [2m(+10ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/what-to-do-when-laminate-flooring-starts-buckling/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/how-much-does-seamless-gutter-installation-cost-huntsville/index.html[22m [2m(+10ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/summer-exterior-painting-preparation-guide-decatur-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/ultimate-spring-home-maintenance-preparation-guide/index.html[22m [2m(+10ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/spring-deck-and-exterior-trim-repair-guide-madison-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m   [34mΓö£ΓöÇ[39m [2m/blog/what-to-do-when-you-find-water-damage-behind-drywall/index.html[22m [2m(+24ms)[22m 
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/blog/what-to-do-when-your-gutters-are-overflowing/index.html[22m [2m(+35ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/blog/index.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/blog/index.html[22m [2m(+9ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/contact.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/contact/index.html[22m [2m(+8ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/athens/canebrake.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/athens/canebrake/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/athens.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/athens/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/decatur/burningtree.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/decatur/burningtree/index.html[22m [2m(+9ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/decatur/somerville.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/decatur/somerville/index.html[22m [2m(+13ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/decatur.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/decatur/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/huntsville/hampton-cove.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/huntsville/hampton-cove/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/huntsville/jones-valley.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/huntsville/jones-valley/index.html[22m [2m(+9ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/huntsville.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/huntsville/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/madison/clifts-cove.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/madison/clifts-cove/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/madison/harvest.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/madison/harvest/index.html[22m [2m(+13ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations/madison.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/madison/index.html[22m [2m(+10ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/locations.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/locations/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/quote.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/quote/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/services/drywall.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/services/drywall/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/services/finish-carpentry.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/services/finish-carpentry/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/services/flooring.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/services/flooring/index.html[22m [2m(+14ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/services/garage-floor-coating.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/services/garage-floor-coating/index.html[22m [2m(+12ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/services/gutter-cleaning.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/services/gutter-cleaning/index.html[22m [2m(+11ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/services/gutter-installation.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/services/gutter-installation/index.html[22m [2m(+18ms)[22m 
+[2m16:34:23[22m [32mΓû╢[39m src/pages/services/painting.astro
+[2m16:34:23[22m   [34mΓööΓöÇ[39m [2m/services/painting/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m src/pages/services/[slug].astro
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-madison-al/index.html[22m [2m(+14ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-huntsville-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-athens-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-decatur-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-harvest-al/index.html[22m [2m(+9ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-owens-cross-roads-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-hampton-cove-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/drywall-repair-redstone-arsenal-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-madison-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-huntsville-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-athens-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-decatur-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-harvest-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-owens-cross-roads-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-hampton-cove-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/interior-painting-redstone-arsenal-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-madison-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-huntsville-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-athens-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-decatur-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-harvest-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-owens-cross-roads-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-hampton-cove-al/index.html[22m [2m(+17ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/exterior-painting-redstone-arsenal-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-madison-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-huntsville-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-athens-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-decatur-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-harvest-al/index.html[22m [2m(+10ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-owens-cross-roads-al/index.html[22m [2m(+8ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-hampton-cove-al/index.html[22m [2m(+10ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-cleaning-redstone-arsenal-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-madison-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-huntsville-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-athens-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-decatur-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-harvest-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-owens-cross-roads-al/index.html[22m [2m(+19ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-hampton-cove-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/gutter-installation-redstone-arsenal-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-madison-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-huntsville-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-athens-al/index.html[22m [2m(+14ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-decatur-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-harvest-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-owens-cross-roads-al/index.html[22m [2m(+16ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-hampton-cove-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/flooring-installation-redstone-arsenal-al/index.html[22m [2m(+14ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-madison-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-huntsville-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-athens-al/index.html[22m [2m(+11ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-decatur-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-harvest-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-owens-cross-roads-al/index.html[22m [2m(+18ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-hampton-cove-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/garage-floor-coating-redstone-arsenal-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/finish-carpentry-madison-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/finish-carpentry-huntsville-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/finish-carpentry-athens-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/finish-carpentry-decatur-al/index.html[22m [2m(+12ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/finish-carpentry-harvest-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/finish-carpentry-owens-cross-roads-al/index.html[22m [2m(+14ms)[22m 
+[2m16:34:24[22m   [34mΓö£ΓöÇ[39m [2m/services/finish-carpentry-hampton-cove-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/services/finish-carpentry-redstone-arsenal-al/index.html[22m [2m(+13ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m src/pages/services.astro
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/services/index.html[22m [2m(+15ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m src/pages/index.astro
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/index.html[22m [2m(+14ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /about.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/about.html/index.html[22m [2m(+8ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /athens-al.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/athens-al.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /athens.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/athens.html/index.html[22m [2m(+4ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /carpentry-wood-repair.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/carpentry-wood-repair.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /contact.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/contact.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /decatur-al.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/decatur-al.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /decatur.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/decatur.html/index.html[22m [2m(+4ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /deck-building-repair.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/deck-building-repair.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /door-window-installation.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/door-window-installation.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /drywall-repair-madison-al
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/drywall-repair-madison-al/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /drywall.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/drywall.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /faq.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/faq.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /fence-installation-repair.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/fence-installation-repair.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /finding-reliable-general-contractors-in-huntsville
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/finding-reliable-general-contractors-in-huntsville/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /flooring.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/flooring.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /furniture-assembly.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/furniture-assembly.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /gutter-cleaning-repair.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/gutter-cleaning-repair.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /gutter-cleaning.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/gutter-cleaning.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /gutter-installation-harvest-al
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/gutter-installation-harvest-al/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /handyman-resources
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/handyman-resources/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /handyman-services-huntsville-al
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/handyman-services-huntsville-al/index.html[22m [2m(+4ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /handyman-services-madison-al
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/handyman-services-madison-al/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /hartselle.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/hartselle.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /harvest.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/harvest.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /home
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/home/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /how-much-does-interior-painting-cost-in-huntsville
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/how-much-does-interior-painting-cost-in-huntsville/index.html[22m [2m(+2ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /huntsville-al.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/huntsville-al.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:24[22m [32mΓû╢[39m /huntsville.html
+[2m16:34:24[22m   [34mΓööΓöÇ[39m [2m/huntsville.html/index.html[22m [2m(+3ms)[22m 
+[2m16:34:25[22m [32mΓû╢[39m /index.html
+node.exe : EEXIST: file already exists, mkdir 
+'C:\Users\rtfre\.gemini\antigravity\scratch\Rittenworx_Final_Website\dist\index.html'
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Users\rtfre\AppData\Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (EEXIST: file al...ist\index.html':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  [1mLocation:[22m
+    
+[4mC:\Users\rtfre\.gemini\antigravity\scratch\Rittenworx_Final_Website\node_modules\astro\dist\core\build\generate.js:424:3[24m
+  [1mStack trace:[22m
+[2m    at async Object.mkdir (node:internal/fs/promises:861:10)
+    at async generatePathWithLogs (file:///C:/Users/rtfre/.gemini/antigravity/scratch/Rittenworx_Final_Website/node_modules/astro/
+dist/core/build/generate.js:159:21)
+    at async generatePages 
+(file:///C:/Users/rtfre/.gemini/antigravity/scratch/Rittenworx_Final_Website/node_modules/astro/dist/core/build/generate.js:99:7)
+    at async AstroBuilder.build 
+(file:///C:/Users/rtfre/.gemini/antigravity/scratch/Rittenworx_Final_Website/node_modules/astro/dist/core/build/index.js:157:5)
+    at async build (file:///C:/Users/rtfre/.gemini/antigravity/scratch/Rittenworx_Final_Website/node_modules/astro/dist/core/build
+/index.js:45:3)[22m
+[2m16:34:25[22m   [34mΓööΓöÇ[39m [2m/index.html/index.html[22m
+
