@@ -47,6 +47,6 @@ A massive 6-inch gutter is useless if it's forced into a tiny 2x3 downspout that
 ## Elevate and Protect Your Meridianville Home
 Seamless aluminum gutters are custom-manufactured on your exact property, ensuring a efficiently tailored fit that dramatically improves the architectural beauty and structural longevity of your house. 
 
-The installation teams at **Rittenworx Handyman Service** specialize in seamless K-style gutter manufacturing, fascia repair, and heavy-duty storm-proofing. 
+The installation teams at **Rittenworx** specialize in seamless K-style gutter manufacturing, fascia repair, and heavy-duty storm-proofing. 
 
 **Text us a photo of your roofline or leaking gutters right now, and let's get you a free, comprehensive gutter replacement quote today!**

@@ -60,6 +60,6 @@ If you apply acrylic latex paint to siding that has been baking in 95-degree dir
 ## Secure Your Spot On the Schedule
 Executing a Quality, deeply prepped exterior paint job in the massive heat requires extensive equipment, immense physical stamina, and dedicated commitment to doing it the hard way. 
 
-If this preparation checklist sounds exhausting, let the professionals take the wheel. The painting teams at **Rittenworx Handyman Service** specialize in ultra-durable, premium exterior restorations that endure the brutal Alabama summers for decades. 
+If this preparation checklist sounds exhausting, let the professionals take the wheel. The painting teams at **Rittenworx** specialize in ultra-durable, premium exterior restorations that endure the brutal Alabama summers for decades. 
 
-**Our summer books fill up aggressively fast. Text us a photo of the front of your house today, and let's get you secured on our schedule for a Quality summer transformation!**
+**Summer schedules fill up in May. Text us a photo of the front of your house and we'll get you a written quote before the good weather window closes.**

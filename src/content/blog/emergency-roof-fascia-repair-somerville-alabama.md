@@ -16,7 +16,7 @@ Here is exactly what Somerville residents need to know about diagnosing failing 
 
 ## The Most Common Fascia Emergencies
 
-Fascia boards typically fail catastrophically during a storm for one of two incredibly common reasons:
+Fascia boards typically fail during a storm for one of two reasons:
 
 ### 1. Severe Wood Rot
 This is by far the leading cause of a mid-storm failure. If your gutters have been clogged with oak leaves and pine needles for the past three seasons, the water has been continuously overflowing *backwards* instead of down the spout.
@@ -33,25 +33,30 @@ If your fascia board is slightly soft from minor water damage, or if there is a 
 An emergency fascia repair is not a simple "slap a patch of wood over it" aesthetic fix. It is severe, high-ladder structural carpentry. When a professional arrives at your Somerville home to permanently secure the breach, here is the exact protocol.
 
 ### 1. Total Wood Eradication
-A experienced carpenters will utilize an oscillating multi-tool or a reciprocating saw to cut out the damaged section of the fascia board. 
-*   They will not stop cutting until they hit hard, structurally pristine, dry wood on both sides of the incredibly massive gap. 
-*   They will also aggressively inspect the "rafter tails" (the incredibly thick, structural 2x4s or 2x6s that physically form the roof geometry protruding from the house). If the extremely heavy rafter tails are also rotten, they must be "sistered" (bolting incredibly dense new structural lumber directly alongside the rot to permanently bear the weight of the massive roof load).
+
+A carpenter uses an oscillating multi-tool or reciprocating saw to cut out the damaged fascia section.
+
+*   The cut doesn't stop until both sides hit hard, dry, structurally sound wood.
+*   The rafter tails (the 2x4s or 2x6s that form the roof geometry) get inspected too. If they're rotten, they must be "sistered" — new structural lumber bolted alongside the rot to carry the roof load before anything is covered up.
 
 ### 2. Upgrading to Impervious Materials
-If your incredibly expensive home features traditional pine or cedar raw wood fascia, replacing the rotten section with exactly the identical raw wood is highly foolish. 
-*   A true professional will exclusively splice in wildly heavy-duty, entirely waterproof Cellular PVC trim (like Azek) or highly dense fiber-cement boards (like HardieTrim). 
-*   These advanced, modern materials are 100% impervious to torrential rain, zero insects can ever eat them, and they brilliantly hold expensive exterior paint incredibly efficiently for decades. 
+
+Replacing pine fascia with more pine will rot again. A professional splices in cellular PVC trim (like Azek) or fiber-cement boards (like HardieTrim).
+
+*   Both are impervious to water rot, insects can't eat them, and they hold exterior paint far longer than raw wood.
 
 ### 3. Re-Securing the Gutter System
-Once the new, structural fascia board is installed using heavily specialized exterior-grade galvanized or stainless steel screws (never incredibly weak finish nails!), the incredibly heavy metal gutter is re-attached.
-*   The incredibly heavy gutter must be meticulously re-pitched so gravity incredibly perfectly pulls the massive waterfalls exactly towards the downspout, guaranteeing that reverse-overflow rot will completely never occur again. 
-*   Finally, heavily robust, ultra-flexible exterior caulk is aggressively pumped into every single microscopic seam and nail hole, completely hermetically sealing out moisture and tiny, aggressive insects perfectly forever.
+
+Once the new fascia is installed with exterior-grade galvanized or stainless steel screws (not finish nails), the gutter gets re-attached.
+
+*   The gutter is re-pitched so water flows toward the downspout rather than pooling at the back of the trough.
+*   Flexible exterior caulk is applied to every seam and screw hole to seal out moisture.
 
 ## Do Not Let The Water In
-If you incredibly randomly find a massive, 12-foot section of your incredibly expensive metal gutter entirely twisted inside your azalea bushes after a violently terrifying thunderstorm, do not completely ignore the wildly exposed wood under the roofline. 
+If you find a 12-foot section of gutter twisted in your azalea bushes after a storm, don't wait until Monday. The exposed fascia under the roofline is unprotected, and the next rain will drive water behind the siding.
 
-Water travels incredibly fast. The next rainstorm can blow water inside that gap, ruining the insulation, damaging your ceiling, and rotting the roof decking. 
+Water damage moves fast. One soaked storm can ruin insulation, damage ceilings, and rot the roof decking behind the sheathing.
 
-The structurally talented, highly aggressive emergency exterior carpenters at **Rittenworx Handyman Service** fiercely serve the absolute entirety of Somerville, Decatur, and Huntsville. 
+The exterior carpenters at **Rittenworx** serve Somerville, Decatur, and Huntsville for exactly these situations — same-day if it's a real emergency.
 
-**Text us an incredibly clear photo of your wildly damaged roofline right now, and let's thoroughly get a truck dispatched instantly to brilliantly secure your incredibly massive home perfectly today!**
+**Text us a photo of the damage and we'll tell you how serious it is within the hour.**

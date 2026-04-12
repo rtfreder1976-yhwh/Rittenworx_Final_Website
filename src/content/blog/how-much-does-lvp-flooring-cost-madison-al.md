@@ -45,6 +45,6 @@ The total expected cost for a completely modernized, waterproof, stunning new li
 ## Your Next Steps
 Are you ready to permanently say goodbye to stained, dusty carpets or outdated, chipping tile? LVP completely revolutionizes both the aesthetic appeal and the daily maintenance routines of your home. 
 
-The flooring experts at **Rittenworx Handyman Service** provide razor-sharp installation precision, ensuring your floors lay perfectly flat, tight, and visually Quality for decades. 
+The flooring experts at **Rittenworx** provide razor-sharp installation precision, ensuring your floors lay perfectly flat, tight, and visually Quality for decades. 
 
 **Text us a photo of the rooms you want upgraded today, along with the rough dimensions, and let's get you an immediate, upfront estimate!**

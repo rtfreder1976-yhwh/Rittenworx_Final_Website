@@ -52,6 +52,6 @@ When a professional arrives at your Somerville home, they will:
 ## Fast, Decisive Emergency Action
 When water starts destroying your home, you cannot afford to wait on hold with a massive corporate dispatch center. You need a fast, local expert who can arrive on-site, immediately assess the catastrophic failure, and execute the structural repair instantly. 
 
-The emergency repair teams at **Rittenworx Handyman Service** specialize in rapid leak detection, valve replacement, and aggressive pipe repairs for the entire Somerville, Decatur, and Madison areas. 
+The emergency repair teams at **Rittenworx** specialize in rapid leak detection, valve replacement, and aggressive pipe repairs for the entire Somerville, Decatur, and Madison areas. 
 
 **Text us a photo or a quick video of the active leak right now, and let's get an emergency truck dispatched to your driveway to stop the damage today!**

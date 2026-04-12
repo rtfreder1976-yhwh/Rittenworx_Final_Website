@@ -50,6 +50,6 @@ The only true way to stop gutters from overflowing is to ensure they are cleaned
 If you have heavy tree coverage, especially pine trees, installing high-quality micro-mesh gutter guards can drastically reduce the need for interior cleanings and keep your water flowing freely year-round.
 
 ## Stop Water Damage Before It Starts
-If your gutters are overflowing and you aren’t comfortable safely maneuvering on a ladder, don't risk it. The team at **Rittenworx Handyman Service** provides comprehensive gutter cleaning, un-clogging, re-pitching, and repair. 
+If your gutters are overflowing and you aren’t comfortable safely maneuvering on a ladder, don't risk it. The team at **Rittenworx** provides comprehensive gutter cleaning, un-clogging, re-pitching, and repair. 
 
 We can visually inspect your system, clear the blockages, fix sagging areas, and ensure water is safely diverted away from your North Alabama home. **Text us a photo of your clogged gutters today for a free price estimate.**

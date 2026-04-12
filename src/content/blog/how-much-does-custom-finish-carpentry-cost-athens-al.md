@@ -55,6 +55,6 @@ You can certainly buy prefabricated bookshelves from a massive retail chain for 
 ## Get Your Custom Price
 Because custom work is exactly that—custom—we need to see your space to give you an accurate estimate. 
 
-The experienced carpenters at **Rittenworx Handyman Service** proudly serve the Athens and greater Madison area with precision finish carpentry. 
+The experienced carpenters at **Rittenworx** proudly serve the Athens and greater Madison area with precision finish carpentry. 
 
 **Text us a photo of the blank wall you want to transform right now, along with an inspiration picture, and we will get you an immediate cost breakdown!**

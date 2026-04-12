@@ -45,6 +45,6 @@ The ultimate long-term preparation is installing a surgical stainless steel micr
 ## Don't Wait For The Overflow
 Once the leaves fall and the winter rains hit, it's too late. Protect your most valuable asset by ensuring the water management system runs perfectly.
 
-The professionals at **Rittenworx Handyman Service** specialize in deep-cleaning, repairing, re-securing, and upgrading gutters across the Hampton Cove area. 
+The professionals at **Rittenworx** specialize in deep-cleaning, repairing, re-securing, and upgrading gutters across the Hampton Cove area. 
 
 **Text us a photo of your roofline today, and let's get you on the fall maintenance schedule!**

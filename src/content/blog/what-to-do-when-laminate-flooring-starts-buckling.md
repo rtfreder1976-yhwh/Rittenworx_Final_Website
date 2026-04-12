@@ -54,6 +54,6 @@ However, if the floor is simply buckling due to humidity expansion and a lack of
 ## Trust the Flooring Experts
 Diagnosing exactly why a floor is failing requires understanding the hydrology of the home, the subfloor parameters, and the expansion coefficients of massive floor spans. 
 
-If your floor looks uneven and the seams are starting to chip, do not wait for it to get worse. The experienced installers at **Rittenworx Handyman Service** can diagnose your buckling floor, cut the proper expansion relief joints, or seamlessly patch in damaged planks. 
+If your floor looks uneven and the seams are starting to chip, do not wait for it to get worse. The experienced installers at **Rittenworx** can diagnose your buckling floor, cut the proper expansion relief joints, or seamlessly patch in damaged planks. 
 
 **Text us a photo of the worst speedbump in your floor right now, and let's get it laying perfectly flat again!**

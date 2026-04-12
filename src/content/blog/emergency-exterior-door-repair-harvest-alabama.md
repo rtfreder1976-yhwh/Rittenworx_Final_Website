@@ -45,6 +45,6 @@ If you can’t lock the door before heading to bed, you need immediate resolutio
 
 The security and peace of mind for your family is paramount. We specialize in immediate, robust door repairs, lock realignment, and hinge reinforcements that make your home structurally tighter than the day it was built. 
 
-If you are dealing with a door emergency in the Harvest or greater Madison area, **Rittenworx Handyman Service** is the team to trust.  
+If you are dealing with a door emergency in the Harvest or greater Madison area, **Rittenworx** is the team to trust.  
 
 **Text us a photo of the damaged door or the misaligned lock right now, and let's get your home secured today!**

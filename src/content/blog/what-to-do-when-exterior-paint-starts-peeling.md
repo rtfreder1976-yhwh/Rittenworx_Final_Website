@@ -60,6 +60,6 @@ Only after the scraping, patching, caulking, masking, and priming are efficientl
 ## Skip The Scaffolding
 Proper exterior painting preparation is grueling, back-breaking work that usually involves dangling on an extension ladder 20 feet in the air. 
 
-If your home’s exterior is starting to fail and you don’t have the weekend (or the specialized equipment) to tackle the job safely, the meticulous painters at **Rittenworx Handyman Service** are ready to help. 
+If your home’s exterior is starting to fail and you don’t have the weekend (or the specialized equipment) to tackle the job safely, the meticulous painters at **Rittenworx** are ready to help. 
 
 **Text us a photo of your peeling siding today, and we will get you a comprehensive, upfront estimate to restore your home's exterior!**

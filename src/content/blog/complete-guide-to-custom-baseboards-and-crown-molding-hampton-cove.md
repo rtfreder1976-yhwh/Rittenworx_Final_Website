@@ -52,6 +52,6 @@ If you upgrade the baseboards, you must simultaneously rip down and upgrade the 
 ## Never Settle For Tiny Trim
 Massive, gorgeous trim instantly defines the aesthetic architecture of your entirely expensive home. 
 
-The experienced carpenters at **Rittenworx Handyman Service** specialize in seamless, heavily coped crown molding, massive baseboard upgrades, and pristine wainscoting installations across the highly demanding Hampton Cove area. 
+The experienced carpenters at **Rittenworx** specialize in seamless, heavily coped crown molding, massive baseboard upgrades, and pristine wainscoting installations across the highly demanding Hampton Cove area. 
 
 **Text us a photo of your blank, boring walls right now, and let's thoroughly elevate your home's architecture today!**

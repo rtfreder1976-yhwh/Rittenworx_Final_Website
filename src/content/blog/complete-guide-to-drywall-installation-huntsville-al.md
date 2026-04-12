@@ -45,6 +45,6 @@ You have essentially created walls that are composed of two entirely different s
 ## Skip The HEPA Filters and Back Pain 
 Finishing a massive room of drywall properly is an exercise in significant physical effort, dust management, and sculptural artistry. 
 
-If you want efficiently smooth ceilings or walls without destroying your shoulders hanging 60-pound boards for three days, the drywall experts at **Rittenworx Handyman Service** specialize in seamless hanging, taping, and Quality texture matching across the Huntsville area.  
+If you want efficiently smooth ceilings or walls without destroying your shoulders hanging 60-pound boards for three days, the drywall experts at **Rittenworx** specialize in seamless hanging, taping, and Quality texture matching across the Huntsville area.  
 
 **Text us a photo of your bare framing layout today, along with the square footage, and let’s get your new room efficiently finished!**

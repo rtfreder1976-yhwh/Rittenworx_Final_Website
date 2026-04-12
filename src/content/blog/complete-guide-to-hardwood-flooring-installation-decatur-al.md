@@ -49,6 +49,6 @@ A professional hardwood job is defined by the quality of the finish work. You ne
 ## When to Hire a Pro
 Laying hardwood flooring is back-breaking, tedious work that requires highly specialized tools (like a $400 floor stapler, a jamb saw for undercutting door frames, and a compound miter saw). Unless you have a week of free time and a strong grasp of geometry, you are generally better off trusting a professional.
 
-If you’re ready to rip up the carpets and reveal the beautiful potential underneath, **Rittenworx Handyman Service** provides Quality hardwood and engineered flooring installation across Decatur, Alabama. 
+If you’re ready to rip up the carpets and reveal the beautiful potential underneath, **Rittenworx** provides Quality hardwood and engineered flooring installation across Decatur, Alabama. 
 
 **Text us a photo of your current room right now, and let's get you a free flooring quote!**
