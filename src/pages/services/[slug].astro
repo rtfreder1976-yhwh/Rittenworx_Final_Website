@@ -111,18 +111,34 @@ const localSchema = {
             mainEntity: [
                 {
                     "@type": "Question",
-                    name: `Do you offer ${service.name.toLowerCase()} in ${city}, AL?`,
+                    name: `How much does ${service.name.toLowerCase()} cost in ${city}, AL?`,
                     acceptedAnswer: {
                         "@type": "Answer",
-                        text: `Yes, we provide professional ${service.name.toLowerCase()} services to residents throughout ${city} and surrounding areas in Alabama.`,
+                        text: `${service.name} pricing in ${city} depends on the scope of work. Rittenworx offers free, no-obligation estimates — call (256) 221-0373 or text a photo of your project for a same-day quote. Most residential jobs are completed within 1–3 days.`,
                     },
                 },
                 {
                     "@type": "Question",
-                    name: `How much does ${service.name.toLowerCase()} cost in ${city}?`,
+                    name: `Is Rittenworx licensed and insured for ${service.name.toLowerCase()} in ${city}?`,
                     acceptedAnswer: {
                         "@type": "Answer",
-                        text: `The cost of ${service.name.toLowerCase()} varies depending on the scope of the project. We offer free, no-obligation estimates for all jobs in ${city}. Call us or text a photo for a quick quote!`,
+                        text: `Yes. Rittenworx is a licensed, insured handyman service in ${city}, Alabama, carrying $1 million in general liability coverage. We are a family-owned business with 7 years of experience serving North Alabama homeowners.`,
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: `How quickly can Rittenworx respond to ${service.name.toLowerCase()} requests in ${city}?`,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: `We respond to all ${city} service requests within 3 hours. Same-day and emergency service is available for urgent repairs. Call or text (256) 221-0373 to get on our schedule.`,
+                    },
+                },
+                {
+                    "@type": "Question",
+                    name: `Does Rittenworx offer free estimates for ${service.name.toLowerCase()} near ${city}?`,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: `Yes — all estimates for ${service.name.toLowerCase()} in ${city} and surrounding North Alabama communities are completely free and carry no obligation. Request yours online or call (256) 221-0373.`,
                     },
                 },
             ],
