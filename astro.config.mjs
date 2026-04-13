@@ -69,10 +69,6 @@ export default defineConfig({
     '/plumbing-service': '/services',
     '/seasonal-outdoor-home-maintenance': '/blog',
 
-    // Hero image appearing as a search result — redirect to homepage
-    '/hero-handyman.png': '/',
-    '/hero-maintenance-roy.png': '/',
-
     // 404s from GSC Coverage report — blog posts on deleted/renamed URLs
     '/how-to-choose-a-handyman-in-somerville': '/blog',
     '/how-to-find-quality-home-repairs-in-decatur': '/blog',

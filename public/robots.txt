@@ -9,15 +9,3 @@ Disallow: /api/
 # Sitemap location
 Sitemap: https://www.rittenworxhandyman.net/sitemap-index.xml
 
-# Allow all major search engines full access
-User-agent: Googlebot
-Allow: /admin/
-Disallow: /
-
-User-agent: Bingbot
-Allow: /admin/
-Disallow: /
-
-User-agent: DuckDuckBot
-Allow: /admin/
-Disallow:/

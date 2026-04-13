@@ -20,7 +20,11 @@
       "Bash(where magick:*)",
       "Bash(node -e \"require\\('sharp'\\)\")",
       "Bash(sed -i 's|/hero-maintenance-roy\\\\.png|/hero-maintenance-roy.webp|g' src/pages/index.astro)",
-      "Bash(sed -i 's|/hero-handyman\\\\.png|/hero-handyman.webp|g' src/pages/index.astro src/pages/services.astro \"src/pages/services/[slug].astro\" src/components/ServiceAreaMap.astro)"
+      "Bash(sed -i 's|/hero-handyman\\\\.png|/hero-handyman.webp|g' src/pages/index.astro src/pages/services.astro \"src/pages/services/[slug].astro\" src/components/ServiceAreaMap.astro)",
+      "Bash([ -d \"dist/$path\" ])",
+      "Bash([ -f \"dist/$path/index.html\" ])",
+      "Bash([ -f \"$DIST/$path/index.html\" ])",
+      "Bash(git -C /c/Users/rtfre/.gemini/antigravity/scratch/Rittenworx_Final_Website/ remote -v)"
     ],
     "deny": [],
     "ask": []
