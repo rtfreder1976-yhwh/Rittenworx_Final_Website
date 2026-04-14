@@ -251,6 +251,15 @@ const finalSchema = schema || schemaData;
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHFZSMFV4Q" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RHFZSMFV4Q');
+    </script>
+
     <!-- Performance: Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
