@@ -24,7 +24,15 @@
       "Bash([ -d \"dist/$path\" ])",
       "Bash([ -f \"dist/$path/index.html\" ])",
       "Bash([ -f \"$DIST/$path/index.html\" ])",
-      "Bash(git -C /c/Users/rtfre/.gemini/antigravity/scratch/Rittenworx_Final_Website/ remote -v)"
+      "Bash(git -C /c/Users/rtfre/.gemini/antigravity/scratch/Rittenworx_Final_Website/ remote -v)",
+      "Bash(git:*)",
+      "Bash(npm i:*)",
+      "Bash(vercel:*)",
+      "Bash(npm --version)",
+      "Bash(gh repo:*)",
+      "Bash(gh workflow:*)",
+      "Bash(gh api:*)",
+      "mcp__plugin_playwright_playwright__browser_tabs"
     ],
     "deny": [],
     "ask": []
