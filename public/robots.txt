@@ -1,10 +1,33 @@
 # Rittenworx - robots.txt
 # https://www.rittenworxhandyman.net
+# US-only local business — block major international crawlers
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /api/
+
+# Block Chinese search crawlers (Baidu, Sogou, 360Spider)
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent: 360Spider
+Disallow: /
+
+# Block Russian search crawler (Yandex)
+User-agent: YandexBot
+Disallow: /
+
+# Block ByteDance/TikTok crawler
+User-agent: Bytespider
+Disallow: /
+
+# Block South Korean search crawler (Naver)
+User-agent: Yeti
+Disallow: /
 
 # Sitemap location
 Sitemap: https://www.rittenworxhandyman.net/sitemap-index.xml

@@ -55,12 +55,14 @@ const schemaData = {
         longitude: "-86.7483",
       },
       areaServed: [
-        { "@type": "City", name: "Madison", addressRegion: "AL" },
-        { "@type": "City", name: "Huntsville", addressRegion: "AL" },
-        { "@type": "City", name: "Decatur", addressRegion: "AL" },
-        { "@type": "City", name: "Athens", addressRegion: "AL" },
-        { "@type": "City", name: "Harvest", addressRegion: "AL" },
-        { "@type": "City", name: "Meridianville", addressRegion: "AL" },
+        { "@type": "Country", name: "United States", sameAs: "https://en.wikipedia.org/wiki/United_States" },
+        { "@type": "State", name: "Alabama", addressCountry: "US", sameAs: "https://en.wikipedia.org/wiki/Alabama" },
+        { "@type": "City", name: "Madison", addressRegion: "AL", addressCountry: "US" },
+        { "@type": "City", name: "Huntsville", addressRegion: "AL", addressCountry: "US" },
+        { "@type": "City", name: "Decatur", addressRegion: "AL", addressCountry: "US" },
+        { "@type": "City", name: "Athens", addressRegion: "AL", addressCountry: "US" },
+        { "@type": "City", name: "Harvest", addressRegion: "AL", addressCountry: "US" },
+        { "@type": "City", name: "Meridianville", addressRegion: "AL", addressCountry: "US" },
       ],
       openingHoursSpecification: [
         {
