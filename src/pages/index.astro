@@ -11,8 +11,8 @@ import TrustBadges from "../components/TrustBadges.astro";
 ---
 
 <Layout
-  title="Handyman Service Madison AL | Licensed & Insured | Rittenworx"
-  description="Trusted handyman in Madison, AL — drywall repair, interior & exterior painting, flooring, finish carpentry & garage floor coating. Licensed, insured, 7 years local. Free written estimates."
+  title="Handyman Madison AL | Licensed & Insured | Rittenworx"
+  description="Trusted handyman in Madison, AL — drywall, painting, flooring, finish carpentry & garage epoxy. Licensed, $1M-insured, 7 years local. Free estimates."
 >
   <link
     slot="head"
@@ -344,6 +344,37 @@ import TrustBadges from "../components/TrustBadges.astro";
         </a>
       </div>
 
+      <!-- Secondary service row: ensures all 7 services are linked from homepage -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <a href="/services/flooring" class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex items-center gap-4 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-blue-50 group-hover:bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors">
+            <svg class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600">Flooring Installation</h3>
+            <p class="text-gray-600 text-sm">Hardwood, LVP & laminate, expertly installed.</p>
+          </div>
+        </a>
+        <a href="/services/gutter-cleaning" class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex items-center gap-4 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-orange-50 group-hover:bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors">
+            <svg class="w-7 h-7 text-orange-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-orange-500">Gutter Cleaning</h3>
+            <p class="text-gray-600 text-sm">Full debris removal & downspout flush.</p>
+          </div>
+        </a>
+        <a href="/services/gutter-installation" class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 flex items-center gap-4 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-blue-50 group-hover:bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors">
+            <svg class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v4H4zM4 12h16M4 20h16"/></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600">Gutter Installation</h3>
+            <p class="text-gray-600 text-sm">Seamless aluminum gutters, custom-fit.</p>
+          </div>
+        </a>
+      </div>
+
       <div class="text-center mt-12">
         <a
           href="/services"
@@ -351,6 +382,30 @@ import TrustBadges from "../components/TrustBadges.astro";
         >
           View All Services
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- "Handyman Near Me" — local intent SEO block -->
+  <section class="py-16 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Local & Nearby</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-6">Looking for a Handyman Near Me in Madison or Huntsville?</h2>
+      <p class="text-lg text-gray-600 leading-relaxed mb-8">
+        If you've been searching for a <strong>handyman near me</strong> in Madison, AL or Huntsville, AL, you're in the right place. Rittenworx is locally based in Madison and serves homeowners across North Alabama — including
+        <a href="/locations/madison" class="text-blue-600 underline hover:text-blue-800">Madison</a>,
+        <a href="/locations/huntsville" class="text-blue-600 underline hover:text-blue-800">Huntsville</a>,
+        <a href="/locations/madison/harvest" class="text-blue-600 underline hover:text-blue-800">Harvest</a>,
+        <a href="/locations/huntsville/hampton-cove" class="text-blue-600 underline hover:text-blue-800">Hampton Cove</a>,
+        <a href="/locations/decatur" class="text-blue-600 underline hover:text-blue-800">Decatur</a>, and
+        <a href="/locations/athens" class="text-blue-600 underline hover:text-blue-800">Athens</a>.
+        Roy is usually 15–25 minutes away from any Madison or Huntsville address — so you get fast on-site estimates and quick scheduling, not the multi-week waitlists you'll find with national chains.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/madison" class="px-5 py-2 bg-blue-50 text-blue-700 rounded-full font-medium hover:bg-blue-100">Madison Handyman</a>
+        <a href="/locations/huntsville" class="px-5 py-2 bg-blue-50 text-blue-700 rounded-full font-medium hover:bg-blue-100">Huntsville Handyman</a>
+        <a href="/locations/decatur" class="px-5 py-2 bg-blue-50 text-blue-700 rounded-full font-medium hover:bg-blue-100">Decatur Handyman</a>
+        <a href="/locations/athens" class="px-5 py-2 bg-blue-50 text-blue-700 rounded-full font-medium hover:bg-blue-100">Athens Handyman</a>
       </div>
     </div>
   </section>

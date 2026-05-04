@@ -25,3 +25,5 @@ pnpm-debug.log*
 
 .vercel
 .env*.local
+SEO_AUDIT_NOTES.md
+pnpm-lock.yaml

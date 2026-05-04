@@ -97,7 +97,7 @@ export default defineConfig({
       filter: (page) => !page.includes('/admin/'),
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date(),
+      lastmod: new Date('2026-05-04'),
       customPages: [
         'https://www.rittenworxhandyman.net/',
         'https://www.rittenworxhandyman.net/services/',

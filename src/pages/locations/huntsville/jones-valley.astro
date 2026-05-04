@@ -135,11 +135,56 @@ const neighborhoodFacts = [
     "Offers completely unparalleled access to the Robert Trent Jones Golf Trail at Hampton Cove",
     "Extremely highly coveted legacy real estate footprint in South Huntsville",
 ];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How quickly can Rittenworx come out for a handyman job in Jones Valley?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We typically schedule Jones Valley estimates within 1–3 business days and complete most jobs within 1–2 weeks of approval. Rittenworx is locally based in Madison, AL, so Jones Valley is a quick drive for Roy and our crew."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "What handyman services do you offer in Jones Valley, AL?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In Jones Valley we provide drywall repair and installation, interior and exterior painting, flooring installation (hardwood, LVP, laminate), garage floor coating (epoxy and polyaspartic), finish carpentry, gutter cleaning, and gutter installation. Pricing is by the project, not the hour, with a written estimate up front."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Are you licensed and insured to work in Jones Valley?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Rittenworx is licensed and carries a $1M general liability policy. We are family-owned, run by a certified carpenter with 7+ years serving North Alabama, and we work in Jones Valley regularly."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Do you give free estimates for Jones Valley handyman jobs?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — estimates are free in Jones Valley and the surrounding area. You can text a photo of the job to (256) 221-0373 for a fast initial price, or request an on-site visit for larger projects."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 ---
 
 <Layout
-    title="Jones Valley Finish Carpentry | Huntsville AL"
-    description="Expert finish carpentry, cabinet painting & home maintenance for Jones Valley homeowners in Huntsville, AL. Certified carpenter, free estimates."
+  title="Jones Valley Handyman & Finish Carpentry | Huntsville AL"
+  description="Expert finish carpentry, cabinet painting & home maintenance for Jones Valley homeowners in Huntsville, AL. Certified carpenter, free estimates."
+  schema={pageSchema}
 >
     <!-- Hero Section -->
     <section class="bg-blue-900 text-white py-16">
@@ -358,4 +403,42 @@ const neighborhoodFacts = [
 
     <InlineQuoteForm />
     <TrustCredentials />
+
+  <!-- SEO: Service cross-links (auto-injected for internal link audit) -->
+  <section class="py-16 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Our Services</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Handyman Services Available in Jones Valley</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Pick the service you need. Every job in Jones Valley comes with a written estimate, a $1M-insured crew, and a 30-minute on-time arrival guarantee.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/services/drywall" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Drywall Repair &amp; Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Holes, cracks, water damage &amp; texture matching.</p>
+        </a>
+        <a href="/services/painting" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Interior &amp; Exterior Painting</h3>
+          <p class="text-sm text-gray-600 mt-1">Walls, trim, cabinets &amp; full house exteriors.</p>
+        </a>
+        <a href="/services/flooring" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Flooring Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Hardwood, LVP &amp; laminate, professionally installed.</p>
+        </a>
+        <a href="/services/garage-floor-coating" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Garage Floor Coating</h3>
+          <p class="text-sm text-gray-600 mt-1">Epoxy &amp; polyaspartic floors with a 20-year warranty.</p>
+        </a>
+        <a href="/services/finish-carpentry" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Finish Carpentry</h3>
+          <p class="text-sm text-gray-600 mt-1">Crown molding, baseboards, wainscoting &amp; built-ins.</p>
+        </a>
+        <a href="/services/gutter-cleaning" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Gutter Cleaning &amp; Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Full debris removal plus seamless gutter replacement.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </Layout>
