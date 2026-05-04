@@ -114,7 +114,7 @@ const localSchema = {
                     name: `How much does ${service.name.toLowerCase()} cost in ${city}, AL?`,
                     acceptedAnswer: {
                         "@type": "Answer",
-                        text: `${service.name} pricing in ${city} depends on the scope of work. Rittenworx offers free, no-obligation estimates — call (256) 221-0373 or text a photo of your project for a same-day quote. Most residential jobs are completed within 1–3 days.`,
+                        text: `${service.name} pricing in ${city} depends on the scope of work. Rittenworx offers free, no-obligation estimates — call (256) 221-0373 or text a photo of your project for a fast quote. Most residential jobs are completed within 1–3 days.`,
                     },
                 },
                 {
@@ -127,10 +127,10 @@ const localSchema = {
                 },
                 {
                     "@type": "Question",
-                    name: `How quickly can Rittenworx respond to ${service.name.toLowerCase()} requests in ${city}?`,
+                    name: `How quickly can Rittenworx schedule ${service.name.toLowerCase()} work in ${city}?`,
                     acceptedAnswer: {
                         "@type": "Answer",
-                        text: `We respond to all ${city} service requests within 3 hours. Same-day and emergency service is available for urgent repairs. Call or text (256) 221-0373 to get on our schedule.`,
+                        text: `Most ${city} projects are scheduled within 3–5 business days of estimate approval. Call or text (256) 221-0373 and Roy will let you know the earliest available opening on our schedule.`,
                     },
                 },
                 {
@@ -270,15 +270,15 @@ const localSchema = {
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
                 Rittenworx has been doing {service.name.toLowerCase()} work in
                 North Alabama for 7 years. We carry $1 million in liability
-                coverage. We respond within 3 hours. We send a written estimate
-                you can hold us to — and the final bill matches it. That's how
-                we've built every client relationship we have.
-                Whether it's an emergency repair or a project you've been putting
-                off, here's what actually happens when you reach out: we answer,
-                we schedule, we show up on time. The same crew you talked to is
-                the crew that does the work — no handoffs to subcontractors.
-                We clean up before we leave. And we walk the job with you before
-                we consider it done.
+                coverage. We send a written estimate you can hold us to — and
+                the final bill matches it. That’s how we’ve built every client
+                relationship we have.
+                Whether it’s a project you’ve been putting off or something
+                that just came up, here’s what actually happens when you reach
+                out: we answer, we schedule, we show up on time. The same crew
+                you talked to is the crew that does the work — no handoffs to
+                subcontractors. We clean up before we leave. And we walk the job
+                with you before we consider it done.
             </p>
 
             <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 mt-14">
@@ -357,14 +357,13 @@ const localSchema = {
                         </div>
                         <div>
                             <strong class="text-gray-900 block text-xl mb-1"
-                                >3-Hour Response. Real Availability.</strong
+                                >Responsive. Reliable. On Schedule.</strong
                             >
                             <span class="text-gray-600 leading-relaxed block"
-                                >You call or text, we respond within 3 hours
-                                — not "sometime this week." Most estimates are
-                                scheduled same day or next. For emergencies in
-                                {city}, we hold daily slots for same-day
-                                service.</span
+                                >You call or text, Roy gets back to you quickly
+                                — not "sometime this week." We book your
+                                estimate fast and show up when we say we will.
+                                No runaround, no no-shows.</span
                             >
                         </div>
                     </li>
@@ -450,10 +449,9 @@ const localSchema = {
                         </h4>
                     </div>
                     <p class="text-gray-600 leading-relaxed">
-                        Call or text a photo to (256) 221-0373. We respond
-                        within 3 hours with a scheduled estimate — usually
-                        same day or next morning. No answering machines,
-                        no waiting three days for a callback.
+                        Call or text a photo to (256) 221-0373. Roy gets back
+                        to you quickly with a scheduled estimate — no answering
+                        machines, no waiting a week for a callback.
                     </p>
                 </div>
                 <div
@@ -588,11 +586,10 @@ const localSchema = {
                             class="text-blue-900 font-black mr-2 tracking-wide"
                             >A:</strong
                         > Most projects start within 3–5 business days of estimate
-                        approval. If it's urgent — storm damage, an active leak, or
-                        anything that can't wait — call us directly at
+                        approval. Call us directly at
                         <a href="tel:2562210373" class="text-orange-600 underline hover:text-orange-700 font-bold transition-colors"
-                            >(256) 221-0373</a>. We hold daily availability for
-                        same-day and next-day emergencies in {city}.
+                            >(256) 221-0373</a> and Roy will give you an honest
+                        timeline based on our current schedule.
                     </p>
                 </div>
 
@@ -645,7 +642,7 @@ const localSchema = {
                 class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light leading-relaxed"
             >
                 Free estimate. Written quote. No surprise invoices.
-                We respond within 3 hours — call, text, or book online.
+                Roy gets back to you quickly — call, text, or book online.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-5 justify-center">

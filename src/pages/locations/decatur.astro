@@ -8,7 +8,7 @@ const neighborhoods = [
     name: "Downtown Decatur / Old Decatur",
     description:
       "Historic district along the Tennessee River with beautiful Victorian homes, Bank Street entertainment district, and revitalized urban living. Many homes are on the historic register and require careful restoration work.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Historic restoration",
       "Trim repair",
@@ -20,7 +20,7 @@ const neighborhoods = [
     name: "Albany / Country Club Area",
     description:
       "Established upscale neighborhood surrounding the Decatur Country Club. Well-maintained homes from the 1960s-90s with mature landscaping. Homeowners expect quality workmanship and attention to detail.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Crown molding",
       "Deck restoration",
@@ -32,7 +32,7 @@ const neighborhoods = [
     name: "Point Mallard Area",
     description:
       "Family-friendly area near Point Mallard Park and the aquatic center. Mix of established neighborhoods and newer developments. Popular with families who appreciate the recreational amenities.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Family home repairs",
       "Drywall repair",
@@ -44,7 +44,7 @@ const neighborhoods = [
     name: "Brookmeade / Southwest Decatur",
     description:
       "Growing residential area with newer subdivisions and easy access to I-65 and Beltline Road. Popular with young families and commuters to Huntsville.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "New home touch-ups",
       "Flooring installation",
@@ -56,7 +56,7 @@ const neighborhoods = [
     name: "Austinville / East Decatur",
     description:
       "Established working-class neighborhood with affordable housing and strong community ties. Practical homeowners who value honest pricing and reliable service.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Home repairs",
       "Gutter cleaning",
@@ -68,7 +68,7 @@ const neighborhoods = [
     name: "Priceville / Highway 67 Corridor",
     description:
       "Rapidly growing area between Decatur and Hartselle with new construction and established farms. Easy I-65 access attracts commuters from across the region.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "New construction punch lists",
       "Flooring",
@@ -80,7 +80,7 @@ const neighborhoods = [
     name: "Moulton Heights / Northwest Decatur",
     description:
       "Quiet residential area with mid-century homes and tree-lined streets. Many original owners updating homes for modern living while maintaining neighborhood character.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Kitchen updates",
       "Bathroom repairs",
@@ -92,7 +92,7 @@ const neighborhoods = [
     name: "Hartselle (Nearby)",
     description:
       "Charming small city just south of Decatur with historic downtown and growing residential areas. Known as the 'City of Southern Hospitality' with strong community values.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Historic home repair",
       "Painting",
@@ -160,7 +160,7 @@ const weatherChallenges = [
     impact:
       "The Tennessee Valley is prone to severe spring storms. Decatur's location near the river creates unique weather patterns. High winds, large hail, heavy rain, and tornado risk can damage roofs, siding, windows, and cause flooding in low-lying areas near the river.",
     services:
-      "Emergency storm repairs, roof assessment, window replacement, siding repair, water damage restoration, flood damage cleanup, drywall repair",
+      "Storm damage assessment, roof assessment, window replacement, siding repair, water damage restoration, flood damage cleanup, drywall repair",
   },
   {
     season: "Summer (June-August)",
@@ -184,7 +184,7 @@ const weatherChallenges = [
     impact:
       "The Tennessee River valley can trap cold air, making Decatur winters feel colder than surrounding areas. Ice storms occasionally cause significant damage to trees and power lines. Older homes may lack adequate insulation.",
     services:
-      "Pipe insulation, ice damage repair, emergency water damage, gutter repair, weatherstripping, insulation improvements",
+      "Pipe insulation, ice damage repair, water damage repair, gutter repair, weatherstripping, insulation improvements",
   },
 ];
 
@@ -193,7 +193,7 @@ const landmarks = [
     name: "Point Mallard Park",
     address: "2901 Point Mallard Dr, Decatur",
     directions:
-      "Decatur's premier recreation destination. We're 30 minutes from Point Mallard via I-565 and serve all surrounding neighborhoods with same-day availability.",
+      "Decatur's premier recreation destination. We're 30 minutes from Point Mallard via I-565 and serve all surrounding neighborhoods with quick scheduling.",
   },
   {
     name: "Decatur Morgan Hospital",
@@ -229,7 +229,7 @@ const landmarks = [
     name: "I-565/I-65 Interchange",
     address: "East Decatur",
     directions:
-      "The gateway connecting Decatur to Huntsville. Easy access makes Decatur convenient for same-day service.",
+      "The gateway connecting Decatur to Huntsville. Easy access makes Decatur convenient for quick scheduling.",
   },
   {
     name: "Wheeler Wildlife Refuge",
@@ -293,14 +293,14 @@ const competitorComparison = [
 ];
 
 const responseTimes = [
-  { area: "Point Mallard Area", time: "Same day", distance: "28 min" },
-  { area: "Downtown / Old Decatur", time: "Same day", distance: "30 min" },
-  { area: "Albany / Country Club", time: "Same day", distance: "30 min" },
-  { area: "Brookmeade / Southwest", time: "Same day", distance: "25 min" },
-  { area: "Beltline Road Corridor", time: "Same day", distance: "25 min" },
-  { area: "Austinville / East", time: "Same day", distance: "28 min" },
-  { area: "Priceville", time: "Same day", distance: "22 min" },
-  { area: "Hartselle", time: "Same day", distance: "30 min" },
+  { area: "Point Mallard Area", time: "Quick scheduling", distance: "28 min" },
+  { area: "Downtown / Old Decatur", time: "Quick scheduling", distance: "30 min" },
+  { area: "Albany / Country Club", time: "Quick scheduling", distance: "30 min" },
+  { area: "Brookmeade / Southwest", time: "Quick scheduling", distance: "25 min" },
+  { area: "Beltline Road Corridor", time: "Quick scheduling", distance: "25 min" },
+  { area: "Austinville / East", time: "Quick scheduling", distance: "28 min" },
+  { area: "Priceville", time: "Quick scheduling", distance: "22 min" },
+  { area: "Hartselle", time: "Quick scheduling", distance: "30 min" },
   {
     area: "Trinity / West Morgan",
     time: "Next day typical",
@@ -320,7 +320,7 @@ const decaturFacts = [
 
 <Layout
   title="Handyman Service in Decatur, AL | Rittenworx"
-  description="Professional handyman in Decatur, AL — downtown, Point Mallard, Somerville & all of Morgan County. Same-day service, free estimates."
+  description="Licensed handyman in Decatur, AL — drywall, painting, flooring, carpentry & gutters. Serving downtown Decatur, Point Mallard, Somerville & all of Morgan County. Free written estimates. Call (256) 221-0373."
 >
   <!-- Hero Section -->
   <section class="bg-blue-900 text-white py-16">
@@ -341,7 +341,7 @@ const decaturFacts = [
         <p class="text-xl text-blue-100 mb-6">
           Daikin, 3M, Nucor — we know Decatur runs on rotating shifts. We schedule
           around yours, communicate by text, and don't expect you to answer calls
-          at 10 AM when you're sleeping before a night shift. Same-day service
+          at 10 AM when you're sleeping before a night shift. Quick scheduling
           across Morgan County. Written estimates. Licensed and insured.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -367,7 +367,7 @@ const decaturFacts = [
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <p class="text-3xl font-bold text-blue-900">Same Day</p>
+          <p class="text-3xl font-bold text-blue-900">On Time</p>
           <p class="text-gray-600 text-sm">Service in Decatur</p>
         </div>
         <div>
@@ -446,7 +446,7 @@ const decaturFacts = [
             just repair. We know the difference between the two.
           </p>
           <p class="text-gray-600">
-            $1M liability coverage. Written estimates that don't change. Same-day
+            $1M liability coverage. Written estimates that don't change.
             availability for most Morgan County areas. Free estimate — call
             (256) 221-0373 or get your quote online.
           </p>
@@ -532,7 +532,7 @@ const decaturFacts = [
           replacement. We know the difference between restoration and
           remodeling — and we know which one you need. Free estimate.
           Written quote. Call (256) 221-0373 or get your estimate online — we
-          respond same day.
+          get back to you quickly.
         </p>
       </div>
     </div>
@@ -607,7 +607,7 @@ const decaturFacts = [
               </div>
               <span
                 class={`px-3 py-1 rounded-full text-sm font-medium ${
-                  item.time === "Same day"
+                  item.time === "Quick scheduling"
                     ? "bg-green-500 text-white"
                     : "bg-yellow-500 text-black"
                 }`}
@@ -620,7 +620,7 @@ const decaturFacts = [
       </div>
       <div class="mt-8 text-center">
         <p class="text-blue-100">
-          Emergency service available for all Decatur areas. Call for urgent
+          Serving all Decatur areas. Call or text to get on the
           repairs.
         </p>
       </div>
@@ -995,7 +995,7 @@ const decaturFacts = [
         Ready for Reliable Handyman Service in Decatur?
       </h2>
       <p class="text-xl mb-8">
-        Same-day service available. Free estimates, quality guaranteed.
+        Quick scheduling available. Free estimates, quality guaranteed.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

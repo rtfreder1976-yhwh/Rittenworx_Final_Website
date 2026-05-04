@@ -8,7 +8,7 @@ const neighborhoods = [
     name: "Downtown Somerville",
     description:
       "Historic town square surrounding the Morgan County Courthouse. Charming small-town atmosphere with historic homes and buildings dating back to the 1800s. Property owners value preserving the character of this Alabama treasure.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Historic restoration",
       "Trim repair",
@@ -20,14 +20,14 @@ const neighborhoods = [
     name: "Highway 36 Corridor",
     description:
       "Main route through Somerville connecting to Hartselle and Lacey's Spring. Mix of established homes and rural properties with convenient access. Growing area as more families discover Somerville's charm.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: ["General repairs", "Painting", "Flooring", "Drywall work"],
   },
   {
     name: "Lacon / East Somerville",
     description:
       "Rural community east of town with spacious properties and agricultural heritage. Families who've lived here for generations alongside newcomers seeking country living at affordable prices.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Deck building",
       "Exterior repairs",
@@ -39,7 +39,7 @@ const neighborhoods = [
     name: "Neel / North Morgan County",
     description:
       "Small community north of Somerville with rural character and close-knit neighbors. Working families who appreciate honest contractors who show up when promised.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Home maintenance",
       "Repairs",
@@ -51,7 +51,7 @@ const neighborhoods = [
     name: "Priceville Adjacent Areas",
     description:
       "Properties between Somerville and the growing Priceville area. Convenient access to I-65 while maintaining rural character. Popular with commuters to Decatur and Huntsville.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Renovations",
       "Painting",
@@ -63,7 +63,7 @@ const neighborhoods = [
     name: "Rural Morgan County",
     description:
       "Farms, acreages, and country homes throughout greater Somerville. Large properties with outbuildings, barns, and unique maintenance needs that require experienced rural contractors.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Outbuilding repairs",
       "Fencing help",
@@ -119,7 +119,7 @@ const weatherChallenges = [
     impact:
       "Morgan County sits in prime tornado territory. Somerville's rural setting means less shelter from severe storms. High winds, large hail, and tornado risk threaten homes, outbuildings, barns, and fencing. Spring storms can cause widespread damage across rural properties.",
     services:
-      "Emergency storm repairs, roof assessment, siding repair, outbuilding repairs, fence repair, debris cleanup, drywall water damage restoration",
+      "Storm damage assessment, roof assessment, siding repair, outbuilding repairs, fence repair, debris cleanup, drywall water damage restoration",
   },
   {
     season: "Summer (June-August)",
@@ -143,7 +143,7 @@ const weatherChallenges = [
     impact:
       "While winters are mild, Somerville experiences occasional hard freezes and ice storms. Rural properties with exposed pipes, older homes, and outbuildings face freeze risks. Ice storms can damage trees and knock out power for extended periods.",
     services:
-      "Pipe insulation, ice damage repair, emergency repairs, weatherstripping, insulation improvements, generator prep assistance",
+      "Pipe insulation, ice damage repair, scheduled repairs, weatherstripping, insulation improvements, generator prep assistance",
   },
 ];
 
@@ -240,13 +240,13 @@ const competitorComparison = [
 ];
 
 const responseTimes = [
-  { area: "Priceville Area", time: "Same day", distance: "25 min" },
-  { area: "Highway 36 Corridor", time: "Same day", distance: "30 min" },
-  { area: "Downtown Somerville", time: "Same day", distance: "35 min" },
-  { area: "Lacon / East Somerville", time: "Same day", distance: "38 min" },
-  { area: "Neel / North Morgan", time: "Same day", distance: "40 min" },
-  { area: "Hartselle", time: "Same day", distance: "28 min" },
-  { area: "Rural Morgan County", time: "Same day", distance: "35-45 min" },
+  { area: "Priceville Area", time: "Quick scheduling", distance: "25 min" },
+  { area: "Highway 36 Corridor", time: "Quick scheduling", distance: "30 min" },
+  { area: "Downtown Somerville", time: "Quick scheduling", distance: "35 min" },
+  { area: "Lacon / East Somerville", time: "Quick scheduling", distance: "38 min" },
+  { area: "Neel / North Morgan", time: "Quick scheduling", distance: "40 min" },
+  { area: "Hartselle", time: "Quick scheduling", distance: "28 min" },
+  { area: "Rural Morgan County", time: "Quick scheduling", distance: "35-45 min" },
   { area: "Lacey's Spring", time: "Next day typical", distance: "45 min" },
   {
     area: "Danville / Southeast Morgan",
@@ -267,7 +267,7 @@ const somervilleFacts = [
 
 <Layout
   title="Handyman Service in Somerville, AL | Rittenworx"
-  description="Professional handyman in Somerville, AL and rural Morgan County. Drywall, carpentry, gutters & painting. Same-day service available, free estimates."
+  description="Professional handyman in Somerville, AL and rural Morgan County. Drywall, carpentry, gutters & painting. Quick scheduling available, free estimates."
 >
   <!-- Hero Section -->
   <section class="bg-blue-900 text-white py-16">
@@ -288,7 +288,7 @@ const somervilleFacts = [
           Somerville & Rural Morgan County: Handyman Service That Makes the Drive
         </h1>
         <p class="text-xl text-blue-100 mb-6">
-          Most contractors won't commit to Somerville. We do — same-day service,
+          Most contractors won't commit to Somerville. We do — quick scheduling,
           written estimates, and a crew that shows up when we said we would.
           From the historic courthouse to farms and country homes across rural
           Morgan County.
@@ -316,7 +316,7 @@ const somervilleFacts = [
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <p class="text-3xl font-bold text-blue-900">Same Day</p>
+          <p class="text-3xl font-bold text-blue-900">On Time</p>
           <p class="text-gray-600 text-sm">Service Available</p>
         </div>
         <div>
@@ -484,7 +484,7 @@ const somervilleFacts = [
               </div>
               <span
                 class={`px-3 py-1 rounded-full text-sm font-medium ${
-                  item.time === "Same day"
+                  item.time === "Quick scheduling"
                     ? "bg-green-500 text-white"
                     : "bg-yellow-500 text-black"
                 }`}
@@ -497,7 +497,7 @@ const somervilleFacts = [
       </div>
       <div class="mt-8 text-center">
         <p class="text-blue-100">
-          Emergency service available for all areas. Call for urgent repairs.
+          Serving all areas. Call or text to get on the schedule.
         </p>
       </div>
     </div>
@@ -871,7 +871,7 @@ const somervilleFacts = [
         Ready for Reliable Service in Somerville?
       </h2>
       <p class="text-xl mb-8">
-        Same-day service available. Free estimates, quality guaranteed.
+        Quick scheduling available. Free estimates, quality guaranteed.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

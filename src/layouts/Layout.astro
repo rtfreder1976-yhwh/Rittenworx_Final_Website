@@ -12,8 +12,7 @@ interface Props {
 }
 
 const {
-  title,
-  description = "Professional handyman service in Madison & Huntsville, AL. Drywall, painting, flooring, carpentry & gutters. Free estimates. Call (256) 221-0373.",
+  title,  description = "Professional handyman service in Madison & Huntsville, AL. Drywall, painting, flooring, carpentry & gutters. Licensed & insured. Free estimates. Call (256) 221-0373.",
   schema,
   robots = "index, follow",
   ogType = "website",
@@ -39,7 +38,7 @@ const schemaData = {
       "@id": "https://www.rittenworxhandyman.net/#business",
       name: "Rittenworx Handyman Service",
       description:
-        "Professional Rittenworx Handyman Service in Madison, Alabama. Drywall, painting, garage floor coating, garage floor coating (epoxy/flake), finish carpentry, gutter cleaning, and gutter installation.",
+        "Rittenworx is a licensed and insured handyman service in Madison, Alabama. We specialize in drywall repair, interior and exterior painting, garage floor coating (epoxy/flake), finish carpentry, gutter cleaning, and gutter installation. Serving Madison, Huntsville, Decatur, and Athens, AL.",
       url: "https://www.rittenworxhandyman.net",
       image: "https://www.rittenworxhandyman.net/images/logo.webp",
       telephone: "(256) 221-0373",
@@ -212,7 +211,12 @@ const schemaData = {
           },
         ],
       },
-      sameAs: [],
+      sameAs: [
+        "https://www.facebook.com/rittenworxhandyman",
+        "https://www.google.com/maps?cid=rittenworxhandyman",
+        "https://www.bbb.org/us/al/madison/profile/handyman/rittenworx",
+        "https://www.nextdoor.com/pages/rittenworx-handyman-service"
+      ],
     },
     {
       "@type": "WebSite",
@@ -458,74 +462,6 @@ const finalSchema = schema || schemaData;
     </script>
   </head>
   <body class="min-h-screen flex flex-col bg-gray-50">
-    <!-- Emergency Hotline Banner -->
-    <div
-      class="bg-orange-500 text-white text-center py-2 px-4 text-sm font-semibold relative z-50"
-    >
-      <div
-        class="max-w-6xl mx-auto flex items-center justify-center gap-2 flex-wrap"
-      >
-        <svg
-          class="w-4 h-4 flex-shrink-0 animate-pulse"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          ><path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"
-          ></path></svg
-        >
-        <span>Emergency Repairs Available —</span>
-        <a
-          href="tel:+12562210373"
-          class="underline font-bold hover:text-white/90 transition-colors"
-          >(256) 221-0373</a
-        >
-        <span class="hidden sm:inline">— We respond within 3 hours</span>
-      </div>
-    </div>
-
-    <!-- Seasonal Urgency Banner (Rotating) -->
-    <div
-      class="bg-gradient-to-r from-blue-800 to-blue-900 text-white text-center py-2 px-4 text-sm relative z-45 border-b border-blue-700"
-      id="urgency-banner"
-    >
-      <div
-        class="max-w-6xl mx-auto flex items-center justify-center gap-2 flex-wrap"
-      >
-        <span class="font-bold">This Week:</span>
-        <span id="urgency-message">14 of 17 slots filled</span>
-        <span class="text-blue-200">•</span>
-        <a
-          href="/contact"
-          class="underline hover:text-orange-400 transition-colors font-semibold"
-          >Lock in your spot before we're booked</a
-        >
-      </div>
-    </div>
-
-    <script>
-      // Rotate urgency messages based on current month
-      const messages = [
-        { months: [0, 1], text: "Winter freeze repairs: Only 5 emergency slots left" },
-        { months: [2, 3, 4], text: "Spring storm season: Book repairs before our April rush" },
-        { months: [5, 6, 7], text: "AC season books fast: Only 5 painting slots left this month" },
-        { months: [8, 9, 10], text: "Fall gutter cleaning: 31 homes ahead of you (reserve now)" },
-        { months: [11], text: "Holiday guest panic? Emergency spots still open" }
-      ];
-
-      const currentMonth = new Date().getMonth();
-      const urgencyEl = document.getElementById('urgency-message');
-      if (urgencyEl) {
-        const message = messages.find(m => m.months.includes(currentMonth));
-        if (message) {
-          urgencyEl.textContent = message.text;
-        }
-      }
-    </script>
-
     <!-- Sticky Header -->
     <header
       class="bg-blue-900 text-white shadow-lg sticky top-0 z-40 transition-shadow duration-300"

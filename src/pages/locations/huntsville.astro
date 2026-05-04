@@ -8,7 +8,7 @@ const neighborhoods = [
     name: "Downtown Huntsville",
     description:
       "Historic downtown with a mix of renovated lofts, historic homes, and new construction. Older buildings often need updating while maintaining character. Popular with young professionals and empty nesters.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Historic restoration",
       "Drywall repair",
@@ -20,7 +20,7 @@ const neighborhoods = [
     name: "Research Park / Cummings Research Park",
     description:
       "The second-largest research park in the country. Modern office buildings surrounded by newer residential developments. Engineers and scientists who appreciate precision and clear communication.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Home office setups",
       "Flooring installation",
@@ -44,7 +44,7 @@ const neighborhoods = [
     name: "Jones Valley / Bailey Cove",
     description:
       "Established family neighborhoods near great schools. Well-maintained homes that occasionally need updates and repairs. Active families appreciate flexible scheduling.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Quick repairs",
       "Drywall patching",
@@ -56,7 +56,7 @@ const neighborhoods = [
     name: "Five Points / Twickenham",
     description:
       "Historic districts with Alabama's largest collection of antebellum homes. These architecturally significant homes require careful restoration work that respects their heritage.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Historic trim work",
       "Plaster repair",
@@ -68,7 +68,7 @@ const neighborhoods = [
     name: "Madison Boulevard Corridor",
     description:
       "The commercial corridor connecting Huntsville and Madison. Mix of apartments, townhomes, and single-family homes. Convenient access makes for quick response times.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Apartment turnovers",
       "Quick repairs",
@@ -80,7 +80,7 @@ const neighborhoods = [
     name: "South Huntsville / Whitesburg",
     description:
       "Diverse area ranging from historic Whitesburg to newer developments near Governors Drive. Strong community feel with homes ranging from 1950s ranch to modern construction.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Kitchen updates",
       "Bathroom repairs",
@@ -92,7 +92,7 @@ const neighborhoods = [
     name: "Monte Sano / Blossomwood",
     description:
       "Mountain and hillside homes with stunning views but unique challenges. Steep lots, mature trees, and older construction require experienced contractors who understand the terrain.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Storm damage repair",
       "Gutter systems",
@@ -160,7 +160,7 @@ const weatherChallenges = [
     impact:
       "Huntsville sits in 'Dixie Alley' with significant tornado risk. The April 2011 outbreak reminded everyone of this reality. Spring storms bring high winds, hail, heavy rain, and potential tornado damage to roofs, siding, windows, and structures.",
     services:
-      "Emergency storm repairs, roof damage assessment, window replacement, siding repair, water damage restoration, drywall repair",
+      "Storm damage assessment, roof damage assessment, window replacement, siding repair, water damage restoration, drywall repair",
   },
   {
     season: "Summer (June-August)",
@@ -184,7 +184,7 @@ const weatherChallenges = [
     impact:
       "While winters are mild, Huntsville experiences occasional ice storms that devastate trees and power lines. Freezing temperatures cause pipe issues, ice dams on roofs, and heating system strain. The hilly terrain of Monte Sano and Jones Valley creates additional ice hazards.",
     services:
-      "Pipe insulation, ice dam repair, emergency water damage, gutter repair, storm damage cleanup, heating system support",
+      "Pipe insulation, ice dam repair, water damage repair, gutter repair, storm damage cleanup, heating system support",
   },
 ];
 
@@ -229,7 +229,7 @@ const landmarks = [
     name: "Parkway Place Mall",
     address: "2801 Memorial Pkwy SW, Huntsville",
     directions:
-      "South Huntsville landmark on the Parkway. We serve all of South Huntsville, Whitesburg, and surrounding neighborhoods with same-day availability.",
+      "South Huntsville landmark on the Parkway. We serve all of South Huntsville, Whitesburg, and surrounding neighborhoods with quick scheduling.",
   },
   {
     name: "Huntsville International Airport",
@@ -247,7 +247,7 @@ const competitorComparison = [
   },
   {
     feature: "Response Time",
-    us: "Same-day for Huntsville",
+    us: "Quick scheduling",
     others: "Days or weeks",
   },
   {
@@ -293,13 +293,13 @@ const competitorComparison = [
 ];
 
 const responseTimes = [
-  { area: "Research Park", time: "Same day", distance: "12 min" },
-  { area: "Downtown Huntsville", time: "Same day", distance: "15 min" },
-  { area: "Jones Valley", time: "Same day", distance: "18 min" },
-  { area: "Madison Blvd Corridor", time: "Same day", distance: "8 min" },
-  { area: "Five Points / Twickenham", time: "Same day", distance: "15 min" },
-  { area: "South Huntsville", time: "Same day", distance: "20 min" },
-  { area: "Monte Sano", time: "Same day", distance: "22 min" },
+  { area: "Research Park", time: "Quick scheduling", distance: "12 min" },
+  { area: "Downtown Huntsville", time: "Quick scheduling", distance: "15 min" },
+  { area: "Jones Valley", time: "Quick scheduling", distance: "18 min" },
+  { area: "Madison Blvd Corridor", time: "Quick scheduling", distance: "8 min" },
+  { area: "Five Points / Twickenham", time: "Quick scheduling", distance: "15 min" },
+  { area: "South Huntsville", time: "Quick scheduling", distance: "20 min" },
+  { area: "Monte Sano", time: "Quick scheduling", distance: "22 min" },
   { area: "Hampton Cove", time: "Next day typical", distance: "25 min" },
   { area: "Owens Cross Roads", time: "Next day typical", distance: "28 min" },
 ];
@@ -307,7 +307,7 @@ const responseTimes = [
 
 <Layout
   title="Handyman Service in Huntsville, AL | Rittenworx"
-  description="Professional handyman in Huntsville, AL — Research Park, Hampton Cove, Jones Valley & downtown. Same-day service available. Free estimates."
+  description="Licensed handyman in Huntsville, AL — drywall repair, painting, flooring, garage floor coating & carpentry. Serving Research Park, Hampton Cove, Jones Valley & downtown. Free written estimates. Call (256) 221-0373."
 >
   <!-- Hero Section -->
   <section class="bg-blue-900 text-white py-16">
@@ -327,7 +327,7 @@ const responseTimes = [
         </h1>
         <p class="text-xl text-blue-100 mb-6">
           Most Huntsville homeowners have a bad contractor story. We're the reason
-          they stop collecting them. Same-day availability across Research Park,
+          they stop collecting them. Quick scheduling across Research Park,
           Jones Valley, Hampton Cove, and downtown. Written estimates. No surprise
           invoices. Licensed and insured.
         </p>
@@ -354,7 +354,7 @@ const responseTimes = [
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <p class="text-3xl font-bold text-blue-900">Same Day</p>
+          <p class="text-3xl font-bold text-blue-900">On Time</p>
           <p class="text-gray-600 text-sm">Most Huntsville Areas</p>
         </div>
         <div>
@@ -440,7 +440,7 @@ const responseTimes = [
           </p>
           <p class="text-gray-600">
             $1M liability coverage on every job. Written estimates with no hidden
-            additions. Same-day availability for most Huntsville areas. If you're
+            additions. Quick scheduling for most Huntsville areas. If you're
             a NASA engineer, a military family at Redstone, or a healthcare worker
             running double shifts — we work around your schedule, not ours.
           </p>
@@ -578,7 +578,7 @@ const responseTimes = [
           why we built this company differently.
         </p>
         <p>
-          We respond within 3 hours. We show up when we said we would. We give you
+          We show up when we said we would. We give you
           a written estimate before any work starts — and we don't change the number
           after the fact. When the job is done, we walk through it with you. If
           something's off, we fix it before we leave.
@@ -595,7 +595,7 @@ const responseTimes = [
         <p>
           We know all of it. That's 7 years of local jobs and over $1M in completed
           work across Huntsville. Free estimate. Written quote. No surprises.
-          Call us at (256) 221-0373 or get your estimate online — we respond same day.
+          Call us at (256) 221-0373 or get your estimate online — we get back to you quickly.
         </p>
       </div>
     </div>
@@ -670,7 +670,7 @@ const responseTimes = [
               </div>
               <span
                 class={`px-3 py-1 rounded-full text-sm font-medium ${
-                  item.time === "Same day"
+                  item.time === "Quick scheduling"
                     ? "bg-green-500 text-white"
                     : "bg-yellow-500 text-black"
                 }`}
@@ -683,7 +683,7 @@ const responseTimes = [
       </div>
       <div class="mt-8 text-center">
         <p class="text-blue-100">
-          Emergency service available for all Huntsville areas. Call for urgent
+          Serving all Huntsville areas. Call or text to get on the
           repairs.
         </p>
       </div>
@@ -1060,7 +1060,7 @@ const responseTimes = [
         Ready for Huntsville's Most Reliable Handyman?
       </h2>
       <p class="text-xl mb-8">
-        Same-day service for most Huntsville areas. Free estimates, quality
+        Quick scheduling for most Huntsville areas. Free estimates, quality
         guaranteed.
       </p>
       <div class="flex flex-wrap justify-center gap-4">

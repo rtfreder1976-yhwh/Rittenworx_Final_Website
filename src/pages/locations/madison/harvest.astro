@@ -8,7 +8,7 @@ const neighborhoods = [
     name: "Monrovia / Highway 53 Corridor",
     description:
       "The heart of Harvest along the main corridor. Mix of established homes and newer developments with easy access to Madison and Huntsville. Growing retail and services make this a convenient location for families.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Drywall repair",
       "Interior painting",
@@ -20,7 +20,7 @@ const neighborhoods = [
     name: "Harvest Town Center Area",
     description:
       "Newer developments surrounding the growing town center. Modern homes that occasionally need finishing touches and warranty-period repairs. Young families moving in appreciate quick, reliable service.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "New home touch-ups",
       "Painting",
@@ -32,7 +32,7 @@ const neighborhoods = [
     name: "Jeff Road / Old Monrovia",
     description:
       "Established rural-suburban area with larger lots and country properties. Mix of farmhouses and newer construction. Homeowners value privacy and quality workmanship from trusted contractors.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Deck building",
       "Exterior repairs",
@@ -43,8 +43,8 @@ const neighborhoods = [
   {
     name: "Capshaw Road Area",
     description:
-      "Growing residential corridor connecting Harvest to Madison. New subdivisions attracting families from across the region. Quick access makes this area especially convenient for same-day service.",
-    responseTime: "Same day available",
+      "Growing residential corridor connecting Harvest to Madison. New subdivisions attracting families from across the region. Quick access makes this area especially convenient for quick scheduling.",
+    responseTime: "Serving this area",
     commonServices: [
       "Flooring",
       "Painting",
@@ -56,7 +56,7 @@ const neighborhoods = [
     name: "Toney / North Harvest",
     description:
       "Rural community north of Harvest proper with spacious properties and country living. Established families who've lived here for generations alongside newcomers seeking affordable acreage.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Home maintenance",
       "Gutter cleaning",
@@ -68,7 +68,7 @@ const neighborhoods = [
     name: "Sparkman Drive / East Harvest",
     description:
       "Area near Sparkman Ninth Grade School with family-oriented neighborhoods. Parents juggling work and school activities appreciate contractors who communicate clearly and respect schedules.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Quick fixes",
       "Drywall patching",
@@ -124,7 +124,7 @@ const weatherChallenges = [
     impact:
       "North Madison County sits in prime tornado territory. Harvest's open terrain offers little protection from severe storms. High winds, large hail, and tornado risk threaten roofs, siding, windows, and outbuildings. Rural properties face additional debris from trees and farm structures.",
     services:
-      "Emergency storm repairs, roof assessment, siding repair, window replacement, outbuilding repairs, debris cleanup, drywall water damage",
+      "Storm damage assessment, roof assessment, siding repair, window replacement, outbuilding repairs, debris cleanup, drywall water damage",
   },
   {
     season: "Summer (June-August)",
@@ -148,7 +148,7 @@ const weatherChallenges = [
     impact:
       "While winters are generally mild, Harvest experiences occasional hard freezes and ice storms. Rural properties with exposed pipes and older homes with inadequate insulation face freeze risks. Ice can damage trees and power lines.",
     services:
-      "Pipe insulation, ice damage repair, emergency water damage, weatherstripping, insulation improvements, generator hookup prep",
+      "Pipe insulation, ice damage repair, water damage repair, weatherstripping, insulation improvements, generator hookup prep",
   },
 ];
 
@@ -169,7 +169,7 @@ const landmarks = [
     name: "Monrovia Church of Christ",
     address: "2761 Jeff Rd, Harvest",
     directions:
-      "Historic Monrovia community landmark. We serve the established Jeff Road corridor and all of greater Monrovia with same-day availability.",
+      "Historic Monrovia community landmark. We serve the established Jeff Road corridor and all of greater Monrovia with quick scheduling.",
   },
   {
     name: "Highway 53 / Jeff Road Intersection",
@@ -181,7 +181,7 @@ const landmarks = [
     name: "Toney Elementary School",
     address: "10755 US-53, Toney",
     directions:
-      "Serving the northern Harvest/Toney area. We provide same-day service to all Toney and north Harvest properties, just 15 minutes away.",
+      "Serving the northern Harvest/Toney area. We provide quick scheduling to all Toney and north Harvest properties, just 15 minutes away.",
   },
   {
     name: "Madison County Mega Site (Future)",
@@ -245,14 +245,14 @@ const competitorComparison = [
 ];
 
 const responseTimes = [
-  { area: "Capshaw Road Area", time: "Same day", distance: "8 min" },
-  { area: "Highway 53 / Monrovia", time: "Same day", distance: "10 min" },
-  { area: "Harvest Town Center", time: "Same day", distance: "10 min" },
-  { area: "Jeff Road / Old Monrovia", time: "Same day", distance: "12 min" },
-  { area: "Sparkman Drive Area", time: "Same day", distance: "12 min" },
-  { area: "Toney", time: "Same day", distance: "15 min" },
-  { area: "North Toney / Ardmore", time: "Same day", distance: "20 min" },
-  { area: "Hazel Green (east)", time: "Same day", distance: "18 min" },
+  { area: "Capshaw Road Area", time: "Quick scheduling", distance: "8 min" },
+  { area: "Highway 53 / Monrovia", time: "Quick scheduling", distance: "10 min" },
+  { area: "Harvest Town Center", time: "Quick scheduling", distance: "10 min" },
+  { area: "Jeff Road / Old Monrovia", time: "Quick scheduling", distance: "12 min" },
+  { area: "Sparkman Drive Area", time: "Quick scheduling", distance: "12 min" },
+  { area: "Toney", time: "Quick scheduling", distance: "15 min" },
+  { area: "North Toney / Ardmore", time: "Quick scheduling", distance: "20 min" },
+  { area: "Hazel Green (east)", time: "Quick scheduling", distance: "18 min" },
   { area: "New Market", time: "Next day typical", distance: "25 min" },
 ];
 
@@ -268,7 +268,7 @@ const harvestFacts = [
 
 <Layout
   title="Handyman Service in Harvest, AL | Rittenworx"
-  description="Trusted handyman in Harvest, AL — Monrovia, Toney & Capshaw Road. Drywall, painting, gutters & carpentry. Same-day service, free estimates."
+  description="Trusted handyman in Harvest, AL — Monrovia, Toney & Capshaw Road. Drywall, painting, gutters & carpentry. Quick scheduling, free estimates."
 >
   <!-- Hero Section -->
   <section class="bg-blue-900 text-white py-16">
@@ -286,12 +286,12 @@ const harvestFacts = [
           >Madison Area Community</span
         >
         <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">
-          Harvest Homeowners: Same-Day Repairs, No Drive-Time Fees
+          Harvest Homeowners: Quality Repairs, No Drive-Time Fees
         </h1>
         <p class="text-xl text-blue-100 mb-6">
           We serve Harvest, Monrovia, and Toney regularly — not occasionally.
           Written estimates. The quote is the price. Licensed and insured.
-          Same-day availability for most Harvest area repairs.
+          Quick scheduling for most Harvest area repairs.
         </p>
         <div class="flex flex-wrap gap-4">
           <a
@@ -316,7 +316,7 @@ const harvestFacts = [
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <p class="text-3xl font-bold text-blue-900">Same Day</p>
+          <p class="text-3xl font-bold text-blue-900">On Time</p>
           <p class="text-gray-600 text-sm">Service in Harvest</p>
         </div>
         <div>
@@ -480,7 +480,7 @@ const harvestFacts = [
               </div>
               <span
                 class={`px-3 py-1 rounded-full text-sm font-medium ${
-                  item.time === "Same day"
+                  item.time === "Quick scheduling"
                     ? "bg-green-500 text-white"
                     : "bg-yellow-500 text-black"
                 }`}
@@ -493,7 +493,7 @@ const harvestFacts = [
       </div>
       <div class="mt-8 text-center">
         <p class="text-blue-100">
-          Emergency service available for all Harvest areas. Call for urgent
+          Serving all Harvest areas. Call or text to get on the
           repairs.
         </p>
       </div>
@@ -867,7 +867,7 @@ const harvestFacts = [
         Ready for Reliable Handyman Service in Harvest?
       </h2>
       <p class="text-xl mb-8">
-        Same-day service available. Free estimates, quality guaranteed.
+        Quick scheduling available. Free estimates, quality guaranteed.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

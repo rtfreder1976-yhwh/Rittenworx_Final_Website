@@ -8,7 +8,7 @@ const neighborhoods = [
     name: "Hampton Cove Proper",
     description:
       "The original Hampton Cove development featuring established homes on spacious lots with mature landscaping. Many homes here are 20+ years old and need updating, from kitchen renovations to deck repairs and exterior refreshes.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Kitchen updates",
       "Deck repair",
@@ -20,7 +20,7 @@ const neighborhoods = [
     name: "The Ledges",
     description:
       "Prestigious golf course community with luxury homes overlooking the Robert Trent Jones Golf Trail. High-end finishes require skilled craftsmen who understand quality materials and precise workmanship.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Crown molding",
       "Custom carpentry",
@@ -32,7 +32,7 @@ const neighborhoods = [
     name: "Hampton Station",
     description:
       "Newer townhome and single-family development near the schools. Young families appreciate quick, reliable service for busy household repairs and child-safety updates.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Drywall repair",
       "Flooring",
@@ -44,7 +44,7 @@ const neighborhoods = [
     name: "Big Cove Area",
     description:
       "Rural properties and farms surrounding Hampton Cove proper. Larger lots mean more outdoor structures, fencing, and outbuilding maintenance needs.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Fence repair",
       "Outbuilding work",
@@ -56,7 +56,7 @@ const neighborhoods = [
     name: "Monte Sano Adjacent",
     description:
       "Properties near Monte Sano State Park with wooded lots and mountain views. Tree coverage means more gutter cleaning and occasional storm damage from falling branches.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "Gutter cleaning",
       "Storm repairs",
@@ -68,7 +68,7 @@ const neighborhoods = [
     name: "Owens Cross Roads Border",
     description:
       "Growing area between Hampton Cove and Owens Cross Roads with new construction and established neighborhoods. Mix of home ages means diverse maintenance needs.",
-    responseTime: "Same day available",
+    responseTime: "Serving this area",
     commonServices: [
       "New home touch-ups",
       "Older home updates",
@@ -124,7 +124,7 @@ const weatherChallenges = [
     impact:
       "Hampton Cove's location at the base of Monte Sano can create unique weather patterns. High winds, hail, and heavy rain damage roofs, siding, and outdoor structures.",
     services:
-      "Emergency repairs, roof damage assessment, gutter repair, siding replacement, window repairs",
+      "Storm damage assessment, roof damage assessment, gutter repair, siding replacement, window repairs",
   },
   {
     season: "Summer (June-August)",
@@ -148,7 +148,7 @@ const weatherChallenges = [
     impact:
       "Hampton Cove's elevation means occasional ice accumulation. Pipes in crawl spaces freeze, decks become hazardous, and ice dams form on north-facing roofs.",
     services:
-      "Pipe insulation, ice dam prevention, deck safety, emergency water damage repair",
+      "Pipe insulation, ice dam prevention, deck safety, water damage repair repair",
   },
 ];
 
@@ -245,13 +245,13 @@ const competitors = [
 ];
 
 const responseTimes = [
-  { area: "Hampton Cove Proper", time: "Same day", distance: "20 min" },
-  { area: "The Ledges", time: "Same day", distance: "22 min" },
-  { area: "Hampton Station", time: "Same day", distance: "20 min" },
-  { area: "Big Cove Road", time: "Same day", distance: "18 min" },
-  { area: "Taylor Lane Area", time: "Same day", distance: "22 min" },
-  { area: "Monte Sano Adjacent", time: "Same day", distance: "25 min" },
-  { area: "Owens Cross Roads", time: "Same day", distance: "25 min" },
+  { area: "Hampton Cove Proper", time: "Quick scheduling", distance: "20 min" },
+  { area: "The Ledges", time: "Quick scheduling", distance: "22 min" },
+  { area: "Hampton Station", time: "Quick scheduling", distance: "20 min" },
+  { area: "Big Cove Road", time: "Quick scheduling", distance: "18 min" },
+  { area: "Taylor Lane Area", time: "Quick scheduling", distance: "22 min" },
+  { area: "Monte Sano Adjacent", time: "Quick scheduling", distance: "25 min" },
+  { area: "Owens Cross Roads", time: "Quick scheduling", distance: "25 min" },
   { area: "New Market", time: "Next day typical", distance: "30 min" },
   { area: "Grant / East", time: "Next day typical", distance: "35 min" },
 ];
@@ -268,7 +268,7 @@ const hamptonCoveFacts = [
 
 <Layout
   title="Handyman Service in Hampton Cove, AL | Rittenworx"
-  description="Expert handyman in Hampton Cove, AL — The Ledges, Hampton Station & Big Cove. Finish carpentry, painting & more. Same-day service, free estimates."
+  description="Expert handyman in Hampton Cove, AL — The Ledges, Hampton Station & Big Cove. Finish carpentry, painting & more. Quick scheduling, free estimates."
 >
   <!-- Hero Section -->
   <section class="bg-blue-900 text-white py-16">
@@ -318,7 +318,7 @@ const hamptonCoveFacts = [
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <p class="text-3xl font-bold text-blue-900">Same Day</p>
+          <p class="text-3xl font-bold text-blue-900">On Time</p>
           <p class="text-gray-600 text-sm">Service Available</p>
         </div>
         <div>
@@ -475,7 +475,7 @@ const hamptonCoveFacts = [
               </div>
               <span
                 class={`px-3 py-1 rounded-full text-sm font-medium ${
-                  item.time === "Same day"
+                  item.time === "Quick scheduling"
                     ? "bg-green-500 text-white"
                     : "bg-yellow-500 text-black"
                 }`}
@@ -488,8 +488,8 @@ const hamptonCoveFacts = [
       </div>
       <div class="mt-8 text-center">
         <p class="text-blue-100">
-          Emergency service available for all Hampton Cove areas. Call for
-          urgent repairs.
+          Serving all Hampton Cove areas. Call or text to get on the
+          schedule.
         </p>
       </div>
     </div>
@@ -739,7 +739,7 @@ const hamptonCoveFacts = [
         Ready for Quality Hampton Cove Service?
       </h2>
       <p class="text-xl mb-8">
-        Same-day response for Hampton Cove residents. Free estimates and quality
+        Quick scheduling for Hampton Cove residents. Free estimates and quality
         guaranteed.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
