@@ -262,12 +262,26 @@ const serviceAreas = [
     note: "Serving this area",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout
   title="Garage Floor Coating Madison AL | Epoxy"
   description="Epoxy, flake & polyaspartic garage floor coatings in Madison, Huntsville, Decatur & Athens, AL. Diamond-grind prep, 20-year warranty. Free estimates."
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
   <!-- Premium Hero Section -->
   <section
     class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"
