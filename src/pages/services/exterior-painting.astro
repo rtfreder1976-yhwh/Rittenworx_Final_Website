@@ -1,0 +1,662 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const includedServices = [
+  {
+    title: "Siding & Wall Painting",
+    items: [
+      "Wood lap siding painting",
+      "HardiePlank & fiber cement siding",
+      "Vinyl siding painting (with proper primer)",
+      "Brick & masonry painting",
+      "Stucco exterior painting",
+      "T1-11 & OSB siding painting",
+      "Cedar shake & shingle painting",
+      "Exterior wall surface preparation",
+    ],
+  },
+  {
+    title: "Trim, Doors & Shutters",
+    items: [
+      "Fascia board painting",
+      "Soffit painting",
+      "Window trim & casing painting",
+      "Exterior door painting & staining",
+      "Shutter painting and refinishing",
+      "Corner board painting",
+      "Garage door painting",
+      "Decorative trim accent painting",
+    ],
+  },
+  {
+    title: "Decks, Porches & Fences",
+    items: [
+      "Deck staining and sealing",
+      "Deck paint & solid-color stain application",
+      "Porch floor painting",
+      "Fence painting and staining",
+      "Pergola & gazebo painting",
+      "Handrail and baluster painting",
+      "Post painting and waterproofing",
+      "Pressure wash and prep before finishing",
+    ],
+  },
+  {
+    title: "Prep & Surface Repair",
+    items: [
+      "2,500 PSI power washing",
+      "Scraping and sanding loose paint",
+      "Caulking gaps around windows, doors, trim",
+      "Spot priming bare wood and repairs",
+      "Wood rot identification and minor repair",
+      "Mildew treatment before painting",
+      "Primer coat on all bare surfaces",
+      "Drop cloth and masking protection",
+    ],
+  },
+];
+
+const paintBrands = [
+  {
+    name: "Sherwin-Williams Emerald",
+    sheen: "Flat, Satin, Semi-Gloss",
+    lifespan: "15–20 years",
+    best: "Premium homes, maximum durability",
+    feature: "Self-cleaning technology, extreme mildew resistance",
+  },
+  {
+    name: "Sherwin-Williams Duration",
+    sheen: "Satin, Semi-Gloss",
+    lifespan: "12–15 years",
+    best: "Most North Alabama homes",
+    feature: "ClimateFlex technology handles temperature swings",
+  },
+  {
+    name: "Benjamin Moore Aura Exterior",
+    sheen: "Flat, Low Lustre, Semi-Gloss",
+    lifespan: "15+ years",
+    best: "Color-critical projects and historic homes",
+    feature: "Color Lock technology prevents fading",
+  },
+  {
+    name: "Behr Marquee Exterior",
+    sheen: "Flat, Satin, Semi-Gloss",
+    lifespan: "10–15 years",
+    best: "Budget-conscious full repaints",
+    feature: "One-coat hide, fade resistance",
+  },
+];
+
+const commonProblems = [
+  {
+    problem: "Paint peeling, bubbling, or flaking off the siding",
+    solution:
+      "Peeling paint is almost always a moisture or adhesion failure. We identify the source — whether it's condensation, improper primer, or surface contamination — scrape all loose paint, treat the substrate, and apply a proper primer before recoating. We fix the root cause, not just the surface.",
+  },
+  {
+    problem: "Exterior paint fading or chalking in just a few years",
+    solution:
+      "Alabama's intense UV exposure is brutal on paint film. We use only premium exterior paints engineered with UV-stabilizing resins (Sherwin-Williams Emerald or Duration) that resist chalking and retain color vibrancy for 12–15+ years instead of the 4–7 a budget paint delivers.",
+  },
+  {
+    problem: "Mildew or mold growing on the painted surface",
+    solution:
+      "North Alabama's humidity is perfect for mildew growth on north-facing walls, under overhangs, and in shaded areas. We treat all affected surfaces with a mildewcide wash before painting and use mildew-resistant topcoats to stop regrowth from the start.",
+  },
+  {
+    problem: "Caulk cracking and gaps opening around windows and trim",
+    solution:
+      "Failed caulk is the most common entry point for moisture damage and rot. We replace all cracked, shrunken, or missing caulk with premium paintable urethane caulk rated for 30+ years of elasticity before applying any paint.",
+  },
+  {
+    problem: "Wood rot discovered under the old paint",
+    solution:
+      "Surface rot is the hidden enemy of every exterior repaint. We probe every piece of wood trim, fascia, and siding for soft spots, remove and replace deteriorated sections, and treat the surrounding wood with hardener before priming. A fresh coat of paint over rot just traps moisture and accelerates the damage.",
+  },
+  {
+    problem: "Paint peeling off recently painted wood in less than two years",
+    solution:
+      "Premature failure almost always comes from skipping primer on bare wood or painting over a damp surface. We never paint over bare or repaired wood without spot-priming first, and we never paint when surface moisture readings are above the manufacturer's threshold.",
+  },
+];
+
+const processSteps = [
+  {
+    step: 1,
+    title: "Free On-Site Estimate",
+    description:
+      "We walk your home's exterior together, identify every surface condition issue, and discuss your color goals. You receive a written, itemized estimate that covers prep, materials, and labor with no hidden charges.",
+    time: "Scheduled at your convenience",
+  },
+  {
+    step: 2,
+    title: "Power Washing",
+    description:
+      "We power wash the entire exterior at 2,500 PSI to remove dirt, mildew, loose paint, chalk, and airborne contaminants. Clean surfaces are essential for paint adhesion. We allow full drying time before any paint application.",
+    time: "Day 1",
+  },
+  {
+    step: 3,
+    title: "Scraping, Sanding & Caulking",
+    description:
+      "All loose, flaking, or peeling paint is scraped and sanded to a feathered edge. Bare wood is primed. All gaps around windows, doors, trim, and utility penetrations are re-caulked with premium urethane caulk.",
+    time: "Day 1–2 depending on scope",
+  },
+  {
+    step: 4,
+    title: "Masking & Drop Cloth Protection",
+    description:
+      "We mask all windows, doors, light fixtures, outlets, and landscaping with drop cloths and painter's tape. Your property is fully protected before any paint product is opened.",
+    time: "Start of each paint day",
+  },
+  {
+    step: 5,
+    title: "Primer Application",
+    description:
+      "All bare wood repairs, raw wood surfaces, and stain-prone areas receive a full coat of premium bonding primer. Primer is not optional on exterior work. It's the layer that makes every topcoat perform.",
+    time: "Day 2",
+  },
+  {
+    step: 6,
+    title: "Two-Coat Finish Application",
+    description:
+      "We apply two full coats of your chosen premium exterior finish at the manufacturer's specified wet mil thickness. Both brush and roll for proper penetration on textured surfaces. Spray work uses backrolling for maximum adhesion.",
+    time: "Day 2–4 depending on scope",
+  },
+  {
+    step: 7,
+    title: "Final Walk-Through & Cleanup",
+    description:
+      "We conduct a detailed inspection of every surface, touch up any spots that need attention, remove all masking and drop cloths, and walk the property with you. We don't leave until you're completely satisfied.",
+    time: "Final day",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does exterior painting cost in Madison or Huntsville, AL?",
+    answer:
+      "Exterior painting in North Alabama typically ranges from $2,500–$6,500 for a standard 1,500–2,500 sq ft single-story home. Two-story homes run $4,000–$9,000. The main cost drivers are square footage of paintable surface, number of stories, surface condition (the worse the prep needed, the higher the cost), and paint product selected. We provide free, detailed written estimates so you know exactly what you're paying for before any work begins.",
+  },
+  {
+    question: "How long does exterior paint last in Alabama's climate?",
+    answer:
+      "With premium paint and proper prep, exterior paint should last 10–15 years in North Alabama. The biggest enemies are Alabama's intense summer UV, high humidity during spring and fall, and temperature swings between winter and summer. Skimping on prep or using low-grade paint cuts that lifespan to 4–7 years. We use Sherwin-Williams Emerald and Duration specifically because they're engineered to handle these conditions.",
+  },
+  {
+    question: "What is the best time of year to paint a house exterior in Alabama?",
+    answer:
+      "Spring (March–May) and fall (September–November) are ideal in North Alabama. Temperatures between 50°F–85°F and lower humidity allow paint to cure properly without blistering or sagging. We can also paint in summer with careful scheduling around the heat of the day. We never paint when temperatures are below 50°F at application or expected to drop below 35°F overnight.",
+  },
+  {
+    question: "Do you pressure wash before painting?",
+    answer:
+      "Yes, always. We power wash the entire exterior at 2,500 PSI before any other prep work begins. Paint applied over a dirty, chalky, or mildew-contaminated surface will fail in 1–3 years regardless of paint quality. The power wash step also reveals hidden surface conditions — soft wood, failed caulk, and loose paint that need to be addressed during prep.",
+  },
+  {
+    question: "What paint brands do you use for exterior painting?",
+    answer:
+      "We primarily use Sherwin-Williams Emerald Exterior and Duration Exterior. For budget-conscious projects, Benjamin Moore Aura and Behr Marquee are solid alternatives. We never use contractor-grade paints that sacrifice UV resistance and film build for lower price. The paint is a small fraction of total project cost, but it determines how long the job lasts.",
+  },
+  {
+    question: "Can you paint vinyl siding?",
+    answer:
+      "Yes, but with important caveats. Vinyl siding can be painted successfully if it's in good condition (not warped, cracked, or heavily faded to white chalking) and if we use the correct primer and a paint that's formulated for vinyl (most quality exterior paints qualify). We won't apply a color significantly darker than the original, as dark colors can cause vinyl panels to absorb too much heat and warp.",
+  },
+  {
+    question: "Do you repair wood rot before painting?",
+    answer:
+      "Yes. We inspect every piece of wood trim, fascia, siding, and framing for soft, spongy rot before any prep work begins. Minor rot is treated with penetrating epoxy consolidant and filled with two-part wood filler before priming. Sections with significant structural rot are removed and replaced with new material. Painting over rot without treatment guarantees a short-lived repaint and accelerates structural damage.",
+  },
+  {
+    question: "How do I prepare to have my exterior painted?",
+    answer:
+      "Very little is required from you. Before we arrive, please trim back overgrown shrubs or plants immediately adjacent to the siding, move potted plants away from the house perimeter, and make sure we have access to exterior water spigots for the power washer. We handle all masking, drop cloths, and cleanup. Pets should be kept indoors during painting days.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const serviceAreas = [
+  { city: "Madison", note: "Primary service area" },
+  { city: "Huntsville", note: "Serving this area" },
+  { city: "Decatur", note: "Serving this area" },
+  { city: "Athens", note: "Serving this area" },
+  { city: "Harvest", note: "Serving this area" },
+  { city: "Hampton Cove", note: "Serving this area" },
+  { city: "Owens Cross Roads", note: "Serving this area" },
+  { city: "Meridianville", note: "Serving this area" },
+];
+---
+
+<Layout
+  title="Exterior Painting Madison AL | Licensed House Painter"
+  description="Exterior house painting in Madison, Huntsville, Decatur & Athens, AL. Siding, trim, doors & decks. Power wash, prime, 2-coat finish. Licensed & insured. Free estimates."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
+  <section
+    class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"
+  >
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/painting.jpg"
+        alt="Exterior house painting in Madison, AL"
+        class="w-full h-full object-cover opacity-20"
+        width="1200"
+        height="800"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"
+      ></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav
+          class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide"
+        >
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors">Services</a>
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">Exterior Painting</span>
+        </nav>
+
+        <div
+          class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100"
+        >
+          <span class="w-2 h-2 inline-block rounded-full bg-orange-400 mr-2 animate-pulse"></span>
+          Licensed & Insured — Free Written Estimates
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
+        >
+          Exterior Painting That<br />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
+            >Outlasts Alabama's Heat</span
+          >
+        </h1>
+
+        <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">
+          Premium prep, Sherwin-Williams Emerald & Duration paints, and a process built to handle North Alabama's UV, humidity, and temperature swings. Starting at $2,500 — free written estimate included.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 border border-orange-400/30"
+          >
+            <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+            </svg>
+            Text a Photo for a Quote
+          </a>
+          <a
+            href="tel:+12562210373"
+            class="group bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 border border-white/20 hover:-translate-y-1"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Call (256) 221-0373
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+      <svg class="relative block w-full h-[50px] md:h-[80px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,155.15,112.5,231.2,88.45,264.44,77.83,296.88,67.36,321.39,56.44Z" class="fill-white"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-white py-4 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-gray-700">
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Licensed & $1M Insured</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Sherwin-Williams Pro Dealer</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Written Estimates — No Surprises</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>7+ Years Serving North Alabama</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>500+ Completed Projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 prose prose-lg prose-blue">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">
+        Why North Alabama Homes Need Exterior Painting Done Right
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        The exterior of your North Alabama home takes a punishment most homeowners never think about until the damage is visible. Summer UV index in Madison and Huntsville routinely hits 10–11 — among the highest in the continental United States. That UV radiation breaks down paint film chemistry from the first day it's applied, causing chalking, fading, and eventually delamination. Layer that with spring and fall humidity that can hover above 80% for weeks, hard winter freezes that crack caulk and cause moisture to migrate behind paint film, and the violent thermal cycling of Alabama summers where a single day can swing 40°F — and you have a climate that exposes every shortcut and material substitution a painter makes.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        The homes in Madison, Harvest, Hampton Cove, and across Huntsville that look fresh and vibrant a decade after painting have one thing in common: they were prepared correctly and painted with premium product. The ones that are peeling in four years skipped the primer, used contractor-grade paint, rushed past the scraping, and are now spending twice as much to redo the job properly. At Rittenworx, we follow the process that produces 12–15 year paint jobs because that's what you're actually paying for when you invest in a quality exterior repaint.
+      </p>
+
+      <h3 class="text-2xl font-bold text-gray-900 mt-12 mb-4">
+        Exterior Painting Pricing in Madison &amp; Huntsville, AL
+      </h3>
+      <p class="text-gray-700 text-lg leading-relaxed mb-4">
+        Most single-story homes in Madison and Huntsville (1,500–2,500 sq ft of living space) have 900–1,400 sq ft of paintable exterior surface. Here's what to budget:
+      </p>
+      <ul class="space-y-2 text-gray-700 mb-8">
+        <li class="flex gap-3"><span class="font-semibold text-blue-900 min-w-[220px]">Small 1-story (under 1,500 sq ft):</span><span>$2,500–$3,800</span></li>
+        <li class="flex gap-3"><span class="font-semibold text-blue-900 min-w-[220px]">Average 1-story (1,500–2,500 sq ft):</span><span>$3,500–$5,500</span></li>
+        <li class="flex gap-3"><span class="font-semibold text-blue-900 min-w-[220px]">Large 1-story (2,500+ sq ft):</span><span>$5,000–$7,500</span></li>
+        <li class="flex gap-3"><span class="font-semibold text-blue-900 min-w-[220px]">2-story home:</span><span>$4,500–$9,000+</span></li>
+        <li class="flex gap-3"><span class="font-semibold text-blue-900 min-w-[220px]">Deck staining/painting (add-on):</span><span>$600–$1,800</span></li>
+        <li class="flex gap-3"><span class="font-semibold text-blue-900 min-w-[220px]">Trim-only repaint:</span><span>$800–$2,500</span></li>
+      </ul>
+      <p class="text-gray-600 text-base italic mb-8">
+        Heavy prep (extensive scraping, significant wood rot repair, or recoating a poorly prepped prior paint job) adds cost. We price every job on-site and itemize every line so you know exactly what drives the number.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Exterior Painting Services We Provide</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Complete exterior painting from power wash to final walkthrough.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        {includedServices.map((category) => (
+          <div class="bg-white rounded-lg p-6 border border-gray-100 shadow-sm">
+            <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+              <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+              </svg>
+              {category.title}
+            </h3>
+            <ul class="space-y-2">
+              {category.items.map((item) => (
+                <li class="flex items-start gap-2 text-gray-700">
+                  <svg class="w-4 h-4 text-green-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Paint Brands -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Paint Products We Use</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We use only premium exterior paints from proven manufacturers. No contractor-grade paint on your home.
+        </p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-lg shadow-sm border border-gray-100">
+          <thead>
+            <tr class="bg-blue-900 text-white">
+              <th class="px-4 py-3 text-left font-semibold">Product</th>
+              <th class="px-4 py-3 text-left font-semibold">Sheen Options</th>
+              <th class="px-4 py-3 text-left font-semibold">Lifespan</th>
+              <th class="px-4 py-3 text-left font-semibold">Best For</th>
+              <th class="px-4 py-3 text-left font-semibold">Key Feature</th>
+            </tr>
+          </thead>
+          <tbody>
+            {paintBrands.map((paint, index) => (
+              <tr class={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                <td class="px-4 py-3 font-semibold text-blue-900">{paint.name}</td>
+                <td class="px-4 py-3 text-gray-700">{paint.sheen}</td>
+                <td class="px-4 py-3 text-gray-700">{paint.lifespan}</td>
+                <td class="px-4 py-3 text-gray-700">{paint.best}</td>
+                <td class="px-4 py-3 text-gray-600 text-sm">{paint.feature}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-4">
+        Not sure which product is right for your home's surface and budget? We'll recommend the best option during your free estimate.
+      </p>
+    </div>
+  </section>
+
+  <!-- Common Problems -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">
+          Exterior Paint Problems We Fix Permanently
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          If your home's exterior has any of these issues, a proper repaint solves them.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {commonProblems.map((item) => (
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-4">
+              <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-2">{item.problem}</h3>
+                <p class="text-gray-600 text-sm flex items-start gap-2">
+                  <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item.solution}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Exterior Painting Process</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Every exterior paint job follows the same careful sequence. No steps skipped, no shortcuts taken.
+        </p>
+      </div>
+      <div class="space-y-6">
+        {processSteps.map((step) => (
+          <div class="flex gap-6 items-start">
+            <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
+              {step.step}
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6 flex-1 border border-gray-100">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                <h3 class="text-lg font-bold text-gray-800">{step.title}</h3>
+                <span class="text-xs text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded-full whitespace-nowrap">{step.time}</span>
+              </div>
+              <p class="text-gray-600 text-sm">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Rittenworx -->
+  <section class="py-16 bg-blue-900 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Why Choose Rittenworx for Exterior Painting</h2>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto">
+          Owner-operated. 500+ projects. $1M insured. We put our name on every job.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Premium Paint Only",
+            body: "We don't use contractor-grade paint. Every exterior job uses Sherwin-Williams Emerald, Duration, or equivalent. The paint costs more — but it's the difference between 5 years and 15 years.",
+          },
+          {
+            title: "Prep Is the Job",
+            body: "Seventy percent of a good exterior paint job is prep. We power wash, scrape, sand, caulk, prime, and treat every surface before we open a can of topcoat. We don't rush the prep to save time.",
+          },
+          {
+            title: "Written, Locked-In Estimates",
+            body: "Your written estimate is your final price. We don't discover 'surprises' mid-job that inflate the cost. If we find wood rot or other issues during prep, we discuss it with you before doing any work.",
+          },
+          {
+            title: "Licensed & $1M Insured",
+            body: "We carry a $1 million liability policy and are fully licensed. If something goes wrong on your property during our work, you're protected. Ask any handyman or painter for their policy — most can't produce one.",
+          },
+          {
+            title: "Owner on Every Job",
+            body: "I'm a working owner-operator, not a company that sends unknown subcontractors. When I take your job, I'm the one doing the work. You know who's on your property and can call me directly at any time.",
+          },
+          {
+            title: "Workmanship Guarantee",
+            body: "Any paint job I complete is guaranteed to perform properly. If there's a defect in application — runs, missed spots, poor coverage — I come back and fix it. No questions, no charges.",
+          },
+        ].map((card) => (
+          <div class="bg-white/10 rounded-lg p-6">
+            <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">{card.title}</h3>
+            <p class="text-blue-100 text-sm">{card.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Exterior Painting FAQs</h2>
+        <p class="text-lg text-gray-600">Common questions about exterior painting in North Alabama.</p>
+      </div>
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <details class="bg-white rounded-lg border border-gray-200 group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="font-semibold text-gray-800 pr-4">{faq.question}</h3>
+              <svg class="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-gray-600">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Exterior Painting Service Areas</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We paint house exteriors throughout Madison County and North Alabama.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {serviceAreas.map((area) => {
+          const citySlug = area.city.toLowerCase().replace(/ /g, "-");
+          return (
+            <a
+              href={`/services/exterior-painting-${citySlug}-al`}
+              class={`block group rounded-2xl p-5 text-center transition-all duration-300 ${area.city === "Madison" ? "bg-gradient-to-br from-blue-900 to-blue-800 text-white shadow-xl" : "bg-gray-50 border border-gray-100 hover:shadow-md hover:border-blue-100 hover:-translate-y-1"}`}
+            >
+              <h3 class={`font-bold mb-1 ${area.city === "Madison" ? "text-white" : "text-gray-900"}`}>{area.city}, AL</h3>
+              <p class={`text-sm ${area.city === "Madison" ? "text-blue-100" : "text-gray-500"}`}>{area.note}</p>
+            </a>
+          );
+        })}
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-6">
+        Not sure if we service your area? <a href="/contact" class="text-blue-600 hover:underline">Contact us</a> — we're happy to check.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cross-links -->
+  <section class="py-12 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-gray-900">Related Services</h2>
+        <p class="text-gray-600 mt-2">Rittenworx handles more than just exterior painting.</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <a href="/services/painting" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Interior Painting</h3>
+          <p class="text-sm text-gray-600 mt-1">Walls, ceilings, trim & cabinet painting</p>
+        </a>
+        <a href="/services/drywall" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Drywall Repair</h3>
+          <p class="text-sm text-gray-600 mt-1">Patch, repair & prep before painting</p>
+        </a>
+        <a href="/services/finish-carpentry" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Finish Carpentry</h3>
+          <p class="text-sm text-gray-600 mt-1">Fascia, trim & exterior wood repair</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Home's Exterior?</h2>
+      <p class="text-xl mb-8 text-orange-100">
+        Free written estimate. No pressure. Most North Alabama homes quoted within 24 hours.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg">
+          Request Free Estimate
+        </a>
+        <a href="tel:+12562210373" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg border border-orange-400">
+          Call (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

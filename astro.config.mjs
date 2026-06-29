@@ -89,6 +89,17 @@ export default defineConfig({
     '/service-area/arab-al': '/locations',
     '/service-area/': '/locations',
 
+    // Exterior painting standalone page
+    '/exterior-painting': '/services/exterior-painting',
+    '/exterior-painting-madison-al': '/services/exterior-painting',
+    '/exterior-house-painting': '/services/exterior-painting',
+
+    // General handyman tasks page
+    '/tv-mounting-madison-al': '/services/general-handyman',
+    '/ceiling-fan-installation-madison-al': '/services/general-handyman',
+    '/furniture-assembly-madison-al': '/services/general-handyman',
+    '/handyman-small-jobs-madison-al': '/services/general-handyman',
+
     // 404s — misc
     '/new-page': '/',
   },
@@ -97,7 +108,7 @@ export default defineConfig({
       filter: (page) => !page.includes('/admin/'),
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date('2026-05-04'),
+      lastmod: new Date(),
       customPages: [
         'https://www.rittenworxhandyman.net/',
         'https://www.rittenworxhandyman.net/services/',

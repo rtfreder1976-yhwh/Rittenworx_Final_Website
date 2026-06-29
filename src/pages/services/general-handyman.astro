@@ -1,0 +1,474 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const services = [
+  {
+    id: "tv-mounting",
+    title: "TV & Monitor Mounting",
+    icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    startingAt: "$85",
+    items: [
+      "Flat, tilting, and full-motion mounts on any wall type",
+      "Drywall, concrete, brick, and tile mounting",
+      "Cable concealment inside wall or conduit",
+      "In-wall power kit installation",
+      "Soundbar shelf and bracket installation",
+      "Multiple TV / multi-monitor setups",
+      "TV relocation from old mount to new location",
+      "Component shelf installation below the display",
+    ],
+    detail:
+      "We mount TVs to any wall surface — drywall, concrete block, brick, or tile — using the correct anchors for the load. Cable management (in-wall or surface conduit) is included on request. Most TV mounting jobs are done in under 90 minutes.",
+  },
+  {
+    id: "ceiling-fan",
+    title: "Ceiling Fan Installation & Replacement",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
+    startingAt: "$85",
+    items: [
+      "Swap out an existing ceiling fan with a new one",
+      "New fan installation where a light fixture exists",
+      "Fan install with brace kit where no box exists",
+      "Remote control kit installation for pull-chain fans",
+      "Ceiling fan repair (wobble, noise, light kit failure)",
+      "Hunter, Minka-Aire, Hampton Bay, and all major brands",
+      "Flush-mount and downrod fans for all ceiling heights",
+      "Outdoor wet-rated fan installation for porches",
+    ],
+    detail:
+      "Replacing a ceiling fan on an existing box takes about 45–60 minutes. New installations where we need to brace a box in the ceiling take longer. We test every fan for wobble and verify all controls work before we leave.",
+  },
+  {
+    id: "furniture-assembly",
+    title: "Furniture Assembly",
+    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+    startingAt: "$75/hr",
+    items: [
+      "IKEA furniture (any line — KALLAX, PAX, BESTA, HEMNES, etc.)",
+      "Wayfair and Amazon flat-pack assembly",
+      "Office desks and workstations",
+      "Bookshelves, entertainment centers, wardrobes",
+      "Bed frames, platform beds, and headboards",
+      "Outdoor furniture assembly (patio sets, grills)",
+      "Exercise equipment (treadmills, weight benches, squat racks)",
+      "Playground and swing set assembly",
+    ],
+    detail:
+      "We bring all tools. Just have the boxes ready and we'll handle everything from unpacking to final positioning. No half-assembled IKEA nightmare sitting in your living room for six months.",
+  },
+  {
+    id: "door-repair",
+    title: "Door Repair & Adjustment",
+    icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+    startingAt: "$95",
+    items: [
+      "Sticking or binding doors that won't close properly",
+      "Door hinge tightening, replacement, and shimming",
+      "Strike plate adjustment for latches that won't catch",
+      "Door bottom gap sealing with new door sweep",
+      "Screen door repair and replacement",
+      "Sliding closet door track repair",
+      "Interior door installation (prehung and slab)",
+      "Pocket door track and hardware repair",
+    ],
+    detail:
+      "Most sticking or misaligned doors are caused by hinge screw holes that have stripped out, or wood swelling from Alabama's humidity cycles. We diagnose the real cause and fix it properly — not just plane the door into a corner until it sort of closes.",
+  },
+  {
+    id: "light-fixtures",
+    title: "Light Fixture Replacement",
+    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    startingAt: "$65",
+    items: [
+      "Ceiling light fixture swap (chandelier, flush-mount, pendant)",
+      "Vanity bar and bathroom light replacement",
+      "Dining room chandelier installation",
+      "Recessed light trim replacement and upgrade",
+      "Exterior light fixture replacement",
+      "Motion-sensor light installation (exterior)",
+      "Dimmer switch installation",
+      "Smart light switch (Lutron, Leviton) installation",
+    ],
+    detail:
+      "Replacing a light fixture on an existing junction box is typically a 30–45 minute job. Heavier chandeliers may need a fan-rated brace box installed first. We cap off wiring safely and restore power to the circuit before leaving.",
+  },
+  {
+    id: "grab-bars",
+    title: "Grab Bar & Safety Rail Installation",
+    icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+    startingAt: "$75",
+    items: [
+      "Bathroom grab bar installation (tub, shower, toilet)",
+      "Into-stud mounting for maximum load rating",
+      "Toggle bolt mounting where studs are inaccessible",
+      "Fold-down shower seat installation",
+      "Stairway handrail extension and repair",
+      "ADA-compliant grab bar placement",
+      "Decorative grab bars that blend with the bathroom",
+      "Single and angled bar configurations",
+    ],
+    detail:
+      "Grab bars must be anchored into studs or blocking — not just drywall. We locate studs with a quality stud finder, verify load capacity, and install to ADA standards. A properly installed bar is rated for 250 lbs.",
+  },
+  {
+    id: "caulking",
+    title: "Caulking & Weatherstripping",
+    icon: "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z",
+    startingAt: "$75",
+    items: [
+      "Bathtub and shower surround re-caulking",
+      "Window exterior caulk replacement",
+      "Door frame caulk and gap sealing",
+      "Kitchen backsplash and countertop caulking",
+      "Weatherstripping replacement on doors",
+      "Door sweep installation and replacement",
+      "Window weatherstrip seal replacement",
+      "Air sealing gaps around electrical and plumbing penetrations",
+    ],
+    detail:
+      "Failed caulk around tubs and windows is the most common source of hidden water damage in North Alabama homes. We remove all old caulk completely, clean and dry the surface, and apply fresh 30-year paintable siliconized caulk that stays flexible through Alabama's temperature swings.",
+  },
+  {
+    id: "shelving",
+    title: "Shelf & Picture Hanging",
+    icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z",
+    startingAt: "$65",
+    items: [
+      "Floating shelf installation (IKEA LACK, Pottery Barn, custom)",
+      "Heavy mirror and artwork hanging",
+      "Gallery wall layout and installation",
+      "Wire shelving system installation (Rubbermaid, ClosetMaid)",
+      "Closet organizer assembly and installation",
+      "Bracket and standard shelving systems",
+      "Wall-mount towel bars and toilet paper holders",
+      "Curtain rod installation",
+    ],
+    detail:
+      "We use a laser level to get every shelf, rod, and frame perfectly level and plumb. Heavy items (large mirrors, floating TV consoles) are anchored into studs. We patch any old holes from previous installations before hanging the new piece.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Do you have a minimum job size for small handyman tasks?",
+    answer:
+      "No minimum. Whether it's one item or a list of ten things that have been nagging you for months, we'll take the job. Most small jobs have a one-hour minimum labor charge, which gives us time to do the work right.",
+  },
+  {
+    question: "How much does TV mounting cost in Madison, AL?",
+    answer:
+      "TV mounting starts at $85 for a standard flat wall mount on drywall with studs. Full-motion mounts, over-fireplace mounting, concrete/brick walls, and in-wall cable management add to the cost. Text us a photo of your space and we can give you a quick estimate.",
+  },
+  {
+    question: "Do you assemble IKEA furniture?",
+    answer:
+      "Yes, any IKEA line. PAX wardrobes, KALLAX shelving units, BESTA TV units, HEMNES bed frames, MALM dressers — we've assembled them all. We charge by the hour and work efficiently. Most single pieces take 1–2 hours; large wardrobe systems with many components take longer.",
+  },
+  {
+    question: "Can you install a ceiling fan where there's currently only a light fixture?",
+    answer:
+      "Yes, as long as there's an existing electrical box in the ceiling. Most standard ceiling boxes are NOT rated for fan support, so we install a fan-rated brace kit or replace the box before hanging the fan. This ensures the fan is properly supported and won't loosen over time.",
+  },
+  {
+    question: "How quickly can you come out for a small job?",
+    answer:
+      "For most small jobs in Madison, Huntsville, Decatur, and Athens, we can schedule within the same week — often within a few days. Text or call (256) 221-0373 and we'll find a time that works. We give you a 2-hour arrival window and text when we're on the way.",
+  },
+  {
+    question: "Are you licensed and insured for small handyman jobs?",
+    answer:
+      "Yes. Rittenworx is a licensed business with a $1 million liability insurance policy on every job, regardless of size. That means if anything goes wrong on your property during our work, you're protected. Most independent handymen you find on Craigslist or Facebook aren't insured at all.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title="Small Job Handyman Madison AL | TV Mounting, Fans & More"
+  description="Handyman for small jobs in Madison, Huntsville & North Alabama. TV mounting, ceiling fan installation, furniture assembly, door repair & more. Licensed & insured. Same-week scheduling."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
+  <section class="relative bg-blue-900 text-white pt-32 pb-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800"></div>
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[120px] -mr-40 -mt-40"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors">Services</a>
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">General Handyman</span>
+        </nav>
+
+        <div class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100">
+          <span class="w-2 h-2 inline-block rounded-full bg-green-400 mr-2 animate-ping"></span>
+          No Minimum Job Size — Same-Week Scheduling
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+          Small Jobs Done Right,<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">This Week</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">
+          TV mounting, ceiling fans, furniture assembly, door repair, and every other task on your to-do list. Licensed, $1M-insured, fast response across Madison, Huntsville, and North Alabama.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 hover:-translate-y-1"
+          >
+            <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+            </svg>
+            Text Your Job List
+          </a>
+          <a
+            href="tel:+12562210373"
+            class="group bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 border border-white/20 hover:-translate-y-1"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Call (256) 221-0373
+          </a>
+        </div>
+
+        <!-- Quick price chips -->
+        <div class="mt-10 flex flex-wrap gap-3">
+          {services.slice(0, 4).map((s) => (
+            <span class="px-4 py-2 bg-white/10 rounded-full text-sm text-blue-100 border border-white/10">
+              {s.title} from {s.startingAt}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services List -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Small Handyman Tasks We Handle</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Every job done by a licensed, insured owner-operator — not a random subcontractor.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        {services.map((service) => (
+          <div id={service.id} class="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
+            <div class="p-6 md:p-8">
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex-shrink-0">
+                  <div class="w-14 h-14 bg-blue-900 rounded-xl flex items-center justify-center">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon} />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                    <h3 class="text-2xl font-bold text-gray-900">{service.title}</h3>
+                    <span class="inline-block bg-orange-100 text-orange-700 font-bold text-sm px-4 py-1.5 rounded-full whitespace-nowrap">
+                      Starting at {service.startingAt}
+                    </span>
+                  </div>
+                  <p class="text-gray-600 mb-5">{service.detail}</p>
+                  <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                    {service.items.map((item) => (
+                      <li class="flex items-start gap-2 text-sm text-gray-700">
+                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Rittenworx for small jobs -->
+  <section class="py-16 bg-blue-900 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Why Hire Rittenworx for Small Jobs?</h2>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto">
+          Most handymen only want the big jobs. We take everything on your list.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Licensed & $1M Insured",
+            body: "Every job — no matter how small — is covered by our $1 million liability policy. Most people who answer Facebook handyman ads can't say that.",
+          },
+          {
+            title: "No Minimum Job Size",
+            body: "Need one ceiling fan swapped out? One TV mounted? Four IKEA boxes assembled? We take all of it. Small jobs matter and we treat them that way.",
+          },
+          {
+            title: "Same-Week Scheduling",
+            body: "We keep our schedule flexible for small jobs. Text or call and we'll find a slot within the week for most tasks in Madison, Huntsville, Decatur, and Athens.",
+          },
+          {
+            title: "Owner Does the Work",
+            body: "I'm Roy — the owner and the person who shows up. Not a dispatcher, not a subcontractor. When you call Rittenworx, you deal directly with the person doing the work.",
+          },
+          {
+            title: "Efficient & Respectful",
+            body: "We work efficiently, respect your home, use drop cloths when needed, and leave the area clean when we're done. No leaving a mess for you to deal with.",
+          },
+          {
+            title: "Bring Everything Back in One Trip",
+            body: "Tackle your entire to-do list in one visit. We batch small jobs together, saving you multiple scheduling slots with different contractors.",
+          },
+        ].map((card) => (
+          <div class="bg-white/10 rounded-lg p-6">
+            <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">{card.title}</h3>
+            <p class="text-blue-100 text-sm">{card.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+        <p class="text-lg text-gray-600">Common questions about small handyman jobs in North Alabama.</p>
+      </div>
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <details class="bg-white rounded-lg border border-gray-200 group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="font-semibold text-gray-800 pr-4">{faq.question}</h3>
+              <svg class="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6">
+              <p class="text-gray-600">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Small Job Handyman Service Areas</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We handle small handyman jobs across Madison County and North Alabama.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[
+          { city: "Madison, AL", note: "Primary area — fastest response" },
+          { city: "Huntsville, AL", note: "Including Hampton Cove & Jones Valley" },
+          { city: "Decatur, AL", note: "Including Somerville" },
+          { city: "Athens, AL", note: "Limestone County" },
+          { city: "Harvest, AL", note: "Madison County" },
+          { city: "Meridianville, AL", note: "Madison County" },
+          { city: "Owens Cross Roads, AL", note: "Marshall/Madison County" },
+          { city: "Hampton Cove, AL", note: "Madison County" },
+        ].map((area) => (
+          <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
+            <h3 class="font-bold text-gray-900">{area.city}</h3>
+            <p class="text-sm text-gray-500 mt-1">{area.note}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-6">
+        Don't see your city? <a href="/contact" class="text-blue-600 hover:underline">Contact us</a> — we may still cover your area.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cross-links to major services -->
+  <section class="py-12 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-gray-900">Need Bigger Jobs Done Too?</h2>
+        <p class="text-gray-600 mt-2">Rittenworx handles full project work, not just small tasks.</p>
+      </div>
+      <div class="grid sm:grid-cols-4 gap-4">
+        <a href="/services/drywall" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Drywall Repair</h3>
+          <p class="text-sm text-gray-600 mt-1">Holes, cracks, water damage</p>
+        </a>
+        <a href="/services/exterior-painting" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Exterior Painting</h3>
+          <p class="text-sm text-gray-600 mt-1">House, trim, doors & decks</p>
+        </a>
+        <a href="/services/flooring" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Flooring</h3>
+          <p class="text-sm text-gray-600 mt-1">LVP, hardwood, laminate</p>
+        </a>
+        <a href="/services/garage-floor-coating" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Garage Epoxy</h3>
+          <p class="text-sm text-gray-600 mt-1">Epoxy & flake floor coatings</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Clear That To-Do List This Week</h2>
+      <p class="text-xl mb-8 text-orange-100">
+        Text your list or call now. Most Madison & Huntsville small jobs scheduled within the week.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="sms:2562210373" class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg">
+          Text Your List
+        </a>
+        <a href="tel:+12562210373" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg border border-orange-400">
+          Call (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
