@@ -32,8 +32,8 @@ export function getStaticPaths() {
         },
         {
             id: "flooring-installation",
-            name: "Garage Floor Coating",
-            shortDesc: "Professional epoxy and specialty garage floor coatings",
+            name: "Flooring Installation",
+            shortDesc: "Expert hardwood, LVP, and laminate flooring installation",
         },
         {
             id: "garage-floor-coating",
@@ -85,7 +85,7 @@ export function getStaticPaths() {
 const { service, city, cityPath } = Astro.props;
 const { slug } = Astro.params;
 
-const title = `${service.name} in ${city}, AL | Rittenworx`;
+const title = `${service.name} in ${city}, AL`;
 const description = `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
 
 // Custom local schema for this specific combination
