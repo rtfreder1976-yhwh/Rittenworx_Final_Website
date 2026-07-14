@@ -8,6 +8,7 @@ interface Props {
   robots?: string;
   ogType?: string;
   ogImage?: string;
+  canonical?: string;
   articleMeta?: { publishedTime?: string; author?: string };
 }
 
@@ -17,6 +18,7 @@ const {
   robots = "index, follow",
   ogType = "website",
   ogImage = "https://www.rittenworxhandyman.net/images/og-roy.jpg",
+  canonical,
   articleMeta,
 } = Astro.props;
 const currentPath = Astro.url.pathname;
@@ -24,6 +26,9 @@ const canonicalURL = new URL(
   Astro.url.pathname,
   "https://www.rittenworxhandyman.net",
 );
+// Allow a page to override the self-referencing canonical (e.g. templated
+// service+city pages that should consolidate into a stronger hub page).
+const canonicalHref = canonical ?? canonicalURL.href;
 
 // LocalBusiness + HomeAndConstructionBusiness Schema
 const schemaData = {
@@ -384,7 +389,7 @@ const finalSchema = schema || schemaData;
     <!-- SEO Meta Tags -->
     <title>{title} | Rittenworx</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="canonical" href={canonicalHref} />
     <link rel="alternate" hreflang="en-us" href="https://www.rittenworxhandyman.net/" />
     <link rel="alternate" hreflang="x-default" href="https://www.rittenworxhandyman.net/" />
 
@@ -405,7 +410,7 @@ const finalSchema = schema || schemaData;
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content={ogType} />
-    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:url" content={canonicalHref} />
     <meta property="og:title" content={`${title} | Rittenworx`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
