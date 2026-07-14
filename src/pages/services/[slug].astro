@@ -82,11 +82,33 @@ export function getStaticPaths() {
     return paths;
 }
 
-const { service, city, cityPath } = Astro.props;
+const { service, city, cityPath, fullCity } = Astro.props;
 const { slug } = Astro.params;
 
 const title = `${service.name} in ${city}, AL`;
 const description = `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
+
+// Cannibalization fix: for the four core cities we already have stronger,
+// hand-written service hub pages. Point these templated service+city pages'
+// canonical at that hub so Google consolidates ranking signals instead of
+// splitting them across near-duplicate URLs. The sub-area cities (Harvest,
+// Owens Cross Roads, Hampton Cove, Redstone Arsenal) have no hub equivalent,
+// so they stay self-canonical.
+const serviceHubSlug: Record<string, string> = {
+    "drywall-repair": "drywall",
+    "interior-painting": "painting",
+    "exterior-painting": "exterior-painting",
+    "gutter-cleaning": "gutter-cleaning",
+    "gutter-installation": "gutter-installation",
+    "flooring-installation": "flooring",
+    "garage-floor-coating": "garage-floor-coating",
+    "finish-carpentry": "finish-carpentry",
+};
+const coreCities = ["madison-al", "huntsville-al", "athens-al", "decatur-al"];
+const canonical =
+    coreCities.includes(fullCity) && serviceHubSlug[service.id]
+        ? `https://www.rittenworxhandyman.net/services/${serviceHubSlug[service.id]}/`
+        : undefined;
 
 // Custom local schema for this specific combination
 const localSchema = {
@@ -147,7 +169,7 @@ const localSchema = {
 };
 ---
 
-<Layout title={title} description={description} schema={localSchema}>
+<Layout title={title} description={description} schema={localSchema} canonical={canonical}>
     <!-- Premium Hero Section -->
     <section
         class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"

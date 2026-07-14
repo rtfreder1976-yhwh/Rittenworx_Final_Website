@@ -1,0 +1,506 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const neighborhoods = [
+  {
+    name: "Hampton Cove",
+    description:
+      "Master-planned community around the Robert Trent Jones Golf Trail. Newer construction, well-kept homes, and homeowners who expect finish-level quality on every project.",
+    commonServices: [
+      "Finish carpentry",
+      "Interior painting",
+      "Flooring installation",
+      "Drywall repair",
+    ],
+  },
+  {
+    name: "Big Cove",
+    description:
+      "Established rural-residential area at the foot of Green Mountain. Larger lots and mature homes that benefit from ongoing maintenance, trim work, and exterior upkeep.",
+    commonServices: [
+      "Exterior painting",
+      "Gutter cleaning",
+      "Finish carpentry",
+      "General repairs",
+    ],
+  },
+  {
+    name: "The Ledges Adjacent",
+    description:
+      "Upscale homes near The Ledges and Hampton Cove's premium sections. Discreet, professional service and precise craftsmanship matter to homeowners here.",
+    commonServices: [
+      "Crown molding",
+      "Cabinet painting",
+      "Built-ins",
+      "Flooring",
+    ],
+  },
+  {
+    name: "US-431 Corridor",
+    description:
+      "Main route connecting Owens Cross Roads to Huntsville. Mix of newer subdivisions and long-time family homes with convenient access to Hampton Cove amenities.",
+    commonServices: [
+      "Drywall work",
+      "Painting",
+      "Gutter installation",
+      "Small jobs",
+    ],
+  },
+  {
+    name: "Green Mountain / Monte Sano Adjacent",
+    description:
+      "Homes tucked along the wooded slopes east of Huntsville. Tree cover means gutters, exterior surfaces, and finish work need regular attention.",
+    commonServices: [
+      "Gutter cleaning",
+      "Exterior painting",
+      "Trim repair",
+      "Flooring",
+    ],
+  },
+  {
+    name: "Greater 35763",
+    description:
+      "New construction and growing subdivisions throughout the Owens Cross Roads ZIP. Fast-growing area where homeowners are finishing garages, updating floors, and adding trim detail.",
+    commonServices: [
+      "Garage floor coating",
+      "Flooring installation",
+      "Finish carpentry",
+      "Drywall",
+    ],
+  },
+];
+
+const whoWeServe = [
+  {
+    name: "Redstone Arsenal & Defense",
+    detail: "Commuters west",
+    description:
+      "Many Owens Cross Roads families work at Redstone Arsenal, NASA, and the defense contractors along the Huntsville corridor. We schedule around your workday and keep you updated.",
+  },
+  {
+    name: "Cummings Research Park",
+    detail: "Tech professionals",
+    description:
+      "Engineers and tech-sector professionals who research their contractors carefully. Our written estimates, licensing, and reviews are built for exactly that kind of due diligence.",
+  },
+  {
+    name: "Hampton Cove Families",
+    detail: "Growing community",
+    description:
+      "Families drawn to Hampton Cove's schools, golf, and newer housing. We handle the finish work, painting, and flooring that make a new house feel like home.",
+  },
+  {
+    name: "Long-Time Big Cove Residents",
+    detail: "Established homes",
+    description:
+      "Homeowners who've been here for decades and want a contractor who respects their property and does it right the first time. We keep older homes maintained and looking sharp.",
+  },
+];
+
+const responseTimes = [
+  { area: "Hampton Cove", time: "Quick scheduling", distance: "20 min" },
+  { area: "US-431 Corridor", time: "Quick scheduling", distance: "22 min" },
+  { area: "Big Cove", time: "Quick scheduling", distance: "25 min" },
+  { area: "The Ledges Area", time: "Quick scheduling", distance: "22 min" },
+  { area: "Green Mountain", time: "Quick scheduling", distance: "25 min" },
+  { area: "Greater 35763", time: "Quick scheduling", distance: "20-30 min" },
+];
+
+const areaFacts = [
+  "Madison County community east of Huntsville",
+  "ZIP code 35763, one of the fastest-growing areas in the county",
+  "Home to Hampton Cove and the RTJ Golf Trail",
+  "Minutes from Redstone Arsenal and Cummings Research Park",
+  "Mix of master-planned neighborhoods and rural acreage",
+  "Green Mountain and Monte Sano nature preserves nearby",
+];
+
+const competitorComparison = [
+  { feature: "Answer Phone Calls", us: "Real person, always", others: "Often voicemail" },
+  { feature: "Serve Owens Cross Roads", us: "Yes, regularly", others: "May decline the drive" },
+  { feature: "Show Up On Time", us: "Guaranteed", others: "Inconsistent" },
+  { feature: "Written Estimates", us: "Detailed, free", others: "Verbal or none" },
+  { feature: "Price Matches Quote", us: "Always", others: "Often adds charges" },
+  { feature: "Licensed & Insured", us: "$1M, verifiable", others: "Often unclear" },
+  { feature: "Certified Carpenter", us: "Yes", others: "Rarely" },
+  { feature: "Clean Up Jobsite", us: "Every job", others: "Inconsistent" },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do you serve Owens Cross Roads and Hampton Cove, AL?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Owens Cross Roads and Hampton Cove are a regular part of our service area. Rittenworx is based in Madison, AL, and we reach the 35763 area in about 20–25 minutes for drywall, painting, flooring, finish carpentry, garage floor coating, and gutter work.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What handyman services do you offer in Owens Cross Roads?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In Owens Cross Roads we provide drywall repair and installation, interior and exterior painting, flooring installation (hardwood, LVP, laminate), garage floor coating (epoxy and polyaspartic), finish carpentry, gutter cleaning, and gutter installation. Pricing is by the project, with a written estimate up front.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are you licensed and insured to work in Owens Cross Roads?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Rittenworx is licensed and carries a $1M general liability policy. We are family-owned, run by a certified carpenter with 7+ years serving North Alabama, and we can show the certificate before we start.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you give free estimates for Owens Cross Roads jobs?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — estimates are free in Owens Cross Roads and Hampton Cove. Text a photo of the project to (256) 221-0373 for a fast initial price, or request an on-site visit for larger projects.",
+          },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<Layout
+  title="Owens Cross Roads Handyman | Hampton Cove, AL"
+  description="Licensed handyman in Owens Cross Roads & Hampton Cove, AL (35763). Drywall, painting, flooring, finish carpentry, garage epoxy & gutters. Free estimates."
+  schema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="bg-blue-900 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl">
+        <nav class="text-sm text-blue-200 mb-4">
+          <a href="/locations" class="hover:text-white">Service Areas</a>
+          <span class="mx-2">/</span>
+          <a href="/locations/huntsville" class="hover:text-white">Huntsville</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Owens Cross Roads</span>
+        </nav>
+        <span class="text-orange-400 font-semibold text-sm uppercase tracking-wide"
+          >Huntsville Area Community</span
+        >
+        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">
+          Owens Cross Roads & Hampton Cove Handyman You Can Count On
+        </h1>
+        <p class="text-xl text-blue-100 mb-6">
+          From Hampton Cove's newer homes to the established properties around
+          Big Cove and Green Mountain, we bring finish-level craftsmanship,
+          written estimates, and a crew that shows up on time. Licensed,
+          $1M-insured, and family-owned.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/contact"
+            class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            Get Free Estimate
+          </a>
+          <a
+            href="tel:2562210373"
+            class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            (256) 221-0373
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="bg-white py-8 border-b">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-3xl font-bold text-blue-900">~20 min</p>
+          <p class="text-gray-600 text-sm">From Our Base</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-blue-900">35763</p>
+          <p class="text-gray-600 text-sm">ZIP Served</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-blue-900">$1M</p>
+          <p class="text-gray-600 text-sm">Insured</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-blue-900">Free</p>
+          <p class="text-gray-600 text-sm">Estimates Always</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+            >East of Huntsville</span
+          >
+          <h2 class="text-3xl font-bold text-gray-800 mt-2 mb-6">
+            Serving Owens Cross Roads & Hampton Cove
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Owens Cross Roads has grown from a quiet Madison County crossroads
+            into one of the most sought-after corners of the Huntsville metro.
+            The Hampton Cove master-planned community, the Robert Trent Jones
+            Golf Trail, and easy access to Redstone Arsenal have drawn families
+            who want newer homes, good schools, and a little more room to
+            breathe at the foot of Green Mountain.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Those homeowners expect quality — and they do their homework before
+            hiring. That suits us. Rittenworx is licensed, carries $1 million in
+            liability coverage, and is run by a certified carpenter with seven
+            years of work across North Alabama. We send a written estimate you
+            can hold us to, and the final bill matches it.
+          </p>
+          <p class="text-gray-600">
+            Based about 20 minutes away in Madison, we treat Owens Cross Roads
+            and Hampton Cove as a core part of our service area — not an
+            afterthought. When we schedule your job, we show up on time, protect
+            your home, and walk the finished work with you before we leave.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-4">Area Quick Facts</h3>
+          <ul class="space-y-3">
+            {
+              areaFacts.map((fact) => (
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">{fact}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neighborhoods -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Area Coverage</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Owens Cross Roads Areas We Serve
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+          From Hampton Cove to Big Cove and the growing 35763 subdivisions, we
+          cover the whole community.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          neighborhoods.map((neighborhood) => (
+            <div class="bg-gray-50 rounded-lg p-6 border-2 border-gray-100 hover:border-blue-200 transition-colors">
+              <h3 class="text-lg font-bold text-blue-900 mb-3">
+                {neighborhood.name}
+              </h3>
+              <p class="text-gray-600 text-sm mb-4">
+                {neighborhood.description}
+              </p>
+              <div>
+                <p class="text-xs font-semibold text-gray-500 uppercase mb-2">
+                  Common Services
+                </p>
+                <div class="flex flex-wrap gap-1">
+                  {neighborhood.commonServices.map((service) => (
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                      {service}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Response Times -->
+  <section class="py-16 bg-blue-900 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Response Times Around Owens Cross Roads</h2>
+        <p class="text-blue-100 mt-4">
+          We reach every corner of the 35763 area quickly.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        {
+          responseTimes.map((item) => (
+            <div class="bg-white/10 rounded-lg p-4 flex items-center justify-between">
+              <p class="font-semibold">{item.area}</p>
+              <span class="px-3 py-1 rounded-full text-sm font-medium bg-green-500 text-white">
+                {item.time}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Who We Serve</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Owens Cross Roads Homeowners We Work With
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          whoWeServe.map((group) => (
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-lg font-bold text-blue-900">{group.name}</h3>
+                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                  {group.detail}
+                </span>
+              </div>
+              <p class="text-gray-600 text-sm">{group.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >The Difference</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Why Owens Cross Roads Residents Choose Us
+        </h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-lg shadow-sm">
+          <thead>
+            <tr class="bg-blue-900 text-white">
+              <th class="px-6 py-4 text-left font-semibold">What Matters</th>
+              <th class="px-6 py-4 text-left font-semibold">Rittenworx</th>
+              <th class="px-6 py-4 text-left font-semibold">Other Contractors</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              competitorComparison.map((row, index) => (
+                <tr class={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                  <td class="px-6 py-4 font-medium text-gray-800">{row.feature}</td>
+                  <td class="px-6 py-4 text-green-600 font-medium">{row.us}</td>
+                  <td class="px-6 py-4 text-gray-500">{row.others}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">
+        Ready for Reliable Service in Owens Cross Roads?
+      </h2>
+      <p class="text-xl mb-8">
+        Quick scheduling available. Free estimates, quality guaranteed.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          Get Free Estimate
+        </a>
+        <a
+          href="tel:2562210373"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service cross-links -->
+  <section class="py-16 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Our Services</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Handyman Services Available in Owens Cross Roads</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Pick the service you need. Every job comes with a written estimate and a $1M-insured, family-owned crew.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/services/drywall" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Drywall Repair &amp; Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Holes, cracks, water damage &amp; texture matching.</p>
+        </a>
+        <a href="/services/painting" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Interior &amp; Exterior Painting</h3>
+          <p class="text-sm text-gray-600 mt-1">Walls, trim, cabinets &amp; full house exteriors.</p>
+        </a>
+        <a href="/services/flooring" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Flooring Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Hardwood, LVP &amp; laminate, professionally installed.</p>
+        </a>
+        <a href="/services/garage-floor-coating" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Garage Floor Coating</h3>
+          <p class="text-sm text-gray-600 mt-1">Epoxy &amp; polyaspartic floors with a 20-year warranty.</p>
+        </a>
+        <a href="/services/finish-carpentry" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Finish Carpentry</h3>
+          <p class="text-sm text-gray-600 mt-1">Crown molding, baseboards, wainscoting &amp; built-ins.</p>
+        </a>
+        <a href="/services/gutter-cleaning" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Gutter Cleaning &amp; Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Full debris removal plus seamless gutter replacement.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

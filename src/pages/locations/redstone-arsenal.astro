@@ -1,0 +1,380 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const whoWeServe = [
+  {
+    name: "Military Families",
+    detail: "PCS-ready",
+    description:
+      "Active-duty families stationed at Redstone often buy off-post in Madison, Huntsville, and Owens Cross Roads. We handle move-in and move-out projects — paint, drywall, flooring, and finish work — on the tight timelines PCS orders demand.",
+  },
+  {
+    name: "NASA & Marshall Employees",
+    detail: "Off-post homes",
+    description:
+      "Engineers and staff at Marshall Space Flight Center who own homes across the metro. Detail-oriented clients who appreciate a written scope and a crew that respects the work.",
+  },
+  {
+    name: "Defense Contractors",
+    detail: "AMCOM / MDA corridor",
+    description:
+      "The large contractor workforce supporting Aviation & Missile Command, the Missile Defense Agency, and the FBI's Huntsville campus. We schedule around demanding work hours.",
+  },
+  {
+    name: "Civilian Government Workforce",
+    detail: "Long-term residents",
+    description:
+      "Career civil servants who've put down roots in North Alabama and want a reliable, licensed contractor for their homes year after year.",
+  },
+];
+
+const services = [
+  {
+    title: "PCS Move-In / Move-Out Projects",
+    description:
+      "Fresh paint, drywall patching, and finish touch-ups to get a home ready to sell, rent, or move into — coordinated to your relocation timeline.",
+  },
+  {
+    title: "Interior & Exterior Painting",
+    description:
+      "Walls, trim, cabinets, and full exteriors with meticulous prep and premium paint. Neutral, market-ready finishes a specialty for relocating families.",
+  },
+  {
+    title: "Drywall Repair & Installation",
+    description:
+      "Holes, cracks, water damage, and texture matching — the repairs that come up most before a sale or after tenants move out.",
+  },
+  {
+    title: "Flooring Installation",
+    description:
+      "Hardwood, LVP, and laminate installed cleanly, with subfloor prep and existing-floor matching handled the right way.",
+  },
+  {
+    title: "Finish Carpentry",
+    description:
+      "Crown molding, baseboards, wainscoting, and built-ins from a certified carpenter — the details that make a home stand out.",
+  },
+  {
+    title: "Garage Floor Coating & Gutters",
+    description:
+      "Epoxy and polyaspartic garage floors with a 20-year warranty, plus gutter cleaning and seamless gutter installation.",
+  },
+];
+
+const areaFacts = [
+  "U.S. Army installation southwest of Huntsville, AL",
+  "Home to NASA's Marshall Space Flight Center",
+  "Hosts AMCOM, the Missile Defense Agency & FBI Huntsville",
+  "Tens of thousands of military, civilian & contractor personnel",
+  "Workforce lives across Madison, Huntsville & Owens Cross Roads",
+  "One of the largest employment hubs in the Southeast",
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do you work with Redstone Arsenal families and employees?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. We regularly serve the Redstone Arsenal community — military families, NASA and Marshall employees, and the defense-contractor workforce — at their homes throughout Madison, Huntsville, and Owens Cross Roads. On-post privatized housing has its own maintenance process through the housing partner; for personal projects and off-post homes, we handle drywall, painting, flooring, finish carpentry, garage coatings, and gutters.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you handle a PCS move-in or move-out on a tight timeline?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Relocation projects are one of our specialties. Text a photo of what needs doing to (256) 221-0373 and we'll get you a fast estimate and a schedule that fits your PCS dates — paint, drywall, flooring, and finish touch-ups to get a home market- or move-in ready.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are you licensed and insured?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Rittenworx is licensed and carries a $1M general liability policy. We are family-owned, run by a certified carpenter with 7+ years serving North Alabama, and we can show the certificate before we start.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you give free estimates for Redstone Arsenal families?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — estimates are always free and carry no obligation. Text a photo to (256) 221-0373 for a fast initial price, or request an on-site visit for larger projects.",
+          },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<Layout
+  title="Handyman for Redstone Arsenal Families | Huntsville AL"
+  description="Handyman serving the Redstone Arsenal community in Huntsville, AL — military & civilian families. PCS-ready painting, drywall, flooring & carpentry. Free estimates."
+  schema={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="bg-blue-900 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl">
+        <nav class="text-sm text-blue-200 mb-4">
+          <a href="/locations" class="hover:text-white">Service Areas</a>
+          <span class="mx-2">/</span>
+          <a href="/locations/huntsville" class="hover:text-white">Huntsville</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Redstone Arsenal</span>
+        </nav>
+        <span class="text-orange-400 font-semibold text-sm uppercase tracking-wide"
+          >Serving the Redstone Community</span
+        >
+        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">
+          Handyman Service for the Redstone Arsenal Community
+        </h1>
+        <p class="text-xl text-blue-100 mb-6">
+          Military, NASA, and contractor families make North Alabama home — and
+          we help keep those homes in shape. From PCS move-in and move-out
+          projects to painting, flooring, and finish carpentry, we serve the
+          Redstone workforce across Madison, Huntsville, and Owens Cross Roads.
+          Licensed, $1M-insured, family-owned.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/contact"
+            class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            Get Free Estimate
+          </a>
+          <a
+            href="tel:2562210373"
+            class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          >
+            (256) 221-0373
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="bg-white py-8 border-b">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-3xl font-bold text-blue-900">PCS</p>
+          <p class="text-gray-600 text-sm">Timelines Welcome</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-blue-900">$1M</p>
+          <p class="text-gray-600 text-sm">Insured</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-blue-900">7 Yrs</p>
+          <p class="text-gray-600 text-sm">In North Alabama</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-blue-900">Free</p>
+          <p class="text-gray-600 text-sm">Estimates Always</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+            >North Alabama's Engine</span
+          >
+          <h2 class="text-3xl font-bold text-gray-800 mt-2 mb-6">
+            Serving the Redstone Arsenal Community
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Redstone Arsenal is the heartbeat of North Alabama's economy — home
+            to NASA's Marshall Space Flight Center, Aviation & Missile Command,
+            the Missile Defense Agency, and the FBI's growing Huntsville campus.
+            Tens of thousands of military members, civil servants, and
+            defense-industry professionals report to the arsenal every day.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Most of them live off-post — in Madison, west Huntsville, Hampton
+            Cove, and Owens Cross Roads — and that's where we come in. Whether
+            you're a family relocating on PCS orders and need a home turned
+            around fast, or a long-time civilian employee updating the place
+            you've owned for years, we bring licensed, insured, finish-level
+            work you can plan around.
+          </p>
+          <p class="text-gray-600">
+            A note on honesty: on-post privatized family housing is maintained
+            through the installation's housing partner, so those work orders go
+            through them. For personal projects and off-post homes, we're ready
+            when you are — with a written estimate up front and a final bill
+            that matches it.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-4">
+            About Redstone Arsenal
+          </h3>
+          <ul class="space-y-3">
+            {
+              areaFacts.map((fact) => (
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">{fact}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Who We Serve</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          The Redstone Workforce We Work With
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          whoWeServe.map((group) => (
+            <div class="bg-gray-50 rounded-lg p-6">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-lg font-bold text-blue-900">{group.name}</h3>
+                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                  {group.detail}
+                </span>
+              </div>
+              <p class="text-gray-600 text-sm">{group.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >How We Help</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Projects We Handle for Redstone Families
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Built around the realities of military and government life — tight
+          timelines, relocations, and homes that need to look their best.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          services.map((service) => (
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-lg font-bold text-blue-900 mb-2">
+                {service.title}
+              </h3>
+              <p class="text-gray-600 text-sm">{service.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">
+        Stationed or Working at Redstone? Let's Talk.
+      </h2>
+      <p class="text-xl mb-8">
+        Free estimates, PCS timelines welcome, quality guaranteed.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          Get Free Estimate
+        </a>
+        <a
+          href="tel:2562210373"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service cross-links -->
+  <section class="py-16 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Our Services</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Handyman Services for Redstone Families</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Pick the service you need. Every job comes with a written estimate and a $1M-insured, family-owned crew.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/services/drywall" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Drywall Repair &amp; Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Holes, cracks, water damage &amp; texture matching.</p>
+        </a>
+        <a href="/services/painting" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Interior &amp; Exterior Painting</h3>
+          <p class="text-sm text-gray-600 mt-1">Walls, trim, cabinets &amp; full house exteriors.</p>
+        </a>
+        <a href="/services/flooring" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Flooring Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Hardwood, LVP &amp; laminate, professionally installed.</p>
+        </a>
+        <a href="/services/garage-floor-coating" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Garage Floor Coating</h3>
+          <p class="text-sm text-gray-600 mt-1">Epoxy &amp; polyaspartic floors with a 20-year warranty.</p>
+        </a>
+        <a href="/services/finish-carpentry" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Finish Carpentry</h3>
+          <p class="text-sm text-gray-600 mt-1">Crown molding, baseboards, wainscoting &amp; built-ins.</p>
+        </a>
+        <a href="/services/gutter-cleaning" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Gutter Cleaning &amp; Installation</h3>
+          <p class="text-sm text-gray-600 mt-1">Full debris removal plus seamless gutter replacement.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
