@@ -82,7 +82,6 @@ const schemaData = {
           closes: "15:00",
         },
       ],
-      priceRange: "$$",
       paymentAccepted: ["Cash", "Check", "Credit Card"],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -215,13 +214,6 @@ const schemaData = {
             ],
           },
         ],
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "163",
-        bestRating: "5",
-        worstRating: "1",
       },
       sameAs: [
         "https://www.facebook.com/p/Rittenworx-Handyman-Services-61573998744338/",
@@ -737,8 +729,8 @@ const finalSchema = schema || schemaData;
               height="172"
             />
             <p class="text-sm text-gray-400 mb-4">
-              Family-owned, certified carpentry. 7 years serving North Alabama
-              with a $1M liability policy backing every project.
+              Family-owned local handyman service. Licensed and insured, with 7
+              years serving homeowners across North Alabama.
             </p>
             <div class="flex items-center gap-2 text-sm">
               <svg
@@ -880,7 +872,7 @@ const finalSchema = schema || schemaData;
         >
           <p>
             &copy; {new Date().getFullYear()} Rittenworx. All rights reserved. | Family
-            Owned | $1M Insured | Certified Carpenter
+            Owned | Licensed &amp; Insured
           </p>
         </div>
       </div>

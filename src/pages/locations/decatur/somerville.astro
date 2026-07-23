@@ -199,7 +199,7 @@ const competitorComparison = [
   },
   {
     feature: "Show Up On Time",
-    us: "Guaranteed",
+    us: "Shows up when he says",
     others: "Rural = low priority",
   },
   {
@@ -209,7 +209,7 @@ const competitorComparison = [
   },
   {
     feature: "Price Matches Quote",
-    us: "Always",
+    us: "The quote is the price",
     others: "Often adds charges",
   },
   {
@@ -275,7 +275,7 @@ const pageSchema = {
           name: "How quickly can Rittenworx come out for a handyman job in Somerville?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We typically schedule Somerville estimates within 1–3 business days and complete most jobs within 1–2 weeks of approval. Rittenworx is locally based in Madison, AL, so Somerville is a quick drive for Roy and our crew."
+            text: "Timing depends on the job, and Roy will go over it with you when you talk. Rittenworx is locally based in Madison, AL, so Somerville is a quick drive for Roy."
           }
         },
         {
@@ -283,7 +283,7 @@ const pageSchema = {
           name: "What handyman services do you offer in Somerville, AL?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "In Somerville we provide drywall repair and installation, interior and exterior painting, flooring installation (hardwood, LVP, laminate), garage floor coating (epoxy and polyaspartic), finish carpentry, gutter cleaning, and gutter installation. Pricing is by the project, not the hour, with a written estimate up front."
+            text: "In Somerville we provide drywall repair and installation, interior and exterior painting, flooring installation (hardwood, LVP, laminate), garage floor coating (epoxy and polyaspartic), finish carpentry, gutter cleaning, and gutter installation. Roy provides a written estimate up front."
           }
         },
         {
@@ -291,7 +291,7 @@ const pageSchema = {
           name: "Are you licensed and insured to work in Somerville?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Rittenworx is licensed and carries a $1M general liability policy. We are family-owned, run by a certified carpenter with 7+ years serving North Alabama, and we work in Somerville regularly."
+            text: "Yes. Rittenworx is licensed and insured. We are family-owned, run by a handyman with 7+ years serving North Alabama, and we work in Somerville regularly."
           }
         },
         {
@@ -299,7 +299,7 @@ const pageSchema = {
           name: "Do you give free estimates for Somerville handyman jobs?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — estimates are free in Somerville and the surrounding area. You can text a photo of the job to (256) 221-0373 for a fast initial price, or request an on-site visit for larger projects."
+            text: "Yes — estimates are free in Somerville and the surrounding area. You can text a photo of the job to (256) 221-0373, or request an on-site visit for larger projects."
           }
         }
       ]
@@ -818,93 +818,6 @@ const pageSchema = {
     </div>
   </section>
 
-  <!-- Somerville Reviews -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <span
-          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
-          >Local Reviews</span
-        >
-        <h2 class="text-3xl font-bold text-gray-800 mt-2">
-          What Somerville Area Homeowners Say
-        </h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg p-6 shadow-sm">
-          <div class="flex items-center gap-1 mb-3">
-            {
-              [1, 2, 3, 4, 5].map(() => (
-                <svg
-                  class="w-5 h-5 text-yellow-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))
-            }
-          </div>
-          <p class="text-gray-600 text-sm mb-4">
-            "Our 1890s farmhouse near the courthouse needed porch repairs that
-            matched the original woodwork. They took the time to find the right
-            materials and did beautiful restoration work. You'd never know it
-            wasn't original. A contractor who respects old houses is rare."
-          </p>
-          <p class="text-gray-800 font-medium">
-            - Margaret L., Downtown Somerville
-          </p>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow-sm">
-          <div class="flex items-center gap-1 mb-3">
-            {
-              [1, 2, 3, 4, 5].map(() => (
-                <svg
-                  class="w-5 h-5 text-yellow-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))
-            }
-          </div>
-          <p class="text-gray-600 text-sm mb-4">
-            "I've called three contractors who said they'd come out to our place
-            in Lacon—none ever showed. Rittenworx came when they said,
-            quoted fair, and did excellent drywall work. Finally, someone who
-            actually serves rural customers."
-          </p>
-          <p class="text-gray-800 font-medium">- Tommy R., Lacon</p>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow-sm">
-          <div class="flex items-center gap-1 mb-3">
-            {
-              [1, 2, 3, 4, 5].map(() => (
-                <svg
-                  class="w-5 h-5 text-yellow-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))
-            }
-          </div>
-          <p class="text-gray-600 text-sm mb-4">
-            "Storm damage to our barn and house after spring storms. They
-            handled both buildings, worked with our insurance, and finished
-            before the next round of weather. Professional, efficient, and they
-            understood farm property needs."
-          </p>
-          <p class="text-gray-800 font-medium">
-            - Harold & Betty S., Rural Morgan County
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <InlineQuoteForm />
 
   <TrustCredentials />
@@ -916,7 +829,7 @@ const pageSchema = {
         Ready for Reliable Service in Somerville?
       </h2>
       <p class="text-xl mb-8">
-        Quick scheduling available. Free estimates, quality guaranteed.
+        Free estimates from a licensed, insured, family-owned handyman.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a
@@ -941,7 +854,7 @@ const pageSchema = {
       <div class="text-center mb-10">
         <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Our Services</span>
         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Handyman Services Available in Somerville</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Pick the service you need. Every job in Somerville comes with a written estimate, a $1M-insured crew, and a 30-minute on-time arrival guarantee.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">Pick the service you need. Every job in Somerville comes with a written estimate from a licensed and insured handyman.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <a href="/services/drywall" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
@@ -958,7 +871,7 @@ const pageSchema = {
         </a>
         <a href="/services/garage-floor-coating" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
           <h3 class="font-bold text-gray-900">Garage Floor Coating</h3>
-          <p class="text-sm text-gray-600 mt-1">Epoxy &amp; polyaspartic floors with a 20-year warranty.</p>
+          <p class="text-sm text-gray-600 mt-1">Epoxy &amp; polyaspartic garage floors.</p>
         </a>
         <a href="/services/finish-carpentry" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
           <h3 class="font-bold text-gray-900">Finish Carpentry</h3>

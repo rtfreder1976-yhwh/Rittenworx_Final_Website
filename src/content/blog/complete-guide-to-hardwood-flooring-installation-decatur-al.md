@@ -47,8 +47,8 @@ A professional hardwood job is defined by the quality of the finish work. You ne
 *   **T-Molding and Reducers:** If your beautiful new oak floor meets the kitchen tile or bathroom linoleum at a different height, you will essentially need custom transition pieces to avoid creating a tripping hazard. 
 
 ## When to Hire a Pro
-Laying hardwood flooring is back-breaking, tedious work that requires highly specialized tools (like a $400 floor stapler, a jamb saw for undercutting door frames, and a compound miter saw). Unless you have a week of free time and a strong grasp of geometry, you are generally better off trusting a professional.
+Laying hardwood flooring is back-breaking, tedious work that requires specialized tools (like a pneumatic floor stapler, a jamb saw for undercutting door frames, and a compound miter saw). Unless you have a week of free time and a strong grasp of geometry, you are generally better off trusting a professional.
 
-If you’re ready to rip up the carpets and reveal the beautiful potential underneath, **Rittenworx** provides Quality hardwood and engineered flooring installation across Decatur, Alabama. 
+If you’re ready to rip up the carpets and reveal the potential underneath, Roy at **Rittenworx** does hardwood and engineered flooring installation across Decatur, Alabama. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo of your current room right now, and let's get you a free flooring quote!**
+Text a photo of your current room to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

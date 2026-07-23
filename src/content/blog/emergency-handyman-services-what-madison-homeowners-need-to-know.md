@@ -60,21 +60,21 @@ A premium emergency professional provides absolute peace of mind during a chaoti
 
 ## The Rittenworx Emergency Response Standard
 
-At Rittenworx, we specialize in high-end, rapid-response home care for luxury properties across Madison, Huntsville, and Athens. When your home is in crisis, you don't need a handyman who might show up next Tuesday. You need a trusted, heavily insured professional who responds immediately, stabilizes the chaos, and executes a Quality repair.
+Roy at Rittenworx handles rapid-response home care across Madison, Huntsville, and Athens. When your home is in crisis, you don't need a handyman who might show up next Tuesday. You need someone local and insured who responds, stabilizes the situation, and does a solid repair.
 
-We view our relationships with our clients as long-term partnerships in protecting their largest asset. When you face an emergency, we deliver a zero-friction, elite experience:
+When you face an emergency, here's what you can expect:
 
-*   **Rapid Communication:** We guarantee a response to texts or calls within 3 hours. When you have a hole in your roof, you won't be left wondering if someone received your message.
-*   **Immediate Stabilization:** We arrive equipped with industrial water extraction tools, heavy-duty tarps, structural bracing, and professional-grade materials to immediately stop the bleeding, mitigate secondary damage, and secure your property.
-*   **Exceptional Craftsmanship:** We do not perform "temporary fixes" disguised as permanent solutions. Once the emergency is stabilized, our certified technicians execute meticulous, undetectable repairs on drywall, framing, and finishes to restore your luxury home to absolutely pristine condition.
-*   **Transparent Expertise:** You receive a detailed, itemized quote within 24 hours of our assessment. We carry a $1,000,000 liability policy, meaning you bear zero risk when our technicians are on-site. 
+*   **Communication:** Roy will get back to you as soon as he can. When you have a hole in your roof, you won't be left wondering if someone received your message.
+*   **Stabilization:** Roy arrives equipped with water extraction tools, heavy-duty tarps, structural bracing, and quality materials to stop the bleeding, limit secondary damage, and secure your property.
+*   **Solid Repairs:** Once the emergency is stabilized, Roy handles the repairs on drywall, framing, and finishes to get your home back to good condition.
+*   **A Clear Quote:** You get a free quote once Roy has assessed the situation. Rittenworx is licensed and insured. 
 
 ## Be Prepared Before Disaster Strikes
 
 The worst time to look for a reliable contractor is while you are standing in two inches of water in your living room. 
 
-The smartest homeowners build a relationship with a premium maintenance service long before an emergency ever occurs. By utilizing our preventative maintenance services, you ensure that small vulnerabilities are fixed before they become massive, expensive disasters. 
+It helps to know who you'll call before an emergency ever occurs. Regular preventative maintenance also catches small vulnerabilities before they become expensive disasters. 
 
-However, if an emergency has already struck, don't leave the structural integrity of your luxury Madison home to chance. 
+If an emergency has already struck, don't wait. 
 
-[**Contact Rittenworx today**](/quote) or call us immediately at **(256) 221-0373**. We will secure your property, execute Quality repairs, and deliver absolute peace of mind.
+[**Contact Rittenworx for a free quote**](/quote) or call **(256) 221-0373**. Roy will get back to you as soon as he can.

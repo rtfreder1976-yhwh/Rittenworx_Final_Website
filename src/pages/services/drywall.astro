@@ -112,14 +112,14 @@ const processSteps = [
     title: "Free On-Site Estimate",
     description:
       "We visit your home to assess the work, measure areas, and identify any underlying issues. You get a detailed written quote with no hidden fees.",
-    time: "Within 48 hours",
+    time: "Scheduled with you",
   },
   {
     step: 3,
     title: "Schedule Your Service",
     description:
-      "Pick a date and time that works for you. We offer flexible scheduling including Saturdays. We confirm appointments 24 hours and 2 hours before arrival.",
-    time: "Usually within 3-5 days",
+      "Pick a date and time that works for you. We offer flexible scheduling including Saturdays, and we'll confirm your appointment ahead of arrival.",
+    time: "Timing depends on the job",
   },
   {
     step: 4,
@@ -146,15 +146,15 @@ const processSteps = [
     step: 7,
     title: "Final Walkthrough",
     description:
-      "We walk through the completed work with you. We don't leave until you're 100% satisfied. Workspace is cleaned and debris removed.",
-    time: "15 minutes",
+      "We walk through the completed work with you. We don't leave until you're satisfied. Workspace is cleaned and debris removed.",
+    time: "Before we leave",
   },
   {
     step: 8,
     title: "Follow-Up",
     description:
-      "We check in after the job to ensure everything looks great once painted. Our work is guaranteed.",
-    time: "Within 7 days",
+      "We check in after the job to make sure everything looks great once painted.",
+    time: "After the job",
   },
 ];
 
@@ -162,12 +162,12 @@ const faqs = [
   {
     question: "How much does drywall repair cost?",
     answer:
-      "Small repairs (nail holes, small cracks) typically run $75-150. Medium repairs (fist-sized holes) are $150-300. Large repairs or water damage restoration varies based on scope — we provide free estimates so you know exactly what to expect.",
+      "Cost depends on the size of the repair and the scope of the work. Water damage restoration varies based on the extent of the damage. We provide free estimates so you know what to expect before any work begins.",
   },
   {
     question: "How long does drywall repair take?",
     answer:
-      "Small patches can be completed in 1-2 hours. However, joint compound needs 24 hours to dry between coats, and most repairs need 2-3 coats. Plan for 2-3 days from start to paint-ready for best results.",
+      "It depends on the job. Joint compound needs time to dry between coats, and most repairs need more than one coat. Roy will go over the expected timeline with you when he looks at the work.",
   },
   {
     question: "Can you match my existing wall texture?",
@@ -197,7 +197,7 @@ const faqs = [
   {
     question: "How quickly can you schedule drywall repairs?",
     answer:
-      "We typically schedule drywall repairs within 3–5 business days of your estimate. For water damage situations where timing matters, call us directly at (256) 221-0373 and we’ll do our best to work you in as soon as our schedule allows.",
+      "Scheduling depends on the job and Roy's current workload. For water damage situations where timing matters, call us directly at (256) 221-0373 and we’ll do our best to work you in as soon as the schedule allows.",
   },
   {
     question: "Do you pull permits for drywall work?",
@@ -280,15 +280,14 @@ const serviceAreas = [
           Invisible <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
             >Drywall Repairs</span
-          > in 24 Hours
+          >
         </h1>
 
         <p
           class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed"
         >
-          Stop hiding that hole with furniture. Madison homeowners get quality
-          repairs starting at just $275. Text a photo now—fixed today, painted
-          tomorrow, forgotten forever.
+          Stop hiding that hole with furniture. Text a photo of the damage and
+          Roy will get back to you with an estimate.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
@@ -309,7 +308,7 @@ const serviceAreas = [
                 d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
               ></path>
             </svg>
-            Text A Photo For Instant Quote
+            Text A Photo For A Quote
           </a>
         </div>
       </div>
@@ -594,8 +593,8 @@ const serviceAreas = [
           </div>
           <h3 class="text-lg font-bold mb-2">We Actually Show Up</h3>
           <p class="text-blue-100 text-sm">
-            We confirm appointments 24 hours AND 2 hours before arrival. No
-            no-shows, no ghosting. Your time matters.
+            We confirm your appointment ahead of arrival. No no-shows, no
+            ghosting. Your time matters.
           </p>
         </div>
         <div class="bg-white/10 rounded-lg p-6">
@@ -618,8 +617,8 @@ const serviceAreas = [
           </div>
           <h3 class="text-lg font-bold mb-2">We Answer the Phone</h3>
           <p class="text-blue-100 text-sm">
-            Call us and a real person answers. Messages returned within 2 hours.
-            Unlike competitors who leave you waiting.
+            Call us and a real person answers. Roy gets back to you as soon as
+            he can.
           </p>
         </div>
         <div class="bg-white/10 rounded-lg p-6">
@@ -812,7 +811,7 @@ const serviceAreas = [
                 <h3 class="font-bold text-gray-900 text-lg group-hover:text-blue-900 transition-colors">
                   {city}
                 </h3>
-                <p class="text-sm text-gray-500 mt-2">View 24/7 Availability</p>
+                <p class="text-sm text-gray-500 mt-2">View Local Details</p>
               </a>
             );
           })

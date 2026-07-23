@@ -14,17 +14,15 @@ However, before the massive aluminum extrusion truck backs into your driveway, y
 
 Here is a transparent guide to precisely how gutter companies price their installations in North Alabama.
 
-## The Standard Pricing Model (Cost Per Linear Foot)
+## The Standard Pricing Model (Per Linear Foot)
 Seamless gutter installation is almost universally priced by the "linear foot." This means the installer measures the exact length of the fascia boards around your roofline where the gutters will hang, plus the total vertical height of every single downspout required to drop the water safely to the ground.
 
-In the Huntsville market, professional installation typically ranges from **$8.00 to $16.00+ per linear foot.** 
-
-Why is there such a massive variance? The price is heavily dictated by three primary factors:
+Why is there such a wide variance between quotes? The price is heavily dictated by three primary factors:
 
 ### 1. Gutter Size (5-Inch vs. 6-Inch)
 This is the single biggest factor influencing the base material cost.
-*   **5-Inch K-Style Gutters (The Standard):** Sufficient for average single-story homes with moderate roof pitches. Typically $8 to $11 per linear foot.
-*   **6-Inch Commercial K-Style Gutters (The Upgrade):** Necessary for steep rooflines or metal roofs where water sheds fast. 6-inch gutters hold 40% more volume than 5-inch. Because they require a wider aluminum coil and heavier hangers, they run $11 to $16+ per linear foot.
+*   **5-Inch K-Style Gutters (The Standard):** Sufficient for average single-story homes with moderate roof pitches, and the more economical option.
+*   **6-Inch Commercial K-Style Gutters (The Upgrade):** Necessary for steep rooflines or metal roofs where water sheds fast. 6-inch gutters hold 40% more volume than 5-inch. Because they require a wider aluminum coil and heavier hangers, they cost more per linear foot.
 
 ### 2. The Architectural Complexity of Your Home
 
@@ -42,21 +40,20 @@ Single-story ranch homes are straightforward.
 ## Hidden Costs: What to Check Before You Sign
 
 *   **Rotten Fascia Board Repair:** New gutters can't be screwed into rotten wood — it won't hold. A professional quote will include an hourly or per-foot rate if they discover soft fascia that needs replacement first.
-*   **Old Gutter Demolition:** Removing old sectioned gutters, pulling the rusty spikes, and hauling the debris typically adds $1 to $2 per linear foot.
+*   **Old Gutter Demolition:** Removing old sectioned gutters, pulling the rusty spikes, and hauling the debris adds to the total.
 
-## A Real-World Example
+## How the Measurements Add Up
 
-A standard 2,000 sq. ft. single-story home in Huntsville:
+For a standard single-story home in Huntsville, the total footage that gets priced is the guttering around the roofline plus the vertical runs of every downspout. On a typical home that comes to roughly:
 
-*   **150 linear feet** of guttering around the roofline.
-*   **4 downspouts** at roughly 10 feet each = 40 additional feet.
-*   **Total Linear Footage:** 190 feet.
-*   Homeowner opts for 6-inch gutters due to large oak trees on the property ($12/ft).
-*   **Estimated Cost:** 190 feet x $12 = **$2,280**.
+*   The guttering around the roofline.
+*   Four downspouts, at roughly 10 feet each.
+
+Add those together, multiply by the per-foot rate for the gutter size you choose, and you have your estimate. Opting for 6-inch gutters — often the right call on a lot with large oak trees — raises the per-foot rate.
 
 ## Protect Your Foundation — Before the Next Storm
-A gutter that can't handle 2 inches of rain in an hour isn't protecting your foundation. It's just decorative aluminum.
+A gutter that can't handle a couple inches of rain in an hour isn't protecting your foundation. It's just decorative aluminum.
 
-The installation crews at **Rittenworx** fabricate seamless K-style gutters on-site to your exact roofline dimensions. No seams, no leaks, no callbacks.
+Roy at **Rittenworx** fabricates seamless K-style gutters on-site to your exact roofline dimensions — no seams, no leaks. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo of your roofline tonight and we'll have a written quote back to you within the hour.**
+Text a photo of your roofline to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

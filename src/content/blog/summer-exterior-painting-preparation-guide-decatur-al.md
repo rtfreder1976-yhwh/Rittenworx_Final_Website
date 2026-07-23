@@ -10,7 +10,7 @@ Summer in Decatur, Alabama is characterized by three unrelenting forces: searing
 
 If you apply expensive exterior paint to a house that hasn't been meticulously prepped for the Alabama heat, you are guaranteed to experience massive blistering, rapid color fading, and complete adherence failure within 24 months. 
 
-Whether you are hiring a professional crew or attempting a massive DIY project, here is the absolute ultimate summer exterior painting preparation guide to guarantee a Quality, bulletproof finish.
+Whether you are hiring a professional or attempting a DIY project, here is a summer exterior painting preparation guide to help you get a durable, long-lasting finish.
 
 ## Phase 1: The Eradication Phase (Weeks 1-2)
 You can buy the most expensive bucket of paint in the hardware store, but if the house is covered in microscopic algae or peeling base layers, it will instantly fail. 
@@ -57,9 +57,9 @@ Finally, it is time to paint. However, the Decatur sun fundamentally changes *ho
 If you apply acrylic latex paint to siding that has been baking in 95-degree direct sunlight for four hours, the paint will "flash-dry" the absolute second it touches the wood. It will dry so incredibly fast that it cannot mechanically cross-link to the surface, and your brush marks will be horribly visible. 
 *   **The Golden Rule of Summer Painting:** You must "chase the shade." Start painting on the West side of the house early in the morning, move to the North side by late morning, hit the East side in the sweltering afternoon, and finish the South side in the evening. Keep the surface temperature of the wood as cool as possible. 
 
-## Secure Your Spot On the Schedule
-Executing a Quality, deeply prepped exterior paint job in the massive heat requires extensive equipment, immense physical stamina, and dedicated commitment to doing it the hard way. 
+## Rather Have Someone Handle It?
+A deeply prepped exterior paint job in the summer heat takes the right equipment, a lot of physical stamina, and the patience to do it the hard way. 
 
-If this preparation checklist sounds exhausting, let the professionals take the wheel. The painting teams at **Rittenworx** specialize in ultra-durable, premium exterior restorations that endure the brutal Alabama summers for decades. 
+If this preparation checklist sounds exhausting, Roy at **Rittenworx** does exterior painting built to hold up to Alabama summers. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Summer schedules fill up in May. Text us a photo of the front of your house and we'll get you a written quote before the good weather window closes.**
+Text a photo of the front of your house to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

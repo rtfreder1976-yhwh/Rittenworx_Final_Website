@@ -43,8 +43,8 @@ During a repair, a professional assesses the weatherstripping. By installing hea
 ## Secure Your Home Immediately 
 If you can’t lock the door before heading to bed, you need immediate resolution. 
 
-The security and peace of mind for your family is paramount. We specialize in immediate, robust door repairs, lock realignment, and hinge reinforcements that make your home structurally tighter than the day it was built. 
+Getting your family's home secure again is what matters. Roy handles door repairs, lock realignment, and hinge reinforcement to get your entry solid and closing properly again. 
 
-If you are dealing with a door emergency in the Harvest or greater Madison area, **Rittenworx** is the team to trust.  
+If you are dealing with a door emergency in the Harvest or greater Madison area, Roy at **Rittenworx** can help. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo of the damaged door or the misaligned lock right now, and let's get your home secured today!**
+Text a photo of the damaged door or the misaligned lock to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

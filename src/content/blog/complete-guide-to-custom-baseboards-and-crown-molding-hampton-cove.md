@@ -52,6 +52,6 @@ If you upgrade the baseboards, you must simultaneously rip down and upgrade the 
 ## Never Settle For Tiny Trim
 Massive, gorgeous trim instantly defines the aesthetic architecture of your entirely expensive home. 
 
-The experienced carpenters at **Rittenworx** specialize in seamless, heavily coped crown molding, massive baseboard upgrades, and pristine wainscoting installations across the highly demanding Hampton Cove area. 
+Roy at **Rittenworx** does coped crown molding, baseboard upgrades, and wainscoting installations across the Hampton Cove area. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo of your blank, boring walls right now, and let's thoroughly elevate your home's architecture today!**
+Text a photo of the walls you want to upgrade to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

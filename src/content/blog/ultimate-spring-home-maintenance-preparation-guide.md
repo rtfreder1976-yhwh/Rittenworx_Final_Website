@@ -75,10 +75,10 @@ Spring maintenance is not a weekend DIY project for a luxury homeowner juggling 
 
 At Rittenworx, we specialize in high-end, proactive home care across Madison, Huntsville, and Athens. We don't just fix what’s broken; we anticipate problems before they occur, protecting the structural integrity and premium aesthetic of your home. 
 
-Our certified technicians will meticulously inspect your exterior, execute Quality carpentry repairs on rotted trim, fully clear your gutter systems, and ensure your home's envelope is completely sealed against the approaching Alabama storms.
+Roy will inspect your exterior, handle carpentry repairs on rotted trim, clear your gutter systems, and help make sure your home's envelope is sealed against the approaching Alabama storms.
 
-We carry a $1,000,000 liability policy, guarantee exceptional craftsmanship, and provide a frictionless, zero-stress client experience from the moment you call. 
+Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Protect your largest asset.** Don't wait for the first spring storm to discover a leak. 
+Don't wait for the first spring storm to discover a leak. 
 
-[**Contact Rittenworx today for a fast, free quote**](/quote) or call us directly at **(256) 221-0373**. We respond to all inquiries within 3 hours. Let us ensure your home is pristine, protected, and ready for whatever the season brings.
+[**Contact Rittenworx for a free quote**](/quote) or call directly at **(256) 221-0373**. Roy will get back to you as soon as he can.

@@ -83,7 +83,7 @@ const whoWeServe = [
     name: "Cummings Research Park",
     detail: "Tech professionals",
     description:
-      "Engineers and tech-sector professionals who research their contractors carefully. Our written estimates, licensing, and reviews are built for exactly that kind of due diligence.",
+      "Engineers and tech-sector professionals who research their contractors carefully. Our written estimates and licensing are built for exactly that kind of due diligence.",
   },
   {
     name: "Hampton Cove Families",
@@ -120,11 +120,10 @@ const areaFacts = [
 const competitorComparison = [
   { feature: "Answer Phone Calls", us: "Real person, always", others: "Often voicemail" },
   { feature: "Serve Owens Cross Roads", us: "Yes, regularly", others: "May decline the drive" },
-  { feature: "Show Up On Time", us: "Guaranteed", others: "Inconsistent" },
+  { feature: "Show Up On Time", us: "Shows up when he says", others: "Inconsistent" },
   { feature: "Written Estimates", us: "Detailed, free", others: "Verbal or none" },
-  { feature: "Price Matches Quote", us: "Always", others: "Often adds charges" },
-  { feature: "Licensed & Insured", us: "$1M, verifiable", others: "Often unclear" },
-  { feature: "Certified Carpenter", us: "Yes", others: "Rarely" },
+  { feature: "Price Matches Quote", us: "The quote is the price", others: "Often adds charges" },
+  { feature: "Licensed & Insured", us: "Yes, verifiable", others: "Often unclear" },
   { feature: "Clean Up Jobsite", us: "Every job", others: "Inconsistent" },
 ];
 
@@ -139,7 +138,7 @@ const pageSchema = {
           name: "Do you serve Owens Cross Roads and Hampton Cove, AL?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Owens Cross Roads and Hampton Cove are a regular part of our service area. Rittenworx is based in Madison, AL, and we reach the 35763 area in about 20–25 minutes for drywall, painting, flooring, finish carpentry, garage floor coating, and gutter work.",
+            text: "Yes. Owens Cross Roads and Hampton Cove are a regular part of our service area. Rittenworx is based in Madison, AL, a short drive from the 35763 area, and we handle drywall, painting, flooring, finish carpentry, garage floor coating, and gutter work.",
           },
         },
         {
@@ -147,7 +146,7 @@ const pageSchema = {
           name: "What handyman services do you offer in Owens Cross Roads?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "In Owens Cross Roads we provide drywall repair and installation, interior and exterior painting, flooring installation (hardwood, LVP, laminate), garage floor coating (epoxy and polyaspartic), finish carpentry, gutter cleaning, and gutter installation. Pricing is by the project, with a written estimate up front.",
+            text: "In Owens Cross Roads we provide drywall repair and installation, interior and exterior painting, flooring installation (hardwood, LVP, laminate), garage floor coating (epoxy and polyaspartic), finish carpentry, gutter cleaning, and gutter installation. Roy provides a written estimate up front.",
           },
         },
         {
@@ -155,7 +154,7 @@ const pageSchema = {
           name: "Are you licensed and insured to work in Owens Cross Roads?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Rittenworx is licensed and carries a $1M general liability policy. We are family-owned, run by a certified carpenter with 7+ years serving North Alabama, and we can show the certificate before we start.",
+            text: "Yes. Rittenworx is licensed and insured. We are family-owned, run by a handyman with 7+ years serving North Alabama, and we can show proof before we start.",
           },
         },
         {
@@ -163,7 +162,7 @@ const pageSchema = {
           name: "Do you give free estimates for Owens Cross Roads jobs?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — estimates are free in Owens Cross Roads and Hampton Cove. Text a photo of the project to (256) 221-0373 for a fast initial price, or request an on-site visit for larger projects.",
+            text: "Yes — estimates are free in Owens Cross Roads and Hampton Cove. Text a photo of the project to (256) 221-0373, or request an on-site visit for larger projects.",
           },
         },
       ],
@@ -197,8 +196,8 @@ const pageSchema = {
         <p class="text-xl text-blue-100 mb-6">
           From Hampton Cove's newer homes to the established properties around
           Big Cove and Green Mountain, we bring finish-level craftsmanship,
-          written estimates, and a crew that shows up on time. Licensed,
-          $1M-insured, and family-owned.
+          written estimates, and a handyman who shows up on time. Licensed,
+          insured, and family-owned.
         </p>
         <div class="flex flex-wrap gap-4">
           <a
@@ -231,8 +230,8 @@ const pageSchema = {
           <p class="text-gray-600 text-sm">ZIP Served</p>
         </div>
         <div>
-          <p class="text-3xl font-bold text-blue-900">$1M</p>
-          <p class="text-gray-600 text-sm">Insured</p>
+          <p class="text-3xl font-bold text-blue-900">Licensed</p>
+          <p class="text-gray-600 text-sm">& Insured</p>
         </div>
         <div>
           <p class="text-3xl font-bold text-blue-900">Free</p>
@@ -263,10 +262,10 @@ const pageSchema = {
           </p>
           <p class="text-gray-600 mb-4">
             Those homeowners expect quality — and they do their homework before
-            hiring. That suits us. Rittenworx is licensed, carries $1 million in
-            liability coverage, and is run by a certified carpenter with seven
-            years of work across North Alabama. We send a written estimate you
-            can hold us to, and the final bill matches it.
+            hiring. That suits us. Rittenworx is licensed and insured, and is
+            run by a handyman with seven years of work across North Alabama. We
+            send a written estimate you can hold us to, and the final bill
+            matches it.
           </p>
           <p class="text-gray-600">
             Based about 20 minutes away in Madison, we treat Owens Cross Roads
@@ -448,7 +447,7 @@ const pageSchema = {
         Ready for Reliable Service in Owens Cross Roads?
       </h2>
       <p class="text-xl mb-8">
-        Quick scheduling available. Free estimates, quality guaranteed.
+        Free estimates from a licensed, insured, family-owned handyman.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a
@@ -473,7 +472,7 @@ const pageSchema = {
       <div class="text-center mb-10">
         <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Our Services</span>
         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Handyman Services Available in Owens Cross Roads</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Pick the service you need. Every job comes with a written estimate and a $1M-insured, family-owned crew.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">Pick the service you need. Every job comes with a written estimate from a licensed, insured, family-owned handyman.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <a href="/services/drywall" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
@@ -490,7 +489,7 @@ const pageSchema = {
         </a>
         <a href="/services/garage-floor-coating" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
           <h3 class="font-bold text-gray-900">Garage Floor Coating</h3>
-          <p class="text-sm text-gray-600 mt-1">Epoxy &amp; polyaspartic floors with a 20-year warranty.</p>
+          <p class="text-sm text-gray-600 mt-1">Epoxy &amp; polyaspartic garage floors.</p>
         </a>
         <a href="/services/finish-carpentry" class="block bg-gray-50 rounded-xl p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
           <h3 class="font-bold text-gray-900">Finish Carpentry</h3>
