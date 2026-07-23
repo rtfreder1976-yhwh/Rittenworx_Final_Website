@@ -8,7 +8,6 @@ const services = [
     id: "tv-mounting",
     title: "TV & Monitor Mounting",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-    startingAt: "$85",
     items: [
       "Flat, tilting, and full-motion mounts on any wall type",
       "Drywall, concrete, brick, and tile mounting",
@@ -20,13 +19,12 @@ const services = [
       "Component shelf installation below the display",
     ],
     detail:
-      "We mount TVs to any wall surface — drywall, concrete block, brick, or tile — using the correct anchors for the load. Cable management (in-wall or surface conduit) is included on request. Most TV mounting jobs are done in under 90 minutes.",
+      "We mount TVs to any wall surface — drywall, concrete block, brick, or tile — using the correct anchors for the load. Cable management (in-wall or surface conduit) is included on request.",
   },
   {
     id: "ceiling-fan",
     title: "Ceiling Fan Installation & Replacement",
     icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
-    startingAt: "$85",
     items: [
       "Swap out an existing ceiling fan with a new one",
       "New fan installation where a light fixture exists",
@@ -38,13 +36,12 @@ const services = [
       "Outdoor wet-rated fan installation for porches",
     ],
     detail:
-      "Replacing a ceiling fan on an existing box takes about 45–60 minutes. New installations where we need to brace a box in the ceiling take longer. We test every fan for wobble and verify all controls work before we leave.",
+      "New installations where we need to brace a box in the ceiling take longer than a straight swap. We test every fan for wobble and verify all controls work before we leave.",
   },
   {
     id: "furniture-assembly",
     title: "Furniture Assembly",
     icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
-    startingAt: "$75/hr",
     items: [
       "IKEA furniture (any line — KALLAX, PAX, BESTA, HEMNES, etc.)",
       "Wayfair and Amazon flat-pack assembly",
@@ -62,7 +59,6 @@ const services = [
     id: "door-repair",
     title: "Door Repair & Adjustment",
     icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
-    startingAt: "$95",
     items: [
       "Sticking or binding doors that won't close properly",
       "Door hinge tightening, replacement, and shimming",
@@ -80,7 +76,6 @@ const services = [
     id: "light-fixtures",
     title: "Light Fixture Replacement",
     icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
-    startingAt: "$65",
     items: [
       "Ceiling light fixture swap (chandelier, flush-mount, pendant)",
       "Vanity bar and bathroom light replacement",
@@ -92,13 +87,12 @@ const services = [
       "Smart light switch (Lutron, Leviton) installation",
     ],
     detail:
-      "Replacing a light fixture on an existing junction box is typically a 30–45 minute job. Heavier chandeliers may need a fan-rated brace box installed first. We cap off wiring safely and restore power to the circuit before leaving.",
+      "Replacing a light fixture on an existing junction box is usually a quick job. Heavier chandeliers may need a fan-rated brace box installed first. We cap off wiring safely and restore power to the circuit before leaving.",
   },
   {
     id: "grab-bars",
     title: "Grab Bar & Safety Rail Installation",
     icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
-    startingAt: "$75",
     items: [
       "Bathroom grab bar installation (tub, shower, toilet)",
       "Into-stud mounting for maximum load rating",
@@ -116,7 +110,6 @@ const services = [
     id: "caulking",
     title: "Caulking & Weatherstripping",
     icon: "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z",
-    startingAt: "$75",
     items: [
       "Bathtub and shower surround re-caulking",
       "Window exterior caulk replacement",
@@ -134,7 +127,6 @@ const services = [
     id: "shelving",
     title: "Shelf & Picture Hanging",
     icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z",
-    startingAt: "$65",
     items: [
       "Floating shelf installation (IKEA LACK, Pottery Barn, custom)",
       "Heavy mirror and artwork hanging",
@@ -154,17 +146,17 @@ const faqs = [
   {
     question: "Do you have a minimum job size for small handyman tasks?",
     answer:
-      "No minimum. Whether it's one item or a list of ten things that have been nagging you for months, we'll take the job. Most small jobs have a one-hour minimum labor charge, which gives us time to do the work right.",
+      "No minimum. Whether it's one item or a list of ten things that have been nagging you for months, we'll take the job.",
   },
   {
     question: "How much does TV mounting cost in Madison, AL?",
     answer:
-      "TV mounting starts at $85 for a standard flat wall mount on drywall with studs. Full-motion mounts, over-fireplace mounting, concrete/brick walls, and in-wall cable management add to the cost. Text us a photo of your space and we can give you a quick estimate.",
+      "It depends on the setup — full-motion mounts, over-fireplace mounting, concrete/brick walls, and in-wall cable management all affect the price. Text us a photo of your space and we can give you an estimate.",
   },
   {
     question: "Do you assemble IKEA furniture?",
     answer:
-      "Yes, any IKEA line. PAX wardrobes, KALLAX shelving units, BESTA TV units, HEMNES bed frames, MALM dressers — we've assembled them all. We charge by the hour and work efficiently. Most single pieces take 1–2 hours; large wardrobe systems with many components take longer.",
+      "Yes, any IKEA line. PAX wardrobes, KALLAX shelving units, BESTA TV units, HEMNES bed frames, MALM dressers — we've assembled them all. We work efficiently. Larger wardrobe systems with many components take longer than a single piece.",
   },
   {
     question: "Can you install a ceiling fan where there's currently only a light fixture?",
@@ -174,12 +166,12 @@ const faqs = [
   {
     question: "How quickly can you come out for a small job?",
     answer:
-      "For most small jobs in Madison, Huntsville, Decatur, and Athens, we can schedule within the same week — often within a few days. Text or call (256) 221-0373 and we'll find a time that works. We give you a 2-hour arrival window and text when we're on the way.",
+      "It depends on Roy's current schedule. Text or call (256) 221-0373 and we'll find a time that works. We give you an arrival window and text when we're on the way.",
   },
   {
     question: "Are you licensed and insured for small handyman jobs?",
     answer:
-      "Yes. Rittenworx is a licensed business with a $1 million liability insurance policy on every job, regardless of size. That means if anything goes wrong on your property during our work, you're protected. Most independent handymen you find on Craigslist or Facebook aren't insured at all.",
+      "Yes. Rittenworx is a licensed and insured business, and that coverage applies to every job regardless of size. That means if anything goes wrong on your property during our work, you're protected. Most independent handymen you find on Craigslist or Facebook aren't insured at all.",
   },
 ];
 
@@ -222,16 +214,16 @@ const faqSchema = {
 
         <div class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100">
           <span class="w-2 h-2 inline-block rounded-full bg-green-400 mr-2 animate-ping"></span>
-          No Minimum Job Size — Same-Week Scheduling
+          No Minimum Job Size
         </div>
 
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
-          Small Jobs Done Right,<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">This Week</span>
+          Small Jobs<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Done Right</span>
         </h1>
 
         <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">
-          TV mounting, ceiling fans, furniture assembly, door repair, and every other task on your to-do list. Licensed, $1M-insured, fast response across Madison, Huntsville, and North Alabama.
+          TV mounting, ceiling fans, furniture assembly, door repair, and every other task on your to-do list. Licensed and insured, serving Madison, Huntsville, and North Alabama.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
@@ -255,11 +247,11 @@ const faqSchema = {
           </a>
         </div>
 
-        <!-- Quick price chips -->
+        <!-- Quick service chips -->
         <div class="mt-10 flex flex-wrap gap-3">
           {services.slice(0, 4).map((s) => (
             <span class="px-4 py-2 bg-white/10 rounded-full text-sm text-blue-100 border border-white/10">
-              {s.title} from {s.startingAt}
+              {s.title}
             </span>
           ))}
         </div>
@@ -292,9 +284,6 @@ const faqSchema = {
                 <div class="flex-1">
                   <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                     <h3 class="text-2xl font-bold text-gray-900">{service.title}</h3>
-                    <span class="inline-block bg-orange-100 text-orange-700 font-bold text-sm px-4 py-1.5 rounded-full whitespace-nowrap">
-                      Starting at {service.startingAt}
-                    </span>
                   </div>
                   <p class="text-gray-600 mb-5">{service.detail}</p>
                   <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
@@ -328,16 +317,16 @@ const faqSchema = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
           {
-            title: "Licensed & $1M Insured",
-            body: "Every job — no matter how small — is covered by our $1 million liability policy. Most people who answer Facebook handyman ads can't say that.",
+            title: "Licensed & Insured",
+            body: "Every job — no matter how small — is covered. Most people who answer Facebook handyman ads can't say that.",
           },
           {
             title: "No Minimum Job Size",
             body: "Need one ceiling fan swapped out? One TV mounted? Four IKEA boxes assembled? We take all of it. Small jobs matter and we treat them that way.",
           },
           {
-            title: "Same-Week Scheduling",
-            body: "We keep our schedule flexible for small jobs. Text or call and we'll find a slot within the week for most tasks in Madison, Huntsville, Decatur, and Athens.",
+            title: "Flexible Scheduling",
+            body: "We keep our schedule flexible for small jobs. Text or call and we'll find a time that works for tasks in Madison, Huntsville, Decatur, and Athens.",
           },
           {
             title: "Owner Does the Work",
@@ -457,9 +446,9 @@ const faqSchema = {
   <!-- CTA -->
   <section class="py-16 bg-orange-500 text-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Clear That To-Do List This Week</h2>
+      <h2 class="text-3xl font-bold mb-4">Clear That To-Do List</h2>
       <p class="text-xl mb-8 text-orange-100">
-        Text your list or call now. Most Madison & Huntsville small jobs scheduled within the week.
+        Text your list or call now. Roy will get back to you as soon as he can.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="sms:2562210373" class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg">

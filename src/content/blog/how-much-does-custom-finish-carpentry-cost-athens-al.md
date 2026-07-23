@@ -19,9 +19,9 @@ A true custom build is completely unique to your home's exact dimensions, your c
 ### 1. Material Selection
 There is an astonishing spectrum of materials available for custom cabinetry. 
 
-*   **MDF (Medium-Density Fiberboard) ($):** The standard for painted built-ins. It is smooth, relatively affordable, does not have a wood grain (meaning it paints efficiently), and is highly stable. The majority of modern painted bookcases are MDF.
-*   **Cabinet-Grade Plywood ($$):** Excellent for structural integrity, holding heavy book collections, and building the structural "boxes" of a unit. Birch and maple plywoods are the standard upgrades from MDF.
-*   **Solid Hardwoods ($$$):** If you desire a clear-coat stain finish showing raw wood grain (like a classic walnut library or red oak mantle), solid hardwood is required. The cost of raw lumber fluctuates wildly, but it typically costs 3x to 5x more than MDF.
+*   **MDF (Medium-Density Fiberboard) — the most economical:** The standard for painted built-ins. It is smooth, relatively affordable, does not have a wood grain (meaning it paints efficiently), and is highly stable. The majority of modern painted bookcases are MDF.
+*   **Cabinet-Grade Plywood — a step up:** Excellent for structural integrity, holding heavy book collections, and building the structural "boxes" of a unit. Birch and maple plywoods are the standard upgrades from MDF.
+*   **Solid Hardwoods — the premium tier:** If you desire a clear-coat stain finish showing raw wood grain (like a classic walnut library or red oak mantle), solid hardwood is required. The cost of raw lumber fluctuates wildly, but it typically runs several times more than MDF.
 
 ### 2. Design Complexity and Trim Details
 A massive amount of the labor cost stems from the architectural flair added to the top, bottom, and edges of your built-ins. 
@@ -33,28 +33,28 @@ Many custom carpentry quotes specifically *exclude* the final painting stage. Yo
 
 If the carpenter is providing an "installation and paint-ready finish" (filling nail holes, caulking the joints, primer coats), expect the price to rise accordingly. Using an HVLP paint sprayer to lay down a completely smooth, factory-grade enamel paint finish is a specialized skill that takes an entire day on its own.
 
-## Average Cost Examples in Athens, AL
+## Common Project Types in Athens, AL
 
-While every single home is different, here are the rough ballparks you can expect for standard custom projects when hiring a skilled finish carpenter:
+Every home is different, but here are the typical custom projects a skilled finish carpenter takes on, from the smaller builds to the larger undertakings:
 
-**The Standard Fireplace Flanking Bookshelves ($1,800 - $3,500+)**
+**The Standard Fireplace Flanking Bookshelves**
 The most popular request: two 4-foot wide bookcase units built into the alcoves on either side of a fireplace. This almost always involves lower cabinets with inset doors, upper open shelving, and tie-ins to the existing living room baseboards and ceiling crown molding.
 
-**The Custom Mudroom Drop Zone ($1,200 - $2,500+)**
+**The Custom Mudroom Drop Zone**
 A functional entryway build featuring a reinforced bench seat (sometimes with lift-top storage or cubbies underneath), beadboard backing, a coat hook rail, and top cubbies for hats and gloves. 
 
-**The Home Office Wall-To-Wall Library ($3,500 - $8,000+)**
-A massive undertaking transforming a dedicated room into a study or library. This includes a 10-to-12 foot continuous wall of heavy-duty adjustable shelving, lower storage banks, and perhaps an integrated desk station, completely trimmed out and painted.
+**The Home Office Wall-To-Wall Library**
+One of the bigger undertakings — transforming a dedicated room into a study or library. This includes a 10-to-12 foot continuous wall of heavy-duty adjustable shelving, lower storage banks, and perhaps an integrated desk station, completely trimmed out and painted. Because of the scale and the amount of trim work involved, it sits at the top end of the range.
 
 ## Why Custom is Better Than Store-Bought
-You can certainly buy prefabricated bookshelves from a massive retail chain for $300 a pop. However:
+You can certainly buy prefabricated bookshelves from a massive retail chain for a fraction of the cost. However:
 1.  **They rarely fit perfectly.** Custom built-ins are scribed to your specific walls, hiding the fact that no room is ever perfectly square or level. 
 2.  **They lack architectural integration.** A true built-in borrows your home's existing baseboards and crown molding, so it looks like it was built with the house in 1995, rather than dropped off by a delivery truck yesterday.
 3.  **The durability is unmatched.** Particleboard sags under the weight of books. True timber joints screwed and glued into the wall studs never will.
 
-## Get Your Custom Price
-Because custom work is exactly that—custom—we need to see your space to give you an accurate estimate. 
+## Get a Quote for Your Space
+Because custom work is exactly that—custom—Roy needs to see your space to give you an accurate estimate. 
 
-The experienced carpenters at **Rittenworx** proudly serve the Athens and greater Madison area with precision finish carpentry. 
+Roy at **Rittenworx** does finish carpentry for the Athens and greater Madison area. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo of the blank wall you want to transform right now, along with an inspiration picture, and we will get you an immediate cost breakdown!**
+Text a photo of the blank wall you want to transform, along with an inspiration picture, to **(256) 221-0373** or [request a free quote](/quote). Roy will get back to you as soon as he can.

@@ -50,8 +50,8 @@ When a professional arrives at your Somerville home, they will:
 4.  Restore the water pressure slowly, verifying perfectly dry joints across the patched section. 
 
 ## Fast, Decisive Emergency Action
-When water starts destroying your home, you cannot afford to wait on hold with a massive corporate dispatch center. You need a fast, local expert who can arrive on-site, immediately assess the catastrophic failure, and execute the structural repair instantly. 
+When water starts destroying your home, you don't want to wait on hold with a corporate dispatch center. You want a local person who can come out, look at the failure, and get the repair done. 
 
-The emergency repair teams at **Rittenworx** specialize in rapid leak detection, valve replacement, and aggressive pipe repairs for the entire Somerville, Decatur, and Madison areas. 
+Roy at **Rittenworx** handles leak detection, valve replacement, and pipe repairs for the Somerville, Decatur, and Madison areas. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo or a quick video of the active leak right now, and let's get an emergency truck dispatched to your driveway to stop the damage today!**
+Text a photo or a quick video of the active leak to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

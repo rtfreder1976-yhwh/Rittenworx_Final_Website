@@ -2,8 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import TrustCredentials from "../components/TrustCredentials.astro";
 import InlineQuoteForm from "../components/InlineQuoteForm.astro";
-import ReviewBadges from "../components/ReviewBadges.astro";
-import Testimonials from "../components/Testimonials.astro";
 import BeforeAfterGallery from "../components/BeforeAfterGallery.astro";
 import ServiceAreaMap from "../components/ServiceAreaMap.astro";
 import TrustBadges from "../components/TrustBadges.astro";
@@ -12,7 +10,7 @@ import TrustBadges from "../components/TrustBadges.astro";
 
 <Layout
   title="Handyman Madison AL | Licensed & Insured"
-  description="Trusted handyman in Madison, AL — drywall, painting, flooring, finish carpentry & garage epoxy. Licensed, $1M-insured, 7 years local. Free estimates."
+  description="Rittenworx is a licensed and insured local handyman in Madison, AL — drywall, painting, flooring, finish carpentry and more. Family owned, 7 years serving North Alabama."
 >
   <link
     slot="head"
@@ -47,9 +45,7 @@ import TrustBadges from "../components/TrustBadges.astro";
         <div
           class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-sm font-medium text-blue-100"
         >
-          <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
-          <span class="w-2 h-2 rounded-full bg-green-400 absolute"></span>
-          Now booking projects in Madison & Huntsville
+          Local handyman serving Madison &amp; Huntsville
         </div>
 
         <h1
@@ -57,15 +53,16 @@ import TrustBadges from "../components/TrustBadges.astro";
         >
           North Alabama's Handyman—<span
             class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
-            >Quality Work, On-Time or $25 Off</span
+            >Roy at Rittenworx</span
           >
         </h1>
 
         <p
           class="text-xl md:text-2xl mb-10 text-blue-100 font-light leading-relaxed"
         >
-          Madison homeowners get quality repairs done right, on schedule, without the contractor runaround.
-          Text a photo now for a fast estimate—Roy responds quickly and gets you on the schedule.
+          Roy is a local handyman helping North Alabama homeowners with drywall,
+          painting, flooring, carpentry, and everyday repairs. Text a photo or
+          give him a call, and he'll talk through your project with you.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
@@ -86,46 +83,23 @@ import TrustBadges from "../components/TrustBadges.astro";
                 d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
               ></path>
             </svg>
-            Text Photo → Get a Fast Estimate
+            Text a Photo of Your Project
           </a>
           <a
             href="/services"
             class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center hover:-translate-y-1"
           >
-            See Why 150+ Madison Families Trust Us
+            See What Roy Does
           </a>
         </div>
 
         <!-- Trust Indicators -->
-        <div class="mt-12 flex items-center gap-6 text-sm text-blue-200">
-          <div class="flex -space-x-3">
-            <img
-              class="w-10 h-10 rounded-full border-2 border-blue-900 object-cover"
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
-              alt="Customer"
-            />
-            <img
-              class="w-10 h-10 rounded-full border-2 border-blue-900 object-cover"
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop"
-              alt="Customer"
-            />
-            <img
-              class="w-10 h-10 rounded-full border-2 border-blue-900 object-cover"
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop"
-              alt="Customer"
-            />
-            <div
-              class="w-10 h-10 rounded-full border-2 border-blue-900 bg-orange-500 flex items-center justify-center text-white font-bold text-xs"
-            >
-              5.0
-            </div>
-          </div>
-          <div>
-            <div class="flex text-orange-400">
-              {"★★★★★"}
-            </div>
-            <p>150+ 5-Star Local Reviews</p>
-          </div>
+        <div class="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-blue-200">
+          <span class="font-semibold text-white">Licensed &amp; Insured</span>
+          <span class="hidden sm:inline text-blue-400">•</span>
+          <span>7 Years in North Alabama</span>
+          <span class="hidden sm:inline text-blue-400">•</span>
+          <span>Family Owned &amp; Operated</span>
         </div>
       </div>
     </div>
@@ -189,11 +163,12 @@ import TrustBadges from "../components/TrustBadges.astro";
             <h3
               class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors"
             >
-              Invisible Repairs in 24 Hours
+              Drywall Repair
             </h3>
             <p class="text-gray-600 mb-6 flex-1">
-              Holes, cracks, and water damage fixed today. Starting at just $275.
-              No more embarrassing wall damage when guests visit.
+              Holes, cracks, and water damage patched and finished so the wall
+              blends back in. Roy will look at it and let you know what's
+              involved.
             </p>
             <span
               class="text-orange-500 font-bold inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform"
@@ -235,11 +210,11 @@ import TrustBadges from "../components/TrustBadges.astro";
             <h3
               class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors"
             >
-              Room Transformed in 2 Days
+              Interior Painting
             </h3>
             <p class="text-gray-600 mb-6 flex-1">
-              Magazine-worthy paint jobs starting at $400/room. No drips,
-              no mess, just stunning walls you'll love showing off.
+              Clean, careful interior painting for a room or the whole house,
+              with the prep done right and the mess cleaned up afterward.
             </p>
             <span
               class="text-orange-500 font-bold inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform"
@@ -281,11 +256,11 @@ import TrustBadges from "../components/TrustBadges.astro";
             <h3
               class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors"
             >
-              Showroom Garage in 1 Day
+              Garage Floor Coating
             </h3>
             <p class="text-gray-600 mb-6 flex-1">
-              Transform your oil-stained concrete into a gleaming showroom floor.
-              20-year warranty, done in one day. Starting at $4/sq ft.
+              Turn stained garage concrete into a clean, durable coated floor.
+              Roy will look at the space and walk you through the options.
             </p>
             <span
               class="text-orange-500 font-bold inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform"
@@ -327,11 +302,11 @@ import TrustBadges from "../components/TrustBadges.astro";
             <h3
               class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors"
             >
-              Crown Molding That Wows
+              Finish Carpentry
             </h3>
             <p class="text-gray-600 mb-6 flex-1">
-              Add $5,000+ in home value with custom trim. Perfect miters,
-              seamless joints. Your neighbors will ask who did the work.
+              Crown molding, trim, and other finish carpentry, done with care for
+              clean joints and a tidy result.
             </p>
             <span
               class="text-orange-500 font-bold inline-flex items-center gap-2 group-hover:translate-x-2 transition-transform"
@@ -407,7 +382,7 @@ import TrustBadges from "../components/TrustBadges.astro";
         <a href="/locations/huntsville/hampton-cove" class="text-blue-600 underline hover:text-blue-800">Hampton Cove</a>,
         <a href="/locations/decatur" class="text-blue-600 underline hover:text-blue-800">Decatur</a>, and
         <a href="/locations/athens" class="text-blue-600 underline hover:text-blue-800">Athens</a>.
-        Roy is usually 15–25 minutes away from any Madison or Huntsville address — so you get fast on-site estimates and quick scheduling, not the multi-week waitlists you'll find with national chains.
+        Roy is based in Madison and works throughout the surrounding area, so he's local to most Madison and Huntsville addresses. Give him a call or text to talk through what you need.
       </p>
       <div class="flex flex-wrap justify-center gap-3">
         <a href="/locations/madison" class="px-5 py-2 bg-blue-50 text-blue-700 rounded-full font-medium hover:bg-blue-100">Madison Handyman</a>
@@ -456,7 +431,7 @@ import TrustBadges from "../components/TrustBadges.astro";
 
           <!-- Floating Badge -->
           <div
-            class="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-2xl p-6 z-30 animate-[bounce_4s_infinite]"
+            class="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-2xl p-6 z-30"
           >
             <div class="flex items-center gap-4">
               <div
@@ -475,9 +450,9 @@ import TrustBadges from "../components/TrustBadges.astro";
                 >
               </div>
               <div>
-                <p class="font-bold text-gray-900 text-lg">100% Licensed</p>
+                <p class="font-bold text-gray-900 text-lg">Licensed &amp; Insured</p>
                 <p class="text-gray-500 text-sm">
-                  Insured & Background Checked
+                  Family Owned &amp; Local
                 </p>
               </div>
             </div>
@@ -492,13 +467,12 @@ import TrustBadges from "../components/TrustBadges.astro";
           <h2
             class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-3 mb-8"
           >
-            Why Madison Homeowners Switch to Rittenworx After One Service Call
+            Working with Roy
           </h2>
 
           <p class="text-lg text-gray-600 mb-10 leading-relaxed">
-            While other contractors leave you waiting for weeks, your project gets
-            completed this week—with photo updates every step and zero surprise
-            charges at the end. Here's what makes us different:
+            Rittenworx is Roy—a local handyman who does the work himself. Here's
+            what that looks like:
           </p>
 
           <div class="space-y-8">
@@ -520,11 +494,11 @@ import TrustBadges from "../components/TrustBadges.astro";
               </div>
               <div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  On-Time Arrival Guarantee
+                  One Person, Start to Finish
                 </h3>
                 <p class="text-gray-600">
-                  If we miss our 30-minute arrival window, we deduct $25 from
-                  your final bill immediately. Your time is valuable.
+                  You deal with Roy directly—not a rotating crew or a call
+                  center. He shows up, does the work, and stands behind it.
                 </p>
               </div>
             </div>
@@ -548,11 +522,11 @@ import TrustBadges from "../components/TrustBadges.astro";
               </div>
               <div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  Transparent, Up-Front Pricing
+                  Straightforward &amp; Honest
                 </h3>
                 <p class="text-gray-600">
-                  No hidden fees, no "surprise" material markups. What you agree
-                  to on the estimate is exactly what you pay.
+                  Roy talks through the work with you up front so you know what
+                  to expect. No pressure and no runaround.
                 </p>
               </div>
             </div>
@@ -591,8 +565,6 @@ import TrustBadges from "../components/TrustBadges.astro";
   </section>
 
   <BeforeAfterGallery />
-  <Testimonials />
-  <ReviewBadges />
   <ServiceAreaMap />
 
   <!-- Programmatic SEO Service Areas Directory -->
@@ -606,8 +578,8 @@ import TrustBadges from "../components/TrustBadges.astro";
           Areas We Serve
         </h2>
         <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-          Every city has different home maintenance quirks. See what we fix most
-          in your neighborhood — and what it actually costs.
+          Roy works throughout North Alabama. Find your area to see the services
+          he offers nearby.
         </p>
       </div>
 
@@ -693,12 +665,11 @@ import TrustBadges from "../components/TrustBadges.astro";
       <h2
         class="text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight"
       >
-        Stop Calling Contractors Who Don't Show Up
+        Have a Project? Get in Touch with Roy
       </h2>
       <p class="text-xl md:text-2xl mb-12 text-blue-100 font-light">
-        Join 150+ Madison families who trust Rittenworx for quality repairs
-        with guaranteed pricing. Text a photo now—Roy will get back to you
-        and get your project on the schedule.
+        Tell Roy what you need and he'll get back to you to talk it through.
+        Text a photo of the project or give him a call—no obligation.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-6">
         <a

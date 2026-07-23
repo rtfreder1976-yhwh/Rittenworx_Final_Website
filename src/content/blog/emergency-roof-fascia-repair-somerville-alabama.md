@@ -57,6 +57,6 @@ If you find a 12-foot section of gutter twisted in your azalea bushes after a st
 
 Water damage moves fast. One soaked storm can ruin insulation, damage ceilings, and rot the roof decking behind the sheathing.
 
-The exterior carpenters at **Rittenworx** serve Somerville, Decatur, and Huntsville for exactly these situations — same-day if it's a real emergency.
+Roy at **Rittenworx** serves Somerville, Decatur, and Huntsville for exactly these situations, and will do his best to get out quickly when it's a real emergency. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo of the damage and we'll tell you how serious it is within the hour.**
+Text a photo of the damage to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

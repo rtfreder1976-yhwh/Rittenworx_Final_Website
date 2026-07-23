@@ -62,6 +62,6 @@ When rot comes out, replacing it with the same raw pine is a short-term fix.
 ## Secure Your Summer Entertaining Space
 Don't wait for a rotted deck board to fail under a guest, or for water damage to work its way into the wall studs behind your trim. Spring is the best time to catch it — before the cost doubles.
 
-The finish carpenters at **Rittenworx** handle rot replacement, structural deck repairs, and PVC trim upgrades across Madison and Huntsville. We'll tell you exactly what needs to come out and what's still solid.
+Roy at **Rittenworx** handles rot replacement, structural deck repairs, and PVC trim upgrades across Madison and Huntsville, and will tell you exactly what needs to come out and what's still solid. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Text us a photo of the damaged wood and we'll get you a written quote within the hour.**
+Text a photo of the damaged wood to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.

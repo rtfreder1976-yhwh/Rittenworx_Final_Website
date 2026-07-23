@@ -136,7 +136,7 @@ const localSchema = {
                     name: `How much does ${service.name.toLowerCase()} cost in ${city}, AL?`,
                     acceptedAnswer: {
                         "@type": "Answer",
-                        text: `${service.name} pricing in ${city} depends on the scope of work. Rittenworx offers free, no-obligation estimates — call (256) 221-0373 or text a photo of your project for a fast quote. Most residential jobs are completed within 1–3 days.`,
+                        text: `${service.name} pricing in ${city} depends on the scope of work. Rittenworx offers free, no-obligation estimates — call (256) 221-0373 or text a photo of your project. Roy will go over the details with you.`,
                     },
                 },
                 {
@@ -144,7 +144,7 @@ const localSchema = {
                     name: `Is Rittenworx licensed and insured for ${service.name.toLowerCase()} in ${city}?`,
                     acceptedAnswer: {
                         "@type": "Answer",
-                        text: `Yes. Rittenworx is a licensed, insured handyman service in ${city}, Alabama, carrying $1 million in general liability coverage. We are a family-owned business with 7 years of experience serving North Alabama homeowners.`,
+                        text: `Yes. Rittenworx is a licensed and insured handyman service in ${city}, Alabama. We are a family-owned business with 7 years of experience serving North Alabama homeowners.`,
                     },
                 },
                 {
@@ -152,7 +152,7 @@ const localSchema = {
                     name: `How quickly can Rittenworx schedule ${service.name.toLowerCase()} work in ${city}?`,
                     acceptedAnswer: {
                         "@type": "Answer",
-                        text: `Most ${city} projects are scheduled within 3–5 business days of estimate approval. Call or text (256) 221-0373 and Roy will let you know the earliest available opening on our schedule.`,
+                        text: `Scheduling depends on the job and Roy's current workload. Call or text (256) 221-0373 and Roy will let you know the earliest available opening on his schedule.`,
                     },
                 },
                 {
@@ -210,7 +210,7 @@ const localSchema = {
                     <span
                         class="w-2 h-2 inline-block rounded-full bg-orange-400 mr-2 animate-pulse"
                     ></span>
-                    Top-Rated {city} Contractor
+                    Local {city} Handyman
                 </div>
 
                 <h1
@@ -250,7 +250,7 @@ const localSchema = {
                                 d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
                             ></path>
                         </svg>
-                        Text A Photo For Instant Quote
+                        Text A Photo For A Quote
                     </a>
                 </div>
             </div>
@@ -291,10 +291,9 @@ const localSchema = {
             </p>
             <p class="text-gray-700 text-lg leading-relaxed mb-6">
                 Rittenworx has been doing {service.name.toLowerCase()} work in
-                North Alabama for 7 years. We carry $1 million in liability
-                coverage. We send a written estimate you can hold us to — and
-                the final bill matches it. That’s how we’ve built every client
-                relationship we have.
+                North Alabama for 7 years. We're licensed and insured. We send a
+                written estimate you can hold us to — and the final bill matches
+                it. That’s how we’ve built every client relationship we have.
                 Whether it’s a project you’ve been putting off or something
                 that just came up, here’s what actually happens when you reach
                 out: we answer, we schedule, we show up on time. The same crew
@@ -310,7 +309,7 @@ const localSchema = {
                 Unlicensed workers are the single biggest source of costly
                 redo work in home repair. If something goes wrong on your property
                 and the contractor isn't properly insured, that cost lands on you.
-                We're licensed, insured to $1 million, and we can show you the
+                We're licensed and insured, and we can show you the
                 certificate before we start.
             </p>
             <p class="text-gray-700 text-lg leading-relaxed mb-10">
@@ -407,12 +406,11 @@ const localSchema = {
                         </div>
                         <div>
                             <strong class="text-gray-900 block text-xl mb-1"
-                                >$1M Coverage on Every Job</strong
+                                >Licensed &amp; Insured</strong
                             >
                             <span class="text-gray-600 leading-relaxed block"
                                 >Not just a guy with tools. Rittenworx is
-                                licensed and carries $1 million in general
-                                liability insurance. Your home is covered if
+                                licensed and insured. Your home is covered if
                                 anything unexpected happens — and we can show
                                 you the certificate before we start.</span
                             >
@@ -585,10 +583,10 @@ const localSchema = {
                         <strong
                             class="text-blue-900 font-black mr-2 tracking-wide"
                             >A:</strong
-                        > Yes. We're licensed and carry $1 million in general liability
-                        insurance. That means your home and your property are covered
-                        if anything unexpected happens on the job. We can show you the
-                        certificate before we start — just ask.
+                        > Yes. We're licensed and insured. That means your home and
+                        your property are covered if anything unexpected happens on
+                        the job. We can show you the certificate before we start —
+                        just ask.
                     </p>
                 </div>
 
@@ -607,11 +605,11 @@ const localSchema = {
                         <strong
                             class="text-blue-900 font-black mr-2 tracking-wide"
                             >A:</strong
-                        > Most projects start within 3–5 business days of estimate
-                        approval. Call us directly at
+                        > Timing depends on the job and Roy's current schedule. Call
+                        us directly at
                         <a href="tel:2562210373" class="text-orange-600 underline hover:text-orange-700 font-bold transition-colors"
                             >(256) 221-0373</a> and Roy will give you an honest
-                        timeline based on our current schedule.
+                        timeline.
                     </p>
                 </div>
 

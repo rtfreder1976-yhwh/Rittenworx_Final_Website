@@ -12,7 +12,7 @@ But here’s the reality that most homeowners don’t realize until it’s too l
 
 It is not simply "slapping on some mud" and painting over it. A poorly executed drywall patch is a permanent, glaring blemish on an otherwise beautiful room. If you value the premium aesthetic of your Madison home, settling for an amateur, visible repair is simply unacceptable. 
 
-This is the ultimate, complete guide to understanding drywall repair in Madison, Alabama. We cover the specific challenges of our local climate, the anatomy of a professional invisible repair, how to identify hidden structural issues, and when it’s time to call in a certified expert.
+This is the complete guide to understanding drywall repair in Madison, Alabama. We cover the specific challenges of our local climate, the anatomy of a professional invisible repair, how to identify hidden structural issues, and when it’s time to call in an experienced pro.
 
 ## Why Madison’s Climate Makes Drywall Repair Tricky
 
@@ -74,7 +74,7 @@ A high-end repair involves using a hopper gun or specialized sea sponges and dry
 
 ## The True Cost of DIY Drywall Repair
 
-It is incredibly tempting to watch a five-minute YouTube tutorial, buy $40 worth of supplies from the local big-box store, and attempt to patch a hole yourself. 
+It is incredibly tempting to watch a five-minute YouTube tutorial, grab a few supplies from the local big-box store, and attempt to patch a hole yourself. 
 
 However, drywall finishing is a highly specific trade skill that takes years of repetition to learn. In the vast majority of cases we see in Madison, the DIY repair looks significantly worse than the hole itself. The homeowner ends up with a wavy, lumpy, mismatched section of the wall. 
 
@@ -86,10 +86,8 @@ When you hire a professional to fix a botched DIY job, they must spend hours san
 
 Your home in Madison is likely your largest financial asset, but more importantly, it is your sanctuary. You shouldn't have to look at a glaring, ugly patch on the wall every time you walk into your living room.
 
-If you value exceptional quality, invisible repairs, and a frictionless, professional experience, Rittenworx is your premier partner. We are not a volume-based operation rushing from job to job. We provide high-end, proactive maintenance and meticulous repairs for clients who demand perfection. 
+If you'd rather have someone handle the repair right, Rittenworx is a licensed and insured local handyman business. Roy takes the time to do drywall work carefully, protects your floors and furniture, and uses dust-extraction sanding to keep the mess down while he works to blend the patch into the existing wall.
 
-Our certified technicians carry a $1,000,000 liability policy, protect your floors and furniture relentlessly, and utilize dust-extraction sanding systems to keep your home pristine. We guarantee our work will blend seamlessly into your existing architecture.
+Rittenworx is family owned, with 7 years serving Madison and North Alabama.
 
-Don't settle for "good enough." 
-
-[**Contact Rittenworx today for a fast, free quote**](/quote) or call us directly at **(256) 221-0373**. We respond to all inquiries within 3 hours. Let us restore your walls—and your peace of mind—to perfection.
+[**Contact Rittenworx for a free quote**](/quote) or call directly at **(256) 221-0373**. Roy will get back to you as soon as he can.

@@ -82,7 +82,7 @@ This is where the difference between a DIY project and a premium, invisible repa
 
 ## The Cost of Waiting vs. Acting Proactively
 
-Ignoring water damage is the most expensive mistake a homeowner can make. What starts as a simple $300 pipe leak and a $500 drywall patch can quickly spiral into a $15,000 whole-room remediation project if black mold infests the framing and HVAC system.
+Ignoring water damage is the most expensive mistake a homeowner can make. What starts as a simple pipe leak and a small drywall patch can quickly spiral into a whole-room remediation project if black mold infests the framing and HVAC system.
 
 Water damage doesn't pause. Every hour that water sits inside your wall cavity, the structural integrity of your home degrades, and the health risks to your family increase.
 
@@ -90,10 +90,8 @@ Water damage doesn't pause. Every hour that water sits inside your wall cavity, 
 
 Repairing water-damaged drywall is a messy, multi-day process that requires specialized tools, structural knowledge, and advanced finishing skills. If the structural integrity of your luxury home is at stake, this isn't the time to experiment with DIY tutorials.
 
-Rittenworx offers premium, undetectable drywall repair services backed by a $1M liability policy and our commitment to absolute excellence. We don't just patch a hole; we ensure the underlying structure is sound, treated, and restored to its original, pristine condition.  
+Rittenworx handles water-damaged drywall repair, and Roy doesn't just patch the hole — he checks that the underlying structure is sound and dry before closing it back up. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
-**Your home is your sanctuary. Don't leave its maintenance to chance.** 
+If you've discovered water damage in your Madison, Huntsville, or Athens home, Roy at Rittenworx can help.
 
-If you've discovered water damage in your Madison, Huntsville, or Athens home, skip the headache and let the certified professionals at Rittenworx deliver peace of mind.
-
-[**Get Your Free Quote Today**](/quote) or call us immediately at **(256) 221-0373**. We respond within 3 hours.
+[**Get a free quote**](/quote) or call **(256) 221-0373**. Roy will get back to you as soon as he can.
