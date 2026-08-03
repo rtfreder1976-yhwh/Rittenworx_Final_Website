@@ -1,0 +1,431 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const serviceAreas = ["Madison", "Huntsville", "Decatur", "Athens"];
+
+const fenceWork = [
+  {
+    title: "Post Replacement",
+    description:
+      "Rotted, leaning, or broken posts dug out and replaced — often the difference between a fence that's fine and one that's about to fall over.",
+  },
+  {
+    title: "Panel & Picket Repair",
+    description:
+      "Individual boards, pickets, or panels replaced to match your existing fence without redoing the whole run.",
+  },
+  {
+    title: "Gate Repair & Realignment",
+    description:
+      "Sagging gates rehung, hinges and latches replaced, and frames squared up so the gate closes and latches properly again.",
+  },
+  {
+    title: "Wood Fence Installation",
+    description:
+      "New privacy, picket, or split-rail wood fencing installed with properly set posts for a fence that stays straight.",
+  },
+  {
+    title: "Vinyl Fence Installation",
+    description:
+      "Vinyl privacy and picket fencing installed for a low-maintenance option that doesn't need repainting or staining.",
+  },
+  {
+    title: "Chain-Link Repair & Installation",
+    description:
+      "Chain-link fencing repaired or installed for yards, dog runs, and property lines that need a functional, budget-friendly boundary.",
+  },
+];
+
+const signs = [
+  {
+    sign: "Fence Leaning or Wobbling",
+    cause: "Post rotted at the base or footing has shifted",
+    risk: "Full section collapse, especially in wind or storms",
+  },
+  {
+    sign: "Gate Won't Close or Latch",
+    cause: "Frame has racked out of square, or hinges have loosened",
+    risk: "Pets and kids getting out, security gap",
+  },
+  {
+    sign: "Wood Feels Soft or Crumbles",
+    cause: "Rot from ground contact or trapped moisture",
+    risk: "Board failure, spreading rot to adjacent sections",
+  },
+  {
+    sign: "Gaps Between Boards Widening",
+    cause: "Wood shrinking, warping, or pickets pulling loose",
+    risk: "Reduced privacy, pests/pets fitting through gaps",
+  },
+  {
+    sign: "Rust Streaks on Chain-Link",
+    cause: "Galvanized coating breaking down at fittings",
+    risk: "Fabric weakening at stress points, tears",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does fence repair cost in Madison, AL?",
+    answer:
+      "It depends on what's wrong — a couple of loose pickets is a different job than replacing rotted posts across a whole run. Text us a photo of the damage and we'll give you a ballpark, or we'll come out for a free written estimate.",
+  },
+  {
+    question: "Can you fix just the damaged section, or do I need a new fence?",
+    answer:
+      "Most fence damage is repairable in place — rotted posts, broken panels, and sagging gates can usually be fixed without replacing the whole fence. We'll be straight with you if a section is too far gone and full replacement makes more sense.",
+  },
+  {
+    question: "Do you install new fences or just repair existing ones?",
+    answer:
+      "Both. We install wood, vinyl, and chain-link fencing, and we repair fences whether we installed the original or not.",
+  },
+  {
+    question: "How deep do you set fence posts?",
+    answer:
+      "Posts are set below the frost line with concrete footings sized to the post and fence height — this is the single biggest factor in whether a fence stays straight for years or starts leaning within a season.",
+  },
+  {
+    question: "How long does a fence repair take?",
+    answer:
+      "A single post or gate repair is usually a same-day job. Larger repairs across multiple sections, or new installations, take longer — we'll give you a time estimate with your quote.",
+  },
+  {
+    question: "Is Rittenworx licensed and insured for fence work?",
+    answer:
+      "Yes. Rittenworx is licensed and insured for all our services, fencing included. We can show you the certificate before we start.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title="Fence Repair & Installation Madison AL"
+  description="Fence repair and installation in Madison, Huntsville, Decatur & Athens, AL. Wood, vinyl & chain-link. Post replacement, gate repair. Free estimates."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Premium Hero Section -->
+  <section
+    class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"
+  >
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/hero-handyman.webp"
+        alt="Fence Repair and Installation Services"
+        class="w-full h-full object-cover opacity-20 scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav
+          class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide"
+        >
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors"
+            >Services</a
+          >
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">Fence Repair &amp; Installation</span>
+        </nav>
+
+        <div
+          class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100"
+        >
+          <span
+            class="w-2 h-2 inline-block rounded-full bg-orange-400 mr-2 animate-pulse"
+          ></span>
+          Wood, Vinyl &amp; Chain-Link
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
+        >
+          Fence Repair &amp;<br /><span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
+            >Installation</span
+          >
+        </h1>
+
+        <p
+          class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed"
+        >
+          Leaning posts, sagging gates, and rotted pickets fixed right — or a
+          new fence set up to last. Text a photo and Roy will get back to you
+          with what it'll take.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 border border-orange-400/30"
+          >
+            <svg
+              class="w-6 h-6 group-hover:scale-110 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+              ></path>
+            </svg>
+            Text A Photo For A Quote
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative shape divider -->
+    <div
+      class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10"
+    >
+      <svg
+        class="relative block w-full h-[50px] md:h-[100px]"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,155.15,112.5,231.2,88.45,264.44,77.83,296.88,67.36,321.39,56.44Z"
+          class="fill-orange-500"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Comprehensive SEO Introduction -->
+  <section class="py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2
+        class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 font-display tracking-tight"
+      >
+        Fence Repair &amp; Installation in North Alabama
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        A fence has one job — stay standing and keep the gate closing — and
+        it's usually a rotted post or a rusted hinge that takes that away
+        from it. Rittenworx repairs and installs wood, vinyl, and chain-link
+        fencing for homeowners across Madison, Huntsville, Decatur, and
+        Athens, AL. Most fence problems don't require tearing out the whole
+        run — a leaning section is almost always one or two bad posts, and a
+        gate that won't latch is almost always a frame that's racked out of
+        square. We fix the actual problem instead of guessing.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed mb-10">
+        When a fence is too far gone to repair, or you're starting from
+        scratch, we install new wood, vinyl, and chain-link fencing with
+        posts set below the frost line in concrete footings — the single
+        biggest factor in whether a fence stays straight for years or starts
+        leaning within a season. We'll walk your property line with you, talk
+        through material options, and give you a written estimate before any
+        work starts.
+      </p>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >What We Do</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Fence Repair &amp; Installation Services
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          fenceWork.map((item) => (
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <svg
+                  class="w-6 h-6 text-blue-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Warning Signs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Know the Signs</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          When Your Fence Needs Attention
+        </h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-lg shadow-sm">
+          <thead>
+            <tr class="bg-blue-900 text-white">
+              <th class="px-6 py-4 text-left font-semibold">Warning Sign</th>
+              <th class="px-6 py-4 text-left font-semibold">What's Happening</th>
+              <th class="px-6 py-4 text-left font-semibold">Potential Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              signs.map((item, index) => (
+                <tr class={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                  <td class="px-6 py-4 font-medium text-gray-800">{item.sign}</td>
+                  <td class="px-6 py-4 text-gray-600">{item.cause}</td>
+                  <td class="px-6 py-4 text-red-600">{item.risk}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-8 text-center">
+        <p class="text-gray-600 mb-4">
+          Seeing any of these signs? Don't wait for the whole section to go.
+        </p>
+        <a
+          href="/contact"
+          class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block"
+        >
+          Schedule a Repair
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Common Questions</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Fence Repair &amp; Installation FAQs
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {
+          faqs.map((faq) => (
+            <details class="bg-gray-50 rounded-lg shadow-sm group">
+              <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:text-blue-900 flex items-center justify-between">
+                {faq.question}
+                <svg
+                  class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-gray-600">{faq.answer}</div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Fix or Build Your Fence?</h2>
+      <p class="text-xl mb-8">
+        Contact us today for a free fence repair or installation estimate.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          Get Free Estimate
+        </a>
+        <a
+          href="tel:2562210373"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area cross-links -->
+  <section class="py-16 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Service Areas</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Fence Repair &amp; Installation Across North Alabama</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Rittenworx provides fence repair and installation throughout the Tennessee Valley. Pick your city below for local details and response times.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {
+          serviceAreas.map((area) => (
+            <a
+              href={`/locations/${area.toLowerCase()}`}
+              class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-lg border border-gray-100 hover:-translate-y-1 transition-all"
+            >
+              <h3 class="font-bold text-gray-900">{area}, AL</h3>
+              <p class="text-sm text-gray-600 mt-1">Fence Repair &amp; Installation</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
