@@ -1,5 +1,6 @@
 ---
 title: "The Complete Guide to Custom Baseboards and Crown Molding in Hampton Cove"
+seoTitle: "Baseboards & Crown Molding Guide | Hampton Cove"
 description: "Everything you need to know to transform your Hampton Cove home with thick, highly architectural trim, including material choices and installation techniques."
 pubDate: 2026-02-21
 author: "Roy"

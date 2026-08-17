@@ -100,14 +100,21 @@ const additionalServices = [
   {
     category: "Exterior Services",
     items: [
-      "Deck and fence repairs",
-      "Power washing",
+      "Deck repair and staining",
+      "Fence repair and installation",
+      "Pressure washing",
       "Screen and storm door installation",
       "Mailbox installation",
       "Exterior caulking"
     ]
   }
 ];
+
+const additionalServiceLinks: Record<string, string> = {
+  "Deck repair and staining": "/services/deck-repair",
+  "Fence repair and installation": "/services/fence-repair",
+  "Pressure washing": "/services/pressure-washing",
+};
 ---
 
 <Layout title="Handyman Services Madison AL | Drywall, Painting & More" description="Licensed handyman services in Madison, Huntsville, Decatur & Athens, AL. Drywall, painting, flooring, garage epoxy, finish carpentry & gutters. Free estimates.">
@@ -197,6 +204,40 @@ const additionalServices = [
     </div>
   </section>
 
+  <!-- Exterior Refresh Services -->
+  <section class="py-20 bg-blue-900 text-white relative">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <span class="text-orange-400 font-bold tracking-wider uppercase text-sm">Outside the House</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Exterior Refresh Services</h2>
+        <p class="text-blue-100 mt-4 max-w-2xl mx-auto">Wash it, fix it, or refinish it — everything outside your walls, in one call.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/services/pressure-washing" class="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1">
+          <h3 class="text-xl font-bold mb-2">Pressure Washing</h3>
+          <p class="text-blue-100 text-sm mb-4">Siding, driveways, decks, fences &amp; roof soft-washing.</p>
+          <span class="inline-flex items-center gap-2 text-orange-400 font-bold text-sm">View Details
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </span>
+        </a>
+        <a href="/services/fence-repair" class="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1">
+          <h3 class="text-xl font-bold mb-2">Fence Repair &amp; Installation</h3>
+          <p class="text-blue-100 text-sm mb-4">Post replacement, panel repair, gate repair &amp; new builds.</p>
+          <span class="inline-flex items-center gap-2 text-orange-400 font-bold text-sm">View Details
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </span>
+        </a>
+        <a href="/services/deck-repair" class="group bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1">
+          <h3 class="text-xl font-bold mb-2">Deck Repair &amp; Staining</h3>
+          <p class="text-blue-100 text-sm mb-4">Structural repair, board &amp; railing replacement, sealing.</p>
+          <span class="inline-flex items-center gap-2 text-orange-400 font-bold text-sm">View Details
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Additional Services Grid -->
   <section class="py-24 bg-white relative">
     <div class="max-w-7xl mx-auto px-4">
@@ -232,7 +273,11 @@ const additionalServices = [
                     <svg class="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    {item}
+                    {additionalServiceLinks[item] ? (
+                      <a href={additionalServiceLinks[item]} class="hover:text-blue-900 hover:underline">{item}</a>
+                    ) : (
+                      item
+                    )}
                   </li>
                 ))}
               </ul>

@@ -1,5 +1,6 @@
 ---
 title: "What to Do When Your Laminate Flooring Starts Buckling"
+seoTitle: "Laminate Flooring Buckling? What to Do"
 description: "Discover the hidden causes behind buckling, peaking, and separating laminate flooring and exactly how to fix it before the damage is permanent."
 pubDate: 2026-02-21
 author: "Roy"

@@ -1,5 +1,6 @@
 ---
 title: "Spring Deck and Exterior Trim Repair Guide for Madison Homeowners"
+seoTitle: "Spring Deck & Trim Repair Guide | Madison, AL"
 description: "Prepare your outdoor living spaces for spring in Madison, AL. Learn how to identify severe wood rot, structural deck issues, and when to replace exterior trim."
 pubDate: 2026-02-21
 author: "Roy"
@@ -62,6 +63,6 @@ When rot comes out, replacing it with the same raw pine is a short-term fix.
 ## Secure Your Summer Entertaining Space
 Don't wait for a rotted deck board to fail under a guest, or for water damage to work its way into the wall studs behind your trim. Spring is the best time to catch it — before the cost doubles.
 
-Roy at **Rittenworx** handles rot replacement, structural deck repairs, and PVC trim upgrades across Madison and Huntsville, and will tell you exactly what needs to come out and what's still solid. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
+Roy at **Rittenworx** handles rot replacement, structural deck repairs, and PVC trim upgrades across Madison and Huntsville, and will tell you exactly what needs to come out and what's still solid. See our [deck repair and staining page](/services/deck-repair) for the full range of work we do. Rittenworx is a licensed and insured local handyman business, family owned, with 7 years serving North Alabama.
 
 Text a photo of the damaged wood to **(256) 221-0373** or [request a free quote](/quote), and Roy will get back to you as soon as he can.
