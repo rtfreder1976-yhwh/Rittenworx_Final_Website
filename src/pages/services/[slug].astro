@@ -88,12 +88,14 @@ const { slug } = Astro.params;
 const title = `${service.name} in ${city}, AL`;
 const description = `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
 
-// Cannibalization fix: for the four core cities we already have stronger,
-// hand-written service hub pages. Point these templated service+city pages'
-// canonical at that hub so Google consolidates ranking signals instead of
-// splitting them across near-duplicate URLs. The sub-area cities (Harvest,
-// Owens Cross Roads, Hampton Cove, Redstone Arsenal) have no hub equivalent,
-// so they stay self-canonical.
+// Cannibalization fix: every one of these templated service+city pages is a
+// thin, mad-libs page ("{shortDesc} in {city}, AL. Licensed & insured...").
+// The hand-written service hub pages already cover the whole region ("Madison,
+// Huntsville, Decatur & Athens, AL"), including the sub-areas (Harvest,
+// Owens Cross Roads, Hampton Cove, Redstone Arsenal) as named neighborhoods
+// on the matching location hub. Point every templated page's canonical at
+// its service hub so Google consolidates ranking signal into that one
+// stronger page instead of splitting it across 64 near-duplicate URLs.
 const serviceHubSlug: Record<string, string> = {
     "drywall-repair": "drywall",
     "interior-painting": "painting",
@@ -104,11 +106,9 @@ const serviceHubSlug: Record<string, string> = {
     "garage-floor-coating": "garage-floor-coating",
     "finish-carpentry": "finish-carpentry",
 };
-const coreCities = ["madison-al", "huntsville-al", "athens-al", "decatur-al"];
-const canonical =
-    coreCities.includes(fullCity) && serviceHubSlug[service.id]
-        ? `https://www.rittenworxhandyman.net/services/${serviceHubSlug[service.id]}/`
-        : undefined;
+const canonical = serviceHubSlug[service.id]
+    ? `https://www.rittenworxhandyman.net/services/${serviceHubSlug[service.id]}/`
+    : undefined;
 
 // Custom local schema for this specific combination
 const localSchema = {

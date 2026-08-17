@@ -1,5 +1,6 @@
 ---
 title: "What to Do When Your Exterior Paint Starts Peeling or Bubbling"
+seoTitle: "Exterior Paint Peeling? What to Do"
 description: "Discover the hidden causes behind failing exterior paint on your home and the exact steps to remedy the situation permanently before wood rot sets in."
 pubDate: 2026-02-21
 author: "Roy"

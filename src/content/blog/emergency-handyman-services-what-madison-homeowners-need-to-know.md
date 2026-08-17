@@ -1,6 +1,7 @@
 ---
 title: "Emergency Handyman Services: What Madison Homeowners Need to Know"
-description: "When disaster strikes your home, every minute counts. Learn how to handle common household emergencies, mitigate damage, and when to call a professional handyman in Madison, Huntsville, or Athens."
+seoTitle: "Emergency Handyman Services | Madison, AL"
+description: "When disaster strikes, every minute counts. How to handle household emergencies and know when to call a pro in Madison, Huntsville, or Athens."
 pubDate: 2026-02-25
 author: "Roy"
 tags: ["Emergency Repair", "Home Maintenance", "Guide", "Madison AL"]

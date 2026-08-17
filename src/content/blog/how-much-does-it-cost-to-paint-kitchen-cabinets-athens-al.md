@@ -1,5 +1,6 @@
 ---
 title: "How Much Does It Cost to Paint Kitchen Cabinets in Athens, AL?"
+seoTitle: "Cost to Paint Kitchen Cabinets | Athens, AL"
 description: "A transparent cost breakdown for painting kitchen cabinets in Athens, including the difference between brushing and spraying enamel."
 pubDate: 2026-02-21
 author: "Roy"

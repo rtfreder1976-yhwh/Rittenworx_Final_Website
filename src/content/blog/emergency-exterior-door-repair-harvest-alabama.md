@@ -1,5 +1,6 @@
 ---
 title: "Emergency Exterior Door Repair: What Harvest Homeowners Need to Know"
+seoTitle: "Emergency Exterior Door Repair | Harvest, AL"
 description: "When an exterior door won't close, lock, or is damaged from a storm, here is exactly what Harvest homeowners need to do to secure their home."
 pubDate: 2026-02-21
 author: "Roy"

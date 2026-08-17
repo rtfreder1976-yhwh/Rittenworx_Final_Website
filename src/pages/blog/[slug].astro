@@ -15,9 +15,12 @@ const { Content } = await entry.render();
 ---
 
 <Layout
-    title={entry.data.title}
+    title={entry.data.seoTitle ?? entry.data.title}
     description={entry.data.description}
     ogType="article"
+    ogImage={entry.data.image
+        ? new URL(entry.data.image, "https://www.rittenworxhandyman.net").href
+        : undefined}
     articleMeta={{
         publishedTime: entry.data.pubDate.toISOString(),
         author: entry.data.author,
