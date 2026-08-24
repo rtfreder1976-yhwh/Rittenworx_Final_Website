@@ -45,24 +45,29 @@ const schemaData = {
       "@id": "https://www.rittenworxhandyman.net/#business",
       name: "Rittenworx Handyman Service",
       description:
-        "Rittenworx is a licensed and insured handyman service in Madison, Alabama. We specialize in drywall repair, interior and exterior painting, garage floor coating (epoxy/flake), finish carpentry, gutter cleaning, and gutter installation. Serving Madison, Huntsville, Decatur, and Athens, AL.",
+        "Rittenworx is a licensed and insured handyman service based in Somerville, Alabama. We specialize in drywall repair, interior and exterior painting, garage floor coating (epoxy/flake), finish carpentry, gutter cleaning, and gutter installation. Serving Madison, Huntsville, Decatur, and Athens, AL.",
       url: "https://www.rittenworxhandyman.net",
       image: "https://www.rittenworxhandyman.net/images/logo.webp",
       telephone: "(256) 221-0373",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Madison",
+        // Somerville is the business address of record, matching the BBB,
+        // Yelp and Nextdoor citations in `sameAs` below. Madison, Huntsville
+        // and the rest of the footprint belong in `areaServed`, not here —
+        // a service-area business lists where it is, then where it works.
+        addressLocality: "Somerville",
         addressRegion: "AL",
         addressCountry: "US",
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: "34.6993",
-        longitude: "-86.7483",
+        latitude: "34.4700",
+        longitude: "-86.7989",
       },
       areaServed: [
         { "@type": "Country", name: "United States", sameAs: "https://en.wikipedia.org/wiki/United_States" },
         { "@type": "State", name: "Alabama", addressCountry: "US", sameAs: "https://en.wikipedia.org/wiki/Alabama" },
+        { "@type": "City", name: "Somerville", addressRegion: "AL", addressCountry: "US" },
         { "@type": "City", name: "Madison", addressRegion: "AL", addressCountry: "US" },
         { "@type": "City", name: "Huntsville", addressRegion: "AL", addressCountry: "US" },
         { "@type": "City", name: "Decatur", addressRegion: "AL", addressCountry: "US" },
@@ -966,7 +971,7 @@ const finalSchema = {
                   >(256) 221-0373</a
                 >
               </li>
-              <li class="text-gray-400">Madison, Alabama</li>
+              <li class="text-gray-400">Based in Somerville, Alabama</li>
               <li class="text-gray-400 text-xs mt-2">
                 Mon-Fri 8AM-6PM | Sat 9AM-3PM
               </li>
