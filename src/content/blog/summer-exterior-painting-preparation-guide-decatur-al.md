@@ -1,5 +1,6 @@
 ---
 title: "Summer Exterior Painting Preparation Guide for Decatur Homeowners"
+seoTitle: "Summer Exterior Painting Prep, Decatur AL"
 description: "Prepare your Decatur home for a quality summer exterior paint job. Learn the crucial steps to ensure maximum adhesion and avoid blistering in the Alabama heat."
 pubDate: 2026-02-21
 author: "Roy"

@@ -3,6 +3,24 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
+// Kept in sync with the canonicalization rule in src/pages/services/[slug].astro.
+const COMBO_SERVICE_IDS = [
+  'drywall-repair',
+  'interior-painting',
+  'exterior-painting',
+  'gutter-cleaning',
+  'gutter-installation',
+  'flooring-installation',
+  'garage-floor-coating',
+  'finish-carpentry',
+];
+const CORE_CITY_SLUGS = ['madison-al', 'huntsville-al', 'athens-al', 'decatur-al'];
+const CANONICALIZED_COMBO_PATHS = new Set(
+  COMBO_SERVICE_IDS.flatMap((service) =>
+    CORE_CITY_SLUGS.map((city) => `/services/${service}-${city}`)
+  )
+);
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.rittenworxhandyman.net',
@@ -105,7 +123,15 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin/'),
+      filter: (page) => {
+        if (page.includes('/admin/')) return false;
+        // The templated service+city pages for the four core cities canonicalize
+        // to their hand-written hub page (see src/pages/services/[slug].astro).
+        // Listing a URL whose own canonical points elsewhere sends Google mixed
+        // signals, so keep them out of the sitemap.
+        const path = new URL(page).pathname.replace(/\/$/, '');
+        return !CANONICALIZED_COMBO_PATHS.has(path);
+      },
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),

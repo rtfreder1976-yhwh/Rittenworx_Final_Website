@@ -1,5 +1,6 @@
 ---
 title: "How Much Does Luxury Vinyl Plank (LVP) Flooring Cost in Madison, AL?"
+seoTitle: "How Much Does LVP Flooring Cost in Madison?"
 description: "A comprehensive breakdown of pricing for LVP flooring installation, subfloor prep, and material choices in Madison, Alabama."
 pubDate: 2026-02-21
 author: "Roy"

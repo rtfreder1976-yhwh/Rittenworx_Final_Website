@@ -1,5 +1,6 @@
 ---
 title: "How Much Do Custom Built-in Shelves Cost in Athens, AL?"
+seoTitle: "Custom Built-in Shelves Cost, Athens AL"
 description: "A comprehensive breakdown of pricing for custom finish carpentry, including built-in bookshelves, entertainment centers, and trim in Athens, Alabama."
 pubDate: 2026-02-21
 author: "Roy"

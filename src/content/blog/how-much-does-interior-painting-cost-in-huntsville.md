@@ -1,6 +1,7 @@
 ---
 title: "How Much Does Interior Painting Cost in Huntsville, AL?"
-description: "Planning a home refresh? Discover the true cost of interior painting in Huntsville, Alabama. Learn how prep work, paint quality, and professional expertise affect the final price."
+seoTitle: "Interior Painting Cost in Huntsville, AL"
+description: "What interior painting really costs in Huntsville, AL — how prep work, paint quality, and professional expertise affect your final price."
 pubDate: 2026-02-23
 author: "Roy"
 tags: ["Painting", "Huntsville AL", "Cost Guide", "Home Maintenance"]

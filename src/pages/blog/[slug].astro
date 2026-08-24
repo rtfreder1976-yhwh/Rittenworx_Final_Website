@@ -15,12 +15,13 @@ const { Content } = await entry.render();
 ---
 
 <Layout
-    title={entry.data.title}
+    title={entry.data.seoTitle ?? entry.data.title}
     description={entry.data.description}
     ogType="article"
     articleMeta={{
         publishedTime: entry.data.pubDate.toISOString(),
         author: entry.data.author,
+        headline: entry.data.title,
     }}
 >
     <article class="bg-gray-50 min-h-screen py-20 lg:py-32">

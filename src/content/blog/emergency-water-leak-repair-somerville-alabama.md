@@ -1,6 +1,7 @@
 ---
 title: "Emergency Water Leak Repair: What Somerville Homeowners Need to Know"
-description: "A sudden water leak can cause catastrophic damage in minutes. Learn how to shut off your water, identify the source, and secure emergency repairs in Somerville, AL."
+seoTitle: "Emergency Water Leak Repair, Somerville AL"
+description: "A sudden water leak can cause serious damage in minutes. How to shut off your water, find the source, and get emergency repairs in Somerville, AL."
 pubDate: 2026-02-21
 author: "Roy"
 tags: ["Home Repairs", "Somerville"]

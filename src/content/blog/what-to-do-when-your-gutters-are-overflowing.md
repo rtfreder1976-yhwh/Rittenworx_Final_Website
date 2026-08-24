@@ -1,5 +1,6 @@
 ---
 title: "What to Do When Your Gutters Start Overflowing During Heavy Rain"
+seoTitle: "What to Do When Gutters Overflow"
 description: "A homeowner's guide to troubleshooting overflowing gutters, identifying clogs vs pitch issues, and when to call a professional in North Alabama."
 pubDate: 2026-02-21
 author: "Roy"
