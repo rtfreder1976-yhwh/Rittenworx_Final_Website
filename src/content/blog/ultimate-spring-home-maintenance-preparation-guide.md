@@ -1,6 +1,7 @@
 ---
 title: "The Ultimate Spring Home Maintenance Preparation Guide for North Alabama"
-description: "Prepare your luxury Huntsville, Madison, or Athens home for the intense Alabama spring and summer. Discover the critical maintenance tasks you must tackle to protect your property value."
+seoTitle: "Spring Home Maintenance, North Alabama"
+description: "Prepare your Huntsville, Madison, or Athens home for the Alabama spring and summer with the maintenance tasks that protect your property value."
 pubDate: 2026-02-24
 author: "Roy"
 tags: ["Spring Prep", "Home Maintenance", "Guide", "Huntsville AL"]

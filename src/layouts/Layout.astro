@@ -9,7 +9,8 @@ interface Props {
   ogType?: string;
   ogImage?: string;
   canonical?: string;
-  articleMeta?: { publishedTime?: string; author?: string };
+  articleMeta?: { publishedTime?: string; author?: string; headline?: string };
+  breadcrumbs?: { name: string; url: string }[];
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   ogImage = "https://www.rittenworxhandyman.net/images/og-roy.jpg",
   canonical,
   articleMeta,
+  breadcrumbs,
 } = Astro.props;
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(
@@ -43,24 +45,29 @@ const schemaData = {
       "@id": "https://www.rittenworxhandyman.net/#business",
       name: "Rittenworx Handyman Service",
       description:
-        "Rittenworx is a licensed and insured handyman service in Madison, Alabama. We specialize in drywall repair, interior and exterior painting, garage floor coating (epoxy/flake), finish carpentry, gutter cleaning, and gutter installation. Serving Madison, Huntsville, Decatur, and Athens, AL.",
+        "Rittenworx is a licensed and insured handyman service based in Somerville, Alabama. We specialize in drywall repair, interior and exterior painting, garage floor coating (epoxy/flake), finish carpentry, gutter cleaning, and gutter installation. Serving Madison, Huntsville, Decatur, and Athens, AL.",
       url: "https://www.rittenworxhandyman.net",
       image: "https://www.rittenworxhandyman.net/images/logo.webp",
       telephone: "(256) 221-0373",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Madison",
+        // Somerville is the business address of record, matching the BBB,
+        // Yelp and Nextdoor citations in `sameAs` below. Madison, Huntsville
+        // and the rest of the footprint belong in `areaServed`, not here —
+        // a service-area business lists where it is, then where it works.
+        addressLocality: "Somerville",
         addressRegion: "AL",
         addressCountry: "US",
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: "34.6993",
-        longitude: "-86.7483",
+        latitude: "34.4700",
+        longitude: "-86.7989",
       },
       areaServed: [
         { "@type": "Country", name: "United States", sameAs: "https://en.wikipedia.org/wiki/United_States" },
         { "@type": "State", name: "Alabama", addressCountry: "US", sameAs: "https://en.wikipedia.org/wiki/Alabama" },
+        { "@type": "City", name: "Somerville", addressRegion: "AL", addressCountry: "US" },
         { "@type": "City", name: "Madison", addressRegion: "AL", addressCountry: "US" },
         { "@type": "City", name: "Huntsville", addressRegion: "AL", addressCountry: "US" },
         { "@type": "City", name: "Decatur", addressRegion: "AL", addressCountry: "US" },
@@ -249,7 +256,123 @@ const schemaData = {
   ],
 };
 
-const finalSchema = schema || schemaData;
+// Breadcrumbs. Derived from the URL path so every nested page ships
+// BreadcrumbList markup matching its visible breadcrumb trail. Pages with a
+// trail that doesn't mirror their path can pass `breadcrumbs` explicitly.
+const segmentLabels: Record<string, string> = {
+  services: "Services",
+  locations: "Locations",
+  blog: "Blog",
+  about: "About",
+  contact: "Contact",
+  quote: "Free Quote",
+};
+
+function labelForSegment(segment: string) {
+  if (segmentLabels[segment]) return segmentLabels[segment];
+  return segment
+    .split("-")
+    .map((word) => (word === "al" ? "AL" : word.charAt(0).toUpperCase() + word.slice(1)))
+    .join(" ");
+}
+
+const pathSegments = currentPath.split("/").filter(Boolean);
+const derivedCrumbs = pathSegments.map((segment, index) => ({
+  // The deepest crumb names the page itself, so prefer the real page title
+  // over a title-cased slug ("Drywall Repair in Madison, AL" beats
+  // "Drywall Repair Madison Al"). Titles carry an SEO tail after a pipe
+  // ("Hampton Cove Handyman | Huntsville AL") that reads badly as a crumb.
+  name:
+    index === pathSegments.length - 1
+      ? title.split("|")[0].trim()
+      : labelForSegment(segment),
+  url: `https://www.rittenworxhandyman.net/${pathSegments.slice(0, index + 1).join("/")}`,
+}));
+
+const crumbs = breadcrumbs ?? derivedCrumbs;
+
+// Only emit BreadcrumbList when there's an actual hierarchy to describe —
+// a single crumb below Home carries no information Google doesn't already have.
+const breadcrumbSchema =
+  crumbs.length > 1
+    ? {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalURL}#breadcrumbs`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.rittenworxhandyman.net/",
+          },
+          ...crumbs.map((crumb, index) => ({
+            "@type": "ListItem",
+            position: index + 2,
+            name: crumb.name,
+            item: crumb.url,
+          })),
+        ],
+      }
+    : null;
+
+// Blog posts get real article markup instead of inheriting only the
+// sitewide business graph.
+const articleSchema = articleMeta
+  ? {
+      "@type": "BlogPosting",
+      "@id": `${canonicalURL}#article`,
+      // Match the visible H1, which keeps the full editorial headline even
+      // when the <title> tag uses a shortened seoTitle.
+      headline: articleMeta.headline ?? title,
+      description: description,
+      image: ogImage,
+      datePublished: articleMeta.publishedTime,
+      dateModified: articleMeta.publishedTime,
+      author: {
+        "@type": "Person",
+        name: articleMeta.author ?? "Roy Ritten",
+      },
+      publisher: { "@id": "https://www.rittenworxhandyman.net/#business" },
+      mainEntityOfPage: { "@id": `${canonicalURL}#webpage` },
+    }
+  : null;
+
+// Merge page-supplied schema into the sitewide graph instead of replacing it.
+// Replacing dropped LocalBusiness, sameAs, areaServed and openingHours from
+// every page that defined its own schema — i.e. exactly the location and
+// service pages that depend on those local signals most.
+function toGraphEntities(input: any): any[] {
+  if (!input) return [];
+  if (Array.isArray(input)) return input.flatMap(toGraphEntities);
+  if (Array.isArray(input["@graph"])) return input["@graph"];
+  if (input["@type"]) {
+    const { "@context": _context, ...entity } = input;
+    return [entity];
+  }
+  return [];
+}
+
+const pageEntities = [
+  ...toGraphEntities(schema),
+  ...(breadcrumbSchema ? [breadcrumbSchema] : []),
+  ...(articleSchema ? [articleSchema] : []),
+];
+
+// A page entity sharing an @id with a sitewide node is treated as a
+// deliberate refinement of that node and wins; everything else is additive.
+const pageEntityIds = new Set(
+  pageEntities.map((entity) => entity?.["@id"]).filter(Boolean),
+);
+
+const finalSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    ...schemaData["@graph"].filter(
+      (entity: any) => !pageEntityIds.has(entity["@id"]),
+    ),
+    ...pageEntities,
+  ],
+};
 ---
 
 <!doctype html>
@@ -281,7 +404,7 @@ const finalSchema = schema || schemaData;
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.png" />
 
     <!-- Performance: Theme Color for Mobile -->
@@ -848,7 +971,7 @@ const finalSchema = schema || schemaData;
                   >(256) 221-0373</a
                 >
               </li>
-              <li class="text-gray-400">Madison, Alabama</li>
+              <li class="text-gray-400">Based in Somerville, Alabama</li>
               <li class="text-gray-400 text-xs mt-2">
                 Mon-Fri 8AM-6PM | Sat 9AM-3PM
               </li>

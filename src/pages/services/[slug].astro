@@ -5,45 +5,65 @@ import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
 
 export function getStaticPaths() {
     const services = [
+        // `metaDesc` gives each service its own meta description copy. A single
+        // shared template left the trailing ~70 characters byte-identical across
+        // all 64 generated pages, which reads as thin, duplicated content.
+        // `{city}` is substituted below.
         {
             id: "drywall-repair",
             name: "Drywall Repair",
             shortDesc: "Professional drywall patching and repair",
+            metaDesc:
+                "Drywall repair in {city}, AL — hole patching, crack repair and texture matching that blends into the existing wall. Free estimates.",
         },
         {
             id: "interior-painting",
             name: "Interior Painting",
             shortDesc: "High-quality interior painting services",
+            metaDesc:
+                "Interior painting in {city}, AL. Walls, ceilings, trim and cabinets with careful prep and clean lines. Licensed, insured, free to quote.",
         },
         {
             id: "exterior-painting",
             name: "Exterior Painting",
             shortDesc: "Durable exterior house painting",
+            metaDesc:
+                "Exterior house painting in {city}, AL — power wash, prime and a two-coat finish on siding, trim and doors. Free written estimate.",
         },
         {
             id: "gutter-cleaning",
             name: "Gutter Cleaning",
             shortDesc: "Thorough gutter cleaning and maintenance",
+            metaDesc:
+                "Gutter cleaning in {city}, AL. Full debris removal, downspout clearing and a damage check while we are up there. No obligation.",
         },
         {
             id: "gutter-installation",
             name: "Gutter Installation",
             shortDesc: "Seamless gutter and downspout installation",
+            metaDesc:
+                "Seamless gutter installation in {city}, AL — formed on site, with downspouts and guards sized to your roof. Free estimate.",
         },
         {
             id: "flooring-installation",
             name: "Flooring Installation",
             shortDesc: "Expert hardwood, LVP, and laminate flooring installation",
+            metaDesc:
+                "Flooring installation in {city}, AL — hardwood, LVP and laminate laid over properly prepped subfloor. Licensed, insured, free estimates.",
         },
         {
             id: "garage-floor-coating",
             name: "Garage Floor Coating",
             shortDesc: "Professional epoxy and flake garage floor coating systems",
+            metaDesc:
+                "Garage floor coating in {city}, AL. Epoxy, flake and polyaspartic systems over diamond-ground concrete. Free estimate from Rittenworx.",
         },
         {
             id: "finish-carpentry",
             name: "Finish Carpentry",
             shortDesc: "Custom trim, crown molding, and woodwork",
+            metaDesc:
+                "Finish carpentry in {city}, AL — crown molding, baseboards, wainscoting and built-ins cut and fit on site. Licensed and insured.",
         },
     ];
     const cities = [
@@ -54,7 +74,10 @@ export function getStaticPaths() {
         "harvest-al",
         "owens-cross-roads-al",
         "hampton-cove-al",
-        "redstone-arsenal-al"
+        "redstone-arsenal-al",
+        // Listed as a service area on the service hub pages, which link here.
+        // Without it those links 404.
+        "meridianville-al"
     ];
 
     const paths: any[] = [];
@@ -69,7 +92,10 @@ export function getStaticPaths() {
                 "harvest-al": { name: "Harvest", path: "madison/harvest" },
                 "owens-cross-roads-al": { name: "Owens Cross Roads", path: "owens-cross-roads" },
                 "hampton-cove-al": { name: "Hampton Cove", path: "huntsville/hampton-cove" },
-                "redstone-arsenal-al": { name: "Redstone Arsenal", path: "redstone-arsenal" }
+                "redstone-arsenal-al": { name: "Redstone Arsenal", path: "redstone-arsenal" },
+                // No dedicated Meridianville page yet; Huntsville is its hub
+                // and is where /service-area/meridianville-al already redirects.
+                "meridianville-al": { name: "Meridianville", path: "huntsville" }
             };
             const cityData = cityNameObj[city];
             paths.push({
@@ -86,7 +112,9 @@ const { service, city, cityPath, fullCity } = Astro.props;
 const { slug } = Astro.params;
 
 const title = `${service.name} in ${city}, AL`;
-const description = `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
+const description = service.metaDesc
+    ? service.metaDesc.replace("{city}", city)
+    : `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
 
 // Cannibalization fix: for the four core cities we already have stronger,
 // hand-written service hub pages. Point these templated service+city pages'
@@ -111,22 +139,28 @@ const canonical =
         : undefined;
 
 // Custom local schema for this specific combination
+// Mirrors the visible breadcrumb trail in the hero, which follows the
+// location hierarchy rather than this page's /services/ URL path.
+const pageBreadcrumbs = [
+    { name: "Locations", url: "https://www.rittenworxhandyman.net/locations" },
+    { name: city, url: `https://www.rittenworxhandyman.net/locations/${cityPath}` },
+    { name: title, url: `https://www.rittenworxhandyman.net/services/${slug}` },
+];
+
 const localSchema = {
     "@context": "https://schema.org",
     "@graph": [
+        // The sitewide LocalBusiness node (Layout.astro) is the single business
+        // entity. A second LocalBusiness here would fragment it across two @ids,
+        // so this page contributes the service offering and its FAQ instead.
         {
-            "@type": "LocalBusiness",
-            "@id": `https://www.rittenworxhandyman.net/services/${slug}/#business`,
-            name: `Rittenworx - ${city}`,
+            "@type": "Service",
+            "@id": `https://www.rittenworxhandyman.net/services/${slug}/#service`,
+            name: `${service.name} in ${city}, AL`,
             description: description,
-            url: `https://www.rittenworxhandyman.net/services/${slug}`,
-            telephone: "(256) 221-0373",
-            address: {
-                "@type": "PostalAddress",
-                addressLocality: city,
-                addressRegion: "AL",
-            },
-            areaServed: [{ "@type": "City", name: city, addressRegion: "AL" }],
+            serviceType: service.name,
+            provider: { "@id": "https://www.rittenworxhandyman.net/#business" },
+            areaServed: [{ "@type": "City", name: city, addressRegion: "AL", addressCountry: "US" }],
         },
         {
             "@type": "FAQPage",
@@ -169,7 +203,13 @@ const localSchema = {
 };
 ---
 
-<Layout title={title} description={description} schema={localSchema} canonical={canonical}>
+<Layout
+    title={title}
+    description={description}
+    schema={localSchema}
+    canonical={canonical}
+    breadcrumbs={pageBreadcrumbs}
+>
     <!-- Premium Hero Section -->
     <section
         class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"

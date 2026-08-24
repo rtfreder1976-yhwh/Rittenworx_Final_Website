@@ -1,5 +1,6 @@
 ---
 title: "Spring Deck and Exterior Trim Repair Guide for Madison Homeowners"
+seoTitle: "Spring Deck & Trim Repair, Madison AL"
 description: "Prepare your outdoor living spaces for spring in Madison, AL. Learn how to identify severe wood rot, structural deck issues, and when to replace exterior trim."
 pubDate: 2026-02-21
 author: "Roy"
