@@ -54,7 +54,8 @@ export function getStaticPaths() {
         "harvest-al",
         "owens-cross-roads-al",
         "hampton-cove-al",
-        "redstone-arsenal-al"
+        "redstone-arsenal-al",
+        "meridianville-al"
     ];
 
     const paths: any[] = [];
@@ -69,7 +70,8 @@ export function getStaticPaths() {
                 "harvest-al": { name: "Harvest", path: "madison/harvest" },
                 "owens-cross-roads-al": { name: "Owens Cross Roads", path: "owens-cross-roads" },
                 "hampton-cove-al": { name: "Hampton Cove", path: "huntsville/hampton-cove" },
-                "redstone-arsenal-al": { name: "Redstone Arsenal", path: "redstone-arsenal" }
+                "redstone-arsenal-al": { name: "Redstone Arsenal", path: "redstone-arsenal" },
+                "meridianville-al": { name: "Meridianville", path: "huntsville" }
             };
             const cityData = cityNameObj[city];
             paths.push({
