@@ -1,0 +1,440 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const serviceAreas = ["Madison", "Huntsville", "Decatur", "Athens"];
+
+const surfaces = [
+  {
+    title: "House Siding",
+    description:
+      "Vinyl, Hardie board, brick, and stucco cleaned of mildew, pollen film, and algae streaking without damaging the surface.",
+  },
+  {
+    title: "Driveways & Walkways",
+    description:
+      "Concrete and pavers stripped of oil stains, tire marks, and the black mildew buildup that collects in shaded areas.",
+  },
+  {
+    title: "Decks & Patios",
+    description:
+      "Wood and composite decking cleaned of green algae film and grime buildup before staining, sealing, or just for looks.",
+  },
+  {
+    title: "Fences",
+    description:
+      "Wood and vinyl fencing cleaned of dirt, mildew, and weathering — often the last step before a fresh coat of stain or paint.",
+  },
+  {
+    title: "Retaining Walls & Steps",
+    description:
+      "Stone, brick, and block surfaces cleaned of moss, algae, and years of accumulated grime.",
+  },
+  {
+    title: "Gutters & Soffits (Exterior)",
+    description:
+      "Exterior gutter faces and soffits rinsed clean of streaking and dirt as part of a full exterior wash.",
+  },
+];
+
+const processSteps = [
+  {
+    step: "1",
+    title: "Walk the Property",
+    description:
+      "We look at every surface being washed and flag anything fragile — loose paint, old mortar, soft wood — before we start.",
+  },
+  {
+    step: "2",
+    title: "Pressure Matched to Surface",
+    description:
+      "Siding, concrete, and wood each need a different PSI and nozzle. We adjust so we clean the surface, not damage it.",
+  },
+  {
+    step: "3",
+    title: "Pre-Treat Where Needed",
+    description:
+      "Heavy mildew, algae, or oil stains get a cleaning solution applied first so the wash actually lifts the stain instead of just wetting it.",
+  },
+  {
+    step: "4",
+    title: "Wash & Rinse",
+    description:
+      "Full wash from top to bottom, working with the grain on siding and decking so nothing gets streaked or gouged.",
+  },
+  {
+    step: "5",
+    title: "Walk-Through",
+    description:
+      "We walk the property with you when we're done. Anything you're not happy with, we address before we call it finished.",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does pressure washing cost in Madison, AL?",
+    answer:
+      "Pricing depends on the surfaces being washed and the square footage — a driveway is priced differently than a full house exterior. Text us a few photos of what you need cleaned and we'll give you a ballpark, or we can come out for a free written estimate.",
+  },
+  {
+    question: "Will pressure washing damage my siding or paint?",
+    answer:
+      "Not when it's done right. We match the pressure and nozzle to the surface — vinyl and Hardie siding, wood, brick, and concrete all get treated differently. Too much pressure on the wrong surface is how amateur jobs cause damage, which is why we adjust before we ever pull the trigger.",
+  },
+  {
+    question: "Can you pressure wash my deck before I stain it?",
+    answer:
+      "Yes — pressure washing is the standard first step before staining or sealing a deck. It strips old finish, dirt, and algae so the new stain actually bonds to the wood instead of sitting on top of grime.",
+  },
+  {
+    question: "How often should I have my house pressure washed?",
+    answer:
+      "Most North Alabama homes benefit from a wash once a year, typically spring, since our humidity and pollen create mildew and green staining faster than drier climates. Homes in heavy shade or near trees sometimes need it twice a year.",
+  },
+  {
+    question: "Do you use pressure washing or soft washing?",
+    answer:
+      "Both, depending on the surface. Concrete, brick, and pavers can generally handle higher pressure. Siding, roofs, and painted wood get a lower-pressure soft wash with a cleaning solution so we don't force water behind the surface or strip paint.",
+  },
+  {
+    question: "Is Rittenworx licensed and insured for pressure washing?",
+    answer:
+      "Yes. Rittenworx is licensed and insured for all the services we offer, pressure washing included. We can show you the certificate before we start.",
+  },
+  {
+    question: "Do I need to be home while you pressure wash?",
+    answer:
+      "No, as long as we have access to the areas being cleaned and a water source. We'll text you before and after photos so you can see the results.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title="Pressure Washing Madison AL | House & Driveway"
+  description="Professional pressure washing in Madison, Huntsville, Decatur & Athens, AL. Siding, driveways, decks, fences & walkways. Licensed & insured. Free estimates."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Premium Hero Section -->
+  <section
+    class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"
+  >
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/hero-handyman.webp"
+        alt="Pressure Washing Services"
+        class="w-full h-full object-cover opacity-20 scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav
+          class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide"
+        >
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors"
+            >Services</a
+          >
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">Pressure Washing</span>
+        </nav>
+
+        <div
+          class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100"
+        >
+          <span
+            class="w-2 h-2 inline-block rounded-full bg-orange-400 mr-2 animate-pulse"
+          ></span>
+          Siding, Concrete, Decks & Fences
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
+        >
+          Pressure Washing That <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
+            >Actually Cleans</span
+          >
+        </h1>
+
+        <p
+          class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed"
+        >
+          Mildew, pollen film, and algae staining are a losing battle against
+          North Alabama's humidity. We wash siding, driveways, decks, and
+          fences with the right pressure for the surface — text a photo and
+          Roy will get back to you.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 border border-orange-400/30"
+          >
+            <svg
+              class="w-6 h-6 group-hover:scale-110 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+              ></path>
+            </svg>
+            Text A Photo For A Quote
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative shape divider -->
+    <div
+      class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10"
+    >
+      <svg
+        class="relative block w-full h-[50px] md:h-[100px]"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,155.15,112.5,231.2,88.45,264.44,77.83,296.88,67.36,321.39,56.44Z"
+          class="fill-orange-500"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Comprehensive SEO Introduction -->
+  <section class="py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2
+        class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 font-display tracking-tight"
+      >
+        Professional Pressure Washing in North Alabama
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        North Alabama's humidity and pollen turn siding, driveways, and decks
+        green and gray faster than most homeowners expect. Left alone, that
+        buildup isn't just a curb-appeal problem — mildew and algae hold
+        moisture against siding and wood, and oil or tannin stains on
+        concrete only get harder to lift the longer they sit. Rittenworx
+        provides professional pressure washing for homes across Madison,
+        Huntsville, Decatur, and Athens, AL, matching pressure and technique
+        to the surface so you get a clean result without stripped paint,
+        gouged wood, or damaged siding.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        A rental pressure washer from the hardware store comes with one
+        setting and no guidance on how much pressure your siding or deck can
+        actually take. We've washed enough houses in this climate to know
+        that vinyl siding, Hardie board, brick, wood decking, and concrete
+        all need different pressure, nozzles, and — in a lot of cases — a
+        cleaning solution applied first so the wash lifts the stain instead
+        of just wetting it. That's the difference between a wash that looks
+        clean for two weeks and one that actually holds up.
+      </p>
+      <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 mt-14">
+        The Right First Step Before Staining or Painting
+      </h3>
+      <p class="text-gray-700 text-lg leading-relaxed mb-10">
+        If you're planning to stain a deck, paint a fence, or have your house
+        exterior painted, pressure washing is the step that makes the finish
+        actually stick. Paint and stain applied over dirt, mildew, or old
+        finish residue fail early — often within a year. We regularly wash
+        decks and siding as prep work ahead of our own
+        <a
+          href="/services/painting"
+          class="text-blue-600 underline hover:text-blue-800"
+          >painting</a
+        > and staining jobs, and we're glad to do the same as a standalone
+        service before you bring in a painter.
+      </p>
+    </div>
+  </section>
+
+  <!-- Surfaces We Wash -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >What We Clean</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Surfaces We Pressure Wash
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          surfaces.map((s) => (
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <svg
+                  class="w-6 h-6 text-blue-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">{s.title}</h3>
+              <p class="text-gray-600 text-sm">{s.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Our Process</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          How We Wash Your Property
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {
+          processSteps.map((item) => (
+            <div class="bg-white rounded-lg p-6 text-center shadow-sm">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                {item.step}
+              </div>
+              <h3 class="font-bold text-gray-800 mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Common Questions</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Pressure Washing FAQs
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {
+          faqs.map((faq) => (
+            <details class="bg-gray-50 rounded-lg shadow-sm group">
+              <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:text-blue-900 flex items-center justify-between">
+                {faq.question}
+                <svg
+                  class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-gray-600">{faq.answer}</div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready for a Cleaner Exterior?</h2>
+      <p class="text-xl mb-8">
+        Contact us today for a free pressure washing estimate.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          Get Free Estimate
+        </a>
+        <a
+          href="tel:2562210373"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area cross-links -->
+  <section class="py-16 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Service Areas</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Pressure Washing Across North Alabama</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Rittenworx provides pressure washing throughout the Tennessee Valley. Pick your city below for local details and response times.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {
+          serviceAreas.map((area) => (
+            <a
+              href={`/locations/${area.toLowerCase()}`}
+              class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-lg border border-gray-100 hover:-translate-y-1 transition-all"
+            >
+              <h3 class="font-bold text-gray-900">{area}, AL</h3>
+              <p class="text-sm text-gray-600 mt-1">Pressure Washing &amp; Exterior Cleaning</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

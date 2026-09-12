@@ -213,6 +213,51 @@ const schemaData = {
               },
             ],
           },
+          {
+            "@type": "OfferCatalog",
+            name: "Pressure Washing Services",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Pressure Washing",
+                  description:
+                    "House siding, driveway, walkway, and deck pressure washing",
+                },
+              },
+            ],
+          },
+          {
+            "@type": "OfferCatalog",
+            name: "Fence Services",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Fence Repair & Installation",
+                  description:
+                    "Wood, vinyl, and chain-link fence repair, post replacement, and new installation",
+                },
+              },
+            ],
+          },
+          {
+            "@type": "OfferCatalog",
+            name: "Deck Services",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Deck Repair & Building",
+                  description:
+                    "Deck board replacement, rot repair, railing repair, and new deck construction",
+                },
+              },
+            ],
+          },
         ],
       },
       sameAs: [
@@ -794,6 +839,26 @@ const finalSchema = schema || schemaData;
                   href="/services/gutter-installation"
                   class="hover:text-white transition-colors"
                   >Gutter Installation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/pressure-washing"
+                  class="hover:text-white transition-colors">Pressure Washing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/fence-repair"
+                  class="hover:text-white transition-colors"
+                  >Fence Repair &amp; Installation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/deck-repair"
+                  class="hover:text-white transition-colors"
+                  >Deck Repair &amp; Building</a
                 >
               </li>
             </ul>

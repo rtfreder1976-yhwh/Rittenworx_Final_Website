@@ -1,0 +1,433 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const serviceAreas = ["Madison", "Huntsville", "Decatur", "Athens"];
+
+const deckWork = [
+  {
+    title: "Board Replacement",
+    description:
+      "Individual rotted, cracked, or warped boards swapped out to match your existing decking without rebuilding the whole surface.",
+  },
+  {
+    title: "Rot & Structural Repair",
+    description:
+      "Rotted joists, ledger boards, and support posts repaired or replaced — the structural work that keeps a deck safe, not just pretty.",
+  },
+  {
+    title: "Railing Repair & Replacement",
+    description:
+      "Loose, wobbly, or missing railings and balusters fixed to code so the deck is actually safe to lean on.",
+  },
+  {
+    title: "Stair Repair",
+    description:
+      "Deck stairs re-secured, rebuilt, or replaced when treads are soft, stringers are cracked, or the whole run has started to shift.",
+  },
+  {
+    title: "Deck Resurfacing",
+    description:
+      "Worn decking replaced on a sound existing frame — a faster, lower-cost path to a like-new deck when the structure underneath is solid.",
+  },
+  {
+    title: "New Deck Construction",
+    description:
+      "New wood or composite decks built with properly sized footings and framing sized to the deck's actual load.",
+  },
+];
+
+const signs = [
+  {
+    sign: "Boards Feel Soft or Spongy",
+    cause: "Water trapped under paint/stain has rotted the wood",
+    risk: "Board failure underfoot, spreading rot to joists",
+  },
+  {
+    sign: "Deck Feels Bouncy or Shifts",
+    cause: "Undersized or rotted joists, loose ledger board",
+    risk: "Structural failure, especially under load",
+  },
+  {
+    sign: "Railing Wobbles When Pushed",
+    cause: "Loose post connections or rotted baluster bases",
+    risk: "Fall hazard — railings are a safety system, not decoration",
+  },
+  {
+    sign: "Gap Where Deck Meets House",
+    cause: "Ledger board pulling away from the house rim joist",
+    risk: "The most common cause of full deck collapse",
+  },
+  {
+    sign: "Rust Stains Around Fasteners",
+    cause: "Nails or screws corroding and losing grip",
+    risk: "Boards working loose, structural connections weakening",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does deck repair cost in Madison, AL?",
+    answer:
+      "It depends on what's actually wrong — a handful of boards is a very different job than joist or ledger board repair. Text us a photo of the problem area and we'll give you a ballpark, or we'll come out for a free written estimate.",
+  },
+  {
+    question: "Is my deck safe to use right now?",
+    answer:
+      "If boards feel soft, the railing wobbles, or you see a gap where the deck meets the house, treat it as a real concern rather than a cosmetic one — those are the signs that show up before structural failure. When in doubt, have it looked at before you keep using it as normal.",
+  },
+  {
+    question: "Can you repair just the damaged part, or do I need a whole new deck?",
+    answer:
+      "Most deck problems are repairable — rotted boards, a loose railing, or a failing stair run can usually be fixed without touching the rest of the deck. We'll tell you honestly if the frame itself is too far gone and a rebuild makes more sense.",
+  },
+  {
+    question: "Do you build new decks or just repair existing ones?",
+    answer:
+      "Both. We build new wood and composite decks, and we repair decks whether we built the original or not.",
+  },
+  {
+    question: "How long does deck repair take?",
+    answer:
+      "A board swap or railing repair is often a same-day job. Structural repairs — joists, ledger board, footings — take longer since we need to make sure the fix is actually sound, not just cosmetic. We'll give you a time estimate with your quote.",
+  },
+  {
+    question: "Is Rittenworx licensed and insured for deck work?",
+    answer:
+      "Yes. Rittenworx is licensed and insured for all our services, deck repair and construction included. We can show you the certificate before we start.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title="Deck Repair & Building Madison AL"
+  description="Deck repair, rebuilding & board replacement in Madison, Huntsville, Decatur & Athens, AL. Rot repair, railings, stairs & resurfacing. Free estimates."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Premium Hero Section -->
+  <section
+    class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"
+  >
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/hero-handyman.webp"
+        alt="Deck Repair and Building Services"
+        class="w-full h-full object-cover opacity-20 scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav
+          class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide"
+        >
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors"
+            >Services</a
+          >
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">Deck Repair &amp; Building</span>
+        </nav>
+
+        <div
+          class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100"
+        >
+          <span
+            class="w-2 h-2 inline-block rounded-full bg-orange-400 mr-2 animate-pulse"
+          ></span>
+          Boards, Railings, Stairs &amp; Structure
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
+        >
+          Deck Repair That <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
+            >Goes Past the Surface</span
+          >
+        </h1>
+
+        <p
+          class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed"
+        >
+          Soft boards, a wobbly railing, or a deck that's ready for a full
+          rebuild — we fix what's actually wrong, not just what's visible.
+          Text a photo and Roy will get back to you.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 border border-orange-400/30"
+          >
+            <svg
+              class="w-6 h-6 group-hover:scale-110 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+              ></path>
+            </svg>
+            Text A Photo For A Quote
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative shape divider -->
+    <div
+      class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10"
+    >
+      <svg
+        class="relative block w-full h-[50px] md:h-[100px]"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,155.15,112.5,231.2,88.45,264.44,77.83,296.88,67.36,321.39,56.44Z"
+          class="fill-orange-500"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Comprehensive SEO Introduction -->
+  <section class="py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2
+        class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 font-display tracking-tight"
+      >
+        Deck Repair &amp; Building in North Alabama
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        A deck takes a beating from Alabama's heat, humidity, and rain cycles
+        — and the damage that matters most is usually the part you can't see
+        from the top. Rittenworx repairs and builds decks for homeowners
+        across Madison, Huntsville, Decatur, and Athens, AL, and we start
+        every job by checking the structure underneath, not just the boards
+        on top. A deck that looks fine can still have a rotted ledger board
+        or a joist that's lost most of its strength — that's the kind of
+        problem that actually causes injuries, and it's exactly what we
+        check for first.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed mb-10">
+        Most deck issues don't require a full rebuild. Rotted boards, a
+        wobbly railing, or a stair run that's shifted can usually be repaired
+        without touching the rest of the deck. When the frame itself has
+        failed, or you're ready for something new, we build wood and
+        composite decks with footings and framing sized to the deck's actual
+        load — not guessed at. Either way, you get a written estimate before
+        anything starts.
+      </p>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >What We Do</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Deck Repair &amp; Building Services
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          deckWork.map((item) => (
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <svg
+                  class="w-6 h-6 text-blue-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Warning Signs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Know the Signs</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          When Your Deck Needs Attention
+        </h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-lg shadow-sm">
+          <thead>
+            <tr class="bg-blue-900 text-white">
+              <th class="px-6 py-4 text-left font-semibold">Warning Sign</th>
+              <th class="px-6 py-4 text-left font-semibold">What's Happening</th>
+              <th class="px-6 py-4 text-left font-semibold">Potential Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              signs.map((item, index) => (
+                <tr class={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                  <td class="px-6 py-4 font-medium text-gray-800">{item.sign}</td>
+                  <td class="px-6 py-4 text-gray-600">{item.cause}</td>
+                  <td class="px-6 py-4 text-red-600">{item.risk}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-8 text-center">
+        <p class="text-gray-600 mb-4">
+          Seeing any of these signs? A deck is a structure, not just a
+          surface — don't wait to have it checked.
+        </p>
+        <a
+          href="/contact"
+          class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block"
+        >
+          Schedule an Inspection
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Common Questions</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Deck Repair &amp; Building FAQs
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {
+          faqs.map((faq) => (
+            <details class="bg-gray-50 rounded-lg shadow-sm group">
+              <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:text-blue-900 flex items-center justify-between">
+                {faq.question}
+                <svg
+                  class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-gray-600">{faq.answer}</div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Fix or Build Your Deck?</h2>
+      <p class="text-xl mb-8">
+        Contact us today for a free deck repair or building estimate.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          Get Free Estimate
+        </a>
+        <a
+          href="tel:2562210373"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area cross-links -->
+  <section class="py-16 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Service Areas</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Deck Repair &amp; Building Across North Alabama</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Rittenworx provides deck repair and building throughout the Tennessee Valley. Pick your city below for local details and response times.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {
+          serviceAreas.map((area) => (
+            <a
+              href={`/locations/${area.toLowerCase()}`}
+              class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-lg border border-gray-100 hover:-translate-y-1 transition-all"
+            >
+              <h3 class="font-bold text-gray-900">{area}, AL</h3>
+              <p class="text-sm text-gray-600 mt-1">Deck Repair &amp; Building</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
