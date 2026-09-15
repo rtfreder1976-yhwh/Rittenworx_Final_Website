@@ -1,6 +1,6 @@
 ---
 title: "Emergency Roof Fascia Repair: What Somerville Residents Need to Know"
-description: "When high winds tear off your fascia board or heavy rain rots it out, your roof is completely exposed. Learn how to identify and secure emergency carpentry repairs in Somerville, AL."
+description: "When high winds or rot tear off your fascia board, your roof is exposed. Learn to identify and secure emergency carpentry repairs in Somerville, AL."
 pubDate: 2026-02-21
 author: "Roy"
 tags: ["Finish Carpentry", "Somerville"]
