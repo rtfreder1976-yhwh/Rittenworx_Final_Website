@@ -6,7 +6,7 @@ author: "Roy"
 tags: ["Finish Carpentry", "Athens"]
 ---
 
-Whether you want to frame your fireplace with elegant bookcases, build an integrated mudroom bench for your kids, or finally construct a seamless home office, custom finish carpentry instantly elevates the character and perceived value of a plain room.
+Whether you want to frame your fireplace with elegant bookcases, build an integrated mudroom bench for your kids, or finally build out a home office, custom finish carpentry is what makes a room look finished instead of just built.
 
 But if you are a homeowner in Athens, Alabama, searching for a bespoke aesthetic that big-box store furniture can’t mimic, you likely have one primary question: How much do custom built-ins and finish carpentry actually cost?
 

@@ -56,7 +56,7 @@ When you are dealing with water pouring through the ceiling or a massive hole in
 
 This desperation makes homeowners vulnerable to "fly-by-night" contractors who demand upfront cash, perform shoddy, unpermitted work with cheap materials, and disappear forever, leaving you to deal with the inevitable failure of the repair months later.
 
-A premium emergency professional provides absolute peace of mind during a chaotic situation. 
+That's the whole case for hiring a real professional instead of gambling on the cheapest bid you can find at 9pm. 
 
 ## The Rittenworx Emergency Response Standard
 
