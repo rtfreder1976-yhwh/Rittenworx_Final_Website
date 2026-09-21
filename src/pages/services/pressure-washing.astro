@@ -1,0 +1,522 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const serviceAreas = ["Madison", "Huntsville", "Decatur", "Athens", "Harvest"];
+
+const surfaces = [
+  {
+    name: "House Siding",
+    description:
+      "Vinyl, brick, and Hardie board washed with a soft-wash approach — low pressure plus the right cleaner, so nothing gets damaged.",
+    benefits: [
+      "Removes mold, mildew & pollen film",
+      "Low-pressure, chemical-assisted wash",
+      "Safe for vinyl and painted surfaces",
+      "Brightens siding without stripping paint",
+    ],
+    bestFor: "Vinyl, Hardie board, brick, and painted exteriors",
+  },
+  {
+    name: "Driveways & Walkways",
+    description:
+      "Higher-pressure cleaning for concrete and pavers to lift oil stains, tire marks, and years of built-up grime.",
+    benefits: [
+      "Strips ground-in dirt and algae",
+      "Removes oil and rust staining",
+      "Restores original concrete color",
+      "Prepares surface for sealing",
+    ],
+    bestFor: "Concrete, pavers, and asphalt surfaces",
+  },
+  {
+    name: "Decks & Fences",
+    description:
+      "The right prep step before staining or sealing — strips old finish and gray, weathered wood back to a clean surface.",
+    benefits: [
+      "Removes mildew and algae buildup",
+      "Strips failing old stain",
+      "Opens wood grain for new sealant",
+      "Pairs with our staining service",
+    ],
+    bestFor: "Wood decks and fences before refinishing",
+  },
+  {
+    name: "Roof Soft Washing",
+    description:
+      "Shingle roofs should never see full pressure — we use a low-pressure soft wash to kill algae streaks without damaging shingles.",
+    benefits: [
+      "Low-pressure, shingle-safe method",
+      "Removes black algae streaking",
+      "No granule loss from high pressure",
+      "Improves curb appeal and roof life",
+    ],
+    bestFor: "Asphalt shingle roofs with algae streaking",
+  },
+];
+
+const processSteps = [
+  {
+    step: "1",
+    title: "Walk the Property",
+    description:
+      "Roy looks at every surface you want cleaned and flags anything that needs a gentler approach.",
+  },
+  {
+    step: "2",
+    title: "Right Pressure, Right Surface",
+    description:
+      "Concrete gets more pressure than siding or a roof — matching PSI to the material is what keeps you from damaging it.",
+  },
+  {
+    step: "3",
+    title: "Pre-Treat if Needed",
+    description:
+      "Heavy mildew, algae, or oil stains get a cleaning solution applied first so the wash actually lifts it.",
+  },
+  {
+    step: "4",
+    title: "Wash & Rinse",
+    description:
+      "Surfaces are washed section by section and rinsed clean, with care around plants, windows, and outlets.",
+  },
+  {
+    step: "5",
+    title: "Final Walkthrough",
+    description:
+      "We walk the property with you to make sure every surface came out the way you expected.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What's the difference between pressure washing and soft washing?",
+    answer:
+      "Pressure washing uses higher PSI water alone to blast dirt off tough surfaces like concrete and pavers. Soft washing uses lower pressure combined with a cleaning solution to lift mold, algae, and mildew off more delicate surfaces like siding, painted wood, and roof shingles without damaging them. We use whichever is right for the surface, not just one setting for everything.",
+  },
+  {
+    question: "Is it safe to pressure wash my roof?",
+    answer:
+      "Not with high pressure. Standard pressure washing can strip the protective granules off asphalt shingles and shorten your roof's life. We only soft-wash roofs — low pressure plus a cleaning solution — to remove the black algae streaking without damaging the shingles.",
+  },
+  {
+    question: "How often should I have my house washed?",
+    answer:
+      "Once a year is typical for most North Alabama homes, given our humidity and pollen. Shaded, wooded lots that stay damp often need it more often to stay ahead of mold and mildew growth.",
+  },
+  {
+    question: "Will pressure washing damage my siding or paint?",
+    answer:
+      "Not when it's done at the right pressure. We soft-wash vinyl, Hardie board, and painted surfaces with lower pressure and a cleaning solution instead of blasting them at full force, which is what causes stripped paint or damaged siding.",
+  },
+  {
+    question: "Can you remove oil stains from my driveway?",
+    answer:
+      "Fresh to moderate oil staining usually lifts well with pre-treatment and higher-pressure washing on concrete. Old, deeply set stains may lighten significantly but not disappear completely — we'll give you an honest expectation before we start.",
+  },
+  {
+    question: "Do you also stain decks and fences after washing them?",
+    answer:
+      "Yes. Washing is the prep step — once the wood is clean and dry, we can apply stain or sealant as part of the same project. See our deck repair and fence services for details.",
+  },
+];
+---
+
+<Layout
+  title="Pressure Washing Madison AL | House, Driveway & Roof"
+  description="Pressure washing and soft washing in Madison, Huntsville, Decatur & Athens, AL. House siding, driveways, decks, fences & shingle-safe roof washing. Free estimates."
+>
+  <!-- Hero -->
+  <section
+    class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"
+  >
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/hero-handyman.webp"
+        alt="Exterior pressure washing services by Rittenworx"
+        class="w-full h-full object-cover opacity-20 scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav
+          class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide"
+        >
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors"
+            >Services</a
+          >
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">Pressure Washing</span>
+        </nav>
+
+        <div
+          class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100"
+        >
+          <span
+            class="w-2 h-2 inline-block rounded-full bg-orange-400 mr-2 animate-pulse"
+          ></span>
+          Pressure & Soft Washing
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
+        >
+          Pressure <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
+            >Washing</span
+          >
+        </h1>
+
+        <p
+          class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed"
+        >
+          House siding, driveways, decks, fences, and shingle-safe roof
+          washing — matched to the right pressure for each surface.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 border border-orange-400/30"
+          >
+            <svg
+              class="w-6 h-6 group-hover:scale-110 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+              ></path>
+            </svg>
+            Text A Photo For A Quote
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10"
+    >
+      <svg
+        class="relative block w-full h-[50px] md:h-[100px]"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,155.15,112.5,231.2,88.45,264.44,77.83,296.88,67.36,321.39,56.44Z"
+          class="fill-white"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 prose prose-lg prose-blue">
+      <h2
+        class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 font-display tracking-tight"
+      >
+        Not Every Surface Should Get the Same Pressure
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        Concrete can take a lot of pressure. Vinyl siding, painted wood, and
+        asphalt shingles can't — blast those at full force and you'll strip
+        paint, crack siding, or knock the protective granules off your roof.
+        Roy matches the pressure and method to the surface: higher PSI for
+        driveways and patios, a gentler soft-wash for siding, decks, and
+        roofs.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Rittenworx handles exterior washing across Madison, Huntsville,
+        Decatur, and Athens, and it pairs naturally with our
+        <a href="/services/deck-repair" class="text-blue-600 underline hover:text-blue-800">deck</a>,
+        <a href="/services/fence-installation" class="text-blue-600 underline hover:text-blue-800">fence</a>,
+        and <a href="/services/painting" class="text-blue-600 underline hover:text-blue-800">exterior painting</a>
+        work as a prep step.
+      </p>
+    </div>
+  </section>
+
+  <!-- Surfaces -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >What We Wash</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Surfaces We Clean
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        {
+          surfaces.map((surface) => (
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                {surface.name}
+              </h3>
+              <p class="text-gray-600 mb-4">{surface.description}</p>
+              <ul class="space-y-2 mb-4">
+                {surface.benefits.map((benefit) => (
+                  <li class="flex items-center gap-2 text-gray-700 text-sm">
+                    <svg
+                      class="w-4 h-4 text-green-500 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+              <p class="text-sm text-blue-900 font-medium">
+                <span class="text-gray-500">Best for:</span> {surface.bestFor}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Our Process</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          How We Wash Your Property
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {
+          processSteps.map((item) => (
+            <div class="bg-gray-50 rounded-lg p-6 text-center shadow-sm">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                {item.step}
+              </div>
+              <h3 class="font-bold text-gray-800 mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Common Questions</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Pressure Washing FAQs
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {
+          faqs.map((faq) => (
+            <details class="bg-white rounded-lg shadow-sm group">
+              <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:text-blue-900 flex items-center justify-between">
+                {faq.question}
+                <svg
+                  class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-gray-600">{faq.answer}</div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="bg-blue-50 rounded-lg p-6">
+        <div class="flex items-start gap-4">
+          <svg
+            class="w-8 h-8 text-blue-900 flex-shrink-0"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            ></path>
+          </svg>
+          <div>
+            <h3 class="text-lg font-bold text-blue-900 mb-2">
+              Our Commitment to North Alabama Homeowners
+            </h3>
+            <p class="text-gray-600 text-sm">
+              We're not a franchise dispatcher sending out whoever's
+              available. Roy shows up, matches the pressure to the surface,
+              and cleans up after. Licensed and insured, family owned, 7
+              years serving North Alabama.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Coverage Area</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          Pressure Washing Service Areas
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {
+          serviceAreas.map((area) => {
+            const citySlug = area.toLowerCase().replace(/ /g, "-");
+            const finalSlug = `pressure-washing-${citySlug}-al`;
+
+            return (
+              <a
+                href={`/services/${finalSlug}`}
+                class={`block group rounded-2xl p-6 text-center transition-all duration-300 ${area === "Madison" ? "bg-gradient-to-br from-blue-900 to-blue-800 text-white shadow-xl shadow-blue-900/20 hover:-translate-y-1" : "bg-white border border-gray-100 shadow-lg hover:shadow-xl hover:border-blue-100 hover:-translate-y-1"}`}
+              >
+                <h3
+                  class={`text-xl font-bold mb-2 ${area === "Madison" ? "text-white" : "text-gray-900 group-hover:text-blue-900"}`}
+                >
+                  {area}
+                </h3>
+                <p
+                  class={`text-sm mb-4 ${area === "Madison" ? "text-blue-100" : "text-gray-500"}`}
+                >
+                  Professional Service
+                </p>
+                <div
+                  class={`inline-flex items-center gap-2 text-sm font-bold ${area === "Madison" ? "text-orange-400" : "text-blue-600"}`}
+                >
+                  View Details
+                  <svg
+                    class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready for a Clean Exterior?</h2>
+      <p class="text-xl mb-8">
+        Get a free estimate for pressure or soft washing.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          Get Free Estimate
+        </a>
+        <a
+          href="tel:2562210373"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area cross-links -->
+  <section class="py-16 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Service Areas</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Pressure Washing Across North Alabama</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Rittenworx washes homes and hardscapes throughout the Tennessee Valley. Pick your city below for local details and response times.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/locations/madison" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-lg border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Madison, AL</h3>
+          <p class="text-sm text-gray-600 mt-1">Pressure Washing in Madison &amp; Harvest</p>
+        </a>
+        <a href="/locations/huntsville" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-lg border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Huntsville, AL</h3>
+          <p class="text-sm text-gray-600 mt-1">Pressure Washing in Huntsville &amp; Hampton Cove</p>
+        </a>
+        <a href="/locations/decatur" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-lg border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Decatur, AL</h3>
+          <p class="text-sm text-gray-600 mt-1">Pressure Washing in Decatur &amp; Somerville</p>
+        </a>
+        <a href="/locations/athens" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-lg border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Athens, AL</h3>
+          <p class="text-sm text-gray-600 mt-1">Pressure Washing across Limestone County</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
