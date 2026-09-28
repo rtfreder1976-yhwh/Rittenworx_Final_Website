@@ -213,6 +213,30 @@ const schemaData = {
               },
             ],
           },
+          {
+            "@type": "OfferCatalog",
+            name: "TV Mounting & Smart Home Services",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "TV & Monitor Mounting",
+                  description:
+                    "Flat, tilting, and full-motion TV mounting with cable concealment",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Smart Home Installation",
+                  description:
+                    "Smart doorbell, lock, thermostat, switch, and WiFi mesh installation and setup",
+                },
+              },
+            ],
+          },
         ],
       },
       sameAs: [
@@ -814,6 +838,13 @@ const finalSchema = schema || schemaData;
                   href="/services/pressure-washing"
                   class="hover:text-white transition-colors"
                   >Pressure Washing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/tv-mounting-smart-home"
+                  class="hover:text-white transition-colors"
+                  >TV Mounting &amp; Smart Home</a
                 >
               </li>
             </ul>

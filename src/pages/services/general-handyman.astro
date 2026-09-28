@@ -5,23 +5,6 @@ import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
 
 const services = [
   {
-    id: "tv-mounting",
-    title: "TV & Monitor Mounting",
-    icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-    items: [
-      "Flat, tilting, and full-motion mounts on any wall type",
-      "Drywall, concrete, brick, and tile mounting",
-      "Cable concealment inside wall or conduit",
-      "In-wall power kit installation",
-      "Soundbar shelf and bracket installation",
-      "Multiple TV / multi-monitor setups",
-      "TV relocation from old mount to new location",
-      "Component shelf installation below the display",
-    ],
-    detail:
-      "We mount TVs to any wall surface — drywall, concrete block, brick, or tile — using the correct anchors for the load. Cable management (in-wall or surface conduit) is included on request.",
-  },
-  {
     id: "ceiling-fan",
     title: "Ceiling Fan Installation & Replacement",
     icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
@@ -149,11 +132,6 @@ const faqs = [
       "No minimum. Whether it's one item or a list of ten things that have been nagging you for months, we'll take the job.",
   },
   {
-    question: "How much does TV mounting cost in Madison, AL?",
-    answer:
-      "It depends on the setup — full-motion mounts, over-fireplace mounting, concrete/brick walls, and in-wall cable management all affect the price. Text us a photo of your space and we can give you an estimate.",
-  },
-  {
     question: "Do you assemble IKEA furniture?",
     answer:
       "Yes, any IKEA line. PAX wardrobes, KALLAX shelving units, BESTA TV units, HEMNES bed frames, MALM dressers — we've assembled them all. We work efficiently. Larger wardrobe systems with many components take longer than a single piece.",
@@ -190,8 +168,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Small Job Handyman Madison AL | TV Mounting, Fans & More"
-  description="Handyman for small jobs across Madison, Huntsville & North Alabama — TV mounting, ceiling fans, furniture assembly & door repair. Licensed & insured."
+  title="Small Job Handyman Madison AL | Fans, Furniture & More"
+  description="Handyman for small jobs across Madison, Huntsville & North Alabama — ceiling fans, furniture assembly, door repair & shelving. Licensed & insured."
 >
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
 
@@ -223,7 +201,7 @@ const faqSchema = {
         </h1>
 
         <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">
-          TV mounting, ceiling fans, furniture assembly, door repair, and every other task on your to-do list. Licensed and insured, serving Madison, Huntsville, and North Alabama.
+          Ceiling fans, furniture assembly, door repair, and every other task on your to-do list. Need a TV mounted or a smart device installed? See our <a href="/services/tv-mounting-smart-home" class="text-orange-400 underline hover:text-orange-300">TV mounting &amp; smart home page</a>. Licensed and insured, serving Madison, Huntsville, and North Alabama.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
@@ -419,7 +397,11 @@ const faqSchema = {
         <h2 class="text-2xl font-bold text-gray-900">Need Bigger Jobs Done Too?</h2>
         <p class="text-gray-600 mt-2">Rittenworx handles full project work, not just small tasks.</p>
       </div>
-      <div class="grid sm:grid-cols-4 gap-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <a href="/services/tv-mounting-smart-home" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">TV Mounting &amp; Smart Home</h3>
+          <p class="text-sm text-gray-600 mt-1">TVs, doorbells, locks & thermostats</p>
+        </a>
         <a href="/services/drywall" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
           <h3 class="font-bold text-gray-900">Drywall Repair</h3>
           <p class="text-sm text-gray-600 mt-1">Holes, cracks, water damage</p>

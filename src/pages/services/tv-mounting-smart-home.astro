@@ -1,0 +1,508 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const serviceAreas = ["Madison", "Huntsville", "Decatur", "Athens", "Harvest"];
+
+const categories = [
+  {
+    name: "TV & Monitor Mounting",
+    description:
+      "Flat, tilting, and full-motion mounts on any wall type, with cable management so you don't see a single cord.",
+    items: [
+      "Flat, tilting, and full-motion mounts",
+      "Drywall, concrete, brick, and tile mounting",
+      "Cable concealment inside wall or conduit",
+      "In-wall power kit installation",
+      "Over-fireplace mounting with proper heat clearance",
+      "Soundbar shelf and bracket installation",
+      "Multiple TV / multi-monitor setups",
+      "TV relocation from an old mount to a new spot",
+    ],
+    bestFor: "Any wall, any TV size, cords hidden or not",
+  },
+  {
+    name: "Smart Home Installation",
+    description:
+      "Video doorbells, smart locks, thermostats, and switches installed and set up on your phone before we leave — not just screwed to the wall.",
+    items: [
+      "Video doorbell installation (Ring, Nest, Arlo)",
+      "Smart lock installation (Schlage, August, Yale)",
+      "Smart thermostat installation (Nest, Ecobee)",
+      "Smart switch & dimmer installation (Lutron, Leviton, Kasa)",
+      "WiFi mesh router / access point mounting",
+      "Security camera mounting (wired or battery)",
+      "Smart plug and outlet setup",
+      "App pairing and network setup for every device we install",
+    ],
+    bestFor: "Anyone upgrading to smart devices who doesn't want to fight the app alone",
+  },
+];
+
+const processSteps = [
+  {
+    step: "1",
+    title: "Check the Wall & Wiring",
+    description:
+      "Before anything goes up, we check what's behind the wall — studs, existing outlets, and whether cable concealment is realistic for your setup.",
+  },
+  {
+    step: "2",
+    title: "Written Quote",
+    description:
+      "You get a real number based on the mount, wall type, and any cable management or wiring involved — not a verbal guess.",
+  },
+  {
+    step: "3",
+    title: "Mount & Wire It Right",
+    description:
+      "Anchors matched to the wall and the load. Heavy TVs and smart locks both need to be anchored into studs, not just drywall.",
+  },
+  {
+    step: "4",
+    title: "Pair the App & Test It",
+    description:
+      "For smart devices, we don't leave until it's connected to your WiFi, paired to your phone, and actually working — not just physically installed.",
+  },
+  {
+    step: "5",
+    title: "Final Walkthrough",
+    description:
+      "We show you how to use it before we go, so you're not figuring out the app on your own after we've left.",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does TV mounting cost in Madison, AL?",
+    answer:
+      "It depends on the setup — full-motion mounts, over-fireplace mounting, concrete or brick walls, and in-wall cable management all affect the price. Text us a photo of your space and we can give you an estimate.",
+  },
+  {
+    question: "Can you mount a TV over a fireplace?",
+    answer:
+      "Yes, with the right mount and heat clearance for your fireplace type. We'll also talk through cable concealment options, since over-fireplace installs usually need power run to the mount location.",
+  },
+  {
+    question: "What if I don't have an outlet near where I want the TV mounted?",
+    answer:
+      "We can conceal cables inside the wall down to an existing outlet, or install an in-wall power kit so you get a real outlet behind the TV instead of a cord running down the wall. We'll tell you which option fits your wall during the estimate.",
+  },
+  {
+    question: "Do you set up the app for smart home devices too, or just install the hardware?",
+    answer:
+      "Both. Whether it's a Ring doorbell, a Nest thermostat, or a smart lock, we pair it to your WiFi and your phone's app and test that it's actually working before we leave — not just mounted on the wall.",
+  },
+  {
+    question: "Do smart locks and doorbells need to be anchored into studs?",
+    answer:
+      "It depends on the device and door type, but most smart locks replace your existing deadbolt hardware directly, and doorbells mount to the existing frame or a supplied wedge. We make sure the mounting is solid either way — a loose smart lock defeats the purpose of having one.",
+  },
+  {
+    question: "Can you install a WiFi mesh system or extender to fix dead zones?",
+    answer:
+      "Yes. We'll help you figure out placement for mesh access points based on your home's layout, then mount and power them cleanly instead of leaving a unit sitting on a bookshelf with a visible cord.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title="TV Mounting & Smart Home Installation Madison AL"
+  description="TV mounting and smart home installation in Madison, Huntsville, Decatur & Athens, AL. Video doorbells, smart locks, thermostats & mesh WiFi. Free estimates."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section
+    class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"
+  >
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/hero-handyman.webp"
+        alt="TV mounting and smart home installation by Rittenworx"
+        class="w-full h-full object-cover opacity-20 scale-105 animate-[pulse_10s_ease-in-out_infinite_alternate]"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav
+          class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide"
+        >
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors"
+            >Services</a
+          >
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">TV Mounting &amp; Smart Home</span>
+        </nav>
+
+        <div
+          class="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-sm font-medium text-blue-100"
+        >
+          <span
+            class="w-2 h-2 inline-block rounded-full bg-orange-400 mr-2 animate-pulse"
+          ></span>
+          TVs, Doorbells, Locks & Thermostats
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight"
+        >
+          TV Mounting &amp; <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600"
+            >Smart Home</span
+          >
+        </h1>
+
+        <p
+          class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed"
+        >
+          Mounted level, wired clean, and — for smart devices — actually
+          working on your phone before we leave.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:-translate-y-1 border border-orange-400/30"
+          >
+            <svg
+              class="w-6 h-6 group-hover:scale-110 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+              ></path>
+            </svg>
+            Text A Photo For A Quote
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10"
+    >
+      <svg
+        class="relative block w-full h-[50px] md:h-[100px]"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.06,155.15,112.5,231.2,88.45,264.44,77.83,296.88,67.36,321.39,56.44Z"
+          class="fill-white"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 prose prose-lg prose-blue">
+      <h2
+        class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 font-display tracking-tight"
+      >
+        Mounted Right, Wired Clean, Actually Set Up
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        A crooked TV mount or a smart lock that's never been paired to your
+        phone isn't really "installed" — it's just attached to the wall. Roy
+        checks the wall and wiring before anything goes up, anchors into
+        studs where it matters, and for anything with an app, doesn't
+        leave until it's actually connected and working.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Rittenworx handles TV mounting and smart home installation across
+        Madison, Huntsville, Decatur, and Athens, and it pairs naturally
+        with our <a href="/services/general-handyman" class="text-blue-600 underline hover:text-blue-800">small job handyman work</a>
+        if you've got a whole list of things to knock out in one visit.
+      </p>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >What We Install</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          TV Mounting &amp; Smart Home Services
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        {
+          categories.map((category) => (
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                {category.name}
+              </h3>
+              <p class="text-gray-600 mb-4">{category.description}</p>
+              <ul class="space-y-2 mb-4">
+                {category.items.map((item) => (
+                  <li class="flex items-center gap-2 text-gray-700 text-sm">
+                    <svg
+                      class="w-4 h-4 text-green-500 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p class="text-sm text-blue-900 font-medium">
+                <span class="text-gray-500">Best for:</span> {category.bestFor}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Our Process</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          How We Handle Every Install
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {
+          processSteps.map((item) => (
+            <div class="bg-gray-50 rounded-lg p-6 text-center shadow-sm">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                {item.step}
+              </div>
+              <h3 class="font-bold text-gray-800 mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Common Questions</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          TV Mounting &amp; Smart Home FAQs
+        </h2>
+      </div>
+      <div class="space-y-4">
+        {
+          faqs.map((faq) => (
+            <details class="bg-white rounded-lg shadow-sm group">
+              <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:text-blue-900 flex items-center justify-between">
+                {faq.question}
+                <svg
+                  class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div class="px-6 pb-4 text-gray-600">{faq.answer}</div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="bg-blue-50 rounded-lg p-6">
+        <div class="flex items-start gap-4">
+          <svg
+            class="w-8 h-8 text-blue-900 flex-shrink-0"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            ></path>
+          </svg>
+          <div>
+            <h3 class="text-lg font-bold text-blue-900 mb-2">
+              Our Commitment to North Alabama Homeowners
+            </h3>
+            <p class="text-gray-600 text-sm">
+              We're not a franchise dispatcher sending out whoever's
+              available. Roy shows up, mounts it level, and — for smart
+              devices — pairs it to your phone before he leaves. Licensed
+              and insured, family owned, 7 years serving North Alabama.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span
+          class="text-orange-700 font-semibold text-sm uppercase tracking-wide"
+          >Coverage Area</span
+        >
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">
+          TV Mounting &amp; Smart Home Service Areas
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {
+          serviceAreas.map((area) => {
+            const citySlug = area.toLowerCase().replace(/ /g, "-");
+            return (
+              <a
+                href={`/locations/${citySlug}`}
+                class={`block group rounded-2xl p-6 text-center transition-all duration-300 ${area === "Madison" ? "bg-gradient-to-br from-blue-900 to-blue-800 text-white shadow-xl shadow-blue-900/20 hover:-translate-y-1" : "bg-white border border-gray-100 shadow-lg hover:shadow-xl hover:border-blue-100 hover:-translate-y-1"}`}
+              >
+                <h3
+                  class={`text-xl font-bold mb-2 ${area === "Madison" ? "text-white" : "text-gray-900 group-hover:text-blue-900"}`}
+                >
+                  {area}
+                </h3>
+                <p
+                  class={`text-sm mb-4 ${area === "Madison" ? "text-blue-100" : "text-gray-500"}`}
+                >
+                  Professional Service
+                </p>
+                <div
+                  class={`inline-flex items-center gap-2 text-sm font-bold ${area === "Madison" ? "text-orange-400" : "text-blue-600"}`}
+                >
+                  View Details
+                  <svg
+                    class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get It Mounted &amp; Working?</h2>
+      <p class="text-xl mb-8">
+        Free estimate for TV mounting or smart home installation.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          Get Free Estimate
+        </a>
+        <a
+          href="tel:2562210373"
+          class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block"
+        >
+          (256) 221-0373
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-links to related services -->
+  <section class="py-12 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-gray-900">Got a Whole List of Small Jobs?</h2>
+        <p class="text-gray-600 mt-2">We batch small tasks together so you're not scheduling separate visits.</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <a href="/services/general-handyman" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">General Handyman</h3>
+          <p class="text-sm text-gray-600 mt-1">Ceiling fans, furniture assembly, door repair</p>
+        </a>
+        <a href="/services/finish-carpentry" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Finish Carpentry</h3>
+          <p class="text-sm text-gray-600 mt-1">Shelving, built-ins, trim work</p>
+        </a>
+        <a href="/services/drywall" class="block bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:-translate-y-1 transition-all">
+          <h3 class="font-bold text-gray-900">Drywall Repair</h3>
+          <p class="text-sm text-gray-600 mt-1">Patch holes left from an old mount</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
