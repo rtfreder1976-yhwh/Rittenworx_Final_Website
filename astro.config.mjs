@@ -45,8 +45,8 @@ export default defineConfig({
     '/gutter-cleaning.html': '/services/gutter-cleaning',
     '/gutter-cleaning-repair.html': '/services/gutter-cleaning',
     '/carpentry-wood-repair.html': '/services/finish-carpentry',
-    '/furniture-assembly.html': '/services',
-    '/tv-mounting.html': '/services',
+    '/furniture-assembly.html': '/services/furniture-assembly',
+    '/tv-mounting.html': '/services/tv-mounting',
     '/pressure-washing.html': '/services/pressure-washing',
     '/deck-building-repair.html': '/services/deck-repair',
     '/door-window-installation.html': '/services',
@@ -95,9 +95,9 @@ export default defineConfig({
     '/exterior-house-painting': '/services/exterior-painting',
 
     // General handyman tasks page
-    '/tv-mounting-madison-al': '/services/general-handyman',
+    '/tv-mounting-madison-al': '/services/tv-mounting',
     '/ceiling-fan-installation-madison-al': '/services/general-handyman',
-    '/furniture-assembly-madison-al': '/services/general-handyman',
+    '/furniture-assembly-madison-al': '/services/furniture-assembly',
     '/handyman-small-jobs-madison-al': '/services/general-handyman',
 
     // 404s — misc

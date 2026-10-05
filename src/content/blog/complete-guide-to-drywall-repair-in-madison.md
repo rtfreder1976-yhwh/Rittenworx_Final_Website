@@ -1,5 +1,6 @@
 ---
 title: "The Complete Guide to Drywall Repair in Madison, AL"
+seoTitle: "Complete Guide to Drywall Repair in Madison, AL"
 description: "Everything you need to know about drywall repair in Madison, AL — spotting damage, the repair process, and why patching isn't just covering a hole."
 pubDate: 2026-02-22
 author: "Roy"
