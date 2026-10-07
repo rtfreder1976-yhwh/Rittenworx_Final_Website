@@ -27,12 +27,12 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
         services: {
             "drywall-repair": {
                 meta: "Cracks over the doors in a Madison house? Roy patches the drywall, matches the texture, and primes. Call (256) 221-0373.",
-                intro: "Madison subdivisions from the 1990s on used fast-cured drywall and builder paint. After a decade or two the seams, nail pops, and cracks over doors show up, once summer humidity and the house's settling meet.",
+                intro: "Madison subdivisions from the 1990s on went up fast, with builder-grade drywall finishing and paint. After a decade or two the seams, nail pops, and cracks over doors show up, once summer humidity and the house's settling meet.",
                 body: "Many Madison homes are in the 10 to 25 year range, and that is when drywall starts showing seams, nail pops and hairline cracks above doors and windows as the house settles. Roy patches these, textures to match the surrounding wall, and primes so the repair does not flash through the paint. Water stains from a roof or plumbing leak are a separate job: he finds out the leak is fixed before he cuts anything out.",
                 faqs: [
                     {
                         q: "Why do cracks show up over doors in Madison houses?",
-                        a: "Those houses settle, and the drywall joint above a door or window is where the crack opens. Roy patches it, matches the texture already on the wall, and primes so the paint does not flash.",
+                        a: "Those houses settle, and the drywall joint above a door or window is where the crack opens.",
                     },
                     {
                         q: "What if a Madison ceiling stain came from a leak?",
@@ -62,7 +62,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
                 faqs: [
                     {
                         q: "Why does trim on the west side of a Madison house peel first?",
-                        a: "Sun and humidity hit that side hardest. Roy scrapes what is loose, spot-primes bare wood, caulks the joints, and paints when the surface is dry.",
+                        a: "Sun and humidity hit that side hardest.",
                     },
                     {
                         q: "Can Roy paint a Madison house right after a spring storm?",
@@ -73,7 +73,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "gutter-cleaning": {
                 meta: "Pine needles overflowing a Madison gutter? Roy clears the trough and flushes the downspout. Call (256) 221-0373.",
                 intro: "Madison lots with pines and oaks drop needles, leaves, and shingle grit into the gutters. Newer streets with young trees still pack the troughs with pollen. Either way, the overflow runs down the siding and sits by the slab.",
-                body: "Madison lots with mature pines and oaks fill gutters with needles, leaves, and shingle grit, and newer lots with young trees still collect pollen and roof debris. When gutters overflow, water runs down siding and pools near the foundation. Roy clears the troughs, flushes the downspouts, and checks that water is actually leaving the system, not just moving the clog down the line.",
+                body: "Roy clears the troughs, flushes the downspouts, and checks that water is actually leaving the system, not just moving the clog down the line.",
                 faqs: [
                     {
                         q: "How do pine needles clog a Madison gutter differently from leaves?",
@@ -103,11 +103,11 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "flooring-installation": {
                 meta: "New floors clicking in a Madison house? Roy fixes the subfloor before the plank goes down. Call (256) 221-0373.",
                 intro: "Madison families put luxury vinyl in kitchens and halls because kids, pets, and humid summers are hard on carpet. The plank looks simple. The subfloor under it decides whether it stays flat.",
-                body: "Luxury vinyl plank is a common choice in Madison homes for kitchens, hallways, and living areas because it stands up to kids, pets, and humidity. The finished floor is only as good as the subfloor, so Roy checks for flatness, moisture, and loose spots before any plank goes down, then handles transitions, baseboard, and quarter-round so the room looks finished.",
+                body: "Luxury vinyl plank is a common choice in Madison homes for kitchens, hallways, and living areas because it stands up to kids, pets, and humidity. Roy checks the subfloor before any plank goes down, then handles transitions, baseboard, and quarter-round so the room looks finished.",
                 faqs: [
                     {
                         q: "Why does new flooring in a Madison house bounce or click?",
-                        a: "The subfloor is loose, out of flat, or damp. Roy checks flatness, moisture, and loose spots before a plank goes down, then sets transitions and base so the room is finished.",
+                        a: "The subfloor is loose, out of flat, or damp, and the plank moves with it. Transitions and base go on after that floor is down.",
                     },
                     {
                         q: "Is luxury vinyl a fit for a Madison kitchen?",
@@ -117,16 +117,16 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             },
             "garage-floor-coating": {
                 meta: "Red clay and oil stained into a Madison garage slab? Roy grinds it before any coating. Call (256) 221-0373.",
-                intro: "Madison garage slabs see hot tires, oil drips, and red clay off the trucks. A coating fails when it is rolled onto concrete that was never ground or dried.",
-                body: "Garage slabs in Madison take a beating from hot tires, oil drips and red clay tracked in on trucks. A coating only lasts if the concrete is prepared properly: grinding the surface, filling cracks and checking for moisture before epoxy is applied. Roy installs flake epoxy systems that are easier to clean and hide stains, and he explains cure time so you know when the garage is usable again.",
+                intro: "Madison garage slabs see hot tires, oil drips, and red clay off the trucks. That clay stains the concrete and sits in the pores. A coating fails when it is rolled onto concrete that was never ground or dried.",
+                body: "A coating only lasts if the concrete is prepared properly: grinding the surface, filling cracks and checking for moisture before epoxy is applied. Roy installs flake epoxy systems that are easier to clean and hide stains.",
                 faqs: [
                     {
                         q: "Why does a Madison garage floor coating peel?",
-                        a: "The slab was sealed, oily, or damp, so the coating never bonded. Roy grinds the concrete, fills cracks, and checks moisture before epoxy goes down, then tells you when the garage can take a car again.",
+                        a: "The slab was sealed, oily, or damp, so the coating never bonded.",
                     },
                     {
-                        q: "What does red clay do to a bare Madison garage slab?",
-                        a: "It tracks in, stains the concrete, and sits in the pores. Roy gets that surface open and clean before a coating, or the clay line shows through later.",
+                        q: "When can a car go back on a Madison garage coating?",
+                        a: "Roy tells you the cure time so you know when the garage is usable again.",
                     },
                 ],
             },
@@ -148,7 +148,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "fence-installation": {
                 meta: "Madison fence posts leaning in wet clay? Roy resets the posts and braces the gate. Call (256) 221-0373.",
                 intro: "Madison fence posts sit in clay that holds water. The boards can still look fine while the posts rot and the run starts to lean.",
-                body: "A fence in Madison sits in clay soil that holds water, which is why posts rot and lean long before the boards do. Roy sets posts at the right depth for the fence height, spaces them consistently, and installs gates that are braced so they do not sag. If you have an existing fence, he repairs leaning sections and replaces rotted boards, not just the panels that look worst.",
+                body: "Posts rot and lean long before the boards do. Roy sets posts at the right depth for the fence height, spaces them consistently, and installs gates that are braced so they do not sag. If you have an existing fence, he repairs leaning sections and replaces rotted boards, not just the panels that look worst.",
                 faqs: [
                     {
                         q: "Why do Madison fence posts lean before the boards fail?",
@@ -163,7 +163,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "deck-repair": {
                 meta: "Soft boards on an older Madison deck? Roy checks the ledger, then replaces what failed. Call (256) 221-0373.",
                 intro: "Decks built in the first years of a Madison subdivision are at the age when boards near the ground go soft and railings loosen. The surface stain is the last step, not the first.",
-                body: "Many decks in Madison were built in the first years of the subdivision and are now due for attention: soft boards near the ground, loose railings, and a finish that has worn through. Roy probes the framing and ledger connection first, since that is what makes a deck safe, then replaces damaged boards, tightens or rebuilds railings, and refinishes the surface.",
+                body: "Roy probes the framing and ledger connection first, since that is what makes a deck safe, then replaces damaged boards, tightens or rebuilds railings, and refinishes the surface.",
                 faqs: [
                     {
                         q: "What does Roy check before he replaces boards on a Madison deck?",
@@ -196,12 +196,12 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
         services: {
             "drywall-repair": {
                 meta: "Plaster cracks in an older Huntsville house, or nail pops in a newer one? Roy matches the repair to the wall. Call (256) 221-0373.",
-                intro: "Huntsville is not one kind of wall. Older houses still have plaster. Houses across central and west Huntsville, and the newer subdivisions to the south, are drywall, and the cracks there come from settling rather than from lath.",
-                body: "Huntsville homes range from plaster-and-lath in older neighborhoods to modern drywall in new subdivisions, and the repair is different for each. In older houses Roy deals with cracked plaster and repairs that need to blend into uneven walls. In newer houses it is settling cracks, nail pops, and damage from moving furniture. He textures to match and primes before paint.",
+                intro: "Older houses near downtown still have plaster. Mid-century and newer houses across west and south Huntsville are drywall, and the cracks there come from settling rather than from lath.",
+                body: "The repair is different for each wall. On plaster, Roy blends the patch into an uneven surface. On drywall, the work is nail pops and damage from moving furniture. He textures to match and primes before paint.",
                 faqs: [
                     {
                         q: "How is a plaster crack in an older Huntsville house different from drywall?",
-                        a: "Plaster is harder, and the wall behind it is uneven. Roy blends the patch into that surface instead of treating it like a flat drywall sheet. He tells you when the wall needs a different approach.",
+                        a: "Plaster is harder than a drywall sheet. He tells you when the wall needs a different approach.",
                     },
                     {
                         q: "What causes nail pops in newer Huntsville drywall?",
@@ -212,7 +212,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "interior-painting": {
                 meta: "Bumpy paint over old plaster in Huntsville? Roy fixes the prep before the new coat. Call (256) 221-0373.",
                 intro: "Older Huntsville rooms often have several coats of paint over patched plaster and heavy caulk lines. Newer rooms need less scraping and more attention to the thin builder coat that scuffs.",
-                body: "Painting a Huntsville home often starts with the condition of what is under the paint. Older houses may have layers of previous coats, patched plaster, and trim with heavy caulk lines, so more prep is needed to get a smooth finish. Newer homes need less surface work and a better coat than the builder used. Roy scopes the prep with you before the first coat goes on.",
+                body: "Painting a Huntsville home often starts with the condition of what is under the paint. Older houses may have layers of previous coats, patched plaster, and trim with heavy caulk lines, so more prep is needed to get a smooth finish. Newer homes need less surface work and a better coat than the builder used.",
                 faqs: [
                     {
                         q: "Why does paint look bumpy in an older Huntsville living room?",
@@ -240,9 +240,9 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
                 ],
             },
             "gutter-cleaning": {
-                meta: "Hardwoods packing a Huntsville gutter every spring? Roy clears it and checks the pitch. Call (256) 221-0373.",
-                intro: "Older Huntsville streets and the lots near Monte Sano have mature hardwoods. They fill gutters in the fall, then again with pollen and seed pods in the spring. A packed gutter is heavy, and the water comes down the fascia.",
-                body: "Many Huntsville neighborhoods, especially older ones and those near Monte Sano, have mature hardwoods that fill gutters every fall and again with spring pollen and seed pods. Packed gutters are heavy, rust fasteners, and send water down the fascia. Roy cleans the troughs, flushes the downspouts, and checks the pitch. He tells you if something needs repair rather than only a cleaning.",
+                meta: "Hardwoods packing a Huntsville gutter every fall? Roy clears it and checks the pitch. Call (256) 221-0373.",
+                intro: "Older Huntsville streets and the lots near Monte Sano have mature hardwoods. They fill gutters in the fall, then again with pollen and seed pods in the spring.",
+                body: "A packed gutter is heavy, rusts the fasteners, and sends water down the fascia. Roy cleans the troughs, flushes the downspouts, and checks the pitch. He tells you if something needs repair rather than only a cleaning.",
                 faqs: [
                     {
                         q: "Why do Monte Sano gutters need more than a fall clean?",
@@ -250,18 +250,18 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
                     },
                     {
                         q: "What if a Huntsville gutter is rusty at the hangers?",
-                        a: "Packed leaves hold water against the fasteners. Roy tells you when a section needs repair instead of only a cleaning. He does not scrape the rust and call the gutter fixed.",
+                        a: "Packed leaves hold water against the fasteners. He does not scrape the rust and call the gutter fixed.",
                     },
                 ],
             },
             "gutter-installation": {
                 meta: "Hillside gutters in Huntsville dumping at the foundation? Roy sets the pitch and the outlets. Call (256) 221-0373.",
                 intro: "Older Huntsville gutters were often patched in pieces, or the downspouts on a hillside dump water at the foundation. The run has to match the roof, and the water has to follow the grade.",
-                body: "Older Huntsville homes often have gutters that were patched many times or were never sized for the roof's runoff. On hillside lots the downspouts need to carry water away from foundations and toward the grade, not into a neighbor's yard. Roy installs seamless gutters with enough downspouts for the roof area and reviews where the water ends up.",
+                body: "Older Huntsville homes often have gutters that were patched many times or were never sized for the roof's runoff. On hillside lots the downspouts need to carry water away from foundations and toward the grade, not into a neighbor's yard. Roy installs seamless gutters with enough downspouts for the roof area.",
                 faqs: [
                     {
                         q: "Why do hillside gutters in Huntsville overflow at one end?",
-                        a: "The pitch fights the slope of the lot, or there are not enough downspouts for the roof. Roy sets the pitch toward the outlets and checks where the water ends up on the grade.",
+                        a: "The pitch fights the slope of the lot. Roy sets the pitch toward the outlets and checks where the water ends up on the grade.",
                     },
                     {
                         q: "What does Roy look at behind an old Huntsville gutter?",
@@ -272,7 +272,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "flooring-installation": {
                 meta: "Uneven floors in an older Huntsville house? Roy levels the subfloor before the new plank. Call (256) 221-0373.",
                 intro: "Huntsville floors sit on different bases: a slab, plywood over joists, or old planks that are no longer flat. A plank installed over that, without a moisture check, telegraphs every dip.",
-                body: "In Huntsville, flooring jobs often begin with what is under the old floor: slab, plywood over joists, or old planks. Older homes may have floors that are no longer flat, and slab-on-grade houses need a moisture check before anything goes down. Roy prepares the subfloor, installs LVP, laminate, or hardwood, and finishes transitions and trim so the new floor meets the old rooms cleanly.",
+                body: "Roy prepares the subfloor, installs LVP, laminate, or hardwood, and finishes transitions and trim so the new floor meets the old rooms cleanly.",
                 faqs: [
                     {
                         q: "Why does flooring in an older Huntsville house need leveling first?",
@@ -286,8 +286,8 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             },
             "garage-floor-coating": {
                 meta: "A sealed or oily Huntsville garage slab? Roy grinds it so the coating can bond. Call (256) 221-0373.",
-                intro: "Huntsville garage slabs run from older cracked concrete with oil stains to newer pours that still have a sealer on them. A coating sticks to a ground, clean slab and lets go of a dirty one.",
-                body: "Garage slabs in Huntsville homes vary a lot in age and condition: hairline cracks, old oil stains, and sealer left from a previous coating. Epoxy bonds to a ground, clean slab and poorly to a sealed or dirty one, so preparation is the main job. Roy grinds, repairs cracks, and applies a flake epoxy system that resists hot tires and cleans up with a mop.",
+                intro: "Huntsville garage slabs run from older cracked concrete with oil stains to newer pours that still have a sealer on them.",
+                body: "Epoxy bonds to a ground, clean slab and poorly to a sealed or dirty one, so preparation is the main job. Roy grinds, repairs cracks, and applies a flake epoxy system that resists hot tires and cleans up with a mop.",
                 faqs: [
                     {
                         q: "Why won't a coating stick to a Huntsville garage that was sealed years ago?",
@@ -317,7 +317,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "fence-installation": {
                 meta: "A Huntsville fence gapping on a slope? Roy steps the panels to the grade. Call (256) 221-0373.",
                 intro: "Huntsville yards go from flat subdivision lots to sloped ground. A fence that works on the flat will gap on a hill if the panels are not stepped or racked.",
-                body: "Huntsville yards range from flat subdivision lots to sloped hillside property, and a fence on a slope needs a different layout from a flat run: stepped or racked panels, and posts set to hold against the pull of the grade. Roy also repairs existing fences, including leaning posts, broken rails, and gates that no longer latch.",
+                body: "Posts on a slope have to hold against the pull of the grade. Roy also repairs existing fences, including leaning posts, broken rails, and gates that no longer latch.",
                 faqs: [
                     {
                         q: "How does Roy build a fence on a Huntsville slope?",
@@ -332,7 +332,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "deck-repair": {
                 meta: "A shaded Huntsville deck staying wet? Roy checks the frame, then the boards. Call (256) 221-0373.",
                 intro: "Huntsville decks take sun, rain, and wide temperature swings. Decks on shaded or sloped lots stay wet longer, and that is where boards and rail posts go soft first.",
-                body: "Decks in Huntsville see sun, rain, and wide temperature swings, and decks on shaded or sloped lots stay wet longer. Roy inspects the ledger, joists, and posts, replaces soft boards, secures or rebuilds railings, and refinishes the surface. If a deck is past repair he says so and explains what a rebuild involves.",
+                body: "Roy inspects the ledger, joists, and posts, replaces soft boards, secures or rebuilds railings, and refinishes the surface.",
                 faqs: [
                     {
                         q: "What does Roy inspect before staining a Huntsville deck?",
@@ -346,7 +346,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             },
             "pressure-washing": {
                 meta: "Algae on a shaded Huntsville fence? Roy sets the pressure for wood, not for concrete. Call (256) 221-0373.",
-                intro: "Shaded Huntsville lots grow algae on siding, fences, and walkways. Brick, vinyl, and older wood with failing caulk each need a different pressure. One setting for the whole house marks the soft surfaces.",
+                intro: "Shade on a Huntsville lot holds damp against the house. Brick, vinyl, and older wood with failing caulk each need a different pressure. One setting for the whole house marks the soft surfaces.",
                 body: "Shaded Huntsville lots grow algae and mildew on siding, roofs, fences, and walkways. Brick and vinyl are cleaned differently from wood, and an older house with failing paint or caulk needs a gentler approach than a recent build. Roy matches pressure to the surface, protects plants and windows, and points out damage that washing uncovers.",
                 faqs: [
                     {
@@ -380,12 +380,12 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             },
             "interior-painting": {
                 meta: "High ceilings and tired trim paint in Athens? Roy preps the edges, then paints. Call (256) 221-0373.",
-                intro: "Older Athens rooms often have high ceilings and trim with layers of old paint, so the time is in the edges and the prep. Newer houses east of town need fewer repairs and a cleaner cut-in.",
-                body: "Older Athens homes often have high ceilings, detailed trim, and layers of old paint, which means careful prep and more time on trim and edges. Newer homes need less repair. Either way Roy patches, caulks, and primes before painting, and he agrees on colors and sheens with you before he starts.",
+                intro: "Older Athens rooms often have high ceilings and trim with layers of old paint. Newer houses east of town need fewer repairs and a cleaner cut-in.",
+                body: "Roy patches, caulks, and primes before painting, and he agrees on colors and sheens with you before he starts. The older rooms take longer at the edges. The newer ones move faster once the dings are filled.",
                 faqs: [
                     {
                         q: "Why does interior painting take longer in an older Athens house?",
-                        a: "High ceilings and detailed trim mean more edge work, and failed paint has to come off. Roy patches, caulks, and primes before the color, and he agrees on sheen with you first.",
+                        a: "Failed paint has to come off before a new coat will hold. Skipping that leaves the old line under the color.",
                     },
                     {
                         q: "What does Roy do differently in a newer Athens subdivision?",
@@ -411,7 +411,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "gutter-cleaning": {
                 meta: "Tree debris and roof grit in an Athens gutter? Roy clears it and flushes the outlet. Call (256) 221-0373.",
                 intro: "Mature trees around older Athens neighborhoods drop a heavy load into the gutters, and older roofs send grit with it. A trough can look clear and still hold water if the pitch is off.",
-                body: "Athens' mature neighborhoods have large trees that drop a lot into gutters, and homes with older shingle roofs send grit and debris into the troughs. Roy cleans the gutters, flushes the downspouts, and checks for loose hangers, sagging runs, and standing water that points to a pitch problem.",
+                body: "Roy cleans the gutters, flushes the downspouts, and checks for loose hangers, sagging runs, and standing water that points to a pitch problem.",
                 faqs: [
                     {
                         q: "What does Roy check after he cleans an Athens gutter?",
@@ -426,7 +426,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "gutter-installation": {
                 meta: "An Athens porch roof with no gutter? Roy adds a run that moves water off the walk. Call (256) 221-0373.",
                 intro: "Athens properties often have long rooflines over porches, additions, and detached garages. Those are the runs where gutters were never put up or have already failed. Water off that roof lands on the walk or against the foundation.",
-                body: "Many Athens properties have long rooflines over porches, additions, and detached garages, which is where gutters often go missing or fail. Roy installs seamless gutters sized for the roof, with downspouts placed so water drains away from foundations and walkways, rather than pooling beside the building.",
+                body: "Roy installs seamless gutters sized for the roof, with downspouts placed so water drains away from foundations and walkways, rather than pooling beside the building.",
                 faqs: [
                     {
                         q: "Why do Athens porch roofs splash where people walk?",
@@ -441,7 +441,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "flooring-installation": {
                 meta: "An uneven wood floor in an older Athens house? Roy levels it before the new flooring. Call (256) 221-0373.",
                 intro: "Athens flooring jobs split between older houses with wood subfloors that have gone uneven and newer houses on a slab. The plank is the last step in both.",
-                body: "Flooring work in Athens includes older homes with wood subfloors that may be uneven, and newer homes on a slab. Roy checks the subfloor and the moisture, levels where needed, and installs LVP, laminate, or hardwood. Transitions, baseboards, and door undercuts are part of the job so the finished floor sits right.",
+                body: "Roy checks the subfloor and the moisture, levels where needed, and installs LVP, laminate, or hardwood. Transitions, baseboards, and door undercuts are part of the job so the finished floor sits right.",
                 faqs: [
                     {
                         q: "Can Roy install flooring over an uneven wood floor in an older Athens house?",
@@ -471,7 +471,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "finish-carpentry": {
                 meta: "Trim that will not sit tight in an older Athens room? Roy scribes it to the wall. Call (256) 221-0373.",
                 intro: "In older Athens houses, finish carpentry is matching trim and casings in rooms that are not square. In newer houses it is adding the base, crown, or casing the builder left off.",
-                body: "In Athens' older homes, finish carpentry means repairing or matching existing trim, repairing casings, and installing built-ins that fit rooms that are not perfectly square. In newer homes it is adding trim detail to plain rooms. Roy measures carefully and scribes to walls and floors for tight joints.",
+                body: "Roy installs built-ins that fit rooms that are not perfectly square, and he scribes to walls and floors for tight joints.",
                 faqs: [
                     {
                         q: "Can Roy match casing in an older Athens room?",
@@ -501,7 +501,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "deck-repair": {
                 meta: "Loose railings on a large Athens deck? Roy checks the frame, then rebuilds the rail. Call (256) 221-0373.",
                 intro: "Decks on Athens properties are often large and used hard. Railings loosen, and boards soften where water sits. Stain is not the inspection.",
-                body: "Decks on Athens properties are often large and heavily used, with railings that loosen over time and boards that soften where water sits. Roy checks the framing, ledger, and posts, replaces damaged boards, secures the railings, and refinishes the surface to protect it from the weather.",
+                body: "Roy checks the framing, ledger, and posts, replaces damaged boards, secures the railings, and refinishes the surface to protect it from the weather.",
                 faqs: [
                     {
                         q: "What does Roy check on a large Athens deck before he replaces boards?",
@@ -514,7 +514,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
                 ],
             },
             "pressure-washing": {
-                meta: "One wash scarring an Athens porch and driveway? Roy changes the pressure for each surface. Call (256) 221-0373.",
+                meta: "Siding, porch and a long driveway on one Athens lot? Roy sets the pressure for each surface. Call (256) 221-0373.",
                 intro: "An Athens place can have siding, a long driveway, a porch, a fence, and a shop. Each surface wants a different pressure. One setting for all of it marks the wood and the paint.",
                 body: "Larger Athens properties have a lot of surface to wash: siding, long driveways, porches, fences, and outbuildings. Different surfaces need different pressure, so Roy soft washes siding and roofs, uses stronger settings on concrete, and keeps wood at a safe pressure. He protects plants and windows and rinses everything off at the end.",
                 faqs: [
@@ -534,12 +534,12 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
         services: {
             "drywall-repair": {
                 meta: "Soft drywall from humidity in an older Decatur house? Roy removes what failed and patches it. Call (256) 221-0373.",
-                intro: "Older Decatur houses often mix plaster, remodel drywall, and patches that have been painted several times. River humidity and old leaks leave stains and soft spots in that mix.",
-                body: "Older Decatur homes often have a mix of plaster, drywall added during remodels, and patches that have been painted over several times. Humidity and old leaks leave stains and soft spots. Roy finds the cause of the damage, repairs or replaces what is compromised, and textures and primes so the patch blends into the wall.",
+                intro: "Older Decatur houses often mix plaster, remodel drywall, and patches that have been painted several times.",
+                body: "Old leaks leave stains and soft spots in that mix. Roy finds the cause of the damage, repairs or replaces what is compromised, and textures and primes so the patch blends into the wall.",
                 faqs: [
                     {
                         q: "How does Roy repair a Decatur wall that is part plaster and part drywall?",
-                        a: "He matches the repair to the material that is there. Plaster and drywall do not finish the same. He textures and primes so the patch blends instead of showing through.",
+                        a: "He matches the repair to the material that is there. Plaster and drywall do not finish the same.",
                     },
                     {
                         q: "What if a Decatur ceiling is soft from an old leak?",
@@ -550,7 +550,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "interior-painting": {
                 meta: "Failed trim paint in Old Decatur? Roy scrapes it before the new coat goes on. Call (256) 221-0373.",
                 intro: "In Old Decatur and Albany, interior paint starts with cracked plaster and trim paint that has already failed. Mid-century and newer rooms need less of that repair and a better coat than the one on the wall now.",
-                body: "In Decatur's older neighborhoods, interior painting means careful prep: repairing cracked plaster, scraping failed paint on trim, and caulking gaps so the finish looks clean. Mid-century and newer homes need less prep and a better coat than the original. Roy goes over color and sheen with you before starting.",
+                body: "In Decatur's older neighborhoods, interior painting means careful prep: repairing cracked plaster, scraping failed paint on trim, and caulking gaps so the finish looks clean.",
                 faqs: [
                     {
                         q: "Why scrape trim in an older Decatur house before painting?",
@@ -564,12 +564,12 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             },
             "exterior-painting": {
                 meta: "Porch paint peeling in Decatur's damp air? Roy replaces the rot, then primes and paints. Call (256) 221-0373.",
-                intro: "Decatur sits on the Tennessee River, and that humidity keeps trim, porches, and siding damp. Paint lets go sooner here. Older wood-sided houses in the historic districts are a regular part of this work.",
-                body: "River humidity keeps wood damp longer in Decatur, so exterior paint on trim, porches, and siding fails sooner than it would in a drier place. Roy scrapes and sands loose paint, replaces rotted boards before painting, and primes bare wood so the new coat bonds. Older wood-sided homes in the historic districts are a regular part of this work.",
+                intro: "Decatur sits on the Tennessee River. Older wood-sided houses in the historic districts are a regular part of this work.",
+                body: "River humidity keeps wood damp longer in Decatur, so exterior paint on trim, porches, and siding fails sooner than it would in a drier place. Roy scrapes and sands loose paint, replaces rotted boards before painting, and primes bare wood so the new coat bonds.",
                 faqs: [
                     {
                         q: "Why does exterior paint fail faster on a Decatur porch?",
-                        a: "The wood stays damp. Roy scrapes loose paint, replaces rotted boards, and primes bare wood so the new coat has something to hold. He does not paint over rot.",
+                        a: "The wood stays damp, so the coat lets go. He does not paint over rot.",
                     },
                     {
                         q: "What is different about painting wood siding in Old Decatur?",
@@ -580,7 +580,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "gutter-cleaning": {
                 meta: "A Decatur gutter overflowing down the fascia? Roy clears it and checks the wood behind it. Call (256) 221-0373.",
                 intro: "Older Decatur neighborhoods have mature trees, and a clogged gutter on an older house sends water down the fascia and into the wall. The leaves are only the visible part.",
-                body: "Older Decatur neighborhoods have mature trees that fill gutters, and clogged gutters on older homes send water down fascia boards and into wall cavities. Roy cleans the troughs, flushes the downspouts, checks for rot on the fascia behind the gutter, and tells you if something needs repair.",
+                body: "Roy cleans the troughs, flushes the downspouts, checks for rot on the fascia behind the gutter, and tells you if something needs repair.",
                 faqs: [
                     {
                         q: "What does Roy look for behind a Decatur gutter while cleaning it?",
@@ -594,12 +594,12 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             },
             "gutter-installation": {
                 meta: "Decatur downspouts stopping at the foundation? Roy moves the water away from the house. Call (256) 221-0373.",
-                intro: "Older Decatur gutters were often added later or patched, and the downspouts stop too close to the foundation. River humidity makes that wet line at the slab a bigger problem than it looks from the street.",
-                body: "Older homes in Decatur often have gutters that were added or patched over time, with downspouts that do not move water far enough from the foundation. Roy installs seamless gutters, sized for the roof, with downspouts placed to carry water away. He also checks the fascia boards behind the old gutters and flags rot before the new ones go up.",
+                intro: "Older Decatur gutters were often added later or patched, and the downspouts stop too close to the foundation. That wet line at the slab is a bigger problem than it looks from the street.",
+                body: "Roy installs seamless gutters, sized for the roof, with downspouts placed to carry water away. He also checks the fascia boards behind the old gutters and flags rot before the new ones go up.",
                 faqs: [
                     {
                         q: "Why does Roy check the fascia before new gutters in Decatur?",
-                        a: "The old gutter was holding water against that board. He flags rot before the new gutter goes up. Hanging on soft wood pulls out.",
+                        a: "The old gutter was holding water against that board. Hanging on soft wood pulls out.",
                     },
                     {
                         q: "Where should a Decatur downspout discharge?",
@@ -629,7 +629,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
                 faqs: [
                     {
                         q: "Why does humidity affect a Decatur garage floor coating?",
-                        a: "Moisture in the slab breaks the bond. Roy grinds, repairs cracks, and coats when the surface is ready. He tells you when you can park again.",
+                        a: "Moisture in the slab breaks the bond. Roy grinds, repairs cracks, and coats when the surface is ready.",
                     },
                     {
                         q: "What do tire marks on a Decatur garage tell Roy?",
@@ -644,7 +644,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
                 faqs: [
                     {
                         q: "Can Roy match trim in an older Decatur house?",
-                        a: "When the profile can be reproduced, he does. When it cannot, he tells you and reworks the run so you are not left with one odd piece. He scribes to walls that are out of square.",
+                        a: "When the profile can be reproduced, he does. When it cannot, he tells you and reworks the run so you are not left with one odd piece.",
                     },
                     {
                         q: "What carpentry do newer Decatur rooms come without?",
@@ -670,11 +670,11 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "deck-repair": {
                 meta: "A Decatur deck staying soft in the humidity? Roy checks the ledger before he refinishes. Call (256) 221-0373.",
                 intro: "River humidity keeps Decatur decks damp, so boards soften, rail posts rot, and the finish gives up. Stain over that damage is a cover, not a repair.",
-                body: "Humidity keeps decks damp in Decatur, so soft boards, rotted rail posts, and failing finish are common. Roy checks the framing and ledger connection, replaces damaged boards, secures the railings, and refinishes the surface. If rot has gone too far to repair, he tells you what a rebuild would involve.",
+                body: "Roy checks the framing and ledger connection, replaces damaged boards, secures the railings, and refinishes the surface. If rot has gone too far to repair, he tells you what a rebuild would involve.",
                 faqs: [
                     {
                         q: "What does Roy check on a damp Decatur deck?",
-                        a: "The framing and the ledger, then the boards and the rail posts. He replaces what is soft, secures the railings, and refinishes after the structure is sound.",
+                        a: "The framing and the ledger, then the boards and the rail posts. A new board on a rotten frame is not a repair.",
                     },
                     {
                         q: "When will Roy say a Decatur deck needs a rebuild?",
@@ -685,7 +685,7 @@ export const cityServiceContent: Record<CityKey, CityContent> = {
             "pressure-washing": {
                 meta: "Algae on damp Decatur siding? Roy washes it without driving water behind the wall. Call (256) 221-0373.",
                 intro: "Decatur humidity grows algae on siding, decks, and walkways. Older houses with failing caulk or loose paint need a gentler wash than a newer hard surface.",
-                body: "Decatur's humidity grows algae and mildew on siding, decks, and walkways. Roy uses soft washing on siding and roofs, higher pressure on concrete, and wood-safe settings on decks and fences. Older homes with failing caulk or paint get a gentler approach, and he points out any damage the washing reveals.",
+                body: "Roy uses soft washing on siding and roofs, higher pressure on concrete, and wood-safe settings on decks and fences. He points out any damage the washing reveals.",
                 faqs: [
                     {
                         q: "Why is algae so common on Decatur siding?",
