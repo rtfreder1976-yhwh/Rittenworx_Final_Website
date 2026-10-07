@@ -110,12 +110,36 @@ const local = cityServiceContent[fullCity as CityKey];
 const localService = local?.services[service.id];
 
 const description = localService
-    ? `${service.name} in ${city}, AL: ${localService.hook}. Licensed & insured. Free estimates, call (256) 221-0373.`
+    ? localService.meta
     : `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
 
-// Core-city pages carry unique local content (see cityServiceContent.ts), so
-// every service + city page is self-canonical.
-const canonical = undefined;
+// Cannibalization fix, same rule as master. The four core cities already have
+// hand-written service hubs. These templated service+city URLs canonical to
+// that hub so Google consolidates ranking signals. Madison matches master
+// exactly. Huntsville, Athens, and Decatur stay on the hub too: the intro and
+// FAQs below are service-specific, but the rest of the page is still the
+// shared template, so none of the 44 are self-canonical. Sub-area cities
+// (Harvest, Owens Cross Roads, Hampton Cove, Redstone Arsenal, Meridianville)
+// have no hub equivalent and stay self-canonical. Sitemap and robots are
+// unchanged from master: these URLs stay indexable and stay in the sitemap.
+const serviceHubSlug: Record<string, string> = {
+    "drywall-repair": "drywall",
+    "interior-painting": "painting",
+    "exterior-painting": "exterior-painting",
+    "gutter-cleaning": "gutter-cleaning",
+    "gutter-installation": "gutter-installation",
+    "flooring-installation": "flooring",
+    "garage-floor-coating": "garage-floor-coating",
+    "finish-carpentry": "finish-carpentry",
+    "fence-installation": "fence-installation",
+    "deck-repair": "deck-repair",
+    "pressure-washing": "pressure-washing",
+};
+const coreCities = ["madison-al", "huntsville-al", "athens-al", "decatur-al"];
+const canonical =
+    coreCities.includes(fullCity) && serviceHubSlug[service.id]
+        ? `https://www.rittenworxhandyman.net/services/${serviceHubSlug[service.id]}/`
+        : undefined;
 
 // Custom local schema for this specific combination
 const localSchema = {
@@ -170,7 +194,7 @@ const localSchema = {
                         text: `Yes — all estimates for ${service.name.toLowerCase()} in ${city} and surrounding North Alabama communities are completely free and carry no obligation. Request yours online or call (256) 221-0373.`,
                     },
                 },
-                ...(local?.faqs ?? []).map((f) => ({
+                ...(localService?.faqs ?? []).map((f) => ({
                     "@type": "Question",
                     name: f.q,
                     acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -318,10 +342,10 @@ const localSchema = {
                 local && localService && (
                     <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 mb-6 mt-10">
                         <h3 class="text-2xl font-bold text-blue-900 mb-4">
-                            {service.name} in {city}: What We See Locally
+                            {service.name} on {city} Homes
                         </h3>
                         <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                            {local.intro}
+                            {localService.intro}
                         </p>
                         <p class="text-gray-700 text-lg leading-relaxed">
                             {localService.body}
@@ -665,7 +689,7 @@ const localSchema = {
                 </div>
 
                 {
-                    (local?.faqs ?? []).map((f) => (
+                    (localService?.faqs ?? []).map((f) => (
                         <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                             <h4 class="font-bold text-gray-900 text-xl flex items-start gap-3">
                                 <span class="text-orange-500 font-black mt-1">Q:</span>

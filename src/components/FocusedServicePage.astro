@@ -41,7 +41,7 @@ const schema = {
       "@id": `https://www.rittenworxhandyman.net/services/${slug}/#service`,
       name: heading + " " + headingAccent,
       description,
-      provider: { "@type": "LocalBusiness", name: "Rittenworx", telephone: "(256) 221-0373" },
+      provider: { "@id": "https://www.rittenworxhandyman.net/#business" },
       areaServed: ["Madison", "Huntsville", "Athens", "Decatur"].map((c) => ({
         "@type": "City",
         name: c,
@@ -81,11 +81,11 @@ const schema = {
         </h1>
         <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">{lead}</p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="sms:2562210373" class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center shadow-lg shadow-orange-500/30 hover:-translate-y-1">
-            Text A Photo For A Quote
-          </a>
           <a href="tel:+12562210373" class="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center border border-white/20 hover:-translate-y-1">
             Call (256) 221-0373
+          </a>
+          <a href="sms:2562210373" class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center shadow-lg shadow-orange-500/30 hover:-translate-y-1">
+            Text A Photo For A Quote
           </a>
         </div>
       </div>
@@ -134,9 +134,9 @@ const schema = {
         ))}
       </div>
 
-      <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-12">Where We Work</h2>
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-12">Where Roy Works</h2>
       <p class="text-gray-700 text-lg leading-relaxed mb-4">
-        We serve homeowners in
+        Roy serves homeowners in
         <a href="/locations/madison" class="text-blue-700 underline">Madison</a>,
         <a href="/locations/huntsville" class="text-blue-700 underline">Huntsville</a>,
         <a href="/locations/athens" class="text-blue-700 underline">Athens</a> and
