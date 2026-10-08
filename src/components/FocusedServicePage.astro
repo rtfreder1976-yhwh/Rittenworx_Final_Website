@@ -1,0 +1,160 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TrustCredentials from "./TrustCredentials.astro";
+import InlineQuoteForm from "./InlineQuoteForm.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  heading: string;
+  headingAccent: string;
+  lead: string;
+  intro: string[];
+  itemsHeading: string;
+  items: string[];
+  steps: { title: string; body: string }[];
+  faqs: { question: string; answer: string }[];
+  related: { href: string; label: string; note: string }[];
+}
+
+const {
+  title,
+  description,
+  slug,
+  heading,
+  headingAccent,
+  lead,
+  intro,
+  itemsHeading,
+  items,
+  steps,
+  faqs,
+  related,
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": `https://www.rittenworxhandyman.net/services/${slug}/#service`,
+      name: heading + " " + headingAccent,
+      description,
+      provider: { "@id": "https://www.rittenworxhandyman.net/#business" },
+      areaServed: ["Madison", "Huntsville", "Athens", "Decatur"].map((c) => ({
+        "@type": "City",
+        name: c,
+        addressRegion: "AL",
+      })),
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    },
+  ],
+};
+---
+
+<Layout title={title} description={description} schema={schema}>
+  <section class="relative bg-blue-900 text-white pt-32 pb-24 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800"></div>
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[120px] -mr-40 -mt-40"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors">Services</a>
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">{heading} {headingAccent}</span>
+        </nav>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+          {heading}
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">{headingAccent}</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">{lead}</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:+12562210373" class="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center border border-white/20 hover:-translate-y-1">
+            Call (256) 221-0373
+          </a>
+          <a href="sms:2562210373" class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg flex items-center justify-center shadow-lg shadow-orange-500/30 hover:-translate-y-1">
+            Text A Photo For A Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      {intro.map((p) => <p class="text-gray-700 text-lg leading-relaxed mb-6">{p}</p>)}
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-12">{itemsHeading}</h2>
+      <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-12">
+        {items.map((item) => (
+          <li class="flex items-start gap-2 text-gray-700">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-12">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        {steps.map((s, i) => (
+          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+            <div class="text-orange-500 font-black text-2xl mb-2">0{i + 1}</div>
+            <h3 class="font-bold text-gray-900 text-lg mb-2">{s.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{s.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-12">Common Questions</h2>
+      <div class="space-y-4 mb-12">
+        {faqs.map((f) => (
+          <details class="bg-white rounded-lg border border-gray-200 group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <h3 class="font-semibold text-gray-800 pr-4">{f.question}</h3>
+              <svg class="w-5 h-5 text-gray-500 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6"><p class="text-gray-600">{f.answer}</p></div>
+          </details>
+        ))}
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 mt-12">Where Roy Works</h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-4">
+        Roy serves homeowners in
+        <a href="/locations/madison" class="text-blue-700 underline">Madison</a>,
+        <a href="/locations/huntsville" class="text-blue-700 underline">Huntsville</a>,
+        <a href="/locations/athens" class="text-blue-700 underline">Athens</a> and
+        <a href="/locations/decatur" class="text-blue-700 underline">Decatur</a>, plus nearby communities across North Alabama.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-12">Related Services</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {related.map((r) => (
+          <a href={r.href} class="block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all">
+            <h3 class="font-bold text-gray-900">{r.label}</h3>
+            <p class="text-sm text-gray-600 mt-1">{r.note}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+  <TrustCredentials />
+</Layout>
