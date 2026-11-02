@@ -1,5 +1,5 @@
 ---
-title: "The Ultimate Fall Gutter Preparation Guide for Hampton Cove Homeowners"
+title: "Fall Gutter Prep Guide for Hampton Cove Homeowners"
 description: "Prepare your Hampton Cove home for autumn leaves and heavy rain. Learn the essential September gutter maintenance checklist."
 pubDate: 2026-02-21
 author: "Roy"
