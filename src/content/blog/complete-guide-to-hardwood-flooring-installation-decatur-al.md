@@ -1,5 +1,5 @@
 ---
-title: "The Complete Guide to Hardwood Flooring Installation in Decatur, AL"
+title: "Hardwood Flooring Installation in Decatur, AL: Guide"
 description: "Everything you need to know about installing new hardwood floors in Decatur, including humidity considerations, acclimation, and picking the right wood."
 pubDate: 2026-02-21
 author: "Roy"

@@ -22,6 +22,8 @@ const {
   articleMeta,
 } = Astro.props;
 const currentPath = Astro.url.pathname;
+// Keep <title> under ~65 chars: drop the brand suffix when it would push it over.
+const fullTitle = `${title} | Rittenworx`.length > 65 ? title : `${title} | Rittenworx`;
 const canonicalURL = new URL(
   Astro.url.pathname,
   "https://www.rittenworxhandyman.net",
@@ -379,7 +381,7 @@ const finalSchema = schema || schemaData;
     </style>
 
     <!-- SEO Meta Tags -->
-    <title>{title} | Rittenworx</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalHref} />
     <link rel="alternate" hreflang="en-us" href="https://www.rittenworxhandyman.net/" />
@@ -403,7 +405,7 @@ const finalSchema = schema || schemaData;
     <!-- Open Graph / Social -->
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalHref} />
-    <meta property="og:title" content={`${title} | Rittenworx`} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="en_US" />
@@ -417,7 +419,7 @@ const finalSchema = schema || schemaData;
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${title} | Rittenworx`} />
+    <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
