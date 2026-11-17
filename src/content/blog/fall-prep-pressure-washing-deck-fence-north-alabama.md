@@ -1,6 +1,6 @@
 ---
 title: "Fall Prep in North Alabama: Pressure Washing, Deck Checks & Fence Repair Before Winter"
-description: "What to knock out this fall before winter — pressure washing before it gets too cold to work, a real deck inspection, and fence post repairs — for Madison, Huntsville, Decatur & Athens homeowners."
+description: "Fall checklist for North Alabama homes: pressure wash before it gets too cold, inspect the deck properly, and fix leaning fence posts before winter."
 pubDate: 2026-09-21
 author: "Roy"
 tags: ["Exterior", "Pressure Washing", "Deck Repair", "Fence", "Seasonal"]

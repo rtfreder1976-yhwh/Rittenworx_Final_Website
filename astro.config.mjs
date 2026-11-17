@@ -105,10 +105,16 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin/'),
+      // Exclude admin pages, and templated service+city pages for the four
+      // core cities: those canonicalize to the hand-written service hubs, so
+      // listing them in the sitemap sends Google mixed signals.
+      filter: (page) =>
+        !page.includes('/admin/') &&
+        !/\/services\/[a-z-]+-(madison|huntsville|athens|decatur)-al\/?$/.test(page),
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date(),
+      // No global lastmod: stamping every URL with the build time makes Google
+      // ignore lastmod entirely.
       customPages: [
         'https://www.rittenworxhandyman.net/',
         'https://www.rittenworxhandyman.net/services/',
