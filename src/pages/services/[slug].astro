@@ -102,6 +102,154 @@ export function getStaticPaths() {
 const { service, city, cityPath, fullCity } = Astro.props;
 const { slug } = Astro.params;
 
+// Area-specific context so each service+town page says something true and
+// local instead of swapping the town name into identical copy. Facts here
+// come from the published location pages for each area.
+type Trait = "wooded" | "older" | "newBuild" | "storms" | "pcs" | "rural";
+const areaContext: Record<string, { intro: string; traits: Trait[]; link?: { href: string; label: string } }> = {
+    "madison-al": {
+        intro: "Madison is mostly subdivision homes built over the last few decades, many of them owned by families who work at Redstone Arsenal and Cummings Research Park.",
+        traits: ["newBuild", "pcs"],
+        link: { href: "/locations/madison/", label: "Madison service area" },
+    },
+    "huntsville-al": {
+        intro: "Huntsville covers everything from older ranch homes in established neighborhoods to new construction on the edges of town, so no two jobs look the same.",
+        traits: ["older", "newBuild", "pcs"],
+        link: { href: "/locations/huntsville/", label: "Huntsville service area" },
+    },
+    "athens-al": {
+        intro: "Athens mixes historic homes near the square with newer subdivisions spreading toward I-65 and the Madison line.",
+        traits: ["older", "newBuild"],
+        link: { href: "/locations/athens/", label: "Athens service area" },
+    },
+    "decatur-al": {
+        intro: "Decatur has a large stock of established homes, plus newer neighborhoods like Burningtree, and sits right on the Tennessee River.",
+        traits: ["older", "storms"],
+        link: { href: "/locations/decatur/", label: "Decatur service area" },
+    },
+    "harvest-al": {
+        intro: "Harvest is a mix of rural-suburban lots, older farmhouses, and new subdivisions along the Highway 53 corridor. Its open terrain gets the full force of North Alabama's spring storms.",
+        traits: ["rural", "storms", "newBuild"],
+        link: { href: "/locations/madison/harvest/", label: "Harvest service area" },
+    },
+    "owens-cross-roads-al": {
+        intro: "Owens Cross Roads runs from long-time family homes at the foot of Green Mountain to fast-growing new subdivisions near Hampton Cove.",
+        traits: ["wooded", "newBuild", "rural"],
+        link: { href: "/locations/owens-cross-roads/", label: "Owens Cross Roads service area" },
+    },
+    "hampton-cove-al": {
+        intro: "Many original Hampton Cove homes are 20+ years old, and lots near Monte Sano are heavily wooded. Both shape what needs fixing here.",
+        traits: ["older", "wooded", "pcs"],
+        link: { href: "/locations/huntsville/hampton-cove/", label: "Hampton Cove service area" },
+    },
+    "redstone-arsenal-al": {
+        intro: "We work for Redstone Arsenal families at their off-post homes in Madison, Huntsville, and Owens Cross Roads. On-post privatized housing has its own maintenance process through the housing partner.",
+        traits: ["pcs"],
+        link: { href: "/locations/redstone-arsenal/", label: "Redstone Arsenal families" },
+    },
+    "meridianville-al": {
+        intro: "Meridianville is an unincorporated community north of Huntsville along the US-231/431 corridor, with a mix of rural lots and newer subdivisions.",
+        traits: ["rural", "newBuild"],
+        link: { href: "/locations/huntsville/", label: "Huntsville-area service" },
+    },
+};
+
+const serviceTraitNotes: Record<string, Partial<Record<Trait, string>>> = {
+    "drywall-repair": {
+        older: "Older homes settle, so we see a lot of stress cracks over doors and windows and nail pops along ceiling seams.",
+        newBuild: "In newer homes the common call is builder-grade tape seams that crack in the first few years as framing dries out.",
+        storms: "After storms, we often cut out and replace ceiling drywall stained by roof or window leaks once the leak itself is fixed.",
+        pcs: "For PCS moves, we patch anchor holes, dings, and door-knob damage so walls are ready for paint or final inspection.",
+        rural: "On rural properties we also handle drywall in shops, bonus rooms, and finished outbuildings.",
+        wooded: "Shaded, damp lots can mean moisture-damaged drywall in basements and bathrooms, so we check for the source before patching.",
+    },
+    "interior-painting": {
+        older: "Older homes often have glossy or oil-based trim that needs proper prep and a bonding primer before new paint will stick.",
+        newBuild: "Many newer homes still have flat builder paint that marks easily; a scrubbable eggshell or satin finish holds up far better.",
+        pcs: "For PCS move-outs, we repaint to a neutral color quickly so the house is ready to list or hand back.",
+        storms: "Water-stained ceilings from storm leaks need a stain-blocking primer, or the stain bleeds right back through.",
+        rural: "Larger farmhouse-style homes often mean high ceilings and long trim runs, which we price by scope, not a flat rate.",
+        wooded: "Homes on wooded lots get less natural light, which changes how colors read. We'll paint sample patches before you commit.",
+    },
+    "exterior-painting": {
+        older: "Older siding and trim usually need scraping, wood repair, and caulking before paint, and that prep is where most of the job's life comes from.",
+        newBuild: "Builder exterior paint is often thin; the first repaint on a newer home is a chance to upgrade to a better coating.",
+        storms: "Hail and wind-driven rain chip and peel exterior paint fast, especially on south and west faces.",
+        wooded: "Shaded, wooded lots grow mildew on siding, so we wash and treat before painting so it doesn't come back through.",
+        pcs: "Freshening exterior trim and doors is one of the cheapest ways to boost curb appeal before a PCS sale.",
+        rural: "Rural properties often include barns, sheds, and fencing we can paint in the same trip.",
+    },
+    "gutter-cleaning": {
+        wooded: "Tree cover means gutters here clog fast, often more than twice a year, and roof valleys collect debris too.",
+        older: "Older gutters often sag or pull from the fascia once they've held standing water; we flag that while we're up there.",
+        storms: "After big storms we clear branches and debris before the next rain backs water under the shingles.",
+        newBuild: "Newer neighborhoods with young trees still collect pine straw and seed pods, so a yearly cleaning is usually enough.",
+        rural: "Rural lots with tall hardwoods drop a lot of leaves in late fall; timing the cleaning after leaf-drop matters.",
+        pcs: "A gutter cleaning is an easy item to knock off a pre-listing or move-out checklist.",
+    },
+    "gutter-installation": {
+        older: "On older homes we check and replace rotted fascia before hanging new seamless gutters, since gutters are only as solid as the board behind them.",
+        storms: "Heavy North Alabama downpours overwhelm undersized gutters, so we size gutters and downspouts for the roof area.",
+        wooded: "On wooded lots, gutter guards can cut down on cleanings. We'll tell you honestly whether they're worth it for your trees.",
+        newBuild: "Some newer homes were built with gutters only on part of the roof; adding runs where water splashes the foundation is common work.",
+        rural: "Rural homes and outbuildings often need longer runs and extended downspouts to move water away from foundations.",
+        pcs: "Damaged or missing gutters often show up on home inspection reports during a sale.",
+    },
+    "flooring-installation": {
+        older: "Older homes often have uneven subfloors that need leveling before LVP or hardwood will lay flat and stay quiet.",
+        newBuild: "In newer homes, replacing builder carpet with LVP or hardwood is one of the most common upgrades we do.",
+        pcs: "LVP goes in quickly and holds up to kids and pets, which makes it a common choice for move-in and rental-ready projects.",
+        rural: "Farmhouse renovations often mean matching or replacing original wood floors room by room.",
+        storms: "After water damage, we pull damaged flooring and check the subfloor before installing new.",
+        wooded: "Damp, shaded lots make moisture testing important before installing hardwood over a slab or crawlspace.",
+    },
+    "garage-floor-coating": {
+        newBuild: "New-construction garages are a great candidate for a flake coating once the slab has fully cured.",
+        older: "Older garage slabs usually need crack repair and grinding before a coating will bond.",
+        rural: "Workshops and outbuildings on rural properties benefit from a coating that resists oil and chemicals.",
+        pcs: "A coated garage floor is a visible upgrade buyers notice, which is handy before a PCS sale.",
+        storms: "Garages that take on water from wind-driven rain need a coating rated for moisture, not a big-box kit.",
+        wooded: "Pine straw and mud tracked in from wooded lots wipe right off a coated floor.",
+    },
+    "finish-carpentry": {
+        older: "In older homes we often replace damaged baseboard and trim and match existing profiles so new pieces blend in.",
+        newBuild: "Newer homes often have plain builder trim; crown molding, wainscoting, and built-ins are popular upgrades.",
+        pcs: "Quick trim repairs and door adjustments help a home pass inspection before a PCS move.",
+        rural: "Farmhouse-style homes suit board-and-batten, shiplap, and custom built-ins.",
+        wooded: "Exterior trim on shaded lots rots faster, and we replace it with rot-resistant material where it makes sense.",
+        storms: "Storm-damaged exterior trim and door casings are a common repair after severe weather.",
+    },
+    "fence-installation": {
+        rural: "Larger rural lots often need longer fence runs and split-rail or field fencing, not just privacy panels.",
+        newBuild: "In newer subdivisions, check HOA fence rules on height, style, and stain color before we start; we'll build to them.",
+        storms: "Wind storms snap rotted posts and push panels over; often only a few posts need replacing, not the whole fence.",
+        wooded: "Fences under trees stay damp and rot at the base sooner, so post setting and drainage matter more.",
+        older: "Older fences often have posts set without enough concrete; we reset or replace them rather than patching boards.",
+        pcs: "Repairing a leaning fence or broken gate is a common pre-sale fix.",
+    },
+    "deck-repair": {
+        older: "Older decks need a close look at ledger boards, joists, and railings, not just the surface boards.",
+        wooded: "Decks on shaded, wooded lots grow mildew and rot faster; cleaning and sealing on a schedule extends their life.",
+        storms: "Falling limbs and storms damage railings and boards; we replace what's damaged and check the framing underneath.",
+        newBuild: "Newer decks often just need cleaning and their first proper seal or stain.",
+        rural: "Rural homes often have larger decks and porches where staged repairs keep cost manageable.",
+        pcs: "Loose railings and soft boards are common home-inspection items before a sale.",
+    },
+    "pressure-washing": {
+        wooded: "Shaded, wooded lots grow mildew and algae on siding, so soft washing is the right approach for most homes here.",
+        older: "On older siding and painted surfaces we use low pressure so we don't strip paint or force water behind the siding.",
+        newBuild: "Newer homes mostly need driveways, walks, and north-facing siding cleaned of red clay and mildew.",
+        rural: "Rural properties often add long driveways, outbuildings, and fencing to the job.",
+        pcs: "A house wash before listing photos is one of the cheapest curb-appeal boosts before a PCS sale.",
+        storms: "After storms we clear mud and debris from siding, decks, and walks.",
+    },
+};
+
+const area = areaContext[fullCity];
+const localNotes = area.traits
+    .map((t) => serviceTraitNotes[service.id]?.[t])
+    .filter(Boolean) as string[];
+
 const title = `${service.name} in ${city}, AL`;
 const description = `${service.shortDesc} in ${city}, AL. Licensed & insured. Free estimates, fast response. Call (256) 221-0373.`;
 
@@ -327,6 +475,23 @@ const localSchema = {
                 subcontractors. We clean up before we leave. And we walk the job
                 with you before we consider it done.
             </p>
+
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 mt-14">
+                {service.name} in {city}: What We See
+            </h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                {area.intro}
+            </p>
+            {localNotes.length > 0 && (
+                <ul class="list-disc pl-6 space-y-3 text-gray-700 text-lg leading-relaxed mb-6">
+                    {localNotes.map((note) => <li>{note}</li>)}
+                </ul>
+            )}
+            {area.link && (
+                <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                    More about our <a href={area.link.href} class="text-blue-700 underline font-semibold">{area.link.label}</a>.
+                </p>
+            )}
 
             <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 mt-14">
                 Why {city} Homeowners Choose Rittenworx First
