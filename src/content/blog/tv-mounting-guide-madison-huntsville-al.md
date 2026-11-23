@@ -47,4 +47,4 @@ Cutting into a wall also means checking first for anything already running insid
 
 If it's a fixed mount on a drywall-and-stud wall and you own a stud finder and a level, it's a reasonable DIY job. Brick, tile, over-fireplace placement, full-motion arms on big screens, or in-wall cable work are where having someone who does it regularly pays off.
 
-TV mounting is one of the small jobs we handle across Madison, Huntsville, Decatur, and Athens, along with soundbar brackets, in-wall power kits, and moving a TV from an old mount to a new spot. See the [small jobs handyman page](/services/general-handyman) for the full list. Text a photo of the wall and the TV model to **(256) 221-0373**, or [request a free estimate](/quote).
+TV mounting is one of the small jobs we handle across Madison, Huntsville, Decatur, and Athens, along with soundbar brackets, in-wall power kits, and moving a TV from an old mount to a new spot. Details are on our [TV mounting page](/services/tv-mounting). Text a photo of the wall and the TV model to **(256) 221-0373**, or [request a free estimate](/quote).
