@@ -1,5 +1,6 @@
 ---
 title: "Drafty Doors and Windows: How to Find and Fix Them Before Winter"
+seoTitle: "Drafty Doors & Windows: Weatherstripping and Caulking Fixes"
 description: "How to find drafts around doors and windows in North Alabama homes, and when weatherstripping, a door sweep, or new caulk fixes the problem."
 pubDate: 2026-11-17
 author: "Roy"
@@ -51,6 +52,6 @@ Some problems need more than a seal:
 
 Most draft sealing is a small job. A door sweep, weatherstripping replacement, and resealing exterior caulk around a few doors and windows can often be done in a single visit. We price by the job after seeing it, not by a flat rate, because every house is different.
 
-See our [general handyman services](/services/general-handyman) for the full list of door and sealing work we do, or our [winterizing checklist](/blog/winterizing-checklist-north-alabama-homes) for everything else to handle before the first hard freeze.
+See our [door repair service](/services/door-repair) for the full list of door and sealing work we do, or our [winterizing checklist](/blog/winterizing-checklist-north-alabama-homes) for everything else to handle before the first hard freeze.
 
 Roy works across Madison, Huntsville, Decatur, and Athens. Text a photo of the door or window to **(256) 221-0373** or [request a free estimate](/quote).

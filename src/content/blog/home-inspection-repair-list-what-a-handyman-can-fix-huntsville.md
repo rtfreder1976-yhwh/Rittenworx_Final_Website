@@ -1,5 +1,6 @@
 ---
 title: "Home Inspection Repair List: What a Handyman Can Fix in Huntsville & Madison"
+seoTitle: "Home Inspection Repairs a Handyman Can Fix | Huntsville"
 description: "Buying or selling in Huntsville or Madison? Which home inspection repair items a handyman can handle, and which need a licensed electrician, plumber, or roofer."
 pubDate: 2026-11-17
 author: "Roy"

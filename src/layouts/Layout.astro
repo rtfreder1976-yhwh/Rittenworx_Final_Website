@@ -30,6 +30,14 @@ const canonicalURL = new URL(
 // service+city pages that should consolidate into a stronger hub page).
 const canonicalHref = canonical ?? canonicalURL.href;
 
+// Append the brand only when the title doesn't already include it and the
+// result still fits in Google's ~60-character title display.
+const BRAND_SUFFIX = " | Rittenworx";
+const fullTitle =
+  title.includes("Rittenworx") || title.length + BRAND_SUFFIX.length > 60
+    ? title
+    : `${title}${BRAND_SUFFIX}`;
+
 // LocalBusiness + HomeAndConstructionBusiness Schema
 const schemaData = {
   "@context": "https://schema.org",
@@ -237,7 +245,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": `${canonicalURL}#webpage`,
       url: canonicalURL.href,
-      name: `${title} | Rittenworx`,
+      name: fullTitle,
       isPartOf: {
         "@id": "https://www.rittenworxhandyman.net/#website",
       },
@@ -379,7 +387,7 @@ const finalSchema = schema || schemaData;
     </style>
 
     <!-- SEO Meta Tags -->
-    <title>{title} | Rittenworx</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalHref} />
     <link rel="alternate" hreflang="en-us" href="https://www.rittenworxhandyman.net/" />
@@ -403,7 +411,7 @@ const finalSchema = schema || schemaData;
     <!-- Open Graph / Social -->
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalHref} />
-    <meta property="og:title" content={`${title} | Rittenworx`} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="en_US" />
@@ -417,7 +425,7 @@ const finalSchema = schema || schemaData;
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${title} | Rittenworx`} />
+    <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
@@ -814,6 +822,18 @@ const finalSchema = schema || schemaData;
                   href="/services/pressure-washing"
                   class="hover:text-white transition-colors"
                   >Pressure Washing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/tv-mounting"
+                  class="hover:text-white transition-colors">TV Mounting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/door-repair"
+                  class="hover:text-white transition-colors">Door Repair</a
                 >
               </li>
             </ul>
