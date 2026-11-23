@@ -1,0 +1,236 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const problems = [
+  {
+    name: "Sticking or Rubbing",
+    cause:
+      "Usually stripped hinge screws letting the door sag, or wood swelling in humid months.",
+    fix: "Re-anchor the top hinge into the framing, shim if needed, and only then plane what still rubs, then seal the bare edge.",
+  },
+  {
+    name: "Latch Won't Catch",
+    cause:
+      "The door has shifted so the latch no longer lines up with the strike plate.",
+    fix: "Correct the sag first, then adjust or move the strike plate so the door closes with a light push.",
+  },
+  {
+    name: "Drafts & Daylight",
+    cause:
+      "Worn weatherstripping or door sweep on an exterior door, or a gap at the bottom.",
+    fix: "New weatherstripping and a new door sweep, sized to the gap.",
+  },
+  {
+    name: "Sliding & Pocket Doors",
+    cause:
+      "Bent or dirty tracks, worn rollers, or loose hardware.",
+    fix: "Track and roller repair or replacement so the door glides and stays on the track.",
+  },
+];
+
+const included = [
+  "Sticking or binding doors",
+  "Hinge tightening, replacement, and shimming",
+  "Strike plate adjustment",
+  "Door sweeps and weatherstripping",
+  "Screen door repair and replacement",
+  "Sliding closet door track repair",
+  "Pocket door track and hardware repair",
+  "Interior door installation (prehung and slab)",
+];
+
+const faqs = [
+  {
+    question: "Why do my doors stick more in the summer?",
+    answer:
+      "Wood doors and frames take on moisture in humid weather and swell a little, then shrink back when it's dry. A door that was already sagging slightly will start rubbing when it swells. Fixing the sag usually solves it without taking much wood off the door.",
+  },
+  {
+    question: "Can't you just shave the door down?",
+    answer:
+      "Sometimes that's part of the fix, but it's rarely the first step. If the real problem is a loose hinge, planing the door just leaves a gap on the other side once the hinge is fixed. We find the cause first.",
+  },
+  {
+    question: "Should I repair my door or replace it?",
+    answer:
+      "Most sticking, sagging, or latching problems are repairs. Replacement makes sense when the door itself is warped, split, or rotted. We'll tell you which one you're looking at.",
+  },
+  {
+    question: "Do you install new interior doors?",
+    answer:
+      "Yes, both prehung doors (door and frame together) and slab doors hung in your existing frame.",
+  },
+  {
+    question: "How much does door repair cost?",
+    answer:
+      "It depends on what's wrong and how many doors. A photo or short video of the door opening and closing helps. Text it to (256) 221-0373 for an estimate.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+---
+
+<Layout
+  title="Door Repair Madison & Huntsville AL"
+  description="Door repair in Madison, Huntsville, Decatur & Athens, AL. Sticking doors, latches that won't catch, sagging hinges, drafts, sliding and pocket doors."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/trim.webp"
+        alt="Interior trim and door casing work by Rittenworx"
+        class="w-full h-full object-cover opacity-20"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors">Services</a>
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">Door Repair</span>
+        </nav>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+          Door <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Repair</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">
+          Doors that stick, sag, won't latch, or let the weather in, fixed at
+          the cause instead of planed until they sort of close.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-colors text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 border border-orange-400/30"
+          >
+            Text A Video Of The Door
+          </a>
+          <a
+            href="tel:2562210373"
+            class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold py-4 px-8 rounded-xl transition-colors text-lg flex items-center justify-center"
+          >
+            (256) 221-0373
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">
+        Most Door Problems Start at the Hinges
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        When a door starts rubbing at the top corner or the latch stops
+        catching, the cause is usually a top hinge whose screws have
+        stripped out of the frame, letting the door drop. North Alabama's
+        humidity swings make it worse, since wood swells in the summer and
+        shrinks back in the winter. Taking wood off the door hides the
+        problem for a season. Re-anchoring the hinge fixes it.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Rittenworx repairs interior and exterior doors across Madison,
+        Huntsville, Decatur, and Athens. A short video of the door opening
+        and closing is often enough for Roy to tell you what's going on.
+      </p>
+    </div>
+  </section>
+
+  <!-- Problems -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide">Common Problems</span>
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">What's Wrong and How It Gets Fixed</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {problems.map((p) => (
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">{p.name}</h3>
+            <p class="text-gray-600 text-sm mb-2"><span class="font-semibold text-gray-800">Usual cause:</span> {p.cause}</p>
+            <p class="text-gray-600 text-sm"><span class="font-semibold text-gray-800">The fix:</span> {p.fix}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Included -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide">What We Handle</span>
+      <h2 class="text-3xl font-bold text-gray-800 mt-2 mb-6">Door Repair & Installation Work</h2>
+      <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+        {included.map((item) => (
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide">Common Questions</span>
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">Door Repair FAQs</h2>
+      </div>
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <details class="bg-white rounded-lg shadow-sm group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:text-blue-900">{faq.question}</summary>
+            <div class="px-6 pb-4 text-gray-600">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+      <p class="text-center text-gray-600 mt-10">
+        Need trim or casing redone around the door? See
+        <a href="/services/finish-carpentry" class="text-blue-700 font-semibold underline">finish carpentry</a>.
+        Other small jobs are on the
+        <a href="/services/general-handyman" class="text-blue-700 font-semibold underline">small-job handyman list</a>.
+      </p>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Tired of Shouldering the Door Shut?</h2>
+      <p class="text-xl mb-8">Text a short video of the door for a free estimate.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="sms:2562210373" class="bg-white hover:bg-gray-100 text-orange-600 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block">Text a Video</a>
+        <a href="tel:2562210373" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block">(256) 221-0373</a>
+      </div>
+    </div>
+  </section>
+</Layout>

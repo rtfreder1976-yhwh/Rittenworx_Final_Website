@@ -130,6 +130,12 @@ const canonical =
         ? `https://www.rittenworxhandyman.net/services/${serviceHubSlug[service.id]}/`
         : undefined;
 
+// Thin-content fix: sub-area pages (Harvest, Hampton Cove, etc.) are ~98%
+// identical to each other. Keep them live for visitors and internal links,
+// but ask search engines not to index them until they carry real local
+// content. They are also excluded from the sitemap (astro.config.mjs).
+const robots = canonical ? "index, follow" : "noindex, follow";
+
 // Custom local schema for this specific combination
 const localSchema = {
     "@context": "https://schema.org",
@@ -189,7 +195,7 @@ const localSchema = {
 };
 ---
 
-<Layout title={title} description={description} schema={localSchema} canonical={canonical}>
+<Layout title={title} description={description} schema={localSchema} canonical={canonical} robots={robots}>
     <!-- Premium Hero Section -->
     <section
         class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden"

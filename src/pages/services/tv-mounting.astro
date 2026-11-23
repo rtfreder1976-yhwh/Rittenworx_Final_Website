@@ -1,0 +1,277 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TrustCredentials from "../../components/TrustCredentials.astro";
+import InlineQuoteForm from "../../components/InlineQuoteForm.astro";
+
+const mountTypes = [
+  {
+    name: "Fixed / Flat Mount",
+    description:
+      "Holds the TV tight to the wall. The cleanest look when the TV sits at eye level and you watch from straight on.",
+    bestFor: "Living rooms and bedrooms with a single main seat",
+  },
+  {
+    name: "Tilting Mount",
+    description:
+      "Angles the screen down a few degrees. Helps when the TV has to go higher than eye level or there's glare from a window.",
+    bestFor: "Bedrooms, higher placements, bright rooms",
+  },
+  {
+    name: "Full-Motion Mount",
+    description:
+      "Swings out and turns. Heavier and more demanding on the wall, so it has to be anchored into framing or masonry, not just drywall.",
+    bestFor: "Corners, open floor plans, kitchens",
+  },
+  {
+    name: "Monitors & Multi-Screen",
+    description:
+      "Monitor arms, side-by-side displays, and multi-TV walls for home offices and game rooms, lined up level with each other.",
+    bestFor: "Home offices, game rooms",
+  },
+];
+
+const included = [
+  "Flat, tilting, and full-motion mounts",
+  "Drywall, concrete block, brick, and tile walls",
+  "Cable concealment inside the wall or in surface conduit",
+  "In-wall power kit installation",
+  "Soundbar brackets and shelves",
+  "Component shelf below the display",
+  "Moving a TV from an old mount to a new spot",
+  "Patching old mount holes after a move",
+];
+
+const process = [
+  {
+    step: "1",
+    title: "Send a Photo",
+    description:
+      "Text a photo of the wall and tell us the TV size and the mount you have (or want). That's usually enough for an estimate.",
+  },
+  {
+    step: "2",
+    title: "Pick the Height",
+    description:
+      "On site, we mark the height with you before drilling anything, based on where you actually sit.",
+  },
+  {
+    step: "3",
+    title: "Find the Framing",
+    description:
+      "Studs on drywall walls, or the right masonry anchors on brick and block, matched to the weight of the TV and mount.",
+  },
+  {
+    step: "4",
+    title: "Mount, Level, Hide the Cables",
+    description:
+      "The mount goes up level, the TV gets hung and checked, and cables go in the wall or in conduit if you asked for it.",
+  },
+];
+
+const faqs = [
+  {
+    question: "How much does TV mounting cost in Madison, AL?",
+    answer:
+      "It depends on the setup. Full-motion mounts, mounting over a fireplace, brick or concrete walls, and in-wall cable management all change the price. Text a photo of the wall to (256) 221-0373 and we'll give you an estimate.",
+  },
+  {
+    question: "Can you hide the cables inside the wall?",
+    answer:
+      "Yes. A TV's power cord isn't meant to be run inside a wall, so for a clean look we install an in-wall power kit, which puts a proper outlet behind the TV. Signal cables like HDMI can run through the wall with it. Where the wall can't be opened, a paintable surface conduit is the other option.",
+  },
+  {
+    question: "Can you mount a TV over a fireplace?",
+    answer:
+      "Often, yes, but it's worth talking through first. Over a fireplace usually means the screen sits higher than ideal, the wall may be brick or stone, and heat can matter. A tilting or pull-down mount helps with the viewing angle. We'll look at the wall and give you a straight answer.",
+  },
+  {
+    question: "Do I need to buy the mount myself?",
+    answer:
+      "Either way works. If you already have one, we'll check that it's rated for your TV's size and weight. If not, we can tell you what to buy for your wall and setup.",
+  },
+  {
+    question: "Can you mount a TV on brick or concrete block?",
+    answer:
+      "Yes. Masonry walls need different drill bits and anchors than drywall, and the anchors are chosen for the load. We mount on drywall, concrete block, brick, and tile.",
+  },
+  {
+    question: "What about the holes from my old mount?",
+    answer:
+      "If you're moving a TV, we can patch the old mount holes. Getting them paint-ready is part of the drywall work we already do.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+---
+
+<Layout
+  title="TV Mounting Madison & Huntsville AL"
+  description="TV and monitor mounting in Madison, Huntsville, Decatur & Athens, AL. Drywall, brick and block walls, in-wall cable concealment and soundbars. Text a photo."
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="relative bg-blue-900 text-white pt-32 pb-24 flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/hero-maintenance-roy.webp"
+        alt="Roy Ritten of Rittenworx on a job in Madison, AL"
+        class="w-full h-full object-cover opacity-20"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-900/90 to-blue-900/60"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <nav class="text-blue-200 text-sm mb-6 flex items-center gap-2 font-medium tracking-wide">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="opacity-50">/</span>
+          <a href="/services" class="hover:text-white transition-colors">Services</a>
+          <span class="opacity-50">/</span>
+          <span class="text-orange-400">TV Mounting</span>
+        </nav>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+          TV <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Mounting</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light leading-relaxed">
+          TVs, monitors, and soundbars mounted level and anchored into the
+          wall properly, with the cables hidden if you want them gone.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="sms:2562210373"
+            class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-colors text-lg flex items-center justify-center gap-3 shadow-lg shadow-orange-500/30 border border-orange-400/30"
+          >
+            Text A Photo Of The Wall
+          </a>
+          <a
+            href="tel:2562210373"
+            class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold py-4 px-8 rounded-xl transition-colors text-lg flex items-center justify-center"
+          >
+            (256) 221-0373
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-20 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">
+        Anchored to the Wall, Not Just Hung on It
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        A mounted TV is only as secure as what the mount is screwed into.
+        On drywall that means finding the studs. On brick or concrete block
+        it means the right masonry anchors for the weight. A full-motion
+        mount puts even more leverage on the wall when it's pulled out, so
+        it matters more there.
+      </p>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Roy mounts TVs and monitors across Madison, Huntsville, Decatur, and
+        Athens. Most jobs start with a text: send a photo of the wall, the
+        TV size, and the mount, and you'll get an estimate back.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's included -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+      <div>
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide">What We Handle</span>
+        <h2 class="text-3xl font-bold text-gray-800 mt-2 mb-6">TV & Monitor Mounting Work</h2>
+        <ul class="space-y-3">
+          {included.map((item) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 content-start">
+        {mountTypes.map((m) => (
+          <div class="bg-white rounded-lg p-5 shadow-sm">
+            <h3 class="text-lg font-bold text-blue-900 mb-2">{m.name}</h3>
+            <p class="text-gray-600 text-sm mb-3">{m.description}</p>
+            <p class="text-xs text-blue-900 font-medium"><span class="text-gray-500">Best for:</span> {m.bestFor}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide">How It Works</span>
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">From Photo to Mounted TV</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {process.map((item) => (
+          <div class="bg-gray-50 rounded-lg p-6 text-center shadow-sm">
+            <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">{item.step}</div>
+            <h3 class="font-bold text-gray-800 mb-2">{item.title}</h3>
+            <p class="text-gray-600 text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-orange-700 font-semibold text-sm uppercase tracking-wide">Common Questions</span>
+        <h2 class="text-3xl font-bold text-gray-800 mt-2">TV Mounting FAQs</h2>
+      </div>
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <details class="bg-white rounded-lg shadow-sm group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-800 hover:text-blue-900">{faq.question}</summary>
+            <div class="px-6 pb-4 text-gray-600">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+      <p class="text-center text-gray-600 mt-10">
+        Got a few other small jobs too? See the full
+        <a href="/services/general-handyman" class="text-blue-700 font-semibold underline">small-job handyman list</a>
+        or <a href="/services/door-repair" class="text-blue-700 font-semibold underline">door repair</a>.
+      </p>
+    </div>
+  </section>
+
+  <InlineQuoteForm />
+
+  <TrustCredentials />
+
+  <!-- CTA -->
+  <section class="py-16 bg-orange-500 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get the TV Off the Stand?</h2>
+      <p class="text-xl mb-8">Text a photo of the wall for a free estimate.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="sms:2562210373" class="bg-white hover:bg-gray-100 text-orange-600 font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block">Text a Photo</a>
+        <a href="tel:2562210373" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-block">(256) 221-0373</a>
+      </div>
+    </div>
+  </section>
+</Layout>

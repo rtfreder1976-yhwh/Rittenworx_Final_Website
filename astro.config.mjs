@@ -46,10 +46,10 @@ export default defineConfig({
     '/gutter-cleaning-repair.html': '/services/gutter-cleaning',
     '/carpentry-wood-repair.html': '/services/finish-carpentry',
     '/furniture-assembly.html': '/services',
-    '/tv-mounting.html': '/services',
+    '/tv-mounting.html': '/services/tv-mounting',
     '/pressure-washing.html': '/services/pressure-washing',
     '/deck-building-repair.html': '/services/deck-repair',
-    '/door-window-installation.html': '/services',
+    '/door-window-installation.html': '/services/door-repair',
     '/fence-installation-repair.html': '/services/fence-installation',
     '/handyman-services-madison-al': '/locations/madison',
     '/handyman-services-huntsville-al': '/locations/huntsville',
@@ -95,7 +95,7 @@ export default defineConfig({
     '/exterior-house-painting': '/services/exterior-painting',
 
     // General handyman tasks page
-    '/tv-mounting-madison-al': '/services/general-handyman',
+    '/tv-mounting-madison-al': '/services/tv-mounting',
     '/ceiling-fan-installation-madison-al': '/services/general-handyman',
     '/furniture-assembly-madison-al': '/services/general-handyman',
     '/handyman-small-jobs-madison-al': '/services/general-handyman',
@@ -105,7 +105,11 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin/'),
+      // Templated service+city pages are either canonicalized to a service hub
+      // (core cities) or noindexed (sub-areas), so keep them out of the sitemap.
+      filter: (page) =>
+        !page.includes('/admin/') &&
+        !/\/services\/[a-z-]+-(madison|huntsville|athens|decatur|harvest|owens-cross-roads|hampton-cove|redstone-arsenal|meridianville)-al\/?$/.test(page),
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
