@@ -22,8 +22,6 @@ const {
   articleMeta,
 } = Astro.props;
 const currentPath = Astro.url.pathname;
-// Keep <title> under ~65 chars: drop the brand suffix when it would push it over.
-const fullTitle = `${title} | Rittenworx`.length > 65 ? title : `${title} | Rittenworx`;
 const canonicalURL = new URL(
   Astro.url.pathname,
   "https://www.rittenworxhandyman.net",
@@ -31,6 +29,14 @@ const canonicalURL = new URL(
 // Allow a page to override the self-referencing canonical (e.g. templated
 // service+city pages that should consolidate into a stronger hub page).
 const canonicalHref = canonical ?? canonicalURL.href;
+
+// Append the brand only when the title doesn't already include it and the
+// result still fits in Google's ~60-character title display.
+const BRAND_SUFFIX = " | Rittenworx";
+const fullTitle =
+  title.includes("Rittenworx") || title.length + BRAND_SUFFIX.length > 60
+    ? title
+    : `${title}${BRAND_SUFFIX}`;
 
 // LocalBusiness + HomeAndConstructionBusiness Schema
 const schemaData = {
@@ -239,7 +245,7 @@ const schemaData = {
       "@type": "WebPage",
       "@id": `${canonicalURL}#webpage`,
       url: canonicalURL.href,
-      name: `${title} | Rittenworx`,
+      name: fullTitle,
       isPartOf: {
         "@id": "https://www.rittenworxhandyman.net/#website",
       },
@@ -283,7 +289,7 @@ const finalSchema = schema || schemaData;
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.png" />
 
     <!-- Performance: Theme Color for Mobile -->
@@ -816,6 +822,18 @@ const finalSchema = schema || schemaData;
                   href="/services/pressure-washing"
                   class="hover:text-white transition-colors"
                   >Pressure Washing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/tv-mounting"
+                  class="hover:text-white transition-colors">TV Mounting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services/door-repair"
+                  class="hover:text-white transition-colors">Door Repair</a
                 >
               </li>
             </ul>

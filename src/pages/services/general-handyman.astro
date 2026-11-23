@@ -7,6 +7,7 @@ const services = [
   {
     id: "tv-mounting",
     title: "TV & Monitor Mounting",
+    link: "/services/tv-mounting",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
     items: [
       "Flat, tilting, and full-motion mounts on any wall type",
@@ -58,6 +59,7 @@ const services = [
   {
     id: "door-repair",
     title: "Door Repair & Adjustment",
+    link: "/services/door-repair",
     icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
     items: [
       "Sticking or binding doors that won't close properly",
@@ -286,6 +288,11 @@ const faqSchema = {
                     <h3 class="text-2xl font-bold text-gray-900">{service.title}</h3>
                   </div>
                   <p class="text-gray-600 mb-5">{service.detail}</p>
+                  {service.link && (
+                    <a href={service.link} class="inline-block mb-5 text-blue-700 font-semibold underline">
+                      More about {service.title.toLowerCase()} &rarr;
+                    </a>
+                  )}
                   <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
                     {service.items.map((item) => (
                       <li class="flex items-start gap-2 text-sm text-gray-700">

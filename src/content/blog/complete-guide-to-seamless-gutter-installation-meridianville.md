@@ -1,5 +1,6 @@
 ---
-title: "Seamless Gutter Installation in Meridianville, AL: Full Guide"
+title: "The Complete Guide to Seamless Gutter Installation in Meridianville, AL"
+seoTitle: "Seamless Gutter Installation Guide | Meridianville, AL"
 description: "Everything you need to know about protecting your Meridianville home with custom seamless aluminum gutters, from sizing to downspout placement."
 pubDate: 2026-02-21
 author: "Roy"
